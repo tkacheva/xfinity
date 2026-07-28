@@ -270,3 +270,76 @@ header nav .nav-sections ul > li > ul > li {
 header nav .nav-tools {
   grid-area: tools;
 }
+
+/* ============ Xfinity mega-nav hover drawers ============ */
+@media (width >= 900px) {
+  /* nav bar: brand purple accent + full-height hover targets */
+  header nav .nav-sections .default-content-wrapper > ul { gap: 20px; align-items: stretch; }
+  header nav .nav-sections .default-content-wrapper > ul > li {
+    display: flex;
+    align-items: center;
+    height: var(--nav-height);
+  }
+
+  header nav .nav-sections .default-content-wrapper > ul > li > a { color: var(--black); font-weight: 500; }
+
+  /* active-item purple underline on hover */
+  header nav .nav-sections .default-content-wrapper > ul > li::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 16px; bottom: 0;
+    height: 3px;
+    background: var(--purple);
+    transform: scaleX(0);
+    transition: transform 0.15s ease;
+    transform-origin: left;
+  }
+
+  header nav .nav-sections .default-content-wrapper > ul > li.nav-drop:hover::after { transform: scaleX(1); }
+
+  /* hide the boilerplate chevron — Xfinity items show none */
+  header nav .nav-sections .nav-drop { padding-right: 0; }
+  header nav .nav-sections .nav-drop::after { display: none; }
+
+  /* the drawer: white panel below the bar, open on hover or keyboard-expand */
+  header nav .nav-sections .default-content-wrapper > ul > li.nav-drop:hover > ul,
+  header nav .nav-sections .default-content-wrapper > ul > li[aria-expanded='true'] > ul {
+    display: block;
+  }
+
+  header nav .nav-sections .default-content-wrapper > ul > li > ul {
+    position: absolute;
+    top: var(--nav-height);
+    left: 0;
+    min-width: 248px;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-top: 3px solid var(--purple);
+    border-radius: 0 0 var(--r-md) var(--r-md);
+    box-shadow: 0 12px 28px rgb(8 8 10 / 12%);
+    padding: 10px 0;
+    flex-direction: column;
+    gap: 0;
+    z-index: 60;
+  }
+
+  header nav .nav-sections .default-content-wrapper > ul > li > ul > li {
+    height: auto;
+    display: block;
+    font-weight: 400;
+  }
+
+  header nav .nav-sections .default-content-wrapper > ul > li > ul > li > a {
+    display: block;
+    padding: 11px 22px;
+    color: var(--black);
+    font-size: 0.95rem;
+    white-space: nowrap;
+  }
+
+  header nav .nav-sections .default-content-wrapper > ul > li > ul > li > a:hover {
+    color: var(--purple);
+    background: var(--grey-05);
+    text-decoration: none;
+  }
+}
