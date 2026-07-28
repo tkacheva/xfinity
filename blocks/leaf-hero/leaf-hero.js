@@ -18,7 +18,7 @@ export default function decorate(block) {
     </div>
     <div class="lh-card">
       <h3>${val(1)}</h3>
-      <div class="lh-price"><span class="amt"><sup>$</sup>${val(4)}</span><span class="per">/mo</span></div>
+      ${val(4) ? `<div class="lh-price"><span class="amt"><sup>$</sup>${val(4)}</span><span class="per">/mo</span></div>` : ''}
       <div class="lh-actions"></div>
     </div>`;
   if (ctaCell) [...ctaCell.childNodes].forEach((n) => inner.querySelector('.lh-actions').append(n.cloneNode(true)));
