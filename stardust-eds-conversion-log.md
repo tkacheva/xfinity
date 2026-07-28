@@ -55,3 +55,14 @@ All 10 body blocks + real nav (horizontal mega-nav) + styled 3-col footer deploy
 3. Images → authorable (upload to DA /media, author <img>).
 4. Even out footer 3-col grid; QA 360 breakpoint.
 5. Promote /home → /index, open PR, merge branch → main.
+
+## Product-pillar deployed to production — 2026-07-28
+- URL: https://main--xfinity--tkacheva.aem.page/learn/internet-service (200, published live, 0 about:error, height 3866).
+- REUSED home blocks: promo, offers, stream, deals, award (5).
+- NEW blocks: tiers (3-up pricing w/ purple check-bullets), faq (3-up cards), page-title (purple H1 + locator strip).
+- Covers ~180 pages (internet-service family + mobile/tv/home-solutions/home-phone/protection/now — same template).
+- Fix logged: page-title first authoring emptied the title cell (text placed directly in row div, not a cell div). Corrected authoring to row>cell nesting. Block reads rows[0].textContent — author blocks as <div class="x"><div><div>cell</div></div>...>.
+
+## Block library (13) so far
+hero-address, promo, offers, tiles, movers, stream, feature-cards, award, student, deals, tiers, faq, page-title.
+Remaining archetypes (offers/deals, leaf, local, support, static, program) reuse these + need a few new (support-cards, feature-alt, tabs). Each is faster now.
