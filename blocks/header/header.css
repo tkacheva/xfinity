@@ -343,3 +343,41 @@ header nav .nav-tools {
     text-decoration: none;
   }
 }
+
+/* ============ Xfinity header polish (brand wordmark, tools, drawer animation) ============ */
+/* brand: show the xfinity wordmark instead of plain text */
+header nav .nav-brand a {
+  display: inline-block;
+  width: 100px;
+  height: 34px;
+  background: url('/icons/xfinity-logo.svg') left center / contain no-repeat;
+  text-indent: -9999px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* tools / Sign In: never wrap to two lines */
+header nav .nav-tools { white-space: nowrap; }
+header nav .nav-tools a { white-space: nowrap; font-weight: 600; }
+
+@media (width >= 900px) {
+  /* drawer: soft fade + slide instead of instant show; softer top edge (match live) */
+  header nav .nav-sections .default-content-wrapper > ul > li > ul {
+    display: block;
+    border-top: 1px solid var(--border);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-6px);
+    transition: opacity 0.16s ease, transform 0.16s ease, visibility 0s linear 0.16s;
+    pointer-events: none;
+  }
+
+  header nav .nav-sections .default-content-wrapper > ul > li.nav-drop:hover > ul,
+  header nav .nav-sections .default-content-wrapper > ul > li[aria-expanded='true'] > ul {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: opacity 0.16s ease, transform 0.16s ease;
+    pointer-events: auto;
+  }
+}
