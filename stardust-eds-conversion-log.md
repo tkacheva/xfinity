@@ -66,3 +66,9 @@ All 10 body blocks + real nav (horizontal mega-nav) + styled 3-col footer deploy
 ## Block library (13) so far
 hero-address, promo, offers, tiles, movers, stream, feature-cards, award, student, deals, tiers, faq, page-title.
 Remaining archetypes (offers/deals, leaf, local, support, static, program) reuse these + need a few new (support-cards, feature-alt, tabs). Each is faster now.
+
+## Offers archetype deployed to production — 2026-07-28
+- https://main--xfinity--tkacheva.aem.page/learn/deals (published live, 0 about:error).
+- REUSED: page-title, promo, offers, tiers, award, deals, stream (7). NEW: cta-band (1, generic purple band, used ×2).
+- Demonstrates block-reuse velocity: a full marketing page from 1 new block.
+- Block library now 14: + cta-band.
