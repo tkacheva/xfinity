@@ -11,46 +11,78 @@
  */
 
 :root {
-  /* colors */
-  --background-color: white;
-  --light-color: #f8f8f8;
-  --dark-color: #505050;
-  --text-color: #131313;
-  --link-color: #3b63fb;
-  --link-hover-color: #1d3ecf;
+  /* Xfinity brand tokens (lifted from source design system — Patch/HMD) */
+  --purple: #5a23b9;
+  --purple-dark: #3d1881;
+  --purple-90: #270e48;
+  --black: #141417;
+  --grey-05: #f6f6f9;
+  --grey-10: #ececf2;
+  --grey-50: #62626c;
+  --border: #dde2e6;
 
-  /* fonts */
-  --body-font-family: roboto, roboto-fallback, sans-serif;
-  --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
+  /* EDS role tokens */
+  --background-color: #fff;
+  --light-color: var(--grey-05);
+  --dark-color: var(--grey-50);
+  --text-color: var(--black);
+  --link-color: var(--purple);
+  --link-hover-color: var(--purple-dark);
+
+  /* fonts — XSans (Xfinity Sans, LICENSED — first in stack) substituted by DM Sans, the site's own fallback */
+  --body-font-family: xsans, "DM Sans Variable", dm-sans-fallback, arial, sans-serif;
+  --heading-font-family: xsans, "DM Sans Variable", dm-sans-fallback, arial, sans-serif;
 
   /* body sizes */
-  --body-font-size-m: 22px;
-  --body-font-size-s: 19px;
-  --body-font-size-xs: 17px;
+  --body-font-size-m: 18px;
+  --body-font-size-s: 16px;
+  --body-font-size-xs: 14px;
 
   /* heading sizes */
-  --heading-font-size-xxl: 55px;
-  --heading-font-size-xl: 44px;
-  --heading-font-size-l: 34px;
-  --heading-font-size-m: 27px;
-  --heading-font-size-s: 24px;
-  --heading-font-size-xs: 22px;
+  --heading-font-size-xxl: 40px;
+  --heading-font-size-xl: 30px;
+  --heading-font-size-l: 24px;
+  --heading-font-size-m: 20px;
+  --heading-font-size-s: 18px;
+  --heading-font-size-xs: 16px;
 
-  /* nav height */
+  /* layout */
   --nav-height: 64px;
+  --maxw: 1280px;
+
+  /* radii */
+  --r-sm: 4px;
+  --r-md: 8px;
+  --r-lg: 16px;
+  --r-xl: 32px;
+  --pill: 9999px;
 }
 
-/* fallback fonts */
+/* brand body/display face (XSans licensed → DM Sans substitute, self-hosted) */
 @font-face {
-  font-family: roboto-condensed-fallback;
-  size-adjust: 88.82%;
-  src: local('Arial');
+  font-family: "DM Sans Variable";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 1000;
+  src: url("/styles/fonts/dm-sans-variable.woff2") format("woff2-variations");
 }
 
 @font-face {
-  font-family: roboto-fallback;
-  size-adjust: 99.529%;
+  font-family: "DM Sans Variable";
+  font-style: italic;
+  font-display: swap;
+  font-weight: 100 1000;
+  src: url("/styles/fonts/dm-sans-italic-variable.woff2") format("woff2-variations");
+}
+
+/* metric-matched fallback — zero CLS on font swap (computed via fonttools) */
+@font-face {
+  font-family: dm-sans-fallback;
   src: local('Arial');
+  size-adjust: 122.34%;
+  ascent-override: 81.09%;
+  descent-override: 25.34%;
+  line-gap-override: 0%;
 }
 
 @media (width >= 900px) {
@@ -297,11 +329,11 @@ main img {
 
 /* sections */
 main > .section {
-  margin: 40px 0;
+  margin: 0;
 }
 
 main > .section > div {
-  max-width: 1200px;
+  max-width: var(--maxw);
   margin: auto;
   padding: 0 24px;
 }
@@ -310,11 +342,14 @@ main > .section:first-of-type {
   margin-top: 0;
 }
 
-@media (width >= 900px) {
-  main > .section > div {
-    padding: 0 32px;
-  }
+/* full-bleed sections (promo bands): block breaks the section container to viewport width */
+main > .section.full-width > div {
+  max-width: none;
+  padding: 0;
 }
+
+/* empty section collapse (page-metadata leaves an empty padded section) */
+main .section:empty { display: none; }
 
 /* section metadata */
 main .section.light,
