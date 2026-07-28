@@ -18,3 +18,31 @@ footer .footer p {
     padding: 40px 32px 24px;
   }
 }
+
+/* --- Xfinity footer --- */
+footer {
+  background-color: #fff;
+  border-top: 1px solid var(--border);
+  color: var(--grey-50);
+}
+
+footer .footer > div { max-width: var(--maxw); }
+footer .footer a { color: var(--grey-50); }
+footer .footer a:hover { color: var(--black); }
+footer .footer h4 {
+  color: var(--black);
+  font-family: var(--heading-font-family);
+  font-weight: 700;
+  font-size: 1rem;
+  margin: 0 0 12px;
+}
+
+/* the columns section: grid the About/Services/Policies groups */
+footer .footer .default-content-wrapper:first-child { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px 40px; align-items: start; }
+footer .footer ul { list-style: none; padding: 0; margin: 0; }
+footer .footer li { padding: 4px 0; font-size: 0.88rem; }
+footer .footer > div > .default-content-wrapper:last-child { border-top: 1px solid var(--border); margin-top: 20px; padding-top: 16px; font-size: 0.78rem; }
+
+@media (width <= 900px) {
+  footer .footer .default-content-wrapper:first-child { grid-template-columns: 1fr 1fr; }
+}
