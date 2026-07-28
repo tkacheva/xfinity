@@ -72,3 +72,8 @@ Remaining archetypes (offers/deals, leaf, local, support, static, program) reuse
 - REUSED: page-title, promo, offers, tiers, award, deals, stream (7). NEW: cta-band (1, generic purple band, used ×2).
 - Demonstrates block-reuse velocity: a full marketing page from 1 new block.
 - Block library now 14: + cta-band.
+
+## Support-hub archetype deployed to production — 2026-07-28
+- https://main--xfinity--tkacheva.aem.page/support (published live, 0 about:error). Distinct non-marketing template.
+- NEW blocks: support-hero (purple search), support-cards (category grid, .triad variant). REUSED: cta-band.
+- Block library now 16.
