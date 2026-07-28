@@ -36,3 +36,22 @@ Images referenced as **CSS backgrounds / inline bg from the source CDN** (assets
 
 ## Verified
 - Branch preview https://home-archetype--xfinity--tkacheva.aem.page/home — 200, all 6 blocks decorate, CDN imagery loads, 0 `about:error`. Renders faithfully as the Xfinity home.
+
+## Home deploy COMPLETE (branch home-archetype) — 2026-07-27
+All 10 body blocks + real nav (horizontal mega-nav) + styled 3-col footer deployed and verified.
+- Branch preview: https://home-archetype--xfinity--tkacheva.aem.page/home (200, 0 about:error, height 4627 vs live 5098 ≈ 91%).
+- Blocks: hero-address, promo, offers, tiles, movers, stream, feature-cards, award, student, deals + boilerplate header/footer (Xfinity nav.html/footer.html in DA).
+
+### content-diff (prototype vs deployed) residuals — all logged, none blocking
+- 🟠 FONT FORK (5/40/50): permanent — XSans licensed → DM Sans substitute. JUSTIFIED.
+- 🔴/🟠 "America's" / "Now's": curly-vs-straight apostrophe encoding mismatch (content present). FIX: use curly ’ in authored content.
+- 🟠 tiles as CTA links; address label/button not <p>: role classification, content present.
+- 🟡 dropped disclaimer fine-print (Offer ends 8/24; Lifetime Device Protection; Xfinity Internet required; offers-disc). REAL minor drops — add as authored default content.
+- h1 is JS-generated (hero-address) — not in server .plain.html. SEO: author hero heading as content <h1>.
+
+### Remaining before merge to main
+1. Fix apostrophes + add dropped disclaimer lines (content edit).
+2. Author hero <h1> as server content (SEO).
+3. Images → authorable (upload to DA /media, author <img>).
+4. Even out footer 3-col grid; QA 360 breakpoint.
+5. Promote /home → /index, open PR, merge branch → main.
