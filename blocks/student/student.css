@@ -1,0 +1,18 @@
+.student .student-wrap { max-width: var(--maxw); margin: 0 auto; padding: 60px 24px; }
+.student .student-band {
+  position: relative;
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  min-height: 360px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  background: #1a1030 url("https://assets.comcast.com/assets/dotcom/projects_3/2026/june/cix-10432_6-15-student-exclusive-offer/Student-Offer-2026_Banner_Desktop.jpg") right center / cover no-repeat;
+}
+
+.student .student-copy { padding: 40px 48px; max-width: 460px; }
+.student .student-copy h3 { color: #fff; font-size: 1.6rem; font-weight: 700; margin: 0 0 12px; }
+.student .student-copy p { font-size: 0.85rem; margin: 0 0 18px; }
+.student .student-actions { display: flex; align-items: center; gap: 20px; }
+.student .student-actions a.button { background: var(--black); color: #fff; border-radius: var(--r-md); padding: 12px 24px; font-weight: 700; }
+.student .student-actions a:not(.button) { color: #fff; font-weight: 600; }

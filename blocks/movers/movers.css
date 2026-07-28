@@ -1,0 +1,16 @@
+.movers .movers-wrap {
+  max-width: var(--maxw);
+  margin: 20px auto 0;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+}
+
+.movers .movers-ic { width: 36px; height: 36px; flex: none; color: var(--purple); }
+.movers .movers-txt { flex: 1; }
+.movers .movers-txt strong { display: block; font-weight: 700; }
+.movers .movers-txt p { color: var(--grey-50); font-size: 0.9rem; margin: 2px 0 0; }
+.movers .movers-actions a { color: var(--purple); font-weight: 600; white-space: nowrap; }

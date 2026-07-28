@@ -1,0 +1,15 @@
+.award .award-wrap { max-width: var(--maxw); margin: 0 auto; padding: 20px 24px; }
+.award .award-band {
+  background: var(--grey-05) url("https://assets.comcast.com/assets/dotcom/projects_3/2026/july/cix-10759_7-27-archer-hsd-offer-relaunch/Opensignal-Award_Full-Image_Desktop.png") center / cover no-repeat;
+  border-radius: var(--r-lg);
+  min-height: 192px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 34px;
+}
+
+.award .award-band h3 { color: var(--purple); font-size: 1.3rem; font-weight: 700; margin: 0 0 6px; }
+.award .award-band p { font-size: 0.85rem; margin: 0; }

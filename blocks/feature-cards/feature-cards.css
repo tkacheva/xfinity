@@ -1,0 +1,27 @@
+.feature-cards .fc-wrap { max-width: var(--maxw); margin: 0 auto; padding: 60px 24px; }
+.feature-cards .fc-head { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 20px; }
+.feature-cards .fc-head h2 { font-size: 1.9rem; font-weight: 700; letter-spacing: -0.02em; margin: 0; }
+.feature-cards .fc-head h2 em { font-style: normal; color: var(--purple); }
+.feature-cards .fc-head-actions a.button { border-radius: var(--r-md); padding: 12px 22px; font-weight: 700; }
+
+.feature-cards .fc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.feature-cards .fc-card {
+  position: relative;
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  min-height: 360px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 36px;
+  background: var(--purple-dark) center / cover no-repeat;
+}
+
+.feature-cards .fc-card h3 { color: #fff; font-size: 1.5rem; font-weight: 700; max-width: 18ch; margin: 0 auto 0 0; }
+.feature-cards .fc-card-actions { margin-top: auto; }
+.feature-cards .fc-card-actions a { color: #fff; font-weight: 600; }
+
+@media (width <= 900px) {
+  .feature-cards .fc-grid { grid-template-columns: 1fr; }
+  .feature-cards .fc-head { flex-direction: column; align-items: flex-start; }
+}
