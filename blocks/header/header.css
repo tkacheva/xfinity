@@ -283,23 +283,30 @@ header nav .nav-tools {
 
   header nav .nav-sections .default-content-wrapper > ul > li > a { color: var(--black); font-weight: 500; }
 
-  /* active-item purple underline on hover */
-  header nav .nav-sections .default-content-wrapper > ul > li::after {
+  /* active-item animated purple underline on hover.
+     Uses ::before — the chevron owns ::after, and hiding that ::after
+     (below) would otherwise kill this underline too. */
+  header nav .nav-sections .default-content-wrapper > ul > li::before {
     content: "";
     position: absolute;
-    left: 0; right: 16px; bottom: 0;
+    left: 0; right: 0; bottom: 0;
     height: 3px;
     background: var(--purple);
     transform: scaleX(0);
-    transition: transform 0.15s ease;
+    transition: transform 0.2s ease;
     transform-origin: left;
+    pointer-events: none;
   }
 
-  header nav .nav-sections .default-content-wrapper > ul > li.nav-drop:hover::after { transform: scaleX(1); }
+  header nav .nav-sections .default-content-wrapper > ul > li:hover::before,
+  header nav .nav-sections .default-content-wrapper > ul > li[aria-expanded='true']::before { transform: scaleX(1); }
 
   /* hide the boilerplate chevron — Xfinity items show none */
   header nav .nav-sections .nav-drop { padding-right: 0; }
   header nav .nav-sections .nav-drop::after { display: none; }
+
+  /* remove the boilerplate caret/triangle on top of the drawer box */
+  header nav .nav-sections .default-content-wrapper > ul > li > ul::before { content: none; display: none; }
 
   /* the drawer: white panel below the bar, open on hover or keyboard-expand */
   header nav .nav-sections .default-content-wrapper > ul > li.nav-drop:hover > ul,
@@ -314,7 +321,6 @@ header nav .nav-tools {
     min-width: 248px;
     background: #fff;
     border: 1px solid var(--border);
-    border-top: 3px solid var(--purple);
     border-radius: 0 0 var(--r-md) var(--r-md);
     box-shadow: 0 12px 28px rgb(8 8 10 / 12%);
     padding: 10px 0;
