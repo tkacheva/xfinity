@@ -3,13 +3,13 @@
   grid-template-columns: repeat(5, 1fr);
   gap: 16px;
   text-align: center;
-  padding: 24px 0;
+  padding: 48px 0 52px;
 }
 
 .tiles .tile { display: block; color: var(--black); }
 .tiles .tile-img {
   display: block;
-  height: 210px;
+  height: 230px;
   background: center / contain no-repeat;
   margin: 0 auto 10px;
 }

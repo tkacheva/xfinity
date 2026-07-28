@@ -23,6 +23,11 @@ export default function decorate(block) {
     const actions = document.createElement('div');
     actions.className = 'offer-actions';
     if (ctaCell) [...ctaCell.childNodes].forEach((n) => actions.append(n.cloneNode(true)));
+    // primary CTA: unwrap <strong><a> into a black button (EDS decorator skips 2-anchor cells)
+    actions.querySelectorAll('strong > a').forEach((a) => {
+      a.classList.add('button', 'primary');
+      a.parentElement.replaceWith(a);
+    });
     card.append(actions);
     grid.append(card);
   });

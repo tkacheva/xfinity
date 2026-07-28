@@ -1,5 +1,5 @@
-.hero-address .hero-address-wrap { max-width: var(--maxw); margin: 0 auto; padding: 40px 24px 44px; text-align: center; }
-.hero-address h1 { font-size: 2rem; font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; margin: 0 0 22px; }
+.hero-address .hero-address-wrap { max-width: var(--maxw); margin: 0 auto; padding: 52px 24px 60px; text-align: center; }
+.hero-address h1 { font-size: 2rem; font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; margin: 0 0 26px; }
 .hero-address .ha-form { display: flex; gap: 10px; max-width: 760px; margin: 0 auto; text-align: left; }
 .hero-address .ha-field { flex: 1; }
 .hero-address .ha-field label { display: block; font-size: 0.78rem; color: var(--grey-50); margin: 0 0 6px 2px; }
