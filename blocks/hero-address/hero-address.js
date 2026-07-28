@@ -5,7 +5,9 @@
  */
 export default function decorate(block) {
   const c = [...block.querySelectorAll(':scope > div > div')];
-  const heading = c[0] ? c[0].textContent.trim() : '';
+  // prefer an authored heading element (server-rendered <h1> for SEO)
+  const authoredH = c[0] ? c[0].querySelector('h1, h2, h3') : null;
+  const heading = authoredH ? authoredH.textContent.trim() : (c[0] ? c[0].textContent.trim() : '');
   const placeholder = c[1] ? c[1].textContent.trim() : '';
   const btn = c[2] ? c[2].textContent.trim() : 'Find My Plan';
   const memberCell = c[3];

@@ -358,3 +358,13 @@ main .section.highlight {
   margin: 0;
   padding: 40px 0;
 }
+
+/* fine-print disclaimers (default content) */
+main .section .disc {
+  max-width: var(--maxw);
+  margin: 14px auto 0;
+  color: var(--grey-50);
+  font-size: 0.72rem;
+  line-height: 1.4;
+  text-align: center;
+}
