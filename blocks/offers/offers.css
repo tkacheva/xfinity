@@ -1,0 +1,32 @@
+.offers .offers-grid {
+  max-width: var(--maxw);
+  margin: -64px auto 0;
+  padding: 0 24px;
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.offers .offer {
+  background: #fff;
+  border-radius: var(--r-lg);
+  box-shadow: 0 4px 24px rgb(8 8 10 / 10%);
+  padding: 34px 36px;
+}
+
+.offers .offer h3 { font-size: 1.4rem; font-weight: 700; letter-spacing: -0.02em; margin: 0 0 6px; }
+.offers .offer h3 em { font-style: normal; color: var(--purple); }
+.offers .offer-sub { color: var(--grey-50); font-size: 0.95rem; margin: 0 0 16px; }
+.offers .offer-price { display: flex; align-items: flex-start; gap: 6px; margin-bottom: 18px; }
+.offers .offer-price .amt { font-weight: 800; font-size: 3.4rem; line-height: 0.9; }
+.offers .offer-price .amt sup { font-size: 1.4rem; top: -1.4rem; font-weight: 700; }
+.offers .offer-price .per { font-size: 0.85rem; align-self: flex-end; margin-bottom: 6px; line-height: 1.15; }
+.offers .offer-actions { display: flex; align-items: center; gap: 20px; }
+.offers .offer-actions a.button { border-radius: var(--r-md); padding: 12px 24px; font-weight: 700; }
+.offers .offer-actions a:not(.button) { color: var(--purple); font-weight: 600; }
+
+@media (width <= 900px) {
+  .offers .offers-grid { grid-template-columns: 1fr; margin-top: -48px; }
+}

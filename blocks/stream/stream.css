@@ -1,0 +1,17 @@
+.stream .stream-wrap { max-width: var(--maxw); margin: 0 auto; padding: 60px 24px; }
+.stream .stream-wrap > h2 { font-size: 1.9rem; font-weight: 700; letter-spacing: -0.02em; margin: 0 0 20px; }
+
+.stream .stream-band {
+  position: relative;
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  min-height: 372px;
+  display: flex;
+  align-items: center;
+  background: var(--purple-dark) url("https://assets.xfinity.com/assets/dotcom/projects_3/2026/march/cix-10087_streamsaver-2dot0-secondary-placements/streamsaver-banner/StreamSaver-Banner-BG-Desktop.png") right center / cover no-repeat;
+}
+
+.stream .stream-copy { padding: 40px 48px; color: #fff; max-width: 440px; }
+.stream .stream-copy h3 { color: #fff; font-size: 1.6rem; font-weight: 700; margin: 0 0 12px; }
+.stream .stream-copy p { font-size: 0.85rem; opacity: 0.95; margin: 0 0 18px; }
+.stream .stream-actions a.button { background: #fff; color: var(--black); border-radius: var(--r-md); padding: 12px 24px; font-weight: 700; }

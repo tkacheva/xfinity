@@ -1,0 +1,22 @@
+.deals .deals-wrap { max-width: var(--maxw); margin: 0 auto; padding: 60px 24px; }
+.deals .deals-wrap > h2 { font-size: 1.9rem; font-weight: 700; letter-spacing: -0.02em; margin: 0 0 20px; }
+.deals .deals-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+
+.deals .deal {
+  background: var(--grey-05);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.deals .deal-img { aspect-ratio: 1 / 1; background: center / cover no-repeat; }
+.deals .deal-body { padding: 18px 20px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+.deals .deal-body h3 { font-size: 1.05rem; font-weight: 700; margin: 0; }
+.deals .deal-fine { color: var(--grey-50); font-size: 0.72rem; line-height: 1.35; margin: 0; }
+.deals .deal-actions { margin-top: auto; }
+.deals .deal-actions a { color: var(--purple); font-weight: 600; font-size: 0.9rem; }
+
+@media (width <= 900px) {
+  .deals .deals-grid { grid-template-columns: 1fr 1fr; }
+}

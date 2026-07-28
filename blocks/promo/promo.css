@@ -1,0 +1,43 @@
+.promo {
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+
+  /* break out of the section container to full-bleed */
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  background:
+    linear-gradient(105deg, var(--purple) 0%, var(--purple-dark) 55%, var(--purple-90) 100%);
+}
+
+.promo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("https://assets.comcast.com/assets/dotcom/projects_3/2026/july/cix-10759_7-27-archer-hsd-offer-relaunch/Archer-Relaunch_Hero_Desktop.jpg") center / cover no-repeat;
+  opacity: 0.9;
+  mix-blend-mode: luminosity;
+}
+
+.promo .promo-inner {
+  position: relative;
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 52px 24px 132px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.promo .eyebrow { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.04em; opacity: 0.9; margin: 0 0 8px; }
+.promo h2 { color: #fff; font-size: 1.9rem; font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; margin: 0 0 10px; }
+.promo .lede { max-width: 46ch; font-size: 0.9rem; opacity: 0.95; margin: 0; }
+.promo .promo-guar { display: flex; align-items: flex-start; gap: 10px; flex: none; }
+.promo .promo-guar .num { font-weight: 800; font-size: 6.5rem; line-height: 0.8; }
+.promo .promo-guar .lbl { font-weight: 600; font-size: 1.6rem; line-height: 1.05; align-self: center; }
+
+@media (width <= 900px) {
+  .promo .promo-inner { flex-direction: column; }
+  .promo .promo-guar .num { font-size: 4.5rem; }
+}

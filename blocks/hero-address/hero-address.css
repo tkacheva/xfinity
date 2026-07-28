@@ -1,0 +1,35 @@
+.hero-address .hero-address-wrap { max-width: var(--maxw); margin: 0 auto; padding: 40px 24px 44px; text-align: center; }
+.hero-address h1 { font-size: 2rem; font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; margin: 0 0 22px; }
+.hero-address .ha-form { display: flex; gap: 10px; max-width: 760px; margin: 0 auto; text-align: left; }
+.hero-address .ha-field { flex: 1; }
+.hero-address .ha-field label { display: block; font-size: 0.78rem; color: var(--grey-50); margin: 0 0 6px 2px; }
+.hero-address .ha-field input {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  padding: 16px 18px;
+  font: inherit;
+  color: var(--grey-50);
+  background: var(--grey-05);
+}
+
+.hero-address .ha-btn {
+  align-self: flex-end;
+  height: 56px;
+  background: var(--black);
+  color: #fff;
+  border: none;
+  border-radius: var(--r-md);
+  padding: 0 26px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.hero-address .ha-btn:hover { background: var(--purple-dark); }
+.hero-address .ha-member { font-size: 0.85rem; margin: 14px 0 0; }
+.hero-address .ha-member a { color: var(--purple); font-weight: 600; }
+
+@media (width <= 900px) {
+  .hero-address .ha-form { flex-direction: column; }
+  .hero-address .ha-btn { align-self: stretch; }
+}
