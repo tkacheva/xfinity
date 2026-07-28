@@ -1,0 +1,10 @@
+.stores .stores-wrap { max-width: var(--maxw); margin: 0 auto; padding: 60px 24px; }
+.stores .stores-wrap > h2 { font-size: 1.9rem; font-weight: 700; letter-spacing: -0.02em; margin: 0 0 20px; }
+.stores .stores-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.stores .store { border: 1px solid var(--border); border-radius: var(--r-lg); padding: 20px; }
+.stores .store h3 { font-size: 1.05rem; font-weight: 700; margin: 0 0 4px; }
+.stores .store-addr { font-size: 0.88rem; color: var(--grey-50); margin: 0 0 6px; }
+.stores .store-hours { color: #008558; font-weight: 600; font-size: 0.85rem; margin: 0 0 6px; }
+.stores .store-link a { color: var(--purple); font-weight: 600; font-size: 0.9rem; }
+
+@media (width <= 900px) { .stores .stores-grid { grid-template-columns: 1fr; } }

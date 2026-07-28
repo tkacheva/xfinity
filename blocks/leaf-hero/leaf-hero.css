@@ -1,0 +1,30 @@
+.leaf-hero {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  background: linear-gradient(105deg, var(--purple-90), var(--purple-dark));
+  color: #fff;
+}
+
+.leaf-hero .leaf-hero-inner {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 52px 24px;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.leaf-hero .lh-eyebrow { opacity: 0.85; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.04em; margin: 0 0 6px; }
+.leaf-hero h1 { color: #fff; font-size: 2.4rem; font-weight: 700; letter-spacing: -0.02em; margin: 0 0 12px; }
+.leaf-hero .lh-lede { opacity: 0.95; max-width: 44ch; margin: 0 0 14px; }
+.leaf-hero .lh-quote { font-style: italic; opacity: 0.9; font-size: 0.9rem; margin: 0; }
+.leaf-hero .lh-card { background: #fff; color: var(--black); border-radius: var(--r-lg); padding: 26px; }
+.leaf-hero .lh-card h3 { font-size: 1.2rem; font-weight: 700; margin: 0 0 8px; }
+.leaf-hero .lh-price { display: flex; align-items: flex-start; gap: 4px; margin: 0 0 16px; }
+.leaf-hero .lh-price .amt { font-weight: 800; font-size: 2.4rem; line-height: 0.9; }
+.leaf-hero .lh-price .amt sup { font-size: 1rem; top: -1rem; }
+.leaf-hero .lh-price .per { align-self: flex-end; color: var(--grey-50); font-size: 0.85rem; margin-bottom: 4px; }
+.leaf-hero .lh-actions a.button { border-radius: var(--r-md); padding: 12px 24px; font-weight: 700; }
+
+@media (width <= 900px) { .leaf-hero .leaf-hero-inner { grid-template-columns: 1fr; } }

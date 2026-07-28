@@ -1,0 +1,6 @@
+.chip-grid .cg-wrap { max-width: var(--maxw); margin: 0 auto; padding: 60px 24px; }
+.chip-grid .cg-wrap > h2 { font-size: 1.9rem; font-weight: 700; letter-spacing: -0.02em; margin: 0 0 20px; }
+.chip-grid .cg-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.chip-grid .cg-chip { border: 1px solid var(--border); border-radius: var(--r-lg); padding: 18px; text-align: center; font-weight: 600; }
+
+@media (width <= 900px) { .chip-grid .cg-grid { grid-template-columns: 1fr 1fr; } }
