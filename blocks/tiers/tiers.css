@@ -1,0 +1,41 @@
+.tiers .tiers-grid {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.tiers .tier {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: 28px;
+}
+
+.tiers .tier-name { font-weight: 700; color: var(--purple); font-size: 1.4rem; }
+.tiers .tier-use { color: var(--grey-50); font-size: 0.9rem; margin: 2px 0 14px; }
+.tiers .tier-price { display: flex; align-items: flex-start; gap: 6px; margin-bottom: 16px; }
+.tiers .tier-price .amt { font-weight: 800; font-size: 3rem; line-height: 0.9; }
+.tiers .tier-price .amt sup { font-size: 1.2rem; top: -1.2rem; font-weight: 700; }
+.tiers .tier-price .per { font-size: 0.8rem; align-self: flex-end; margin-bottom: 4px; line-height: 1.15; }
+
+.tiers .tier-feats { list-style: none; padding: 0; margin: 0 0 18px; }
+.tiers .tier-feats li { display: flex; gap: 8px; align-items: flex-start; font-size: 0.9rem; padding: 5px 0; }
+.tiers .tier-feats li::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  flex: none;
+  border-radius: 50%;
+  background: var(--purple);
+  margin-top: 1px;
+  mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='white' d='M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z'/></svg>") center / 14px no-repeat;
+}
+
+.tiers .tier-actions a.button { border-radius: var(--r-md); padding: 12px 22px; font-weight: 700; }
+
+@media (width <= 900px) {
+  .tiers .tiers-grid { grid-template-columns: 1fr; }
+}

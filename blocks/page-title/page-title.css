@@ -1,0 +1,13 @@
+.page-title .page-title-wrap { max-width: var(--maxw); margin: 0 auto; padding: 28px 24px 8px; }
+.page-title .pt-locator {
+  background: var(--grey-05);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  padding: 10px 16px;
+  font-size: 0.9rem;
+  margin: 0 0 18px;
+  text-align: center;
+}
+
+.page-title .pt-locator a { color: var(--purple); font-weight: 600; }
+.page-title h1 { color: var(--purple); font-size: 2.2rem; font-weight: 700; letter-spacing: -0.02em; margin: 0; }
