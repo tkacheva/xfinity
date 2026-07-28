@@ -6,38 +6,36 @@
   /* break out of the section container to full-bleed */
   width: 100vw;
   margin-left: calc(50% - 50vw);
-  background:
-    linear-gradient(105deg, var(--purple) 0%, var(--purple-dark) 55%, var(--purple-90) 100%);
-}
 
-.promo::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: url("https://assets.comcast.com/assets/dotcom/projects_3/2026/july/cix-10759_7-27-archer-hsd-offer-relaunch/Archer-Relaunch_Hero_Desktop.jpg") center / cover no-repeat;
-  opacity: 0.9;
-  mix-blend-mode: luminosity;
+  /* clean purple gradient (brand tokens): lighter top-right → darker bottom-left + subtle glow (matches xfinity.com/overview) */
+  background:
+    radial-gradient(120% 140% at 8% 108%, rgb(90 35 185 / 65%) 0%, rgb(90 35 185 / 0%) 42%),
+    linear-gradient(300deg, var(--purple) 0%, var(--purple-dark) 46%, var(--purple-90) 100%);
 }
 
 .promo .promo-inner {
   position: relative;
   max-width: var(--maxw);
   margin: 0 auto;
-  padding: 52px 24px 132px;
+  padding: 56px 24px 128px;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   gap: 24px;
 }
 
-.promo .eyebrow { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.04em; opacity: 0.9; margin: 0 0 8px; }
-.promo h2 { color: #fff; font-size: 1.9rem; font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; margin: 0 0 10px; }
-.promo .lede { max-width: 46ch; font-size: 0.9rem; opacity: 0.95; margin: 0; }
-.promo .promo-guar { display: flex; align-items: flex-start; gap: 10px; flex: none; }
-.promo .promo-guar .num { font-weight: 800; font-size: 6.5rem; line-height: 0.8; }
-.promo .promo-guar .lbl { font-weight: 600; font-size: 1.6rem; line-height: 1.05; align-self: center; }
+.promo .promo-copy { max-width: 46ch; }
+.promo .eyebrow { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 10px; }
+.promo h2 { color: #fff; font-size: 2.1rem; font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; margin: 0 0 12px; }
+.promo .lede { font-size: 0.95rem; font-weight: 500; line-height: 1.4; margin: 0; }
+
+/* "5 year price guarantee" — large thin numeral + two-line label, recreated in CSS (no image) */
+.promo .promo-guar { display: flex; align-items: center; gap: 14px; flex: none; }
+.promo .promo-guar .num { font-weight: 300; font-size: 13rem; line-height: 0.72; letter-spacing: -0.04em; }
+.promo .promo-guar .lbl { font-weight: 500; font-size: 3rem; line-height: 0.98; }
 
 @media (width <= 900px) {
-  .promo .promo-inner { flex-direction: column; }
-  .promo .promo-guar .num { font-size: 4.5rem; }
+  .promo .promo-inner { flex-direction: column; align-items: flex-start; padding-bottom: 96px; }
+  .promo .promo-guar .num { font-size: 7rem; }
+  .promo .promo-guar .lbl { font-size: 1.8rem; }
 }
