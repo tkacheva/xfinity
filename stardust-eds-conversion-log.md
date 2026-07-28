@@ -84,3 +84,9 @@ Deployed + published (aem.live, all 200):
 NEW blocks this batch: feature-rows, stores, leaf-hero, chip-grid, split-hero. Reused everything else.
 Block library now 21. Fix: chip-grid/page-title authoring needs row>cell nesting (<div class="x"><div><div>label</div></div></div>) — bare text in a row div is emptied by DA.
 Remaining: migrate siblings (~250 pages) + rollout; images->authorable; feature-rows illustration placeholders.
+
+## Migration progress — 2026-07-28 (5 families + article archetype)
+Live families: SVOD 24 · premium-channels 5 · sports 10 · local metros 12 · support articles 4 = 55 migrated pages.
+NEW archetype: article (support/help) — breadcrumb + constrained prose column + Ask-Xfinity footer. Block library now 22.
+ALL distinct template classes of xfinity.com are now live in production.
+Remaining = pure scale: local long-tail (~8,100 cities, feed generator from Xfinity store/pricing DATA rather than crawling), 1,439 more support articles (same generator), misc top-level pages.
