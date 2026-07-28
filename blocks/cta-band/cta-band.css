@@ -1,0 +1,16 @@
+.cta-band .cta-band-inner {
+  max-width: var(--maxw);
+  margin: 40px auto;
+  border-radius: var(--r-lg);
+  background: linear-gradient(105deg, var(--purple), var(--purple-dark));
+  color: #fff;
+  padding: 44px 48px;
+  text-align: center;
+}
+
+.cta-band.left .cta-band-inner { text-align: left; }
+.cta-band .cta-eyebrow { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.06em; margin: 0 0 8px; opacity: 0.9; }
+.cta-band h2 { color: #fff; font-size: 1.7rem; font-weight: 700; letter-spacing: -0.02em; margin: 0; }
+.cta-band .cta-body { opacity: 0.95; margin: 12px 0 0; font-size: 0.95rem; }
+.cta-band .cta-band-actions { margin-top: 18px; }
+.cta-band .cta-band-actions a.button { background: #fff; color: var(--black); border-radius: var(--r-md); padding: 12px 24px; font-weight: 700; }
