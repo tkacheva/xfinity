@@ -77,3 +77,10 @@ Remaining archetypes (offers/deals, leaf, local, support, static, program) reuse
 - https://main--xfinity--tkacheva.aem.page/support (published live, 0 about:error). Distinct non-marketing template.
 - NEW blocks: support-hero (purple search), support-cards (category grid, .triad variant). REUSED: cta-band.
 - Block library now 16.
+
+## ALL 8 ARCHETYPES LIVE ON PRODUCTION — 2026-07-28
+Deployed + published (aem.live, all 200):
+  / · /learn/internet-service · /learn/deals · /support · /learn/digital-cable-tv/svod/acorntv · /local/il/chicago · /accessibility · /learn/moving
+NEW blocks this batch: feature-rows, stores, leaf-hero, chip-grid, split-hero. Reused everything else.
+Block library now 21. Fix: chip-grid/page-title authoring needs row>cell nesting (<div class="x"><div><div>label</div></div></div>) — bare text in a row div is emptied by DA.
+Remaining: migrate siblings (~250 pages) + rollout; images->authorable; feature-rows illustration placeholders.
