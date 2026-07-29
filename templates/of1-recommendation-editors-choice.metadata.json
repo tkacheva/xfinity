@@ -1,0 +1,192 @@
+{
+  "name": "of1-recommendation-editors-choice",
+  "intent": "recommendation",
+  "description": "An editorial editors'-choice layout: one highlighted pick with a pull-quote and rationale, an 'also great for' row of situational picks, and a closing editors' note.",
+  "minItems": 3,
+  "maxItems": 3,
+  "stylesheet": "/styles/of1-recommendation-editors-choice.css",
+  "html": "/templates/of1-recommendation-editors-choice.html",
+  "slots": [
+    {
+      "key": "hero.eyebrow",
+      "type": "text",
+      "instruction": "Short editorial kicker such as 'Editors' Choice' above the headline."
+    },
+    {
+      "key": "hero.title",
+      "type": "text",
+      "instruction": "Personalized headline framing this as the editors' pick for the visitor's situation."
+    },
+    {
+      "key": "hero.subtitle",
+      "type": "text",
+      "instruction": "One-sentence editorial summary of how the pick was chosen and what else stood out."
+    },
+    {
+      "key": "hero.cta",
+      "type": "link",
+      "instruction": "Primary hero call to action jumping to the editors' pick."
+    },
+    {
+      "key": "choice.image",
+      "type": "image",
+      "instruction": "Product image for the editors' choice pick. Use a real Xfinity asset URL."
+    },
+    {
+      "key": "choice.badge",
+      "type": "text",
+      "instruction": "Badge label overlaid on the image flagging the editors' choice."
+    },
+    {
+      "key": "choice.title",
+      "type": "text",
+      "instruction": "Name of the editors' choice product."
+    },
+    {
+      "key": "choice.price",
+      "type": "text",
+      "instruction": "Monthly price of the editors' choice product."
+    },
+    {
+      "key": "choice.priceNote",
+      "type": "text",
+      "instruction": "Short pricing reassurance such as contract or price-guarantee terms."
+    },
+    {
+      "key": "choice.quote",
+      "type": "text",
+      "instruction": "Editorial pull-quote capturing why this pick wins, written in a confident review voice."
+    },
+    {
+      "key": "choice.byline",
+      "type": "text",
+      "instruction": "Attribution line naming the reviewing team behind the pick."
+    },
+    {
+      "key": "choice.rationale",
+      "type": "text",
+      "instruction": "Paragraph explaining in detail why the editors chose this product for the visitor."
+    },
+    {
+      "key": "choice.points",
+      "type": "list",
+      "instruction": "Bulleted list of the standout features that earned this pick the top spot."
+    },
+    {
+      "key": "choice.cta",
+      "type": "link",
+      "instruction": "Call to action to select the editors' choice product."
+    },
+    {
+      "key": "situational.title",
+      "type": "text",
+      "instruction": "Heading introducing the situational 'also great for' alternatives, e.g. 'Also great for...'."
+    },
+    {
+      "key": "item-1.context",
+      "type": "text",
+      "instruction": "Short situational label for the first pick, e.g. 'For a smaller place'."
+    },
+    {
+      "key": "item-1.title",
+      "type": "text",
+      "instruction": "Name of the first situational pick."
+    },
+    {
+      "key": "item-1.price",
+      "type": "text",
+      "instruction": "Monthly price of the first situational pick."
+    },
+    {
+      "key": "item-1.body",
+      "type": "text",
+      "instruction": "Short description of the first situational pick and who it suits."
+    },
+    {
+      "key": "item-1.cta",
+      "type": "link",
+      "instruction": "Link to view or select the first situational pick."
+    },
+    {
+      "key": "item-2.context",
+      "type": "text",
+      "instruction": "Short situational label for the second pick, e.g. 'For a busy household'."
+    },
+    {
+      "key": "item-2.title",
+      "type": "text",
+      "instruction": "Name of the second situational pick."
+    },
+    {
+      "key": "item-2.price",
+      "type": "text",
+      "instruction": "Monthly price of the second situational pick."
+    },
+    {
+      "key": "item-2.body",
+      "type": "text",
+      "instruction": "Short description of the second situational pick and who it suits."
+    },
+    {
+      "key": "item-2.cta",
+      "type": "link",
+      "instruction": "Link to view or select the second situational pick."
+    },
+    {
+      "key": "item-3.context",
+      "type": "text",
+      "instruction": "Short situational label for the third pick, e.g. 'For cutting the bill'."
+    },
+    {
+      "key": "item-3.title",
+      "type": "text",
+      "instruction": "Name of the third situational pick."
+    },
+    {
+      "key": "item-3.price",
+      "type": "text",
+      "instruction": "Monthly price of the third situational pick."
+    },
+    {
+      "key": "item-3.body",
+      "type": "text",
+      "instruction": "Short description of the third situational pick and who it suits."
+    },
+    {
+      "key": "item-3.cta",
+      "type": "link",
+      "instruction": "Link to view or select the third situational pick."
+    },
+    {
+      "key": "note.label",
+      "type": "text",
+      "instruction": "Short kicker above the editors' closing note, e.g. 'The editors' bottom line'."
+    },
+    {
+      "key": "note.title",
+      "type": "text",
+      "instruction": "Heading for the editors' closing recommendation note."
+    },
+    {
+      "key": "note.body",
+      "type": "text",
+      "instruction": "Editorial closing note advising how the visitor should combine the picks."
+    },
+    {
+      "key": "cta.title",
+      "type": "text",
+      "instruction": "Closing call-to-action heading."
+    },
+    {
+      "key": "cta.body",
+      "type": "text",
+      "instruction": "Closing call-to-action supporting copy."
+    },
+    {
+      "key": "cta.cta",
+      "type": "link",
+      "instruction": "Final call to action to start the order."
+    }
+  ],
+  "label": "Recommendation - Editors' Choice"
+}

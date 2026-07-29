@@ -1,0 +1,182 @@
+{
+  "name": "of1-recommendation-quiz-match",
+  "intent": "recommendation",
+  "description": "A 'matched to you' quiz-result layout: a top match with a match-strength meter and why-it-fits list, a recap of the visitor's answers, and close runner-up cards with match scores.",
+  "minItems": 3,
+  "maxItems": 3,
+  "stylesheet": "/styles/of1-recommendation-quiz-match.css",
+  "html": "/templates/of1-recommendation-quiz-match.html",
+  "slots": [
+    {
+      "key": "hero.eyebrow",
+      "type": "text",
+      "instruction": "Short kicker signaling the result of a personalization quiz, e.g. 'Your match is in'."
+    },
+    {
+      "key": "hero.title",
+      "type": "text",
+      "instruction": "Headline announcing the matched product based on the visitor's answers."
+    },
+    {
+      "key": "hero.subtitle",
+      "type": "text",
+      "instruction": "One-sentence explanation that the pick was matched against what the visitor told us."
+    },
+    {
+      "key": "hero.cta",
+      "type": "link",
+      "instruction": "Primary hero call to action jumping to the match result."
+    },
+    {
+      "key": "match.image",
+      "type": "image",
+      "instruction": "Product image for the top match. Use a real Xfinity asset URL."
+    },
+    {
+      "key": "match.badge",
+      "type": "text",
+      "instruction": "Badge label flagging this as the visitor's top match."
+    },
+    {
+      "key": "match.title",
+      "type": "text",
+      "instruction": "Name of the matched product."
+    },
+    {
+      "key": "match.price",
+      "type": "text",
+      "instruction": "Monthly price of the matched product."
+    },
+    {
+      "key": "match.priceNote",
+      "type": "text",
+      "instruction": "Short pricing reassurance such as contract or price-guarantee terms."
+    },
+    {
+      "key": "match.scoreLabel",
+      "type": "text",
+      "instruction": "Match strength label shown with the meter, e.g. '94% match'."
+    },
+    {
+      "key": "match.body",
+      "type": "text",
+      "instruction": "Paragraph explaining why this product is the strongest match for the visitor's answers."
+    },
+    {
+      "key": "match.fit",
+      "type": "list",
+      "instruction": "List of point-by-point reasons the match fits, each tying back to a stated need."
+    },
+    {
+      "key": "match.cta",
+      "type": "link",
+      "instruction": "Call to action to choose the matched product."
+    },
+    {
+      "key": "recap.title",
+      "type": "text",
+      "instruction": "Heading introducing the recap of the visitor's quiz answers, e.g. 'Based on what you told us'."
+    },
+    {
+      "key": "recap.items",
+      "type": "list",
+      "instruction": "List recapping the answers or preferences the visitor gave that drove the match."
+    },
+    {
+      "key": "runnerup.title",
+      "type": "text",
+      "instruction": "Heading introducing the close runner-up options."
+    },
+    {
+      "key": "item-1.title",
+      "type": "text",
+      "instruction": "Name of the first runner-up product."
+    },
+    {
+      "key": "item-1.score",
+      "type": "text",
+      "instruction": "Match strength for the first runner-up, e.g. '86% match'."
+    },
+    {
+      "key": "item-1.price",
+      "type": "text",
+      "instruction": "Monthly price of the first runner-up."
+    },
+    {
+      "key": "item-1.body",
+      "type": "text",
+      "instruction": "Short description of the first runner-up and how it compares to the match."
+    },
+    {
+      "key": "item-1.cta",
+      "type": "link",
+      "instruction": "Link to view or select the first runner-up."
+    },
+    {
+      "key": "item-2.title",
+      "type": "text",
+      "instruction": "Name of the second runner-up product."
+    },
+    {
+      "key": "item-2.score",
+      "type": "text",
+      "instruction": "Match strength for the second runner-up, e.g. '78% match'."
+    },
+    {
+      "key": "item-2.price",
+      "type": "text",
+      "instruction": "Monthly price of the second runner-up."
+    },
+    {
+      "key": "item-2.body",
+      "type": "text",
+      "instruction": "Short description of the second runner-up and how it compares to the match."
+    },
+    {
+      "key": "item-2.cta",
+      "type": "link",
+      "instruction": "Link to view or select the second runner-up."
+    },
+    {
+      "key": "item-3.title",
+      "type": "text",
+      "instruction": "Name of the third runner-up product."
+    },
+    {
+      "key": "item-3.score",
+      "type": "text",
+      "instruction": "Match strength or label for the third runner-up, e.g. 'Great add-on'."
+    },
+    {
+      "key": "item-3.price",
+      "type": "text",
+      "instruction": "Monthly price of the third runner-up."
+    },
+    {
+      "key": "item-3.body",
+      "type": "text",
+      "instruction": "Short description of the third runner-up and how it compares to the match."
+    },
+    {
+      "key": "item-3.cta",
+      "type": "link",
+      "instruction": "Link to view or select the third runner-up."
+    },
+    {
+      "key": "cta.title",
+      "type": "text",
+      "instruction": "Closing call-to-action heading."
+    },
+    {
+      "key": "cta.body",
+      "type": "text",
+      "instruction": "Closing call-to-action supporting copy."
+    },
+    {
+      "key": "cta.cta",
+      "type": "link",
+      "instruction": "Final call to action to start the order."
+    }
+  ],
+  "label": "Recommendation - Quiz Match"
+}

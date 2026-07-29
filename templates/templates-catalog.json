@@ -1,36 +1,267 @@
 {
   "useRouting": true,
   "baseUrl": "https://main--xfinity--tkacheva.aem.page",
-  "generatedAt": "2026-07-29T14:59:11Z",
-  "count": 15,
+  "generatedAt": "2026-07-29T15:35:57Z",
+  "count": 25,
   "byIntent": {
     "budget": [
+      "of1-budget-bill-compare",
       "of1-budget-cost-breakdown",
       "of1-budget-price-tiers",
-      "of1-budget-roi-story"
+      "of1-budget-roi-story",
+      "of1-budget-savings-calculator"
     ],
     "comparison": [
+      "of1-comparison-decision-matrix",
       "of1-comparison-pros-cons",
+      "of1-comparison-spec-grid",
       "of1-comparison-table",
       "of1-comparison-versus"
     ],
     "deep-dive": [
       "of1-deep-dive-faq-explainer",
+      "of1-deep-dive-how-it-works",
       "of1-deep-dive-longform",
+      "of1-deep-dive-spec-sheet",
       "of1-deep-dive-timeline"
     ],
     "discovery": [
       "of1-discovery-by-category",
       "of1-discovery-curated-collections",
-      "of1-discovery-gallery"
+      "of1-discovery-gallery",
+      "of1-discovery-spotlight",
+      "of1-discovery-starter-paths"
     ],
     "recommendation": [
       "of1-recommendation-curated-bundle",
+      "of1-recommendation-editors-choice",
       "of1-recommendation-hero-pick",
+      "of1-recommendation-quiz-match",
       "of1-recommendation-ranked-list"
     ]
   },
   "templates": [
+    {
+      "name": "of1-budget-bill-compare",
+      "intent": "budget",
+      "description": "A side-by-side monthly-bill comparison of two or three plans with included features, add-on costs, and a lowest-total-cost callout.",
+      "minItems": 3,
+      "maxItems": 3,
+      "stylesheet": "/styles/of1-budget-bill-compare.css",
+      "slots": [
+        {
+          "key": "hero.eyebrow",
+          "type": "text",
+          "instruction": "Short kicker above the headline framing the bill comparison."
+        },
+        {
+          "key": "hero.title",
+          "type": "text",
+          "instruction": "Headline setting up a side-by-side monthly-bill comparison."
+        },
+        {
+          "key": "hero.subtitle",
+          "type": "text",
+          "instruction": "One sentence explaining that the comparison reflects the true total monthly cost."
+        },
+        {
+          "key": "hero.cta",
+          "type": "link",
+          "instruction": "Primary hero call to action linking to the shop or compare flow."
+        },
+        {
+          "key": "compare.title",
+          "type": "text",
+          "instruction": "Heading introducing the side-by-side plan comparison columns."
+        },
+        {
+          "key": "item-1.badge",
+          "type": "text",
+          "instruction": "Badge flagging the first column as the lowest total cost option."
+        },
+        {
+          "key": "item-1.name",
+          "type": "text",
+          "instruction": "Name of the first plan being compared."
+        },
+        {
+          "key": "item-1.price",
+          "type": "text",
+          "instruction": "Base monthly price of the first plan, digits only."
+        },
+        {
+          "key": "item-1.period",
+          "type": "text",
+          "instruction": "Billing period suffix for the first plan, such as /mo."
+        },
+        {
+          "key": "item-1.priceNote",
+          "type": "text",
+          "instruction": "Short note on the first plan's pricing terms."
+        },
+        {
+          "key": "item-1.includes",
+          "type": "list",
+          "instruction": "List of what is included in the first plan."
+        },
+        {
+          "key": "item-1.addonLabel",
+          "type": "text",
+          "instruction": "Label for the first plan's add-on or fee line."
+        },
+        {
+          "key": "item-1.addonPrice",
+          "type": "text",
+          "instruction": "Add-on or fee amount for the first plan."
+        },
+        {
+          "key": "item-1.total",
+          "type": "text",
+          "instruction": "True total monthly cost of the first plan."
+        },
+        {
+          "key": "item-1.cta",
+          "type": "link",
+          "instruction": "Call to action for the first plan."
+        },
+        {
+          "key": "item-2.name",
+          "type": "text",
+          "instruction": "Name of the second plan being compared."
+        },
+        {
+          "key": "item-2.price",
+          "type": "text",
+          "instruction": "Base monthly price of the second plan, digits only."
+        },
+        {
+          "key": "item-2.period",
+          "type": "text",
+          "instruction": "Billing period suffix for the second plan, such as /mo."
+        },
+        {
+          "key": "item-2.priceNote",
+          "type": "text",
+          "instruction": "Short note on the second plan's pricing terms."
+        },
+        {
+          "key": "item-2.includes",
+          "type": "list",
+          "instruction": "List of what is included in the second plan."
+        },
+        {
+          "key": "item-2.addonLabel",
+          "type": "text",
+          "instruction": "Label for the second plan's add-on or fee line."
+        },
+        {
+          "key": "item-2.addonPrice",
+          "type": "text",
+          "instruction": "Add-on or fee amount for the second plan."
+        },
+        {
+          "key": "item-2.total",
+          "type": "text",
+          "instruction": "True total monthly cost of the second plan."
+        },
+        {
+          "key": "item-2.cta",
+          "type": "link",
+          "instruction": "Call to action for the second plan."
+        },
+        {
+          "key": "item-3.name",
+          "type": "text",
+          "instruction": "Name of the third plan being compared."
+        },
+        {
+          "key": "item-3.price",
+          "type": "text",
+          "instruction": "Base monthly price of the third plan, digits only."
+        },
+        {
+          "key": "item-3.period",
+          "type": "text",
+          "instruction": "Billing period suffix for the third plan, such as /mo."
+        },
+        {
+          "key": "item-3.priceNote",
+          "type": "text",
+          "instruction": "Short note on the third plan's pricing terms."
+        },
+        {
+          "key": "item-3.includes",
+          "type": "list",
+          "instruction": "List of what is included in the third plan."
+        },
+        {
+          "key": "item-3.addonLabel",
+          "type": "text",
+          "instruction": "Label for the third plan's add-on or fee line."
+        },
+        {
+          "key": "item-3.addonPrice",
+          "type": "text",
+          "instruction": "Add-on or fee amount for the third plan."
+        },
+        {
+          "key": "item-3.total",
+          "type": "text",
+          "instruction": "True total monthly cost of the third plan."
+        },
+        {
+          "key": "item-3.cta",
+          "type": "link",
+          "instruction": "Call to action for the third plan."
+        },
+        {
+          "key": "callout.eyebrow",
+          "type": "text",
+          "instruction": "Kicker introducing the lowest-total-cost callout."
+        },
+        {
+          "key": "callout.title",
+          "type": "text",
+          "instruction": "Heading for the lowest-total-cost callout."
+        },
+        {
+          "key": "callout.figure",
+          "type": "text",
+          "instruction": "The headline savings figure for choosing the lowest-total plan."
+        },
+        {
+          "key": "callout.body",
+          "type": "text",
+          "instruction": "Copy explaining why the flagged plan has the lowest total cost."
+        },
+        {
+          "key": "notes.title",
+          "type": "text",
+          "instruction": "Heading introducing helpful notes about the comparison."
+        },
+        {
+          "key": "notes.items",
+          "type": "list",
+          "instruction": "List of notes clarifying the terms behind the compared totals."
+        },
+        {
+          "key": "cta.title",
+          "type": "text",
+          "instruction": "Closing call-to-action heading."
+        },
+        {
+          "key": "cta.body",
+          "type": "text",
+          "instruction": "Closing call-to-action supporting copy."
+        },
+        {
+          "key": "cta.cta",
+          "type": "link",
+          "instruction": "Final call to action to check availability or start the order."
+        }
+      ],
+      "htmlContent": "<main>\n  <section class=\"of1-budget-bill-compare-hero of1-hero\">\n    <p class=\"eyebrow\" data-slot=\"hero.eyebrow\">Compare the real monthly bill</p>\n    <h1 data-slot=\"hero.title\">The whole bill, side by side</h1>\n    <p class=\"lede\" data-slot=\"hero.subtitle\">Base price is only half the story. Here is what each plan actually costs once equipment and fees are added in.</p>\n    <a class=\"hero-cta\" data-slot=\"hero.cta\" href=\"https://xfinity.com/learn/internet-service\">Compare plans</a>\n  </section>\n\n  <section class=\"of1-budget-bill-compare-columns\">\n    <h2 data-slot=\"compare.title\">Internet plus one mobile line, monthly</h2>\n    <div class=\"col-grid\" data-grid-items>\n      <article class=\"bill-col bill-col--best\" data-card=\"1\">\n        <p class=\"col-badge\" data-slot=\"item-1.badge\">Lowest total cost</p>\n        <p class=\"col-name\" data-slot=\"item-1.name\">Xfinity Internet + Mobile</p>\n        <p class=\"col-price\"><span class=\"currency\">$</span><span class=\"amount\" data-slot=\"item-1.price\">75</span><span class=\"period\" data-slot=\"item-1.period\">/mo</span></p>\n        <p class=\"col-note\" data-slot=\"item-1.priceNote\">Price locked for 5 years, no contract</p>\n        <ul class=\"col-includes\" data-slot-list=\"item-1.includes\">\n          <li>500 Mbps WiFi for the whole home</li>\n          <li>One unlimited Xfinity Mobile line</li>\n          <li>xFi Gateway included</li>\n          <li>5-year price guarantee</li>\n        </ul>\n        <div class=\"col-addon\">\n          <span class=\"addon-label\" data-slot=\"item-1.addonLabel\">Equipment and fees</span>\n          <span class=\"addon-price\" data-slot=\"item-1.addonPrice\">$0</span>\n        </div>\n        <div class=\"col-total\">\n          <span class=\"total-label\">Total each month</span>\n          <span class=\"total-amount\" data-slot=\"item-1.total\">$75/mo</span>\n        </div>\n        <a class=\"col-cta\" data-slot=\"item-1.cta\" href=\"https://xfinity.com/learn/internet-service\">Get this plan</a>\n      </article>\n\n      <article class=\"bill-col\" data-card=\"2\">\n        <p class=\"col-name\" data-slot=\"item-2.name\">Typical cable competitor</p>\n        <p class=\"col-price\"><span class=\"currency\">$</span><span class=\"amount\" data-slot=\"item-2.price\">80</span><span class=\"period\" data-slot=\"item-2.period\">/mo</span></p>\n        <p class=\"col-note\" data-slot=\"item-2.priceNote\">Promo rate rises after 12 months</p>\n        <ul class=\"col-includes\" data-slot-list=\"item-2.includes\">\n          <li>400 Mbps WiFi</li>\n          <li>One mobile line, limited data</li>\n          <li>Modem rental required</li>\n          <li>Price increases at renewal</li>\n        </ul>\n        <div class=\"col-addon\">\n          <span class=\"addon-label\" data-slot=\"item-2.addonLabel\">Modem rental</span>\n          <span class=\"addon-price\" data-slot=\"item-2.addonPrice\">+$15</span>\n        </div>\n        <div class=\"col-total\">\n          <span class=\"total-label\">Total each month</span>\n          <span class=\"total-amount\" data-slot=\"item-2.total\">$95/mo</span>\n        </div>\n        <a class=\"col-cta\" data-slot=\"item-2.cta\" href=\"https://xfinity.com/learn/internet-service\">See details</a>\n      </article>\n\n      <article class=\"bill-col\" data-card=\"3\">\n        <p class=\"col-name\" data-slot=\"item-3.name\">Fiber provider + separate carrier</p>\n        <p class=\"col-price\"><span class=\"currency\">$</span><span class=\"amount\" data-slot=\"item-3.price\">90</span><span class=\"period\" data-slot=\"item-3.period\">/mo</span></p>\n        <p class=\"col-note\" data-slot=\"item-3.priceNote\">Two bills, taxes and fees extra</p>\n        <ul class=\"col-includes\" data-slot-list=\"item-3.includes\">\n          <li>500 Mbps fiber WiFi</li>\n          <li>One unlimited line on another carrier</li>\n          <li>Two separate monthly bills</li>\n          <li>Taxes and fees added on top</li>\n        </ul>\n        <div class=\"col-addon\">\n          <span class=\"addon-label\" data-slot=\"item-3.addonLabel\">Taxes and autopay</span>\n          <span class=\"addon-price\" data-slot=\"item-3.addonPrice\">+$20</span>\n        </div>\n        <div class=\"col-total\">\n          <span class=\"total-label\">Total each month</span>\n          <span class=\"total-amount\" data-slot=\"item-3.total\">$110/mo</span>\n        </div>\n        <a class=\"col-cta\" data-slot=\"item-3.cta\" href=\"https://xfinity.com/learn/internet-service\">See details</a>\n      </article>\n    </div>\n  </section>\n\n  <section class=\"of1-budget-bill-compare-callout\">\n    <div class=\"callout-inner\">\n      <p class=\"callout-eyebrow\" data-slot=\"callout.eyebrow\">Lowest total cost</p>\n      <h2 data-slot=\"callout.title\">Xfinity wins on the total, not just the sticker price</h2>\n      <p class=\"callout-figure\" data-slot=\"callout.figure\">$420 a year</p>\n      <p class=\"callout-body\" data-slot=\"callout.body\">Once you add equipment rental, taxes, and post-promo increases, Xfinity comes out lower every month. Over a year that is real money back in your pocket.</p>\n    </div>\n  </section>\n\n  <section class=\"of1-budget-bill-compare-notes\">\n    <h2 data-slot=\"notes.title\">Good to know before you compare</h2>\n    <ul class=\"notes-list\" data-slot-list=\"notes.items\">\n      <li>Your Xfinity Internet price is guaranteed for 5 years with no annual contract</li>\n      <li>The xFi Gateway is included, so there is no separate modem rental</li>\n      <li>Your first Xfinity Mobile line is free for a year when you add it to Internet</li>\n      <li>Internet, Mobile, and streaming all land on one simple bill</li>\n    </ul>\n  </section>\n\n  <section class=\"of1-budget-bill-compare-cta\">\n    <h2 data-slot=\"cta.title\">Ready to lower your bill?</h2>\n    <p data-slot=\"cta.body\">Check availability at your address and see your real monthly total before you switch.</p>\n    <a class=\"final-cta\" data-slot=\"cta.cta\" href=\"https://xfinity.com/learn/internet-service\">Check availability</a>\n  </section>\n</main>\n"
+    },
     {
       "name": "of1-budget-cost-breakdown",
       "intent": "budget",
@@ -540,6 +771,443 @@
       "htmlContent": "<main>\n  <section class=\"of1-budget-roi-story-hero of1-hero\">\n    <div class=\"hero-copy\">\n      <p class=\"eyebrow\" data-slot=\"hero.eyebrow\">Cut the bill</p>\n      <h1 data-slot=\"hero.title\">Make half your mobile bill disappear</h1>\n      <p class=\"lede\" data-slot=\"hero.subtitle\">Switch your line to Xfinity Mobile with your Internet and watch what you pay drop, month after month.</p>\n      <a class=\"hero-cta\" data-slot=\"hero.cta\" href=\"https://xfinity.com/learn/mobile\">See your savings</a>\n    </div>\n    <img class=\"hero-img\" data-slot=\"hero.image\" src=\"https://assets.comcast.com/assets/dotcom/projects_3/2026/june/cix-10733_xm-tmo-competitive-de-positioning-forced-plan-migration/TMO-FullImage-Banner-Desktop.jpg\" alt=\"Xfinity Mobile savings\" />\n  </section>\n\n  <section class=\"of1-budget-roi-story-compare\">\n    <h2 data-slot=\"compare.title\">Before and after you switch</h2>\n    <div class=\"compare-grid\">\n      <div class=\"compare-card compare-card--before\">\n        <p class=\"compare-label\" data-slot=\"before.label\">Your bill with the other guys</p>\n        <p class=\"compare-amount\"><span class=\"currency\">$</span><span class=\"value\" data-slot=\"before.amount\">80</span><span class=\"per\" data-slot=\"before.period\">/mo</span></p>\n        <p class=\"compare-note\" data-slot=\"before.note\">One unlimited line on Verizon, AT&amp;T, or T-Mobile</p>\n      </div>\n      <div class=\"compare-arrow\" aria-hidden=\"true\">&rarr;</div>\n      <div class=\"compare-card compare-card--after\">\n        <p class=\"compare-label\" data-slot=\"after.label\">Your bill on Xfinity Mobile</p>\n        <p class=\"compare-amount\"><span class=\"currency\">$</span><span class=\"value\" data-slot=\"after.amount\">30</span><span class=\"per\" data-slot=\"after.period\">/mo</span></p>\n        <p class=\"compare-note\" data-slot=\"after.note\">One unlimited line on the most reliable 5G network</p>\n      </div>\n    </div>\n  </section>\n\n  <section class=\"of1-budget-roi-story-headline\">\n    <div class=\"headline-inner\">\n      <p class=\"headline-kicker\" data-slot=\"savings.kicker\">You keep</p>\n      <p class=\"headline-figure\" data-figure><span data-slot=\"savings.amount\">$600</span></p>\n      <p class=\"headline-copy\" data-slot=\"savings.copy\">every single year, just by moving your line. That is real money back in your pocket, not a limited-time gimmick.</p>\n      <div class=\"headline-toggle\">\n        <button type=\"button\" class=\"toggle-btn is-active\" data-view=\"yr\">Per year</button>\n        <button type=\"button\" class=\"toggle-btn\" data-view=\"mo\">Per month</button>\n      </div>\n    </div>\n  </section>\n\n  <section class=\"of1-budget-roi-story-sources\">\n    <h2 data-slot=\"sources.title\">Where the savings come from</h2>\n    <div class=\"sources-grid\">\n      <article class=\"source-card\" data-card=\"1\">\n        <p class=\"source-value\" data-slot=\"item-1.value\">$360</p>\n        <p class=\"source-title\" data-slot=\"item-1.title\">A free line for a year</p>\n        <p class=\"source-detail\" data-slot=\"item-1.detail\">Add an Xfinity Mobile line free for 12 months when you have Xfinity Internet.</p>\n      </article>\n      <article class=\"source-card\" data-card=\"2\">\n        <p class=\"source-value\" data-slot=\"item-2.value\">$0</p>\n        <p class=\"source-title\" data-slot=\"item-2.title\">Price increases</p>\n        <p class=\"source-detail\" data-slot=\"item-2.detail\">The 5-year price guarantee keeps your Internet rate flat, with no annual contract.</p>\n      </article>\n      <article class=\"source-card\" data-card=\"3\">\n        <p class=\"source-value\" data-slot=\"item-3.value\">1 bill</p>\n        <p class=\"source-title\" data-slot=\"item-3.title\">Everything together</p>\n        <p class=\"source-detail\" data-slot=\"item-3.detail\">Internet, Mobile, and streaming on one simple bill you can manage in the Xfinity app.</p>\n      </article>\n    </div>\n  </section>\n\n  <section class=\"of1-budget-roi-story-cta\">\n    <h2 data-slot=\"cta.title\">Start saving on move-in day</h2>\n    <p data-slot=\"cta.subtitle\">Only pay for the data you use, keep your number, and switch with no contract.</p>\n    <a class=\"final-cta\" data-slot=\"cta.link\" href=\"https://xfinity.com/learn/mobile\">Switch and save</a>\n  </section>\n\n  <script>\n    (function () {\n      var section = document.querySelector('.of1-budget-roi-story-headline');\n      if (!section) return;\n      var figure = section.querySelector('[data-figure] [data-slot]');\n      var buttons = section.querySelectorAll('.toggle-btn');\n      if (!figure) return;\n      var yearly = parseFloat(figure.textContent.replace(/[^0-9.]/g, ''));\n      if (isNaN(yearly)) return;\n      function render(view) {\n        var amount = view === 'mo' ? Math.round(yearly / 12) : yearly;\n        figure.textContent = '$' + amount.toLocaleString('en-US');\n      }\n      buttons.forEach(function (btn) {\n        btn.addEventListener('click', function () {\n          buttons.forEach(function (b) { b.classList.toggle('is-active', b === btn); });\n          render(btn.getAttribute('data-view'));\n        });\n      });\n      render('yr');\n    })();\n  </script>\n</main>\n"
     },
     {
+      "name": "of1-budget-savings-calculator",
+      "intent": "budget",
+      "description": "A how-much-you-save layout with a headline savings figure, a today-vs-Xfinity line-item comparison, and a bundle-savings highlight.",
+      "minItems": 3,
+      "maxItems": 3,
+      "stylesheet": "/styles/of1-budget-savings-calculator.css",
+      "slots": [
+        {
+          "key": "hero.eyebrow",
+          "type": "text",
+          "instruction": "Short kicker above the headline framing the savings story."
+        },
+        {
+          "key": "hero.title",
+          "type": "text",
+          "instruction": "Headline promising the visitor a clear savings outcome with Xfinity."
+        },
+        {
+          "key": "hero.subtitle",
+          "type": "text",
+          "instruction": "One-sentence summary of the today-vs-Xfinity comparison shown below."
+        },
+        {
+          "key": "hero.figure",
+          "type": "text",
+          "instruction": "The single big headline savings amount, for example a first-year dollar figure."
+        },
+        {
+          "key": "hero.figureNote",
+          "type": "text",
+          "instruction": "Short note explaining what the headline savings figure represents."
+        },
+        {
+          "key": "hero.cta",
+          "type": "link",
+          "instruction": "Primary hero call to action linking to the shop or order flow."
+        },
+        {
+          "key": "compare.title",
+          "type": "text",
+          "instruction": "Heading introducing the today-versus-Xfinity line-item comparison."
+        },
+        {
+          "key": "compare.todayLabel",
+          "type": "text",
+          "instruction": "Column label for what the visitor pays today."
+        },
+        {
+          "key": "compare.xfinityLabel",
+          "type": "text",
+          "instruction": "Column label for what the visitor pays with Xfinity."
+        },
+        {
+          "key": "item-1.label",
+          "type": "text",
+          "instruction": "Name of the first cost line, such as home internet."
+        },
+        {
+          "key": "item-1.today",
+          "type": "text",
+          "instruction": "What the visitor pays today for the first line item."
+        },
+        {
+          "key": "item-1.xfinity",
+          "type": "text",
+          "instruction": "What the visitor pays with Xfinity for the first line item."
+        },
+        {
+          "key": "item-1.save",
+          "type": "text",
+          "instruction": "Monthly savings on the first line item."
+        },
+        {
+          "key": "item-2.label",
+          "type": "text",
+          "instruction": "Name of the second cost line, such as a mobile line."
+        },
+        {
+          "key": "item-2.today",
+          "type": "text",
+          "instruction": "What the visitor pays today for the second line item."
+        },
+        {
+          "key": "item-2.xfinity",
+          "type": "text",
+          "instruction": "What the visitor pays with Xfinity for the second line item."
+        },
+        {
+          "key": "item-2.save",
+          "type": "text",
+          "instruction": "Monthly savings on the second line item."
+        },
+        {
+          "key": "item-3.label",
+          "type": "text",
+          "instruction": "Name of the third cost line, such as streaming apps."
+        },
+        {
+          "key": "item-3.today",
+          "type": "text",
+          "instruction": "What the visitor pays today for the third line item."
+        },
+        {
+          "key": "item-3.xfinity",
+          "type": "text",
+          "instruction": "What the visitor pays with Xfinity for the third line item."
+        },
+        {
+          "key": "item-3.save",
+          "type": "text",
+          "instruction": "Monthly savings on the third line item."
+        },
+        {
+          "key": "total.label",
+          "type": "text",
+          "instruction": "Label for the combined monthly total row."
+        },
+        {
+          "key": "total.today",
+          "type": "text",
+          "instruction": "Combined amount the visitor pays today across all line items."
+        },
+        {
+          "key": "total.xfinity",
+          "type": "text",
+          "instruction": "Combined amount the visitor pays with Xfinity across all line items."
+        },
+        {
+          "key": "total.save",
+          "type": "text",
+          "instruction": "Combined monthly savings across all line items."
+        },
+        {
+          "key": "bundle.eyebrow",
+          "type": "text",
+          "instruction": "Kicker introducing the bundle-savings highlight."
+        },
+        {
+          "key": "bundle.title",
+          "type": "text",
+          "instruction": "Heading for the bundle-savings highlight section."
+        },
+        {
+          "key": "bundle.body",
+          "type": "text",
+          "instruction": "Paragraph describing how bundling mobile increases the savings."
+        },
+        {
+          "key": "bundle.features",
+          "type": "list",
+          "instruction": "Bulleted list of bundle savings benefits."
+        },
+        {
+          "key": "bundle.cta",
+          "type": "link",
+          "instruction": "Call to action to explore the bundle or mobile savings."
+        },
+        {
+          "key": "bundle.image",
+          "type": "image",
+          "instruction": "Supporting image for the bundle highlight. Use a real Xfinity asset URL."
+        },
+        {
+          "key": "breakdown.title",
+          "type": "text",
+          "instruction": "Heading introducing where the savings come from."
+        },
+        {
+          "key": "breakdown.items",
+          "type": "list",
+          "instruction": "List of reasons that explain how the savings add up."
+        },
+        {
+          "key": "cta.title",
+          "type": "text",
+          "instruction": "Closing call-to-action heading."
+        },
+        {
+          "key": "cta.body",
+          "type": "text",
+          "instruction": "Closing call-to-action supporting copy."
+        },
+        {
+          "key": "cta.cta",
+          "type": "link",
+          "instruction": "Final call to action to check availability or start the order."
+        }
+      ],
+      "htmlContent": "<main>\n  <section class=\"of1-budget-savings-calculator-hero of1-hero\">\n    <div class=\"hero-copy\">\n      <p class=\"eyebrow\" data-slot=\"hero.eyebrow\">Your savings, added up</p>\n      <h1 data-slot=\"hero.title\">See how much you save with Xfinity</h1>\n      <p class=\"lede\" data-slot=\"hero.subtitle\">Here is what a typical home pays today versus the same setup on Xfinity Internet and Mobile. No contract, no surprise hikes.</p>\n      <a class=\"hero-cta\" data-slot=\"hero.cta\" href=\"https://xfinity.com/learn/internet-service\">Start saving</a>\n    </div>\n    <div class=\"hero-figure\">\n      <p class=\"figure-amount\" data-slot=\"hero.figure\">$960</p>\n      <p class=\"figure-note\" data-slot=\"hero.figureNote\">saved in your first year versus a comparable Internet, Mobile, and streaming setup</p>\n    </div>\n  </section>\n\n  <section class=\"of1-budget-savings-calculator-compare\">\n    <h2 data-slot=\"compare.title\">What you pay today vs with Xfinity</h2>\n    <div class=\"compare-card\">\n      <div class=\"compare-head\">\n        <span class=\"ch-label\">Service</span>\n        <span class=\"ch-today\" data-slot=\"compare.todayLabel\">You pay today</span>\n        <span class=\"ch-xfinity\" data-slot=\"compare.xfinityLabel\">With Xfinity</span>\n        <span class=\"ch-save\">You save</span>\n      </div>\n      <div data-grid-items>\n        <article class=\"compare-row\" data-card=\"1\">\n          <span class=\"cr-label\" data-slot=\"item-1.label\">Home Internet</span>\n          <span class=\"cr-today\"><span class=\"cr-tag\">Today</span><span data-slot=\"item-1.today\">$75/mo</span></span>\n          <span class=\"cr-xfinity\"><span class=\"cr-tag\">Xfinity</span><span data-slot=\"item-1.xfinity\">$45/mo</span></span>\n          <span class=\"cr-save\" data-slot=\"item-1.save\">-$30/mo</span>\n        </article>\n        <article class=\"compare-row\" data-card=\"2\">\n          <span class=\"cr-label\" data-slot=\"item-2.label\">Mobile line</span>\n          <span class=\"cr-today\"><span class=\"cr-tag\">Today</span><span data-slot=\"item-2.today\">$65/mo</span></span>\n          <span class=\"cr-xfinity\"><span class=\"cr-tag\">Xfinity</span><span data-slot=\"item-2.xfinity\">$30/mo</span></span>\n          <span class=\"cr-save\" data-slot=\"item-2.save\">-$35/mo</span>\n        </article>\n        <article class=\"compare-row\" data-card=\"3\">\n          <span class=\"cr-label\" data-slot=\"item-3.label\">Streaming apps</span>\n          <span class=\"cr-today\"><span class=\"cr-tag\">Today</span><span data-slot=\"item-3.today\">$30/mo</span></span>\n          <span class=\"cr-xfinity\"><span class=\"cr-tag\">Xfinity</span><span data-slot=\"item-3.xfinity\">$15/mo</span></span>\n          <span class=\"cr-save\" data-slot=\"item-3.save\">-$15/mo</span>\n        </article>\n      </div>\n      <div class=\"compare-row compare-row--total\">\n        <span class=\"cr-label\" data-slot=\"total.label\">Every month</span>\n        <span class=\"cr-today\"><span class=\"cr-tag\">Today</span><span data-slot=\"total.today\">$170/mo</span></span>\n        <span class=\"cr-xfinity\"><span class=\"cr-tag\">Xfinity</span><span data-slot=\"total.xfinity\">$90/mo</span></span>\n        <span class=\"cr-save cr-save--total\" data-slot=\"total.save\">-$80/mo</span>\n      </div>\n    </div>\n  </section>\n\n  <section class=\"of1-budget-savings-calculator-bundle\">\n    <div class=\"bundle-inner\">\n      <div class=\"bundle-copy\">\n        <p class=\"bundle-eyebrow\" data-slot=\"bundle.eyebrow\">Bundle and save more</p>\n        <h2 data-slot=\"bundle.title\">Add a mobile line and watch the bill drop</h2>\n        <p data-slot=\"bundle.body\">Xfinity Mobile runs on the most reliable 5G network and costs a fraction of the big carriers. Pair it with your Internet and your first line is free for a year, so the savings start on day one.</p>\n        <ul class=\"bundle-features\" data-slot-list=\"bundle.features\">\n          <li>A free Xfinity Mobile line for 1 year with Internet</li>\n          <li>Only pay for the data you use</li>\n          <li>One simple bill for Internet, Mobile, and streaming</li>\n          <li>No annual contract, cancel anytime</li>\n        </ul>\n        <a class=\"bundle-cta\" data-slot=\"bundle.cta\" href=\"https://xfinity.com/learn/mobile\">See mobile savings</a>\n      </div>\n      <img class=\"bundle-img\" data-slot=\"bundle.image\" src=\"https://assets.comcast.com/assets/dotcom/projects_3/2026/june/cix-10733_xm-tmo-competitive-de-positioning-forced-plan-migration/CYMBIH-FullImage.jpg\" alt=\"Xfinity Mobile savings\" />\n    </div>\n  </section>\n\n  <section class=\"of1-budget-savings-calculator-breakdown\">\n    <h2 data-slot=\"breakdown.title\">Where your savings come from</h2>\n    <ul class=\"breakdown-list\" data-slot-list=\"breakdown.items\">\n      <li>A 5-year price guarantee keeps your Internet rate locked, so it never creeps up</li>\n      <li>The xFi Gateway is included, so there is no monthly equipment rental</li>\n      <li>Xfinity Mobile costs less than half of a comparable line on the big carriers</li>\n      <li>StreamSaver bundles Peacock, Netflix, and Apple TV+ for less than subscribing separately</li>\n    </ul>\n  </section>\n\n  <section class=\"of1-budget-savings-calculator-cta\">\n    <h2 data-slot=\"cta.title\">Ready to keep the difference?</h2>\n    <p data-slot=\"cta.body\">Check availability at your address and see your own savings before you commit to anything.</p>\n    <a class=\"final-cta\" data-slot=\"cta.cta\" href=\"https://xfinity.com/learn/internet-service\">Check availability</a>\n  </section>\n</main>\n"
+    },
+    {
+      "name": "of1-comparison-decision-matrix",
+      "intent": "comparison",
+      "description": "A which-should-you-pick decision matrix mapping visitor situations to a recommended option, backed by per-option summary cards, a how-to-choose guide, and a closing CTA.",
+      "minItems": 3,
+      "maxItems": 3,
+      "stylesheet": "/styles/of1-comparison-decision-matrix.css",
+      "slots": [
+        {
+          "key": "hero.eyebrow",
+          "type": "text",
+          "instruction": "Short kicker above the headline framing the decision-matrix guide."
+        },
+        {
+          "key": "hero.title",
+          "type": "text",
+          "instruction": "Headline promising to help the visitor pick the right option."
+        },
+        {
+          "key": "hero.subtitle",
+          "type": "text",
+          "instruction": "One-sentence summary of how the matrix helps the visitor decide."
+        },
+        {
+          "key": "hero.cta",
+          "type": "link",
+          "instruction": "Primary hero call to action linking to plans or the order flow."
+        },
+        {
+          "key": "matrix.title",
+          "type": "text",
+          "instruction": "Heading introducing the decision matrix."
+        },
+        {
+          "key": "matrix.col1",
+          "type": "text",
+          "instruction": "Header for the first matrix column (e.g. Your situation)."
+        },
+        {
+          "key": "matrix.col2",
+          "type": "text",
+          "instruction": "Header for the second matrix column (e.g. We recommend)."
+        },
+        {
+          "key": "matrix.col3",
+          "type": "text",
+          "instruction": "Header for the third matrix column (e.g. Why)."
+        },
+        {
+          "key": "row-1.situation",
+          "type": "text",
+          "instruction": "First visitor situation or need."
+        },
+        {
+          "key": "row-1.pick",
+          "type": "text",
+          "instruction": "Recommended option for the first situation."
+        },
+        {
+          "key": "row-1.why",
+          "type": "text",
+          "instruction": "Reason the recommended option fits the first situation."
+        },
+        {
+          "key": "row-2.situation",
+          "type": "text",
+          "instruction": "Second visitor situation or need."
+        },
+        {
+          "key": "row-2.pick",
+          "type": "text",
+          "instruction": "Recommended option for the second situation."
+        },
+        {
+          "key": "row-2.why",
+          "type": "text",
+          "instruction": "Reason the recommended option fits the second situation."
+        },
+        {
+          "key": "row-3.situation",
+          "type": "text",
+          "instruction": "Third visitor situation or need."
+        },
+        {
+          "key": "row-3.pick",
+          "type": "text",
+          "instruction": "Recommended option for the third situation."
+        },
+        {
+          "key": "row-3.why",
+          "type": "text",
+          "instruction": "Reason the recommended option fits the third situation."
+        },
+        {
+          "key": "row-4.situation",
+          "type": "text",
+          "instruction": "Fourth visitor situation or need."
+        },
+        {
+          "key": "row-4.pick",
+          "type": "text",
+          "instruction": "Recommended option for the fourth situation."
+        },
+        {
+          "key": "row-4.why",
+          "type": "text",
+          "instruction": "Reason the recommended option fits the fourth situation."
+        },
+        {
+          "key": "row-5.situation",
+          "type": "text",
+          "instruction": "Fifth visitor situation or need."
+        },
+        {
+          "key": "row-5.pick",
+          "type": "text",
+          "instruction": "Recommended option for the fifth situation."
+        },
+        {
+          "key": "row-5.why",
+          "type": "text",
+          "instruction": "Reason the recommended option fits the fifth situation."
+        },
+        {
+          "key": "options.title",
+          "type": "text",
+          "instruction": "Heading introducing the per-option summary cards."
+        },
+        {
+          "key": "item-1.image",
+          "type": "image",
+          "instruction": "Image for the first option card. Use a real Xfinity asset URL."
+        },
+        {
+          "key": "item-1.tag",
+          "type": "text",
+          "instruction": "Short tag for the first option (e.g. who it is best for)."
+        },
+        {
+          "key": "item-1.name",
+          "type": "text",
+          "instruction": "Name of the first option."
+        },
+        {
+          "key": "item-1.price",
+          "type": "text",
+          "instruction": "Monthly price of the first option."
+        },
+        {
+          "key": "item-1.body",
+          "type": "text",
+          "instruction": "Short summary of the first option and who it suits."
+        },
+        {
+          "key": "item-1.cta",
+          "type": "link",
+          "instruction": "Link to view or select the first option."
+        },
+        {
+          "key": "item-2.image",
+          "type": "image",
+          "instruction": "Image for the second option card. Use a real Xfinity asset URL."
+        },
+        {
+          "key": "item-2.tag",
+          "type": "text",
+          "instruction": "Short tag for the second option (e.g. who it is best for)."
+        },
+        {
+          "key": "item-2.name",
+          "type": "text",
+          "instruction": "Name of the second option."
+        },
+        {
+          "key": "item-2.price",
+          "type": "text",
+          "instruction": "Monthly price of the second option."
+        },
+        {
+          "key": "item-2.body",
+          "type": "text",
+          "instruction": "Short summary of the second option and who it suits."
+        },
+        {
+          "key": "item-2.cta",
+          "type": "link",
+          "instruction": "Link to view or select the second option."
+        },
+        {
+          "key": "item-3.image",
+          "type": "image",
+          "instruction": "Image for the third option card. Use a real Xfinity asset URL."
+        },
+        {
+          "key": "item-3.tag",
+          "type": "text",
+          "instruction": "Short tag for the third option (e.g. who it is best for)."
+        },
+        {
+          "key": "item-3.name",
+          "type": "text",
+          "instruction": "Name of the third option."
+        },
+        {
+          "key": "item-3.price",
+          "type": "text",
+          "instruction": "Monthly price of the third option."
+        },
+        {
+          "key": "item-3.body",
+          "type": "text",
+          "instruction": "Short summary of the third option and who it suits."
+        },
+        {
+          "key": "item-3.cta",
+          "type": "link",
+          "instruction": "Link to view or select the third option."
+        },
+        {
+          "key": "guide.title",
+          "type": "text",
+          "instruction": "Heading for the how-to-choose quick guide."
+        },
+        {
+          "key": "guide.items",
+          "type": "list",
+          "instruction": "Bulleted list of quick tips for choosing the right option."
+        },
+        {
+          "key": "cta.title",
+          "type": "text",
+          "instruction": "Closing call-to-action heading."
+        },
+        {
+          "key": "cta.body",
+          "type": "text",
+          "instruction": "Closing call-to-action supporting copy."
+        },
+        {
+          "key": "cta.button",
+          "type": "link",
+          "instruction": "Final call to action to start the order."
+        }
+      ],
+      "htmlContent": "<main>\n  <section class=\"of1-comparison-decision-matrix-hero of1-hero\">\n    <div class=\"hero-inner\">\n      <p class=\"eyebrow\" data-slot=\"hero.eyebrow\"></p>\n      <h1 data-slot=\"hero.title\"></h1>\n      <p class=\"hero-sub\" data-slot=\"hero.subtitle\"></p>\n      <a class=\"btn\" data-slot=\"hero.cta\" href=\"#\"></a>\n    </div>\n  </section>\n\n  <section class=\"of1-comparison-decision-matrix-matrix\">\n    <div class=\"matrix-inner\">\n      <h2 data-slot=\"matrix.title\"></h2>\n      <div class=\"matrix\" role=\"table\">\n        <div class=\"mcell mhead col-a\" role=\"columnheader\" data-slot=\"matrix.col1\"></div>\n        <div class=\"mcell mhead col-b\" role=\"columnheader\" data-slot=\"matrix.col2\"></div>\n        <div class=\"mcell mhead col-c\" role=\"columnheader\" data-slot=\"matrix.col3\"></div>\n\n        <div class=\"mcell situation\" role=\"rowheader\" data-slot=\"row-1.situation\"></div>\n        <div class=\"mcell pick\" data-slot=\"row-1.pick\"></div>\n        <div class=\"mcell why\" data-slot=\"row-1.why\"></div>\n\n        <div class=\"mcell situation\" role=\"rowheader\" data-slot=\"row-2.situation\"></div>\n        <div class=\"mcell pick\" data-slot=\"row-2.pick\"></div>\n        <div class=\"mcell why\" data-slot=\"row-2.why\"></div>\n\n        <div class=\"mcell situation\" role=\"rowheader\" data-slot=\"row-3.situation\"></div>\n        <div class=\"mcell pick\" data-slot=\"row-3.pick\"></div>\n        <div class=\"mcell why\" data-slot=\"row-3.why\"></div>\n\n        <div class=\"mcell situation\" role=\"rowheader\" data-slot=\"row-4.situation\"></div>\n        <div class=\"mcell pick\" data-slot=\"row-4.pick\"></div>\n        <div class=\"mcell why\" data-slot=\"row-4.why\"></div>\n\n        <div class=\"mcell situation\" role=\"rowheader\" data-slot=\"row-5.situation\"></div>\n        <div class=\"mcell pick\" data-slot=\"row-5.pick\"></div>\n        <div class=\"mcell why\" data-slot=\"row-5.why\"></div>\n      </div>\n    </div>\n  </section>\n\n  <section class=\"of1-comparison-decision-matrix-options\">\n    <div class=\"options-inner\">\n      <h2 data-slot=\"options.title\"></h2>\n      <div class=\"options-grid\" data-grid-items>\n        <article class=\"option-card\" data-card=\"1\">\n          <img class=\"option-img\" data-slot=\"item-1.image\" src=\"\" alt=\"\" />\n          <div class=\"option-body\">\n            <span class=\"option-tag\" data-slot=\"item-1.tag\"></span>\n            <h3 data-slot=\"item-1.name\"></h3>\n            <p class=\"option-price\" data-slot=\"item-1.price\"></p>\n            <p data-slot=\"item-1.body\"></p>\n            <a class=\"link\" data-slot=\"item-1.cta\" href=\"#\"></a>\n          </div>\n        </article>\n        <article class=\"option-card\" data-card=\"2\">\n          <img class=\"option-img\" data-slot=\"item-2.image\" src=\"\" alt=\"\" />\n          <div class=\"option-body\">\n            <span class=\"option-tag\" data-slot=\"item-2.tag\"></span>\n            <h3 data-slot=\"item-2.name\"></h3>\n            <p class=\"option-price\" data-slot=\"item-2.price\"></p>\n            <p data-slot=\"item-2.body\"></p>\n            <a class=\"link\" data-slot=\"item-2.cta\" href=\"#\"></a>\n          </div>\n        </article>\n        <article class=\"option-card\" data-card=\"3\">\n          <img class=\"option-img\" data-slot=\"item-3.image\" src=\"\" alt=\"\" />\n          <div class=\"option-body\">\n            <span class=\"option-tag\" data-slot=\"item-3.tag\"></span>\n            <h3 data-slot=\"item-3.name\"></h3>\n            <p class=\"option-price\" data-slot=\"item-3.price\"></p>\n            <p data-slot=\"item-3.body\"></p>\n            <a class=\"link\" data-slot=\"item-3.cta\" href=\"#\"></a>\n          </div>\n        </article>\n      </div>\n    </div>\n  </section>\n\n  <section class=\"of1-comparison-decision-matrix-guide\">\n    <div class=\"guide-inner\">\n      <h2 data-slot=\"guide.title\"></h2>\n      <ul class=\"guide-list\" data-slot-list=\"guide.items\"></ul>\n    </div>\n  </section>\n\n  <section class=\"of1-comparison-decision-matrix-cta\">\n    <div class=\"cta-inner\">\n      <h2 data-slot=\"cta.title\"></h2>\n      <p data-slot=\"cta.body\"></p>\n      <a class=\"btn\" data-slot=\"cta.button\" href=\"#\"></a>\n    </div>\n  </section>\n</main>\n"
+    },
+    {
       "name": "of1-comparison-pros-cons",
       "intent": "comparison",
       "description": "Filterable card grid where each plan is an article with a summary plus separate pros and cons lists; filter tabs toggle which cards show, followed by a verdict recap section.",
@@ -734,6 +1402,272 @@
         }
       ],
       "htmlContent": "<main>\n  <section class=\"of1-comparison-pros-cons-hero of1-hero\">\n    <div class=\"of1-container\">\n      <p class=\"eyebrow\" data-slot=\"hero.eyebrow\"></p>\n      <h1 data-slot=\"hero.title\"></h1>\n      <p class=\"hero-sub\" data-slot=\"hero.subtitle\"></p>\n      <a class=\"btn\" data-slot=\"hero.cta\"></a>\n    </div>\n  </section>\n\n  <section class=\"of1-comparison-pros-cons-grid\">\n    <div class=\"of1-container\">\n      <div class=\"filter-bar\" role=\"tablist\" aria-label=\"Filter plans\">\n        <button type=\"button\" class=\"filter is-active\" data-filter=\"all\" data-slot=\"filters.all\"></button>\n        <button type=\"button\" class=\"filter\" data-filter=\"value\" data-slot=\"filters.value\"></button>\n        <button type=\"button\" class=\"filter\" data-filter=\"speed\" data-slot=\"filters.speed\"></button>\n      </div>\n\n      <div class=\"card-grid\">\n        <article class=\"pc-card\" data-card=\"1\" data-category=\"value\">\n          <img class=\"pc-img\" data-slot=\"item-1.image\" alt=\"\" />\n          <div class=\"pc-body\">\n            <span class=\"pc-tag\" data-slot=\"item-1.tag\"></span>\n            <h2 class=\"pc-name\" data-slot=\"item-1.name\"></h2>\n            <p class=\"pc-price\" data-slot=\"item-1.price\"></p>\n            <p class=\"pc-summary\" data-slot=\"item-1.summary\"></p>\n            <p class=\"pc-label pc-label-pro\">Pros</p>\n            <ul class=\"pc-pros\" data-slot-list=\"item-1.pros\"></ul>\n            <p class=\"pc-label pc-label-con\">Cons</p>\n            <ul class=\"pc-cons\" data-slot-list=\"item-1.cons\"></ul>\n            <a class=\"btn\" data-slot=\"item-1.cta\"></a>\n          </div>\n        </article>\n\n        <article class=\"pc-card\" data-card=\"2\" data-category=\"value\">\n          <img class=\"pc-img\" data-slot=\"item-2.image\" alt=\"\" />\n          <div class=\"pc-body\">\n            <span class=\"pc-tag\" data-slot=\"item-2.tag\"></span>\n            <h2 class=\"pc-name\" data-slot=\"item-2.name\"></h2>\n            <p class=\"pc-price\" data-slot=\"item-2.price\"></p>\n            <p class=\"pc-summary\" data-slot=\"item-2.summary\"></p>\n            <p class=\"pc-label pc-label-pro\">Pros</p>\n            <ul class=\"pc-pros\" data-slot-list=\"item-2.pros\"></ul>\n            <p class=\"pc-label pc-label-con\">Cons</p>\n            <ul class=\"pc-cons\" data-slot-list=\"item-2.cons\"></ul>\n            <a class=\"btn\" data-slot=\"item-2.cta\"></a>\n          </div>\n        </article>\n\n        <article class=\"pc-card\" data-card=\"3\" data-category=\"speed\">\n          <img class=\"pc-img\" data-slot=\"item-3.image\" alt=\"\" />\n          <div class=\"pc-body\">\n            <span class=\"pc-tag\" data-slot=\"item-3.tag\"></span>\n            <h2 class=\"pc-name\" data-slot=\"item-3.name\"></h2>\n            <p class=\"pc-price\" data-slot=\"item-3.price\"></p>\n            <p class=\"pc-summary\" data-slot=\"item-3.summary\"></p>\n            <p class=\"pc-label pc-label-pro\">Pros</p>\n            <ul class=\"pc-pros\" data-slot-list=\"item-3.pros\"></ul>\n            <p class=\"pc-label pc-label-con\">Cons</p>\n            <ul class=\"pc-cons\" data-slot-list=\"item-3.cons\"></ul>\n            <a class=\"btn\" data-slot=\"item-3.cta\"></a>\n          </div>\n        </article>\n      </div>\n    </div>\n  </section>\n\n  <section class=\"of1-comparison-pros-cons-verdict\">\n    <div class=\"of1-container\">\n      <h2 data-slot=\"verdict.title\"></h2>\n      <p data-slot=\"verdict.body\"></p>\n      <ul class=\"verdict-list\" data-slot-list=\"verdict.items\"></ul>\n    </div>\n  </section>\n\n  <section class=\"of1-comparison-pros-cons-cta\">\n    <div class=\"of1-container cta-inner\">\n      <h2 data-slot=\"cta.title\"></h2>\n      <p data-slot=\"cta.body\"></p>\n      <a class=\"btn\" data-slot=\"cta.button\"></a>\n    </div>\n  </section>\n\n  <script>\n    (() => {\n      const root = document.querySelector('.of1-comparison-pros-cons-grid');\n      if (!root) return;\n      const tabs = root.querySelectorAll('[data-filter]');\n      const cards = root.querySelectorAll('[data-card]');\n      tabs.forEach((tab) => tab.addEventListener('click', () => {\n        const f = tab.dataset.filter;\n        tabs.forEach((t) => t.classList.toggle('is-active', t === tab));\n        cards.forEach((c) => {\n          const show = f === 'all' || (c.dataset.category || '').includes(f);\n          c.hidden = !show;\n        });\n      }));\n    })();\n  </script>\n</main>\n"
+    },
+    {
+      "name": "of1-comparison-spec-grid",
+      "intent": "comparison",
+      "description": "A dense specification grid comparing three plans as feature rows by product columns, followed by a differences-that-matter section and a closing CTA.",
+      "minItems": 3,
+      "maxItems": 3,
+      "stylesheet": "/styles/of1-comparison-spec-grid.css",
+      "slots": [
+        {
+          "key": "hero.eyebrow",
+          "type": "text",
+          "instruction": "Short kicker above the headline framing the spec comparison."
+        },
+        {
+          "key": "hero.title",
+          "type": "text",
+          "instruction": "Headline introducing the side-by-side specification comparison."
+        },
+        {
+          "key": "hero.subtitle",
+          "type": "text",
+          "instruction": "One-sentence summary of what the visitor is comparing and why."
+        },
+        {
+          "key": "hero.cta",
+          "type": "link",
+          "instruction": "Primary hero call to action linking to the comparison or plans page."
+        },
+        {
+          "key": "hero.image",
+          "type": "image",
+          "instruction": "Supporting hero image. Use a real Xfinity asset URL."
+        },
+        {
+          "key": "intro.title",
+          "type": "text",
+          "instruction": "Heading introducing the specification grid."
+        },
+        {
+          "key": "intro.body",
+          "type": "text",
+          "instruction": "Short paragraph explaining how to read the grid and what differs between plans."
+        },
+        {
+          "key": "spec.corner",
+          "type": "text",
+          "instruction": "Corner label for the grid header, e.g. the category of specs being compared."
+        },
+        {
+          "key": "spec.row1",
+          "type": "text",
+          "instruction": "Label for the first spec row (e.g. Download speed)."
+        },
+        {
+          "key": "spec.row2",
+          "type": "text",
+          "instruction": "Label for the second spec row (e.g. Monthly price)."
+        },
+        {
+          "key": "spec.row3",
+          "type": "text",
+          "instruction": "Label for the third spec row (e.g. Data)."
+        },
+        {
+          "key": "spec.row4",
+          "type": "text",
+          "instruction": "Label for the fourth spec row (e.g. Equipment)."
+        },
+        {
+          "key": "spec.row5",
+          "type": "text",
+          "instruction": "Label for the fifth spec row (e.g. Mobile perk)."
+        },
+        {
+          "key": "spec.row6",
+          "type": "text",
+          "instruction": "Label for the sixth spec row (e.g. Contract)."
+        },
+        {
+          "key": "item-1.badge",
+          "type": "text",
+          "instruction": "Badge label for the first plan column (e.g. Fastest)."
+        },
+        {
+          "key": "item-1.name",
+          "type": "text",
+          "instruction": "Name of the first plan."
+        },
+        {
+          "key": "item-1.speed",
+          "type": "text",
+          "instruction": "First plan value for the speed row."
+        },
+        {
+          "key": "item-1.price",
+          "type": "text",
+          "instruction": "First plan value for the price row."
+        },
+        {
+          "key": "item-1.data",
+          "type": "text",
+          "instruction": "First plan value for the data row."
+        },
+        {
+          "key": "item-1.equipment",
+          "type": "text",
+          "instruction": "First plan value for the equipment row."
+        },
+        {
+          "key": "item-1.mobile",
+          "type": "text",
+          "instruction": "First plan value for the mobile perk row."
+        },
+        {
+          "key": "item-1.contract",
+          "type": "text",
+          "instruction": "First plan value for the contract row."
+        },
+        {
+          "key": "item-1.cta",
+          "type": "link",
+          "instruction": "Call to action to select the first plan."
+        },
+        {
+          "key": "item-2.badge",
+          "type": "text",
+          "instruction": "Badge label for the second plan column (e.g. Most popular)."
+        },
+        {
+          "key": "item-2.name",
+          "type": "text",
+          "instruction": "Name of the second plan."
+        },
+        {
+          "key": "item-2.speed",
+          "type": "text",
+          "instruction": "Second plan value for the speed row."
+        },
+        {
+          "key": "item-2.price",
+          "type": "text",
+          "instruction": "Second plan value for the price row."
+        },
+        {
+          "key": "item-2.data",
+          "type": "text",
+          "instruction": "Second plan value for the data row."
+        },
+        {
+          "key": "item-2.equipment",
+          "type": "text",
+          "instruction": "Second plan value for the equipment row."
+        },
+        {
+          "key": "item-2.mobile",
+          "type": "text",
+          "instruction": "Second plan value for the mobile perk row."
+        },
+        {
+          "key": "item-2.contract",
+          "type": "text",
+          "instruction": "Second plan value for the contract row."
+        },
+        {
+          "key": "item-2.cta",
+          "type": "link",
+          "instruction": "Call to action to select the second plan."
+        },
+        {
+          "key": "item-3.badge",
+          "type": "text",
+          "instruction": "Badge label for the third plan column (e.g. Best value)."
+        },
+        {
+          "key": "item-3.name",
+          "type": "text",
+          "instruction": "Name of the third plan."
+        },
+        {
+          "key": "item-3.speed",
+          "type": "text",
+          "instruction": "Third plan value for the speed row."
+        },
+        {
+          "key": "item-3.price",
+          "type": "text",
+          "instruction": "Third plan value for the price row."
+        },
+        {
+          "key": "item-3.data",
+          "type": "text",
+          "instruction": "Third plan value for the data row."
+        },
+        {
+          "key": "item-3.equipment",
+          "type": "text",
+          "instruction": "Third plan value for the equipment row."
+        },
+        {
+          "key": "item-3.mobile",
+          "type": "text",
+          "instruction": "Third plan value for the mobile perk row."
+        },
+        {
+          "key": "item-3.contract",
+          "type": "text",
+          "instruction": "Third plan value for the contract row."
+        },
+        {
+          "key": "item-3.cta",
+          "type": "link",
+          "instruction": "Call to action to select the third plan."
+        },
+        {
+          "key": "diff.title",
+          "type": "text",
+          "instruction": "Heading for the differences-that-matter section."
+        },
+        {
+          "key": "diff.c1title",
+          "type": "text",
+          "instruction": "Title of the first difference that matters."
+        },
+        {
+          "key": "diff.c1body",
+          "type": "text",
+          "instruction": "Explanation of the first difference that matters."
+        },
+        {
+          "key": "diff.c2title",
+          "type": "text",
+          "instruction": "Title of the second difference that matters."
+        },
+        {
+          "key": "diff.c2body",
+          "type": "text",
+          "instruction": "Explanation of the second difference that matters."
+        },
+        {
+          "key": "diff.c3title",
+          "type": "text",
+          "instruction": "Title of the third difference that matters."
+        },
+        {
+          "key": "diff.c3body",
+          "type": "text",
+          "instruction": "Explanation of the third difference that matters."
+        },
+        {
+          "key": "cta.title",
+          "type": "text",
+          "instruction": "Closing call-to-action heading."
+        },
+        {
+          "key": "cta.body",
+          "type": "text",
+          "instruction": "Closing call-to-action supporting copy."
+        },
+        {
+          "key": "cta.button",
+          "type": "link",
+          "instruction": "Final call to action to start the order."
+        }
+      ],
+      "htmlContent": "<main>\n  <section class=\"of1-comparison-spec-grid-hero of1-hero\">\n    <div class=\"hero-inner\">\n      <div class=\"hero-copy\">\n        <p class=\"eyebrow\" data-slot=\"hero.eyebrow\"></p>\n        <h1 data-slot=\"hero.title\"></h1>\n        <p class=\"hero-sub\" data-slot=\"hero.subtitle\"></p>\n        <a class=\"btn\" data-slot=\"hero.cta\" href=\"#\"></a>\n      </div>\n      <img class=\"hero-img\" data-slot=\"hero.image\" src=\"\" alt=\"\" />\n    </div>\n  </section>\n\n  <section class=\"of1-comparison-spec-grid-intro\">\n    <h2 data-slot=\"intro.title\"></h2>\n    <p data-slot=\"intro.body\"></p>\n  </section>\n\n  <section class=\"of1-comparison-spec-grid-grid\">\n    <div class=\"spec-grid\" role=\"table\">\n      <div class=\"cell corner\" role=\"columnheader\" data-slot=\"spec.corner\"></div>\n      <div class=\"cell head\" role=\"columnheader\">\n        <span class=\"badge\" data-slot=\"item-1.badge\"></span>\n        <span class=\"name\" data-slot=\"item-1.name\"></span>\n      </div>\n      <div class=\"cell head is-featured\" role=\"columnheader\">\n        <span class=\"badge\" data-slot=\"item-2.badge\"></span>\n        <span class=\"name\" data-slot=\"item-2.name\"></span>\n      </div>\n      <div class=\"cell head\" role=\"columnheader\">\n        <span class=\"badge\" data-slot=\"item-3.badge\"></span>\n        <span class=\"name\" data-slot=\"item-3.name\"></span>\n      </div>\n\n      <div class=\"cell rowlabel\" role=\"rowheader\" data-slot=\"spec.row1\"></div>\n      <div class=\"cell value\" data-slot=\"item-1.speed\"></div>\n      <div class=\"cell value is-featured\" data-slot=\"item-2.speed\"></div>\n      <div class=\"cell value\" data-slot=\"item-3.speed\"></div>\n\n      <div class=\"cell rowlabel\" role=\"rowheader\" data-slot=\"spec.row2\"></div>\n      <div class=\"cell value price\" data-slot=\"item-1.price\"></div>\n      <div class=\"cell value price is-featured\" data-slot=\"item-2.price\"></div>\n      <div class=\"cell value price\" data-slot=\"item-3.price\"></div>\n\n      <div class=\"cell rowlabel\" role=\"rowheader\" data-slot=\"spec.row3\"></div>\n      <div class=\"cell value\" data-slot=\"item-1.data\"></div>\n      <div class=\"cell value is-featured\" data-slot=\"item-2.data\"></div>\n      <div class=\"cell value\" data-slot=\"item-3.data\"></div>\n\n      <div class=\"cell rowlabel\" role=\"rowheader\" data-slot=\"spec.row4\"></div>\n      <div class=\"cell value\" data-slot=\"item-1.equipment\"></div>\n      <div class=\"cell value is-featured\" data-slot=\"item-2.equipment\"></div>\n      <div class=\"cell value\" data-slot=\"item-3.equipment\"></div>\n\n      <div class=\"cell rowlabel\" role=\"rowheader\" data-slot=\"spec.row5\"></div>\n      <div class=\"cell value\" data-slot=\"item-1.mobile\"></div>\n      <div class=\"cell value is-featured\" data-slot=\"item-2.mobile\"></div>\n      <div class=\"cell value\" data-slot=\"item-3.mobile\"></div>\n\n      <div class=\"cell rowlabel\" role=\"rowheader\" data-slot=\"spec.row6\"></div>\n      <div class=\"cell value\" data-slot=\"item-1.contract\"></div>\n      <div class=\"cell value is-featured\" data-slot=\"item-2.contract\"></div>\n      <div class=\"cell value\" data-slot=\"item-3.contract\"></div>\n\n      <div class=\"cell corner\"></div>\n      <div class=\"cell action\"><a class=\"btn btn-outline\" data-slot=\"item-1.cta\" href=\"#\"></a></div>\n      <div class=\"cell action is-featured\"><a class=\"btn\" data-slot=\"item-2.cta\" href=\"#\"></a></div>\n      <div class=\"cell action\"><a class=\"btn btn-outline\" data-slot=\"item-3.cta\" href=\"#\"></a></div>\n    </div>\n  </section>\n\n  <section class=\"of1-comparison-spec-grid-diff\">\n    <h2 data-slot=\"diff.title\"></h2>\n    <div class=\"diff-grid\">\n      <article class=\"diff-card\">\n        <h3 data-slot=\"diff.c1title\"></h3>\n        <p data-slot=\"diff.c1body\"></p>\n      </article>\n      <article class=\"diff-card\">\n        <h3 data-slot=\"diff.c2title\"></h3>\n        <p data-slot=\"diff.c2body\"></p>\n      </article>\n      <article class=\"diff-card\">\n        <h3 data-slot=\"diff.c3title\"></h3>\n        <p data-slot=\"diff.c3body\"></p>\n      </article>\n    </div>\n  </section>\n\n  <section class=\"of1-comparison-spec-grid-cta\">\n    <div class=\"cta-inner\">\n      <h2 data-slot=\"cta.title\"></h2>\n      <p data-slot=\"cta.body\"></p>\n      <a class=\"btn\" data-slot=\"cta.button\" href=\"#\"></a>\n    </div>\n  </section>\n</main>\n"
     },
     {
       "name": "of1-comparison-table",
@@ -1229,6 +2163,132 @@
       "htmlContent": "<main>\n  <section class=\"of1-deep-dive-faq-explainer-hero of1-hero\">\n    <div class=\"of1-faq-hero-inner\">\n      <p class=\"of1-faq-eyebrow\" data-slot=\"hero.eyebrow\">Xfinity Internet Q and A</p>\n      <h1 data-slot=\"hero.title\">Your gig WiFi questions, answered</h1>\n      <p class=\"of1-faq-lede\" data-slot=\"hero.subtitle\">The straight answers on speed, equipment, moving day, and the 5-year price guarantee, in plain language.</p>\n      <a class=\"of1-faq-hero-cta\" data-slot=\"hero.cta\" href=\"#\">See plans</a>\n    </div>\n  </section>\n\n  <section class=\"of1-deep-dive-faq-explainer-intro\">\n    <div class=\"of1-faq-prose\">\n      <h2 data-slot=\"intro.title\">Everything you were wondering about</h2>\n      <p data-slot=\"intro.body\">We hear the same questions a lot, so we put the honest answers in one place. Tap any question to expand it.</p>\n    </div>\n  </section>\n\n  <section class=\"of1-deep-dive-faq-explainer-list\">\n    <div class=\"of1-faq-accordion\">\n      <article class=\"of1-faq-item\" data-card=\"1\">\n        <button class=\"of1-faq-q\" type=\"button\" aria-expanded=\"true\">\n          <span data-slot=\"faq-1.question\">What is the Xfinity 5-Year Price Guarantee?</span>\n          <span class=\"of1-faq-icon\" aria-hidden=\"true\"></span>\n        </button>\n        <div class=\"of1-faq-a\">\n          <p data-slot=\"faq-1.answer\">It locks your base monthly internet rate for 60 months, with the freedom to change or cancel anytime and no annual contract. If you move within our service area, your rate stays the same.</p>\n        </div>\n      </article>\n\n      <article class=\"of1-faq-item\" data-card=\"2\">\n        <button class=\"of1-faq-q\" type=\"button\" aria-expanded=\"false\">\n          <span data-slot=\"faq-2.question\">Can I get internet on move-in day?</span>\n          <span class=\"of1-faq-icon\" aria-hidden=\"true\"></span>\n        </button>\n        <div class=\"of1-faq-a\">\n          <p data-slot=\"faq-2.answer\">Yes. Most Xfinity Internet plans support same-day or next-day delivery and same-day self-install using the Xfinity app, so you can be online the day you move in.</p>\n        </div>\n      </article>\n\n      <article class=\"of1-faq-item\" data-card=\"3\">\n        <button class=\"of1-faq-q\" type=\"button\" aria-expanded=\"false\">\n          <span data-slot=\"faq-3.question\">What does the xFi Gateway do?</span>\n          <span class=\"of1-faq-icon\" aria-hidden=\"true\"></span>\n        </button>\n        <div class=\"of1-faq-a\">\n          <p data-slot=\"faq-3.answer\">The xFi Gateway is your modem and router in one, included with your plan. It delivers whole-home WiFi and unlocks Advanced Security and parental controls in the Xfinity app.</p>\n        </div>\n      </article>\n\n      <article class=\"of1-faq-item\" data-card=\"4\">\n        <button class=\"of1-faq-q\" type=\"button\" aria-expanded=\"false\">\n          <span data-slot=\"faq-4.question\">Is there a contract or early termination fee?</span>\n          <span class=\"of1-faq-icon\" aria-hidden=\"true\"></span>\n        </button>\n        <div class=\"of1-faq-a\">\n          <p data-slot=\"faq-4.answer\">No annual contract required. You can change or cancel anytime without a penalty.</p>\n        </div>\n      </article>\n\n      <article class=\"of1-faq-item\" data-card=\"5\">\n        <button class=\"of1-faq-q\" type=\"button\" aria-expanded=\"false\">\n          <span data-slot=\"faq-5.question\">How much can I save by bundling mobile?</span>\n          <span class=\"of1-faq-icon\" aria-hidden=\"true\"></span>\n        </button>\n        <div class=\"of1-faq-a\">\n          <p data-slot=\"faq-5.answer\">Adding an Xfinity Mobile line to your internet can cut your total bill significantly versus Verizon, AT and T, or T-Mobile, and you can try a line free for a year with Xfinity Internet.</p>\n        </div>\n      </article>\n    </div>\n  </section>\n\n  <section class=\"of1-deep-dive-faq-explainer-closing\">\n    <div class=\"of1-faq-prose\">\n      <h2 data-slot=\"closing.title\">Still have questions?</h2>\n      <p data-slot=\"closing.body\">Compare speeds side by side and find the plan that fits your home, all with the price locked for five years.</p>\n      <a class=\"of1-faq-closing-cta\" data-slot=\"closing.cta\" href=\"#\">Compare Internet plans</a>\n    </div>\n  </section>\n\n  <script>\n    (function () {\n      const items = document.querySelectorAll('.of1-deep-dive-faq-explainer-list .of1-faq-item');\n      items.forEach((item) => {\n        const btn = item.querySelector('.of1-faq-q');\n        const setOpen = (open) => {\n          btn.setAttribute('aria-expanded', String(open));\n          item.classList.toggle('is-open', open);\n        };\n        setOpen(btn.getAttribute('aria-expanded') === 'true');\n        btn.addEventListener('click', () => {\n          setOpen(btn.getAttribute('aria-expanded') !== 'true');\n        });\n      });\n    })();\n  </script>\n</main>\n"
     },
     {
+      "name": "of1-deep-dive-how-it-works",
+      "intent": "deep-dive",
+      "description": "A how-it-works explainer that walks the visitor through a numbered step-by-step sequence of how the product or technology works, backed by a benefits section and a closing call to action.",
+      "minItems": 4,
+      "maxItems": 5,
+      "stylesheet": "/styles/of1-deep-dive-how-it-works.css",
+      "slots": [
+        {
+          "key": "hero.eyebrow",
+          "type": "text",
+          "instruction": "Short kicker above the headline signalling this is a how-it-works explainer."
+        },
+        {
+          "key": "hero.title",
+          "type": "text",
+          "instruction": "Headline framing what process or technology the page explains."
+        },
+        {
+          "key": "hero.subtitle",
+          "type": "text",
+          "instruction": "One-sentence plain-language summary of the path the explainer will walk through."
+        },
+        {
+          "key": "hero.cta",
+          "type": "link",
+          "instruction": "Primary hero call to action linking to the relevant product or learn page."
+        },
+        {
+          "key": "steps.title",
+          "type": "text",
+          "instruction": "Heading introducing the numbered step-by-step sequence."
+        },
+        {
+          "key": "steps.intro",
+          "type": "text",
+          "instruction": "Short lead-in sentence setting up the steps that follow."
+        },
+        {
+          "key": "item-1.title",
+          "type": "text",
+          "instruction": "Title of the first step in the sequence."
+        },
+        {
+          "key": "item-1.body",
+          "type": "text",
+          "instruction": "Explanation of what happens in the first step."
+        },
+        {
+          "key": "item-2.title",
+          "type": "text",
+          "instruction": "Title of the second step in the sequence."
+        },
+        {
+          "key": "item-2.body",
+          "type": "text",
+          "instruction": "Explanation of what happens in the second step."
+        },
+        {
+          "key": "item-3.title",
+          "type": "text",
+          "instruction": "Title of the third step in the sequence."
+        },
+        {
+          "key": "item-3.body",
+          "type": "text",
+          "instruction": "Explanation of what happens in the third step."
+        },
+        {
+          "key": "item-4.title",
+          "type": "text",
+          "instruction": "Title of the fourth step in the sequence."
+        },
+        {
+          "key": "item-4.body",
+          "type": "text",
+          "instruction": "Explanation of what happens in the fourth step."
+        },
+        {
+          "key": "item-5.title",
+          "type": "text",
+          "instruction": "Title of the optional fifth step. Leave empty to hide."
+        },
+        {
+          "key": "item-5.body",
+          "type": "text",
+          "instruction": "Explanation of the optional fifth step. Leave empty to hide."
+        },
+        {
+          "key": "benefits.title",
+          "type": "text",
+          "instruction": "Heading for the supporting benefits or spec section."
+        },
+        {
+          "key": "benefits.body",
+          "type": "text",
+          "instruction": "Short paragraph connecting how the setup works to the visitor's real-world benefit."
+        },
+        {
+          "key": "benefits.items",
+          "type": "list",
+          "instruction": "Bulleted list of the concrete benefits or specs that result from how it works."
+        },
+        {
+          "key": "benefits.image",
+          "type": "image",
+          "instruction": "Supporting product image. Use a real Xfinity asset URL."
+        },
+        {
+          "key": "cta.title",
+          "type": "text",
+          "instruction": "Closing call-to-action heading."
+        },
+        {
+          "key": "cta.body",
+          "type": "text",
+          "instruction": "Closing call-to-action supporting copy."
+        },
+        {
+          "key": "cta.cta",
+          "type": "link",
+          "instruction": "Final call to action to start the order or continue."
+        }
+      ],
+      "htmlContent": "<main>\n  <section class=\"of1-deep-dive-how-it-works-hero of1-hero\">\n    <div class=\"of1-hiw-hero-inner\">\n      <p class=\"of1-hiw-eyebrow\" data-slot=\"hero.eyebrow\">How it works</p>\n      <h1 data-slot=\"hero.title\">How fiber-powered Gig WiFi reaches every room</h1>\n      <p class=\"of1-hiw-lede\" data-slot=\"hero.subtitle\">From the fiber-backed network to the xFi Gateway in your living room, here is the simple path your connection takes to power dozens of devices at once.</p>\n      <a class=\"of1-hiw-hero-cta\" data-slot=\"hero.cta\" href=\"#\">See Gig Internet plans</a>\n    </div>\n  </section>\n\n  <section class=\"of1-deep-dive-how-it-works-steps\">\n    <div class=\"of1-hiw-steps-head\">\n      <h2 data-slot=\"steps.title\">Four steps from our network to your screens</h2>\n      <p data-slot=\"steps.intro\">No technician, no guesswork. Here is exactly how your WiFi gets from the Xfinity network to every device in your home.</p>\n    </div>\n    <ol class=\"of1-hiw-grid\" data-grid-items>\n      <li class=\"of1-hiw-step\" data-card=\"1\">\n        <span class=\"of1-hiw-num\" aria-hidden=\"true\">1</span>\n        <h3 data-slot=\"item-1.title\">Fiber-backed speed reaches your home</h3>\n        <p data-slot=\"item-1.body\">Gig-speed data travels over our fiber-powered network right up to your address, delivering up to 1 gigabit per second with the headroom for 4K streaming, gaming, and video calls at the same time.</p>\n      </li>\n      <li class=\"of1-hiw-step\" data-card=\"2\">\n        <span class=\"of1-hiw-num\" aria-hidden=\"true\">2</span>\n        <h3 data-slot=\"item-2.title\">The xFi Gateway turns it into WiFi</h3>\n        <p data-slot=\"item-2.body\">Your included xFi Gateway is a modem and router in one. It takes that incoming signal and broadcasts secure, whole-home WiFi, so coverage reaches the back bedroom just as strongly as the living room.</p>\n      </li>\n      <li class=\"of1-hiw-step\" data-card=\"3\">\n        <span class=\"of1-hiw-num\" aria-hidden=\"true\">3</span>\n        <h3 data-slot=\"item-3.title\">You self-install in minutes</h3>\n        <p data-slot=\"item-3.body\">The Xfinity app walks you through plugging in the Gateway and activating service. Most people are online in about 15 minutes on move-in day, with no technician visit to schedule.</p>\n      </li>\n      <li class=\"of1-hiw-step\" data-card=\"4\">\n        <span class=\"of1-hiw-num\" aria-hidden=\"true\">4</span>\n        <h3 data-slot=\"item-4.title\">You manage it all from the app</h3>\n        <p data-slot=\"item-4.body\">Turn on Advanced Security, set parental controls, pause WiFi at dinner, and check your speeds anytime. Your whole network lives in your pocket.</p>\n      </li>\n      <li class=\"of1-hiw-step\" data-card=\"5\">\n        <span class=\"of1-hiw-num\" aria-hidden=\"true\">5</span>\n        <h3 data-slot=\"item-5.title\">Optional step title</h3>\n        <p data-slot=\"item-5.body\">Optional fifth step body copy.</p>\n      </li>\n    </ol>\n  </section>\n\n  <section class=\"of1-deep-dive-how-it-works-benefits\">\n    <div class=\"of1-hiw-benefits-inner\">\n      <div class=\"of1-hiw-benefits-copy\">\n        <h2 data-slot=\"benefits.title\">What that setup means for your home</h2>\n        <p data-slot=\"benefits.body\">Because the speed is fiber-backed and the Gateway is built for whole-home coverage, you get consistent performance even at peak hours across every connected device.</p>\n        <ul class=\"of1-hiw-benefits-list\" data-slot-list=\"benefits.items\">\n          <li>Up to 1 Gig download speeds with unlimited data</li>\n          <li>xFi Gateway included, no equipment to buy</li>\n          <li>Whole-home WiFi coverage with Advanced Security</li>\n          <li>5-year price guarantee with no annual contract</li>\n        </ul>\n      </div>\n      <img class=\"of1-hiw-benefits-img\" data-slot=\"benefits.image\" src=\"\" alt=\"Xfinity xFi Gateway\" />\n    </div>\n  </section>\n\n  <section class=\"of1-deep-dive-how-it-works-cta\">\n    <div class=\"of1-hiw-cta-inner\">\n      <h2 data-slot=\"cta.title\">Now that you know how it works, get connected</h2>\n      <p data-slot=\"cta.body\">Pick the speed that fits your home, self-install on your schedule, and lock your rate for five years.</p>\n      <a class=\"of1-hiw-cta-btn\" data-slot=\"cta.cta\" href=\"#\">Start my order</a>\n    </div>\n  </section>\n</main>\n"
+    },
+    {
       "name": "of1-deep-dive-longform",
       "intent": "deep-dive",
       "description": "Editorial long-read that explains Xfinity Internet in depth through alternating text and image sections.",
@@ -1348,6 +2408,162 @@
         }
       ],
       "htmlContent": "<main>\n  <section class=\"of1-deep-dive-longform-hero of1-hero\">\n    <div class=\"of1-longform-hero-inner\">\n      <p class=\"of1-longform-eyebrow\" data-slot=\"hero.eyebrow\">Xfinity Internet, explained</p>\n      <h1 data-slot=\"hero.title\">How gig fiber WiFi actually works</h1>\n      <p class=\"of1-longform-lede\" data-slot=\"hero.subtitle\">A plain-language guide to the speed, the equipment, the setup, and the price you can count on for five years.</p>\n      <a class=\"of1-longform-hero-cta\" data-slot=\"hero.cta\" href=\"#\">Explore Internet plans</a>\n    </div>\n    <img class=\"of1-longform-hero-img\" data-slot=\"hero.image\" src=\"\" alt=\"Xfinity Internet\" />\n  </section>\n\n  <section class=\"of1-deep-dive-longform-intro\">\n    <div class=\"of1-longform-prose\">\n      <h2 data-slot=\"intro.title\">Fast WiFi, minus the jargon</h2>\n      <p data-slot=\"intro.body\">Internet shopping is full of acronyms and asterisks. This guide skips all that. We will walk through what gig speed means for your home, what the xFi Gateway does, how same-day self-install works, and why your price stays put for five years.</p>\n    </div>\n  </section>\n\n  <section class=\"of1-deep-dive-longform-body\">\n    <article class=\"of1-longform-block\" data-card=\"1\">\n      <div class=\"of1-longform-prose\">\n        <h2 data-slot=\"section-1.title\">Gig-speed fiber, built for a busy home</h2>\n        <p data-slot=\"section-1.body\">Gig means up to 1 gigabit per second of download speed, powered by fiber. In everyday terms, that is enough headroom to stream in 4K, jump on video calls, and game online across dozens of devices at the same time, without anyone buffering.</p>\n      </div>\n      <img class=\"of1-longform-fig\" data-slot=\"section-1.image\" src=\"\" alt=\"\" />\n    </article>\n\n    <article class=\"of1-longform-block\" data-card=\"2\">\n      <div class=\"of1-longform-prose\">\n        <h2 data-slot=\"section-2.title\">The xFi Gateway does the heavy lifting</h2>\n        <p data-slot=\"section-2.body\">The xFi Gateway is your modem and router in one box, included with your plan. It spreads whole-home WiFi to every room and unlocks Advanced Security and parental controls right inside the Xfinity app, so you manage the whole network from your phone.</p>\n      </div>\n      <img class=\"of1-longform-fig\" data-slot=\"section-2.image\" src=\"\" alt=\"\" />\n    </article>\n\n    <article class=\"of1-longform-block\" data-card=\"3\">\n      <div class=\"of1-longform-prose\">\n        <h2 data-slot=\"section-3.title\">Online the day you move in</h2>\n        <p data-slot=\"section-3.body\">Most Xfinity Internet plans support same-day self-install. Your equipment ships to you, the Xfinity app walks you through each step, and you are usually online in minutes, with no technician visit to schedule and no waiting around.</p>\n      </div>\n      <img class=\"of1-longform-fig\" data-slot=\"section-3.image\" src=\"\" alt=\"\" />\n    </article>\n\n    <article class=\"of1-longform-block\" data-card=\"4\">\n      <div class=\"of1-longform-prose\">\n        <h2 data-slot=\"section-4.title\">One price, locked for five years</h2>\n        <p data-slot=\"section-4.body\">The 5-year price guarantee locks your base monthly rate for 60 months. There is no annual contract, so you keep the freedom to change or cancel anytime. Even if you move within our service area, your rate comes with you.</p>\n      </div>\n      <img class=\"of1-longform-fig\" data-slot=\"section-4.image\" src=\"\" alt=\"\" />\n    </article>\n  </section>\n\n  <section class=\"of1-deep-dive-longform-closing\">\n    <div class=\"of1-longform-prose\">\n      <h2 data-slot=\"closing.title\">Ready when you are</h2>\n      <p data-slot=\"closing.body\">Now that you know how it all fits together, pick the speed that matches your home and get online on your schedule.</p>\n      <a class=\"of1-longform-closing-cta\" data-slot=\"closing.cta\" href=\"#\">See plans in your area</a>\n    </div>\n  </section>\n</main>\n"
+    },
+    {
+      "name": "of1-deep-dive-spec-sheet",
+      "intent": "deep-dive",
+      "description": "A structured spec-sheet fact file presenting the product as labeled label-to-value rows, followed by a what-this-means-for-you callout and a closing call to action.",
+      "minItems": 4,
+      "maxItems": 8,
+      "stylesheet": "/styles/of1-deep-dive-spec-sheet.css",
+      "slots": [
+        {
+          "key": "hero.eyebrow",
+          "type": "text",
+          "instruction": "Short kicker above the headline signalling this is a spec sheet or fact file."
+        },
+        {
+          "key": "hero.title",
+          "type": "text",
+          "instruction": "Headline naming the product this spec sheet covers."
+        },
+        {
+          "key": "hero.subtitle",
+          "type": "text",
+          "instruction": "One-sentence summary framing the spec sheet as a plain comparison aid."
+        },
+        {
+          "key": "hero.cta",
+          "type": "link",
+          "instruction": "Primary hero call to action such as checking availability."
+        },
+        {
+          "key": "specs.title",
+          "type": "text",
+          "instruction": "Heading introducing the labeled spec rows."
+        },
+        {
+          "key": "specs.intro",
+          "type": "text",
+          "instruction": "Short lead-in sentence setting up the spec rows that follow."
+        },
+        {
+          "key": "item-1.label",
+          "type": "text",
+          "instruction": "Label for the first spec row, for example the attribute name."
+        },
+        {
+          "key": "item-1.value",
+          "type": "text",
+          "instruction": "Value for the first spec row."
+        },
+        {
+          "key": "item-2.label",
+          "type": "text",
+          "instruction": "Label for the second spec row."
+        },
+        {
+          "key": "item-2.value",
+          "type": "text",
+          "instruction": "Value for the second spec row."
+        },
+        {
+          "key": "item-3.label",
+          "type": "text",
+          "instruction": "Label for the third spec row."
+        },
+        {
+          "key": "item-3.value",
+          "type": "text",
+          "instruction": "Value for the third spec row."
+        },
+        {
+          "key": "item-4.label",
+          "type": "text",
+          "instruction": "Label for the fourth spec row."
+        },
+        {
+          "key": "item-4.value",
+          "type": "text",
+          "instruction": "Value for the fourth spec row."
+        },
+        {
+          "key": "item-5.label",
+          "type": "text",
+          "instruction": "Label for the optional fifth spec row. Leave empty to hide."
+        },
+        {
+          "key": "item-5.value",
+          "type": "text",
+          "instruction": "Value for the optional fifth spec row. Leave empty to hide."
+        },
+        {
+          "key": "item-6.label",
+          "type": "text",
+          "instruction": "Label for the optional sixth spec row. Leave empty to hide."
+        },
+        {
+          "key": "item-6.value",
+          "type": "text",
+          "instruction": "Value for the optional sixth spec row. Leave empty to hide."
+        },
+        {
+          "key": "item-7.label",
+          "type": "text",
+          "instruction": "Label for the optional seventh spec row. Leave empty to hide."
+        },
+        {
+          "key": "item-7.value",
+          "type": "text",
+          "instruction": "Value for the optional seventh spec row. Leave empty to hide."
+        },
+        {
+          "key": "item-8.label",
+          "type": "text",
+          "instruction": "Label for the optional eighth spec row. Leave empty to hide."
+        },
+        {
+          "key": "item-8.value",
+          "type": "text",
+          "instruction": "Value for the optional eighth spec row. Leave empty to hide."
+        },
+        {
+          "key": "means.eyebrow",
+          "type": "text",
+          "instruction": "Kicker flagging the what-this-means-for-you callout."
+        },
+        {
+          "key": "means.title",
+          "type": "text",
+          "instruction": "Heading for the what-this-means-for-you callout."
+        },
+        {
+          "key": "means.body",
+          "type": "text",
+          "instruction": "Short paragraph framing why the specs matter in everyday life."
+        },
+        {
+          "key": "means.items",
+          "type": "list",
+          "instruction": "List translating each key spec into a concrete real-world benefit."
+        },
+        {
+          "key": "cta.title",
+          "type": "text",
+          "instruction": "Closing call-to-action heading."
+        },
+        {
+          "key": "cta.body",
+          "type": "text",
+          "instruction": "Closing call-to-action supporting copy."
+        },
+        {
+          "key": "cta.cta",
+          "type": "link",
+          "instruction": "Final call to action to start the order or check availability."
+        }
+      ],
+      "htmlContent": "<main>\n  <section class=\"of1-deep-dive-spec-sheet-hero of1-hero\">\n    <div class=\"of1-spec-hero-inner\">\n      <p class=\"of1-spec-eyebrow\" data-slot=\"hero.eyebrow\">Fact file</p>\n      <h1 data-slot=\"hero.title\">Xfinity Gig Internet, spec by spec</h1>\n      <p class=\"of1-spec-lede\" data-slot=\"hero.subtitle\">Every number that matters, laid out plainly so you can compare with confidence before you decide.</p>\n      <a class=\"of1-spec-hero-cta\" data-slot=\"hero.cta\" href=\"#\">Check availability</a>\n    </div>\n  </section>\n\n  <section class=\"of1-deep-dive-spec-sheet-specs\">\n    <div class=\"of1-spec-specs-head\">\n      <h2 data-slot=\"specs.title\">The specs at a glance</h2>\n      <p data-slot=\"specs.intro\">No fine print games. Here is what you get with Gig Internet, spelled out.</p>\n    </div>\n    <dl class=\"of1-spec-list\" data-grid-items>\n      <div class=\"of1-spec-row\" data-card=\"1\">\n        <dt data-slot=\"item-1.label\">Download speed</dt>\n        <dd data-slot=\"item-1.value\">Up to 1 Gig (1,000 Mbps)</dd>\n      </div>\n      <div class=\"of1-spec-row\" data-card=\"2\">\n        <dt data-slot=\"item-2.label\">Data allowance</dt>\n        <dd data-slot=\"item-2.value\">Unlimited data, no overage fees</dd>\n      </div>\n      <div class=\"of1-spec-row\" data-card=\"3\">\n        <dt data-slot=\"item-3.label\">Equipment</dt>\n        <dd data-slot=\"item-3.value\">xFi Gateway included (modem plus router)</dd>\n      </div>\n      <div class=\"of1-spec-row\" data-card=\"4\">\n        <dt data-slot=\"item-4.label\">Installation</dt>\n        <dd data-slot=\"item-4.value\">Same-day self-install, online in about 15 minutes</dd>\n      </div>\n      <div class=\"of1-spec-row\" data-card=\"5\">\n        <dt data-slot=\"item-5.label\">Monthly price</dt>\n        <dd data-slot=\"item-5.value\">$50/mo with a 5-year price guarantee</dd>\n      </div>\n      <div class=\"of1-spec-row\" data-card=\"6\">\n        <dt data-slot=\"item-6.label\">Contract</dt>\n        <dd data-slot=\"item-6.value\">No annual contract, cancel anytime</dd>\n      </div>\n      <div class=\"of1-spec-row\" data-card=\"7\">\n        <dt data-slot=\"item-7.label\">Optional spec label</dt>\n        <dd data-slot=\"item-7.value\">Optional spec value</dd>\n      </div>\n      <div class=\"of1-spec-row\" data-card=\"8\">\n        <dt data-slot=\"item-8.label\">Optional spec label</dt>\n        <dd data-slot=\"item-8.value\">Optional spec value</dd>\n      </div>\n    </dl>\n  </section>\n\n  <section class=\"of1-deep-dive-spec-sheet-means\">\n    <div class=\"of1-spec-means-inner\">\n      <p class=\"of1-spec-means-flag\" data-slot=\"means.eyebrow\">What this means for you</p>\n      <h2 data-slot=\"means.title\">Translating the numbers into everyday life</h2>\n      <p data-slot=\"means.body\">Specs only matter when they show up in your day. Here is what these numbers actually do for the way you stream, work, and play at home.</p>\n      <ul class=\"of1-spec-means-list\" data-slot-list=\"means.items\">\n        <li>1 Gig speeds mean 4K streaming, gaming, and video calls run at once without buffering.</li>\n        <li>Unlimited data means every device stays online all month with no surprise charges.</li>\n        <li>The included Gateway means nothing to buy and whole-home coverage on day one.</li>\n        <li>The 5-year price guarantee means your bill stays predictable while you settle in.</li>\n      </ul>\n    </div>\n  </section>\n\n  <section class=\"of1-deep-dive-spec-sheet-cta\">\n    <div class=\"of1-spec-cta-inner\">\n      <h2 data-slot=\"cta.title\">Numbers add up? Get connected.</h2>\n      <p data-slot=\"cta.body\">Confirm Gig Internet is available at your address and self-install on your schedule.</p>\n      <a class=\"of1-spec-cta-btn\" data-slot=\"cta.cta\" href=\"#\">Start my order</a>\n    </div>\n  </section>\n</main>\n"
     },
     {
       "name": "of1-deep-dive-timeline",
@@ -2194,6 +3410,313 @@
       "htmlContent": "<main>\n  <section class=\"of1-discovery-gallery-hero of1-hero\">\n    <div class=\"of1-discovery-gallery-hero-inner\">\n      <p class=\"of1-discovery-gallery-eyebrow\" data-slot=\"hero.eyebrow\">Explore Xfinity</p>\n      <h1 data-slot=\"hero.title\">Find the WiFi, mobile, and streaming that fits your life</h1>\n      <p class=\"of1-discovery-gallery-lede\" data-slot=\"hero.subtitle\">Take a look around. Every plan comes with a 5-year price guarantee and no annual contract, so there is no pressure to decide today.</p>\n      <a class=\"of1-discovery-gallery-hero-cta\" data-slot=\"hero.cta\" href=\"https://xfinity.com/learn/internet-service\">Browse all plans</a>\n    </div>\n    <div class=\"of1-discovery-gallery-hero-media\">\n      <img data-slot=\"hero.image\" src=\"\" alt=\"\" loading=\"eager\" />\n    </div>\n  </section>\n\n  <section class=\"of1-discovery-gallery-grid-section\">\n    <div class=\"of1-discovery-gallery-section-head\">\n      <h2 data-slot=\"grid.title\">Browse plans and services</h2>\n      <p data-slot=\"grid.subtitle\">Tap any card to learn more. No commitment, just a closer look.</p>\n    </div>\n    <div class=\"of1-discovery-gallery-grid\">\n      <article class=\"of1-discovery-gallery-card\" data-card=\"1\">\n        <div class=\"of1-discovery-gallery-card-media\">\n          <img data-slot=\"item-1.image\" src=\"\" alt=\"\" loading=\"lazy\" />\n        </div>\n        <div class=\"of1-discovery-gallery-card-body\">\n          <h3 data-slot=\"item-1.title\">Xfinity Gig Internet</h3>\n          <p data-slot=\"item-1.body\">Fiber-powered Gig WiFi for busy, always-online homes.</p>\n          <a data-slot=\"item-1.cta\" href=\"https://xfinity.com/learn/internet-service/gig\">See Gig Internet</a>\n        </div>\n      </article>\n      <article class=\"of1-discovery-gallery-card\" data-card=\"2\">\n        <div class=\"of1-discovery-gallery-card-media\">\n          <img data-slot=\"item-2.image\" src=\"\" alt=\"\" loading=\"lazy\" />\n        </div>\n        <div class=\"of1-discovery-gallery-card-body\">\n          <h3 data-slot=\"item-2.title\">Xfinity Internet 500 Mbps</h3>\n          <p data-slot=\"item-2.body\">Fast, reliable WiFi that keeps up with every device at once.</p>\n          <a data-slot=\"item-2.cta\" href=\"https://xfinity.com/learn/internet-service\">See 500 Mbps</a>\n        </div>\n      </article>\n      <article class=\"of1-discovery-gallery-card\" data-card=\"3\">\n        <div class=\"of1-discovery-gallery-card-media\">\n          <img data-slot=\"item-3.image\" src=\"\" alt=\"\" loading=\"lazy\" />\n        </div>\n        <div class=\"of1-discovery-gallery-card-body\">\n          <h3 data-slot=\"item-3.title\">Xfinity Internet 300 Mbps</h3>\n          <p data-slot=\"item-3.body\">Simple, seamless WiFi with same-day self-install.</p>\n          <a data-slot=\"item-3.cta\" href=\"https://xfinity.com/learn/internet-service\">See 300 Mbps</a>\n        </div>\n      </article>\n      <article class=\"of1-discovery-gallery-card\" data-card=\"4\">\n        <div class=\"of1-discovery-gallery-card-media\">\n          <img data-slot=\"item-4.image\" src=\"\" alt=\"\" loading=\"lazy\" />\n        </div>\n        <div class=\"of1-discovery-gallery-card-body\">\n          <h3 data-slot=\"item-4.title\">Xfinity Mobile - Mobile Select</h3>\n          <p data-slot=\"item-4.body\">Unlimited talk, text, and data on the most reliable 5G network.</p>\n          <a data-slot=\"item-4.cta\" href=\"https://xfinity.com/learn/mobile\">See Xfinity Mobile</a>\n        </div>\n      </article>\n      <article class=\"of1-discovery-gallery-card\" data-card=\"5\">\n        <div class=\"of1-discovery-gallery-card-media\">\n          <img data-slot=\"item-5.image\" src=\"\" alt=\"\" loading=\"lazy\" />\n        </div>\n        <div class=\"of1-discovery-gallery-card-body\">\n          <h3 data-slot=\"item-5.title\">Xfinity Mobile - Mobile Plus</h3>\n          <p data-slot=\"item-5.body\">The best phone deals plus device protection for life.</p>\n          <a data-slot=\"item-5.cta\" href=\"https://xfinity.com/learn/mobile/plans\">See Mobile Plus</a>\n        </div>\n      </article>\n      <article class=\"of1-discovery-gallery-card\" data-card=\"6\">\n        <div class=\"of1-discovery-gallery-card-media\">\n          <img data-slot=\"item-6.image\" src=\"\" alt=\"\" loading=\"lazy\" />\n        </div>\n        <div class=\"of1-discovery-gallery-card-body\">\n          <h3 data-slot=\"item-6.title\">StreamSaver and Streaming Apps</h3>\n          <p data-slot=\"item-6.body\">Peacock, Netflix, and Apple TV+ together on one simple bill.</p>\n          <a data-slot=\"item-6.cta\" href=\"https://xfinity.com/learn/digital-cable-tv\">See StreamSaver</a>\n        </div>\n      </article>\n    </div>\n  </section>\n\n  <section class=\"of1-discovery-gallery-perks\">\n    <div class=\"of1-discovery-gallery-perks-inner\">\n      <h2 data-slot=\"perks.title\">Good to know as you browse</h2>\n      <ul class=\"of1-discovery-gallery-perks-list\" data-slot-list=\"perks.list\">\n        <li>5-year price guarantee on every plan</li>\n        <li>No annual contract, ever</li>\n        <li>Same-day self-install in minutes</li>\n        <li>xFi Gateway included on select plans</li>\n      </ul>\n    </div>\n  </section>\n\n  <section class=\"of1-discovery-gallery-spotlight-section\">\n    <div class=\"of1-discovery-gallery-section-head\">\n      <h2 data-slot=\"spotlight.title\">Complete your setup</h2>\n      <p data-slot=\"spotlight.subtitle\">Equipment and add-ons that round out your home network.</p>\n    </div>\n    <div class=\"of1-discovery-gallery-spotlight\">\n      <article class=\"of1-discovery-gallery-spotlight-card\" data-card=\"7\">\n        <div class=\"of1-discovery-gallery-spotlight-media\">\n          <img data-slot=\"item-7.image\" src=\"\" alt=\"\" loading=\"lazy\" />\n        </div>\n        <div class=\"of1-discovery-gallery-spotlight-body\">\n          <h3 data-slot=\"item-7.title\">xFi Gateway</h3>\n          <p data-slot=\"item-7.body\">The all-in-one modem and router with powerful whole-home WiFi, included with your plan.</p>\n          <a data-slot=\"item-7.cta\" href=\"https://xfinity.com/learn/internet-service/equipment\">Explore the xFi Gateway</a>\n        </div>\n      </article>\n      <article class=\"of1-discovery-gallery-spotlight-card\" data-card=\"8\">\n        <div class=\"of1-discovery-gallery-spotlight-media\">\n          <img data-slot=\"item-8.image\" src=\"\" alt=\"\" loading=\"lazy\" />\n        </div>\n        <div class=\"of1-discovery-gallery-spotlight-body\">\n          <h3 data-slot=\"item-8.title\">Xfinity Pro</h3>\n          <p data-slot=\"item-8.body\">Professional-grade WiFi that reaches every room, with 4G LTE backup so you stay connected.</p>\n          <a data-slot=\"item-8.cta\" href=\"https://xfinity.com/learn/internet-service/xfinity-pro\">Explore Xfinity Pro</a>\n        </div>\n      </article>\n    </div>\n  </section>\n\n  <section class=\"of1-discovery-gallery-closing\">\n    <div class=\"of1-discovery-gallery-closing-inner\">\n      <h2 data-slot=\"closing.title\">Take your time and explore</h2>\n      <p data-slot=\"closing.subtitle\">Check availability at your address to see the plans and prices near you.</p>\n      <a class=\"of1-discovery-gallery-closing-cta\" data-slot=\"closing.cta\" href=\"https://xfinity.com/learn/internet-service\">Check availability</a>\n    </div>\n  </section>\n</main>\n"
     },
     {
+      "name": "of1-discovery-spotlight",
+      "intent": "discovery",
+      "description": "A single featured spotlight product anchors the page, backed by a compact row of other favorites to explore and a closing availability check.",
+      "minItems": 4,
+      "maxItems": 5,
+      "stylesheet": "/styles/of1-discovery-spotlight.css",
+      "slots": [
+        {
+          "key": "hero.eyebrow",
+          "type": "text",
+          "instruction": "Short kicker above the headline inviting the visitor to look closer."
+        },
+        {
+          "key": "hero.title",
+          "type": "text",
+          "instruction": "Headline framing a single standout plan as the thing worth exploring first."
+        },
+        {
+          "key": "hero.subtitle",
+          "type": "text",
+          "instruction": "One or two sentences reassuring the visitor there is no pressure and every plan has the same guarantees."
+        },
+        {
+          "key": "hero.cta",
+          "type": "link",
+          "instruction": "Primary hero call to action pointing to the featured plan or browse flow."
+        },
+        {
+          "key": "hero.image",
+          "type": "image",
+          "instruction": "Lifestyle hero image. Use a real Xfinity asset URL."
+        },
+        {
+          "key": "spotlight.image",
+          "type": "image",
+          "instruction": "Product image for the featured spotlight plan. Use a real Xfinity asset URL."
+        },
+        {
+          "key": "spotlight.eyebrow",
+          "type": "text",
+          "instruction": "Badge label flagging this as the featured pick."
+        },
+        {
+          "key": "spotlight.title",
+          "type": "text",
+          "instruction": "Name of the featured spotlight product."
+        },
+        {
+          "key": "spotlight.price",
+          "type": "text",
+          "instruction": "Monthly price of the featured product."
+        },
+        {
+          "key": "spotlight.priceNote",
+          "type": "text",
+          "instruction": "Short pricing reassurance such as contract or price-guarantee terms."
+        },
+        {
+          "key": "spotlight.body",
+          "type": "text",
+          "instruction": "Paragraph describing the featured product and who it fits."
+        },
+        {
+          "key": "spotlight.features",
+          "type": "list",
+          "instruction": "Bulleted list of the top features of the featured product."
+        },
+        {
+          "key": "spotlight.cta",
+          "type": "link",
+          "instruction": "Call to action to explore the featured product."
+        },
+        {
+          "key": "explore.title",
+          "type": "text",
+          "instruction": "Heading introducing the secondary set of products to explore."
+        },
+        {
+          "key": "explore.subtitle",
+          "type": "text",
+          "instruction": "Supporting line under the explore heading."
+        },
+        {
+          "key": "item-1.title",
+          "type": "text",
+          "instruction": "Name of the first also-explore product."
+        },
+        {
+          "key": "item-1.price",
+          "type": "text",
+          "instruction": "Price or price note for the first product."
+        },
+        {
+          "key": "item-1.body",
+          "type": "text",
+          "instruction": "Short description of the first product."
+        },
+        {
+          "key": "item-1.cta",
+          "type": "link",
+          "instruction": "Link to view the first product."
+        },
+        {
+          "key": "item-2.title",
+          "type": "text",
+          "instruction": "Name of the second also-explore product."
+        },
+        {
+          "key": "item-2.price",
+          "type": "text",
+          "instruction": "Price or price note for the second product."
+        },
+        {
+          "key": "item-2.body",
+          "type": "text",
+          "instruction": "Short description of the second product."
+        },
+        {
+          "key": "item-2.cta",
+          "type": "link",
+          "instruction": "Link to view the second product."
+        },
+        {
+          "key": "item-3.title",
+          "type": "text",
+          "instruction": "Name of the third also-explore product."
+        },
+        {
+          "key": "item-3.price",
+          "type": "text",
+          "instruction": "Price or price note for the third product."
+        },
+        {
+          "key": "item-3.body",
+          "type": "text",
+          "instruction": "Short description of the third product."
+        },
+        {
+          "key": "item-3.cta",
+          "type": "link",
+          "instruction": "Link to view the third product."
+        },
+        {
+          "key": "item-4.title",
+          "type": "text",
+          "instruction": "Name of the fourth also-explore product."
+        },
+        {
+          "key": "item-4.price",
+          "type": "text",
+          "instruction": "Price or price note for the fourth product."
+        },
+        {
+          "key": "item-4.body",
+          "type": "text",
+          "instruction": "Short description of the fourth product."
+        },
+        {
+          "key": "item-4.cta",
+          "type": "link",
+          "instruction": "Link to view the fourth product."
+        },
+        {
+          "key": "closing.title",
+          "type": "text",
+          "instruction": "Closing call-to-action heading."
+        },
+        {
+          "key": "closing.subtitle",
+          "type": "text",
+          "instruction": "Closing call-to-action supporting copy."
+        },
+        {
+          "key": "closing.cta",
+          "type": "link",
+          "instruction": "Final call to action to check availability or start an order."
+        }
+      ],
+      "htmlContent": "<main>\n  <section class=\"of1-discovery-spotlight-hero of1-hero\">\n    <div class=\"of1-discovery-spotlight-hero-inner\">\n      <p class=\"of1-discovery-spotlight-eyebrow\" data-slot=\"hero.eyebrow\">Worth a closer look</p>\n      <h1 data-slot=\"hero.title\">One plan our neighbors keep coming back to</h1>\n      <p class=\"of1-discovery-spotlight-lede\" data-slot=\"hero.subtitle\">Start with the setup that fits most homes, then explore a few other favorites. No annual contract, and a 5-year price guarantee on every plan.</p>\n      <a class=\"of1-discovery-spotlight-hero-cta\" data-slot=\"hero.cta\" href=\"https://xfinity.com/learn/internet-service\">See what stands out</a>\n    </div>\n    <div class=\"of1-discovery-spotlight-hero-media\">\n      <img data-slot=\"hero.image\" src=\"\" alt=\"\" loading=\"eager\" />\n    </div>\n  </section>\n\n  <section class=\"of1-discovery-spotlight-feature\">\n    <article class=\"of1-discovery-spotlight-feature-card\">\n      <div class=\"of1-discovery-spotlight-feature-media\">\n        <img data-slot=\"spotlight.image\" src=\"\" alt=\"\" loading=\"lazy\" />\n      </div>\n      <div class=\"of1-discovery-spotlight-feature-body\">\n        <p class=\"of1-discovery-spotlight-flag\" data-slot=\"spotlight.eyebrow\">In the spotlight</p>\n        <h2 data-slot=\"spotlight.title\">Xfinity Gig Internet</h2>\n        <p class=\"of1-discovery-spotlight-price\"><span data-slot=\"spotlight.price\">$50/mo</span> <span class=\"of1-discovery-spotlight-price-note\" data-slot=\"spotlight.priceNote\">No annual contract, 5-year price guarantee</span></p>\n        <p data-slot=\"spotlight.body\">Fiber-powered gig WiFi built for busy, always-online homes. Stream in 4K, game, and work from home across dozens of devices, with the xFi Gateway included so you self-install in minutes.</p>\n        <ul class=\"of1-discovery-spotlight-features\" data-slot-list=\"spotlight.features\">\n          <li>Up to 1 Gig download speeds</li>\n          <li>Unlimited data</li>\n          <li>xFi Gateway included</li>\n          <li>Peacock Premium for 2 years</li>\n        </ul>\n        <a class=\"of1-discovery-spotlight-feature-cta\" data-slot=\"spotlight.cta\" href=\"https://xfinity.com/learn/internet-service/gig\">Explore Gig Internet</a>\n      </div>\n    </article>\n  </section>\n\n  <section class=\"of1-discovery-spotlight-explore\">\n    <div class=\"of1-discovery-spotlight-section-head\">\n      <h2 data-slot=\"explore.title\">Also worth exploring</h2>\n      <p data-slot=\"explore.subtitle\">A few other favorites that pair well with your Internet.</p>\n    </div>\n    <div class=\"of1-discovery-spotlight-grid\" data-grid-items>\n      <article class=\"of1-discovery-spotlight-card\" data-card=\"1\">\n        <h3 data-slot=\"item-1.title\">Xfinity Internet 500 Mbps</h3>\n        <p class=\"of1-discovery-spotlight-card-price\" data-slot=\"item-1.price\">$45/mo</p>\n        <p data-slot=\"item-1.body\">Fast, consistent WiFi that keeps up with every device at once, with a free Xfinity Mobile line for a year.</p>\n        <a data-slot=\"item-1.cta\" href=\"https://xfinity.com/learn/internet-service\">See 500 Mbps</a>\n      </article>\n      <article class=\"of1-discovery-spotlight-card\" data-card=\"2\">\n        <h3 data-slot=\"item-2.title\">Xfinity Mobile - Mobile Select</h3>\n        <p class=\"of1-discovery-spotlight-card-price\" data-slot=\"item-2.price\">$30/mo</p>\n        <p data-slot=\"item-2.body\">Unlimited talk, text, and data on the most reliable 5G network. Try a line free for a year with Internet.</p>\n        <a data-slot=\"item-2.cta\" href=\"https://xfinity.com/learn/mobile\">See Xfinity Mobile</a>\n      </article>\n      <article class=\"of1-discovery-spotlight-card\" data-card=\"3\">\n        <h3 data-slot=\"item-3.title\">StreamSaver and Streaming Apps</h3>\n        <p class=\"of1-discovery-spotlight-card-price\" data-slot=\"item-3.price\">$15/mo</p>\n        <p data-slot=\"item-3.body\">Peacock, Netflix, and Apple TV+ together on one simple bill with your Internet plan.</p>\n        <a data-slot=\"item-3.cta\" href=\"https://xfinity.com/learn/digital-cable-tv\">See StreamSaver</a>\n      </article>\n      <article class=\"of1-discovery-spotlight-card\" data-card=\"4\">\n        <h3 data-slot=\"item-4.title\">xFi Gateway</h3>\n        <p class=\"of1-discovery-spotlight-card-price\" data-slot=\"item-4.price\">Included</p>\n        <p data-slot=\"item-4.body\">The all-in-one modem and router with powerful whole-home WiFi, included with your plan.</p>\n        <a data-slot=\"item-4.cta\" href=\"https://xfinity.com/learn/internet-service/equipment\">See the xFi Gateway</a>\n      </article>\n    </div>\n  </section>\n\n  <section class=\"of1-discovery-spotlight-closing\">\n    <div class=\"of1-discovery-spotlight-closing-inner\">\n      <h2 data-slot=\"closing.title\">Like what you see?</h2>\n      <p data-slot=\"closing.subtitle\">Check availability at your address and we will show the plans and prices ready to go near you.</p>\n      <a class=\"of1-discovery-spotlight-closing-cta\" data-slot=\"closing.cta\" href=\"https://xfinity.com/learn/internet-service\">Check availability</a>\n    </div>\n  </section>\n</main>\n"
+    },
+    {
+      "name": "of1-discovery-starter-paths",
+      "intent": "discovery",
+      "description": "A pick-your-path starter layout offering three situational routes, each with a short blurb and a few suggested products, plus a closing availability check.",
+      "minItems": 3,
+      "maxItems": 3,
+      "stylesheet": "/styles/of1-discovery-starter-paths.css",
+      "slots": [
+        {
+          "key": "hero.eyebrow",
+          "type": "text",
+          "instruction": "Short kicker inviting the visitor to pick a starting path."
+        },
+        {
+          "key": "hero.title",
+          "type": "text",
+          "instruction": "Headline asking the visitor to choose the situation that fits them."
+        },
+        {
+          "key": "hero.subtitle",
+          "type": "text",
+          "instruction": "One or two sentences explaining that each path bundles the right services with shared guarantees."
+        },
+        {
+          "key": "item-1.label",
+          "type": "text",
+          "instruction": "Short situational tag for the first path, such as a life moment or use case."
+        },
+        {
+          "key": "item-1.title",
+          "type": "text",
+          "instruction": "Headline naming the first path."
+        },
+        {
+          "key": "item-1.body",
+          "type": "text",
+          "instruction": "Short blurb describing who the first path fits and what it delivers."
+        },
+        {
+          "key": "item-1.products",
+          "type": "list",
+          "instruction": "A few suggested products for the first path, each with a name and price."
+        },
+        {
+          "key": "item-1.cta",
+          "type": "link",
+          "instruction": "Call to action to start the first path."
+        },
+        {
+          "key": "item-2.label",
+          "type": "text",
+          "instruction": "Short situational tag for the second path."
+        },
+        {
+          "key": "item-2.title",
+          "type": "text",
+          "instruction": "Headline naming the second path."
+        },
+        {
+          "key": "item-2.body",
+          "type": "text",
+          "instruction": "Short blurb describing who the second path fits and what it delivers."
+        },
+        {
+          "key": "item-2.products",
+          "type": "list",
+          "instruction": "A few suggested products for the second path, each with a name and price."
+        },
+        {
+          "key": "item-2.cta",
+          "type": "link",
+          "instruction": "Call to action to start the second path."
+        },
+        {
+          "key": "item-3.label",
+          "type": "text",
+          "instruction": "Short situational tag for the third path."
+        },
+        {
+          "key": "item-3.title",
+          "type": "text",
+          "instruction": "Headline naming the third path."
+        },
+        {
+          "key": "item-3.body",
+          "type": "text",
+          "instruction": "Short blurb describing who the third path fits and what it delivers."
+        },
+        {
+          "key": "item-3.products",
+          "type": "list",
+          "instruction": "A few suggested products for the third path, each with a name and price."
+        },
+        {
+          "key": "item-3.cta",
+          "type": "link",
+          "instruction": "Call to action to start the third path."
+        },
+        {
+          "key": "reassure.title",
+          "type": "text",
+          "instruction": "Heading introducing the shared reassurances that apply to every path."
+        },
+        {
+          "key": "reassure.list",
+          "type": "list",
+          "instruction": "List of shared guarantees and reassurances that apply no matter which path is chosen."
+        },
+        {
+          "key": "closing.title",
+          "type": "text",
+          "instruction": "Closing call-to-action heading for visitors unsure which path to pick."
+        },
+        {
+          "key": "closing.subtitle",
+          "type": "text",
+          "instruction": "Closing call-to-action supporting copy."
+        },
+        {
+          "key": "closing.cta",
+          "type": "link",
+          "instruction": "Final call to action to check availability or get matched."
+        }
+      ],
+      "htmlContent": "<main>\n  <section class=\"of1-discovery-starter-paths-hero of1-hero\">\n    <div class=\"of1-discovery-starter-paths-hero-inner\">\n      <p class=\"of1-discovery-starter-paths-eyebrow\" data-slot=\"hero.eyebrow\">Pick your path</p>\n      <h1 data-slot=\"hero.title\">Where should we start? Choose the moment that sounds like you</h1>\n      <p class=\"of1-discovery-starter-paths-lede\" data-slot=\"hero.subtitle\">Every path pairs the Internet, mobile, and streaming that fit how you live, all with no annual contract and a 5-year price guarantee.</p>\n    </div>\n  </section>\n\n  <section class=\"of1-discovery-starter-paths-paths\">\n    <div class=\"of1-discovery-starter-paths-grid\" data-grid-items>\n      <article class=\"of1-discovery-starter-paths-card\" data-card=\"1\">\n        <p class=\"of1-discovery-starter-paths-label\" data-slot=\"item-1.label\">Just moved in</p>\n        <h2 data-slot=\"item-1.title\">Setting up a new home</h2>\n        <p data-slot=\"item-1.body\">Get online on day one with gig-fast WiFi you self-install in minutes, plus a free mobile line to keep the first bill light.</p>\n        <p class=\"of1-discovery-starter-paths-suggested\">Suggested for this path</p>\n        <ul class=\"of1-discovery-starter-paths-products\" data-slot-list=\"item-1.products\">\n          <li>Xfinity Gig Internet - $50/mo</li>\n          <li>xFi Gateway - included</li>\n          <li>Xfinity Mobile - Mobile Select - $30/mo</li>\n        </ul>\n        <a class=\"of1-discovery-starter-paths-card-cta\" data-slot=\"item-1.cta\" href=\"https://xfinity.com/learn/internet-service/gig\">Start this path</a>\n      </article>\n\n      <article class=\"of1-discovery-starter-paths-card\" data-card=\"2\">\n        <p class=\"of1-discovery-starter-paths-label\" data-slot=\"item-2.label\">Work from home</p>\n        <h2 data-slot=\"item-2.title\">Keeping every room connected</h2>\n        <p data-slot=\"item-2.body\">Reliable WiFi that reaches the home office, with whole-home coverage and 4G LTE backup so calls never drop mid-meeting.</p>\n        <p class=\"of1-discovery-starter-paths-suggested\">Suggested for this path</p>\n        <ul class=\"of1-discovery-starter-paths-products\" data-slot-list=\"item-2.products\">\n          <li>Xfinity Internet 500 Mbps - $45/mo</li>\n          <li>Xfinity Pro - $15/mo</li>\n          <li>Xfinity Mobile - Mobile Select - $30/mo</li>\n        </ul>\n        <a class=\"of1-discovery-starter-paths-card-cta\" data-slot=\"item-2.cta\" href=\"https://xfinity.com/learn/internet-service\">Start this path</a>\n      </article>\n\n      <article class=\"of1-discovery-starter-paths-card\" data-card=\"3\">\n        <p class=\"of1-discovery-starter-paths-label\" data-slot=\"item-3.label\">Streaming and gaming</p>\n        <h2 data-slot=\"item-3.title\">Powering movie nights and match nights</h2>\n        <p data-slot=\"item-3.body\">Gig speeds and unlimited data for 4K streaming and low-lag gaming, with your favorite apps bundled on one simple bill.</p>\n        <p class=\"of1-discovery-starter-paths-suggested\">Suggested for this path</p>\n        <ul class=\"of1-discovery-starter-paths-products\" data-slot-list=\"item-3.products\">\n          <li>Xfinity Gig Internet - $50/mo</li>\n          <li>StreamSaver and Streaming Apps - $15/mo</li>\n          <li>Xfinity Mobile - Mobile Plus - $45/mo</li>\n        </ul>\n        <a class=\"of1-discovery-starter-paths-card-cta\" data-slot=\"item-3.cta\" href=\"https://xfinity.com/learn/digital-cable-tv\">Start this path</a>\n      </article>\n    </div>\n  </section>\n\n  <section class=\"of1-discovery-starter-paths-reassure\">\n    <div class=\"of1-discovery-starter-paths-reassure-inner\">\n      <h2 data-slot=\"reassure.title\">Whichever path you pick</h2>\n      <ul class=\"of1-discovery-starter-paths-reassure-list\" data-slot-list=\"reassure.list\">\n        <li>5-year price guarantee on every plan</li>\n        <li>No annual contract, ever</li>\n        <li>Same-day self-install in minutes</li>\n        <li>Switch paths anytime as your needs change</li>\n      </ul>\n    </div>\n  </section>\n\n  <section class=\"of1-discovery-starter-paths-closing\">\n    <div class=\"of1-discovery-starter-paths-closing-inner\">\n      <h2 data-slot=\"closing.title\">Not sure which path is yours?</h2>\n      <p data-slot=\"closing.subtitle\">Check availability at your address and we will help you match a path to the plans ready to go near you.</p>\n      <a class=\"of1-discovery-starter-paths-closing-cta\" data-slot=\"closing.cta\" href=\"https://xfinity.com/learn/internet-service\">Check availability</a>\n    </div>\n  </section>\n</main>\n"
+    },
+    {
       "name": "of1-recommendation-curated-bundle",
       "intent": "recommendation",
       "description": "A curated internet + mobile + equipment bundle presented as one package with a first-year total and an interactive toggle for the free mobile line.",
@@ -2370,6 +3893,197 @@
       "htmlContent": "<main>\n  <section class=\"of1-recommendation-curated-bundle-hero of1-hero\">\n    <p class=\"of1-eyebrow\" data-slot=\"hero.eyebrow\">Your move-in bundle</p>\n    <h1 data-slot=\"hero.title\">Gig Internet plus a free Mobile line, ready to go</h1>\n    <p class=\"of1-hero-sub\" data-slot=\"hero.subtitle\">One curated package for your new apartment: gig-speed WiFi, the xFi Gateway, and an Xfinity Mobile line free for a year.</p>\n    <a class=\"of1-btn\" data-slot=\"hero.cta\" href=\"#\">Get this bundle</a>\n  </section>\n\n  <section class=\"of1-recommendation-curated-bundle-package\">\n    <div class=\"of1-package-copy\">\n      <h2 data-slot=\"bundle.title\">The Mover's Bundle</h2>\n      <p data-slot=\"bundle.body\">Everything you need online on day one, self-installed in minutes and on one simple bill. No annual contract, backed by a 5-year price guarantee.</p>\n      <ul class=\"of1-package-perks\" data-slot-list=\"bundle.perks\">\n        <li>No annual contract</li>\n        <li>Same-day self-install</li>\n        <li>One simple monthly bill</li>\n      </ul>\n    </div>\n    <aside class=\"of1-package-summary\">\n      <p class=\"of1-summary-label\" data-slot=\"bundle.summaryLabel\">Your first-year total</p>\n      <p class=\"of1-summary-total\" data-slot=\"bundle.total\" data-total-with=\"$50/mo\" data-total-without=\"$50/mo\">$50/mo</p>\n      <p class=\"of1-summary-save\" data-save-with=\"You save $360 in year one\" data-save-without=\"Add the free mobile line to save $360\" data-slot=\"bundle.saveNote\">You save $360 in year one</p>\n      <label class=\"of1-summary-toggle\">\n        <input type=\"checkbox\" id=\"of1-mobile-toggle\" checked />\n        <span data-slot=\"bundle.toggleLabel\">Include the free Xfinity Mobile line</span>\n      </label>\n      <a class=\"of1-btn of1-btn-block\" data-slot=\"bundle.cta\" href=\"#\">Build my bundle</a>\n    </aside>\n  </section>\n\n  <section class=\"of1-recommendation-curated-bundle-included\">\n    <h2 data-slot=\"included.title\">What is in the box</h2>\n    <div class=\"of1-included-grid\">\n      <article class=\"of1-included-card\" data-card=\"1\">\n        <img data-slot=\"item-1.image\" src=\"https://assets.comcast.com/assets/dotcom/projects_3/2024/nov/cix-7121_ie-learn-page-updates/IE_BAU-Hero-Learn-Desktop.jpg\" alt=\"Xfinity Gig Internet\" />\n        <div class=\"of1-included-body\">\n          <p class=\"of1-included-tag\" data-slot=\"item-1.tag\">Internet</p>\n          <h3 data-slot=\"item-1.title\">Xfinity Gig Internet</h3>\n          <p class=\"of1-included-price\" data-slot=\"item-1.price\">$50/mo</p>\n          <p data-slot=\"item-1.body\">Up to 1 Gig download speeds with unlimited data, built for streaming in 4K, gaming, and working from home.</p>\n        </div>\n      </article>\n      <article class=\"of1-included-card of1-mobile-item\" data-card=\"2\">\n        <img data-slot=\"item-2.image\" src=\"https://assets.comcast.com/assets/dotcom/projects_3/2026/june/cix-10733_xm-tmo-competitive-de-positioning-forced-plan-migration/TMO-FullImage-Banner-Desktop.jpg\" alt=\"Xfinity Mobile\" />\n        <div class=\"of1-included-body\">\n          <p class=\"of1-included-tag\" data-slot=\"item-2.tag\">Mobile</p>\n          <h3 data-slot=\"item-2.title\">Xfinity Mobile - Mobile Select</h3>\n          <p class=\"of1-included-price\" data-slot=\"item-2.price\">Free for 1 year, then $30/mo</p>\n          <p data-slot=\"item-2.body\">Unlimited talk, text, and data on the most reliable 5G network. Your first line is free for a year with Internet.</p>\n        </div>\n      </article>\n      <article class=\"of1-included-card\" data-card=\"3\">\n        <img data-slot=\"item-3.image\" src=\"https://assets.comcast.com/assets/dotcom/projects/cix-3594_customer_voice_2-0_page/Image_GridFullImage_BlueGateway_Desktop.png\" alt=\"xFi Gateway\" />\n        <div class=\"of1-included-body\">\n          <p class=\"of1-included-tag\" data-slot=\"item-3.tag\">Equipment</p>\n          <h3 data-slot=\"item-3.title\">xFi Gateway</h3>\n          <p class=\"of1-included-price\" data-slot=\"item-3.price\">Included</p>\n          <p data-slot=\"item-3.body\">The all-in-one modem and router for whole-home WiFi, plus Advanced Security and parental controls in the Xfinity app.</p>\n        </div>\n      </article>\n    </div>\n  </section>\n\n  <section class=\"of1-recommendation-curated-bundle-value\">\n    <h2 data-slot=\"value.title\">Why the bundle wins</h2>\n    <ul class=\"of1-value-list\" data-slot-list=\"value.items\">\n      <li>A free mobile line saves you $360 over your first year</li>\n      <li>The xFi Gateway is included, so there is no equipment to buy</li>\n      <li>Peacock Premium is on us for 2 years with Gig Internet</li>\n      <li>One bill, one app, and a 5-year price guarantee</li>\n    </ul>\n  </section>\n\n  <section class=\"of1-recommendation-curated-bundle-cta\">\n    <h2 data-slot=\"cta.title\">Move in, plug in, done</h2>\n    <p data-slot=\"cta.body\">Order the Mover's Bundle today and self-install the same day your keys arrive.</p>\n    <a class=\"of1-btn\" data-slot=\"cta.cta\" href=\"#\">Start my order</a>\n  </section>\n\n  <script>\n    (function () {\n      var toggle = document.getElementById('of1-mobile-toggle');\n      if (!toggle) return;\n      var scope = document.querySelector('.of1-recommendation-curated-bundle-package');\n      var total = scope.querySelector('.of1-summary-total');\n      var save = scope.querySelector('.of1-summary-save');\n      var mobileItem = document.querySelector('.of1-recommendation-curated-bundle-included .of1-mobile-item');\n      function sync() {\n        var on = toggle.checked;\n        if (total) total.textContent = on ? total.dataset.totalWith : total.dataset.totalWithout;\n        if (save) save.textContent = on ? save.dataset.saveWith : save.dataset.saveWithout;\n        if (mobileItem) mobileItem.classList.toggle('is-dimmed', !on);\n      }\n      toggle.addEventListener('change', sync);\n      sync();\n    })();\n  </script>\n</main>\n"
     },
     {
+      "name": "of1-recommendation-editors-choice",
+      "intent": "recommendation",
+      "description": "An editorial editors'-choice layout: one highlighted pick with a pull-quote and rationale, an 'also great for' row of situational picks, and a closing editors' note.",
+      "minItems": 3,
+      "maxItems": 3,
+      "stylesheet": "/styles/of1-recommendation-editors-choice.css",
+      "slots": [
+        {
+          "key": "hero.eyebrow",
+          "type": "text",
+          "instruction": "Short editorial kicker such as 'Editors' Choice' above the headline."
+        },
+        {
+          "key": "hero.title",
+          "type": "text",
+          "instruction": "Personalized headline framing this as the editors' pick for the visitor's situation."
+        },
+        {
+          "key": "hero.subtitle",
+          "type": "text",
+          "instruction": "One-sentence editorial summary of how the pick was chosen and what else stood out."
+        },
+        {
+          "key": "hero.cta",
+          "type": "link",
+          "instruction": "Primary hero call to action jumping to the editors' pick."
+        },
+        {
+          "key": "choice.image",
+          "type": "image",
+          "instruction": "Product image for the editors' choice pick. Use a real Xfinity asset URL."
+        },
+        {
+          "key": "choice.badge",
+          "type": "text",
+          "instruction": "Badge label overlaid on the image flagging the editors' choice."
+        },
+        {
+          "key": "choice.title",
+          "type": "text",
+          "instruction": "Name of the editors' choice product."
+        },
+        {
+          "key": "choice.price",
+          "type": "text",
+          "instruction": "Monthly price of the editors' choice product."
+        },
+        {
+          "key": "choice.priceNote",
+          "type": "text",
+          "instruction": "Short pricing reassurance such as contract or price-guarantee terms."
+        },
+        {
+          "key": "choice.quote",
+          "type": "text",
+          "instruction": "Editorial pull-quote capturing why this pick wins, written in a confident review voice."
+        },
+        {
+          "key": "choice.byline",
+          "type": "text",
+          "instruction": "Attribution line naming the reviewing team behind the pick."
+        },
+        {
+          "key": "choice.rationale",
+          "type": "text",
+          "instruction": "Paragraph explaining in detail why the editors chose this product for the visitor."
+        },
+        {
+          "key": "choice.points",
+          "type": "list",
+          "instruction": "Bulleted list of the standout features that earned this pick the top spot."
+        },
+        {
+          "key": "choice.cta",
+          "type": "link",
+          "instruction": "Call to action to select the editors' choice product."
+        },
+        {
+          "key": "situational.title",
+          "type": "text",
+          "instruction": "Heading introducing the situational 'also great for' alternatives, e.g. 'Also great for...'."
+        },
+        {
+          "key": "item-1.context",
+          "type": "text",
+          "instruction": "Short situational label for the first pick, e.g. 'For a smaller place'."
+        },
+        {
+          "key": "item-1.title",
+          "type": "text",
+          "instruction": "Name of the first situational pick."
+        },
+        {
+          "key": "item-1.price",
+          "type": "text",
+          "instruction": "Monthly price of the first situational pick."
+        },
+        {
+          "key": "item-1.body",
+          "type": "text",
+          "instruction": "Short description of the first situational pick and who it suits."
+        },
+        {
+          "key": "item-1.cta",
+          "type": "link",
+          "instruction": "Link to view or select the first situational pick."
+        },
+        {
+          "key": "item-2.context",
+          "type": "text",
+          "instruction": "Short situational label for the second pick, e.g. 'For a busy household'."
+        },
+        {
+          "key": "item-2.title",
+          "type": "text",
+          "instruction": "Name of the second situational pick."
+        },
+        {
+          "key": "item-2.price",
+          "type": "text",
+          "instruction": "Monthly price of the second situational pick."
+        },
+        {
+          "key": "item-2.body",
+          "type": "text",
+          "instruction": "Short description of the second situational pick and who it suits."
+        },
+        {
+          "key": "item-2.cta",
+          "type": "link",
+          "instruction": "Link to view or select the second situational pick."
+        },
+        {
+          "key": "item-3.context",
+          "type": "text",
+          "instruction": "Short situational label for the third pick, e.g. 'For cutting the bill'."
+        },
+        {
+          "key": "item-3.title",
+          "type": "text",
+          "instruction": "Name of the third situational pick."
+        },
+        {
+          "key": "item-3.price",
+          "type": "text",
+          "instruction": "Monthly price of the third situational pick."
+        },
+        {
+          "key": "item-3.body",
+          "type": "text",
+          "instruction": "Short description of the third situational pick and who it suits."
+        },
+        {
+          "key": "item-3.cta",
+          "type": "link",
+          "instruction": "Link to view or select the third situational pick."
+        },
+        {
+          "key": "note.label",
+          "type": "text",
+          "instruction": "Short kicker above the editors' closing note, e.g. 'The editors' bottom line'."
+        },
+        {
+          "key": "note.title",
+          "type": "text",
+          "instruction": "Heading for the editors' closing recommendation note."
+        },
+        {
+          "key": "note.body",
+          "type": "text",
+          "instruction": "Editorial closing note advising how the visitor should combine the picks."
+        },
+        {
+          "key": "cta.title",
+          "type": "text",
+          "instruction": "Closing call-to-action heading."
+        },
+        {
+          "key": "cta.body",
+          "type": "text",
+          "instruction": "Closing call-to-action supporting copy."
+        },
+        {
+          "key": "cta.cta",
+          "type": "link",
+          "instruction": "Final call to action to start the order."
+        }
+      ],
+      "htmlContent": "<main>\n  <section class=\"of1-recommendation-editors-choice-hero of1-hero\">\n    <p class=\"of1-eyebrow\" data-slot=\"hero.eyebrow\">Editors' Choice</p>\n    <h1 data-slot=\"hero.title\">Our editors' pick for your move-in WiFi</h1>\n    <p class=\"of1-hero-sub\" data-slot=\"hero.subtitle\">After testing every plan for a no-contract, self-install move, our team keeps coming back to one clear winner, plus a few standouts for special situations.</p>\n    <a class=\"of1-btn\" data-slot=\"hero.cta\" href=\"#\">See the editors' pick</a>\n  </section>\n\n  <section class=\"of1-recommendation-editors-choice-choice\">\n    <div class=\"of1-choice-media\">\n      <img data-slot=\"choice.image\" src=\"https://assets.comcast.com/assets/dotcom/projects_3/2024/nov/cix-7121_ie-learn-page-updates/IE_BAU-Hero-Learn-Desktop.jpg\" alt=\"Xfinity Gig Internet\" />\n      <span class=\"of1-choice-badge\" data-slot=\"choice.badge\">Editors' Choice</span>\n    </div>\n    <div class=\"of1-choice-body\">\n      <h2 data-slot=\"choice.title\">Xfinity Gig Internet</h2>\n      <p class=\"of1-choice-price\"><span data-slot=\"choice.price\">$50/mo</span> <span class=\"of1-choice-price-note\" data-slot=\"choice.priceNote\">No annual contract, 5-year price guarantee</span></p>\n      <blockquote class=\"of1-choice-quote\" data-slot=\"choice.quote\">It is the rare plan that is fast enough to future-proof your apartment yet flexible enough to walk away from anytime. For movers, nothing else comes close.</blockquote>\n      <p class=\"of1-choice-byline\" data-slot=\"choice.byline\">Reviewed by the Xfinity Home Networking team</p>\n      <p data-slot=\"choice.rationale\">Gig-speed, fiber-powered WiFi with the xFi Gateway built in means you unbox, self-install in minutes, and are streaming in 4K on move-in day. It handles dozens of devices without a stutter, and there is no contract holding you hostage if your needs change.</p>\n      <ul class=\"of1-choice-points\" data-slot-list=\"choice.points\">\n        <li>Up to 1 Gig download speeds with unlimited data</li>\n        <li>xFi Gateway and whole-home WiFi included</li>\n        <li>Peacock Premium on us for 2 years</li>\n      </ul>\n      <a class=\"of1-btn\" data-slot=\"choice.cta\" href=\"#\">Get the editors' pick</a>\n    </div>\n  </section>\n\n  <section class=\"of1-recommendation-editors-choice-situational\">\n    <h2 data-slot=\"situational.title\">Also great for...</h2>\n    <div data-grid-items class=\"of1-situational-grid\">\n      <article class=\"of1-situational-card\" data-card=\"1\">\n        <p class=\"of1-situational-for\" data-slot=\"item-1.context\">For a smaller place</p>\n        <h3 data-slot=\"item-1.title\">Xfinity Internet 300 Mbps</h3>\n        <p class=\"of1-situational-price\" data-slot=\"item-1.price\">$40/mo</p>\n        <p data-slot=\"item-1.body\">Our best-value starter plan. Reliable, everyday WiFi with same-day self-install and a free Xfinity Mobile line for a year.</p>\n        <a class=\"of1-link\" data-slot=\"item-1.cta\" href=\"#\">See 300 Mbps</a>\n      </article>\n      <article class=\"of1-situational-card\" data-card=\"2\">\n        <p class=\"of1-situational-for\" data-slot=\"item-2.context\">For a busy household</p>\n        <h3 data-slot=\"item-2.title\">Xfinity Internet 500 Mbps</h3>\n        <p class=\"of1-situational-price\" data-slot=\"item-2.price\">$45/mo</p>\n        <p data-slot=\"item-2.body\">Fast, consistent WiFi that keeps up with every device at once, even at peak hours, with no annual contract.</p>\n        <a class=\"of1-link\" data-slot=\"item-2.cta\" href=\"#\">See 500 Mbps</a>\n      </article>\n      <article class=\"of1-situational-card\" data-card=\"3\">\n        <p class=\"of1-situational-for\" data-slot=\"item-3.context\">For cutting the bill</p>\n        <h3 data-slot=\"item-3.title\">Xfinity Mobile - Mobile Select</h3>\n        <p class=\"of1-situational-price\" data-slot=\"item-3.price\">$30/mo</p>\n        <p data-slot=\"item-3.body\">Unlimited talk, text, and data on the most reliable 5G network. Add a line free for a year with any Internet plan.</p>\n        <a class=\"of1-link\" data-slot=\"item-3.cta\" href=\"#\">Add a mobile line</a>\n      </article>\n    </div>\n  </section>\n\n  <section class=\"of1-recommendation-editors-choice-note\">\n    <p class=\"of1-note-label\" data-slot=\"note.label\">The editors' bottom line</p>\n    <h2 data-slot=\"note.title\">Why we would set it up this way</h2>\n    <p data-slot=\"note.body\">Start with Gig Internet for headroom you will not outgrow, then add the free mobile line to trim your monthly total. If your place is small or your budget is tight, the 300 Mbps plan is a genuinely great fallback that we would happily recommend to family.</p>\n  </section>\n\n  <section class=\"of1-recommendation-editors-choice-cta\">\n    <h2 data-slot=\"cta.title\">Go with the editors' pick</h2>\n    <p data-slot=\"cta.body\">Order Gig Internet today, self-install in minutes, and add a free mobile line whenever you are ready.</p>\n    <a class=\"of1-btn\" data-slot=\"cta.cta\" href=\"#\">Start my order</a>\n  </section>\n</main>\n"
+    },
+    {
       "name": "of1-recommendation-hero-pick",
       "intent": "recommendation",
       "description": "One standout recommended plan presented as a big hero pick, backed by personalized reasons and a couple of secondary alternatives.",
@@ -2529,6 +4243,187 @@
         }
       ],
       "htmlContent": "<main>\n  <section class=\"of1-recommendation-hero-pick-hero of1-hero\">\n    <p class=\"of1-eyebrow\" data-slot=\"hero.eyebrow\">Your move-in WiFi, sorted</p>\n    <h1 data-slot=\"hero.title\">For your new apartment, we recommend Gig Internet</h1>\n    <p class=\"of1-hero-sub\" data-slot=\"hero.subtitle\">Fast, no-contract WiFi you can self-install on day one, plus a free Xfinity Mobile line to shrink your monthly bill.</p>\n    <a class=\"of1-btn\" data-slot=\"hero.cta\" href=\"#\">See your recommendation</a>\n  </section>\n\n  <section class=\"of1-recommendation-hero-pick-pick\">\n    <div class=\"of1-pick-media\">\n      <img data-slot=\"pick.image\" src=\"https://assets.comcast.com/assets/dotcom/projects_3/2024/nov/cix-7121_ie-learn-page-updates/IE_BAU-Hero-Learn-Desktop.jpg\" alt=\"Xfinity Gig Internet\" />\n    </div>\n    <div class=\"of1-pick-body\">\n      <p class=\"of1-pick-flag\" data-slot=\"pick.eyebrow\">Top pick for movers</p>\n      <h2 data-slot=\"pick.title\">Xfinity Gig Internet</h2>\n      <p class=\"of1-pick-price\"><span data-slot=\"pick.price\">$50/mo</span> <span class=\"of1-pick-price-note\" data-slot=\"pick.priceNote\">No annual contract, 5-year price guarantee</span></p>\n      <p data-slot=\"pick.body\">Gig-speed fiber-powered WiFi built for streaming in 4K, gaming, and working from home across dozens of devices. The xFi Gateway is included, so you self-install in minutes and you are online on move-in day.</p>\n      <ul class=\"of1-pick-features\" data-slot-list=\"pick.features\">\n        <li>Up to 1 Gig download speeds</li>\n        <li>Unlimited data</li>\n        <li>xFi Gateway included</li>\n        <li>Peacock Premium for 2 years</li>\n      </ul>\n      <a class=\"of1-btn\" data-slot=\"pick.cta\" href=\"#\">Get Gig Internet</a>\n    </div>\n  </section>\n\n  <section class=\"of1-recommendation-hero-pick-reasons\">\n    <h2 data-slot=\"reasons.title\">Why this is the right fit for you</h2>\n    <ul class=\"of1-reasons\" data-slot-list=\"reasons.items\">\n      <li>You wanted no-contract gig speeds, and this plan delivers exactly that with a 5-year price guarantee.</li>\n      <li>Same-day self-install means your WiFi is up the moment you unpack the box.</li>\n      <li>Add a free Xfinity Mobile line for a year and cut your phone bill while you are at it.</li>\n      <li>Unlimited data keeps every device online, from your laptop to the smart TV.</li>\n    </ul>\n  </section>\n\n  <section class=\"of1-recommendation-hero-pick-alternatives\">\n    <h2 data-slot=\"alt.title\">Prefer to start smaller? Two solid alternatives</h2>\n    <div class=\"of1-alt-grid\">\n      <article class=\"of1-alt-card\" data-card=\"1\">\n        <h3 data-slot=\"item-1.title\">Xfinity Internet 300 Mbps</h3>\n        <p class=\"of1-alt-price\" data-slot=\"item-1.price\">$40/mo</p>\n        <p data-slot=\"item-1.body\">Our best-value starter plan with 99.9% reliability, same-day self-install, and a free Xfinity Mobile line for a year.</p>\n        <a class=\"of1-link\" data-slot=\"item-1.cta\" href=\"#\">See 300 Mbps</a>\n      </article>\n      <article class=\"of1-alt-card\" data-card=\"2\">\n        <h3 data-slot=\"item-2.title\">Xfinity Internet 500 Mbps</h3>\n        <p class=\"of1-alt-price\" data-slot=\"item-2.price\">$45/mo</p>\n        <p data-slot=\"item-2.body\">Fast, consistent WiFi that keeps up with all your devices at once, with a free Xfinity Mobile line and no annual contract.</p>\n        <a class=\"of1-link\" data-slot=\"item-2.cta\" href=\"#\">See 500 Mbps</a>\n      </article>\n      <article class=\"of1-alt-card\" data-card=\"3\">\n        <h3 data-slot=\"item-3.title\">Xfinity Mobile - Mobile Select</h3>\n        <p class=\"of1-alt-price\" data-slot=\"item-3.price\">$30/mo</p>\n        <p data-slot=\"item-3.body\">Unlimited talk, text, and data on the most reliable 5G network. Try a line free for a year when you add it to Internet.</p>\n        <a class=\"of1-link\" data-slot=\"item-3.cta\" href=\"#\">Add a mobile line</a>\n      </article>\n    </div>\n  </section>\n\n  <section class=\"of1-recommendation-hero-pick-cta\">\n    <h2 data-slot=\"cta.title\">Ready to get online on move-in day?</h2>\n    <p data-slot=\"cta.body\">Order Gig Internet today, self-install in minutes, and add a free mobile line whenever you are ready.</p>\n    <a class=\"of1-btn\" data-slot=\"cta.cta\" href=\"#\">Start my order</a>\n  </section>\n</main>\n"
+    },
+    {
+      "name": "of1-recommendation-quiz-match",
+      "intent": "recommendation",
+      "description": "A 'matched to you' quiz-result layout: a top match with a match-strength meter and why-it-fits list, a recap of the visitor's answers, and close runner-up cards with match scores.",
+      "minItems": 3,
+      "maxItems": 3,
+      "stylesheet": "/styles/of1-recommendation-quiz-match.css",
+      "slots": [
+        {
+          "key": "hero.eyebrow",
+          "type": "text",
+          "instruction": "Short kicker signaling the result of a personalization quiz, e.g. 'Your match is in'."
+        },
+        {
+          "key": "hero.title",
+          "type": "text",
+          "instruction": "Headline announcing the matched product based on the visitor's answers."
+        },
+        {
+          "key": "hero.subtitle",
+          "type": "text",
+          "instruction": "One-sentence explanation that the pick was matched against what the visitor told us."
+        },
+        {
+          "key": "hero.cta",
+          "type": "link",
+          "instruction": "Primary hero call to action jumping to the match result."
+        },
+        {
+          "key": "match.image",
+          "type": "image",
+          "instruction": "Product image for the top match. Use a real Xfinity asset URL."
+        },
+        {
+          "key": "match.badge",
+          "type": "text",
+          "instruction": "Badge label flagging this as the visitor's top match."
+        },
+        {
+          "key": "match.title",
+          "type": "text",
+          "instruction": "Name of the matched product."
+        },
+        {
+          "key": "match.price",
+          "type": "text",
+          "instruction": "Monthly price of the matched product."
+        },
+        {
+          "key": "match.priceNote",
+          "type": "text",
+          "instruction": "Short pricing reassurance such as contract or price-guarantee terms."
+        },
+        {
+          "key": "match.scoreLabel",
+          "type": "text",
+          "instruction": "Match strength label shown with the meter, e.g. '94% match'."
+        },
+        {
+          "key": "match.body",
+          "type": "text",
+          "instruction": "Paragraph explaining why this product is the strongest match for the visitor's answers."
+        },
+        {
+          "key": "match.fit",
+          "type": "list",
+          "instruction": "List of point-by-point reasons the match fits, each tying back to a stated need."
+        },
+        {
+          "key": "match.cta",
+          "type": "link",
+          "instruction": "Call to action to choose the matched product."
+        },
+        {
+          "key": "recap.title",
+          "type": "text",
+          "instruction": "Heading introducing the recap of the visitor's quiz answers, e.g. 'Based on what you told us'."
+        },
+        {
+          "key": "recap.items",
+          "type": "list",
+          "instruction": "List recapping the answers or preferences the visitor gave that drove the match."
+        },
+        {
+          "key": "runnerup.title",
+          "type": "text",
+          "instruction": "Heading introducing the close runner-up options."
+        },
+        {
+          "key": "item-1.title",
+          "type": "text",
+          "instruction": "Name of the first runner-up product."
+        },
+        {
+          "key": "item-1.score",
+          "type": "text",
+          "instruction": "Match strength for the first runner-up, e.g. '86% match'."
+        },
+        {
+          "key": "item-1.price",
+          "type": "text",
+          "instruction": "Monthly price of the first runner-up."
+        },
+        {
+          "key": "item-1.body",
+          "type": "text",
+          "instruction": "Short description of the first runner-up and how it compares to the match."
+        },
+        {
+          "key": "item-1.cta",
+          "type": "link",
+          "instruction": "Link to view or select the first runner-up."
+        },
+        {
+          "key": "item-2.title",
+          "type": "text",
+          "instruction": "Name of the second runner-up product."
+        },
+        {
+          "key": "item-2.score",
+          "type": "text",
+          "instruction": "Match strength for the second runner-up, e.g. '78% match'."
+        },
+        {
+          "key": "item-2.price",
+          "type": "text",
+          "instruction": "Monthly price of the second runner-up."
+        },
+        {
+          "key": "item-2.body",
+          "type": "text",
+          "instruction": "Short description of the second runner-up and how it compares to the match."
+        },
+        {
+          "key": "item-2.cta",
+          "type": "link",
+          "instruction": "Link to view or select the second runner-up."
+        },
+        {
+          "key": "item-3.title",
+          "type": "text",
+          "instruction": "Name of the third runner-up product."
+        },
+        {
+          "key": "item-3.score",
+          "type": "text",
+          "instruction": "Match strength or label for the third runner-up, e.g. 'Great add-on'."
+        },
+        {
+          "key": "item-3.price",
+          "type": "text",
+          "instruction": "Monthly price of the third runner-up."
+        },
+        {
+          "key": "item-3.body",
+          "type": "text",
+          "instruction": "Short description of the third runner-up and how it compares to the match."
+        },
+        {
+          "key": "item-3.cta",
+          "type": "link",
+          "instruction": "Link to view or select the third runner-up."
+        },
+        {
+          "key": "cta.title",
+          "type": "text",
+          "instruction": "Closing call-to-action heading."
+        },
+        {
+          "key": "cta.body",
+          "type": "text",
+          "instruction": "Closing call-to-action supporting copy."
+        },
+        {
+          "key": "cta.cta",
+          "type": "link",
+          "instruction": "Final call to action to start the order."
+        }
+      ],
+      "htmlContent": "<main>\n  <section class=\"of1-recommendation-quiz-match-hero of1-hero\">\n    <p class=\"of1-eyebrow\" data-slot=\"hero.eyebrow\">Your match is in</p>\n    <h1 data-slot=\"hero.title\">Based on your answers, Gig Internet is your match</h1>\n    <p class=\"of1-hero-sub\" data-slot=\"hero.subtitle\">We lined up what you told us about your new apartment against every Xfinity plan. Here is the one that fits best, and why.</p>\n    <a class=\"of1-btn\" data-slot=\"hero.cta\" href=\"#\">See your match</a>\n  </section>\n\n  <section class=\"of1-recommendation-quiz-match-match\">\n    <div class=\"of1-match-media\">\n      <img data-slot=\"match.image\" src=\"https://assets.comcast.com/assets/dotcom/projects_3/2024/nov/cix-7121_ie-learn-page-updates/IE_BAU-Hero-Learn-Desktop.jpg\" alt=\"Xfinity Gig Internet\" />\n    </div>\n    <div class=\"of1-match-body\">\n      <p class=\"of1-match-flag\" data-slot=\"match.badge\">Your top match</p>\n      <h2 data-slot=\"match.title\">Xfinity Gig Internet</h2>\n      <p class=\"of1-match-price\"><span data-slot=\"match.price\">$50/mo</span> <span class=\"of1-match-price-note\" data-slot=\"match.priceNote\">No annual contract, 5-year price guarantee</span></p>\n      <div class=\"of1-match-meter\">\n        <div class=\"of1-match-meter-bar\"><span class=\"of1-match-meter-fill\" style=\"width:94%\"></span></div>\n        <p class=\"of1-match-score\" data-slot=\"match.scoreLabel\">94% match</p>\n      </div>\n      <p data-slot=\"match.body\">You wanted fast, no-contract WiFi you could set up yourself on move-in day. Gig Internet delivers all three, with room to spare for streaming, gaming, and a home full of devices.</p>\n      <ul class=\"of1-match-fit\" data-slot-list=\"match.fit\">\n        <li>Matches your must-have: no annual contract</li>\n        <li>Matches your speed goal: gig-fast for every device</li>\n        <li>Matches your timeline: same-day self-install</li>\n      </ul>\n      <a class=\"of1-btn\" data-slot=\"match.cta\" href=\"#\">Choose my match</a>\n    </div>\n  </section>\n\n  <section class=\"of1-recommendation-quiz-match-recap\">\n    <h2 data-slot=\"recap.title\">Based on what you told us</h2>\n    <ul class=\"of1-recap-list\" data-slot-list=\"recap.items\">\n      <li>You are setting up WiFi for a new apartment</li>\n      <li>You want to avoid an annual contract</li>\n      <li>You stream, game, and work from home</li>\n      <li>You would rather self-install than book a technician</li>\n    </ul>\n  </section>\n\n  <section class=\"of1-recommendation-quiz-match-runnerups\">\n    <h2 data-slot=\"runnerup.title\">Close runners-up</h2>\n    <div data-grid-items class=\"of1-runnerup-grid\">\n      <article class=\"of1-runnerup-card\" data-card=\"1\">\n        <div class=\"of1-runnerup-head\">\n          <h3 data-slot=\"item-1.title\">Xfinity Internet 500 Mbps</h3>\n          <span class=\"of1-runnerup-score\" data-slot=\"item-1.score\">86% match</span>\n        </div>\n        <p class=\"of1-runnerup-price\" data-slot=\"item-1.price\">$45/mo</p>\n        <p data-slot=\"item-1.body\">A slightly slower, lower-cost fit that still clears every box you cared about, with a free Xfinity Mobile line for a year.</p>\n        <a class=\"of1-link\" data-slot=\"item-1.cta\" href=\"#\">See 500 Mbps</a>\n      </article>\n      <article class=\"of1-runnerup-card\" data-card=\"2\">\n        <div class=\"of1-runnerup-head\">\n          <h3 data-slot=\"item-2.title\">Xfinity Internet 300 Mbps</h3>\n          <span class=\"of1-runnerup-score\" data-slot=\"item-2.score\">78% match</span>\n        </div>\n        <p class=\"of1-runnerup-price\" data-slot=\"item-2.price\">$40/mo</p>\n        <p data-slot=\"item-2.body\">Our best-value pick if budget outranks speed. Reliable everyday WiFi with same-day self-install and no contract.</p>\n        <a class=\"of1-link\" data-slot=\"item-2.cta\" href=\"#\">See 300 Mbps</a>\n      </article>\n      <article class=\"of1-runnerup-card\" data-card=\"3\">\n        <div class=\"of1-runnerup-head\">\n          <h3 data-slot=\"item-3.title\">Xfinity Mobile - Mobile Select</h3>\n          <span class=\"of1-runnerup-score\" data-slot=\"item-3.score\">Great add-on</span>\n        </div>\n        <p class=\"of1-runnerup-price\" data-slot=\"item-3.price\">$30/mo</p>\n        <p data-slot=\"item-3.body\">Not a WiFi plan, but a strong match for your goal to cut the bill. Add a line free for a year with any Internet plan.</p>\n        <a class=\"of1-link\" data-slot=\"item-3.cta\" href=\"#\">Add a mobile line</a>\n      </article>\n    </div>\n  </section>\n\n  <section class=\"of1-recommendation-quiz-match-cta\">\n    <h2 data-slot=\"cta.title\">Ready to go with your match?</h2>\n    <p data-slot=\"cta.body\">Order Gig Internet today, self-install in minutes, and add a free mobile line whenever you are ready.</p>\n    <a class=\"of1-btn\" data-slot=\"cta.cta\" href=\"#\">Start my order</a>\n  </section>\n</main>\n"
     },
     {
       "name": "of1-recommendation-ranked-list",

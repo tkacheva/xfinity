@@ -1,0 +1,127 @@
+{
+  "name": "of1-discovery-starter-paths",
+  "intent": "discovery",
+  "description": "A pick-your-path starter layout offering three situational routes, each with a short blurb and a few suggested products, plus a closing availability check.",
+  "minItems": 3,
+  "maxItems": 3,
+  "stylesheet": "/styles/of1-discovery-starter-paths.css",
+  "html": "/templates/of1-discovery-starter-paths.html",
+  "slots": [
+    {
+      "key": "hero.eyebrow",
+      "type": "text",
+      "instruction": "Short kicker inviting the visitor to pick a starting path."
+    },
+    {
+      "key": "hero.title",
+      "type": "text",
+      "instruction": "Headline asking the visitor to choose the situation that fits them."
+    },
+    {
+      "key": "hero.subtitle",
+      "type": "text",
+      "instruction": "One or two sentences explaining that each path bundles the right services with shared guarantees."
+    },
+    {
+      "key": "item-1.label",
+      "type": "text",
+      "instruction": "Short situational tag for the first path, such as a life moment or use case."
+    },
+    {
+      "key": "item-1.title",
+      "type": "text",
+      "instruction": "Headline naming the first path."
+    },
+    {
+      "key": "item-1.body",
+      "type": "text",
+      "instruction": "Short blurb describing who the first path fits and what it delivers."
+    },
+    {
+      "key": "item-1.products",
+      "type": "list",
+      "instruction": "A few suggested products for the first path, each with a name and price."
+    },
+    {
+      "key": "item-1.cta",
+      "type": "link",
+      "instruction": "Call to action to start the first path."
+    },
+    {
+      "key": "item-2.label",
+      "type": "text",
+      "instruction": "Short situational tag for the second path."
+    },
+    {
+      "key": "item-2.title",
+      "type": "text",
+      "instruction": "Headline naming the second path."
+    },
+    {
+      "key": "item-2.body",
+      "type": "text",
+      "instruction": "Short blurb describing who the second path fits and what it delivers."
+    },
+    {
+      "key": "item-2.products",
+      "type": "list",
+      "instruction": "A few suggested products for the second path, each with a name and price."
+    },
+    {
+      "key": "item-2.cta",
+      "type": "link",
+      "instruction": "Call to action to start the second path."
+    },
+    {
+      "key": "item-3.label",
+      "type": "text",
+      "instruction": "Short situational tag for the third path."
+    },
+    {
+      "key": "item-3.title",
+      "type": "text",
+      "instruction": "Headline naming the third path."
+    },
+    {
+      "key": "item-3.body",
+      "type": "text",
+      "instruction": "Short blurb describing who the third path fits and what it delivers."
+    },
+    {
+      "key": "item-3.products",
+      "type": "list",
+      "instruction": "A few suggested products for the third path, each with a name and price."
+    },
+    {
+      "key": "item-3.cta",
+      "type": "link",
+      "instruction": "Call to action to start the third path."
+    },
+    {
+      "key": "reassure.title",
+      "type": "text",
+      "instruction": "Heading introducing the shared reassurances that apply to every path."
+    },
+    {
+      "key": "reassure.list",
+      "type": "list",
+      "instruction": "List of shared guarantees and reassurances that apply no matter which path is chosen."
+    },
+    {
+      "key": "closing.title",
+      "type": "text",
+      "instruction": "Closing call-to-action heading for visitors unsure which path to pick."
+    },
+    {
+      "key": "closing.subtitle",
+      "type": "text",
+      "instruction": "Closing call-to-action supporting copy."
+    },
+    {
+      "key": "closing.cta",
+      "type": "link",
+      "instruction": "Final call to action to check availability or get matched."
+    }
+  ],
+  "label": "Discovery - Starter Paths"
+}

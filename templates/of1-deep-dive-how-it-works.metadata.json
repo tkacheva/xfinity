@@ -1,0 +1,127 @@
+{
+  "name": "of1-deep-dive-how-it-works",
+  "intent": "deep-dive",
+  "description": "A how-it-works explainer that walks the visitor through a numbered step-by-step sequence of how the product or technology works, backed by a benefits section and a closing call to action.",
+  "minItems": 4,
+  "maxItems": 5,
+  "stylesheet": "/styles/of1-deep-dive-how-it-works.css",
+  "html": "/templates/of1-deep-dive-how-it-works.html",
+  "slots": [
+    {
+      "key": "hero.eyebrow",
+      "type": "text",
+      "instruction": "Short kicker above the headline signalling this is a how-it-works explainer."
+    },
+    {
+      "key": "hero.title",
+      "type": "text",
+      "instruction": "Headline framing what process or technology the page explains."
+    },
+    {
+      "key": "hero.subtitle",
+      "type": "text",
+      "instruction": "One-sentence plain-language summary of the path the explainer will walk through."
+    },
+    {
+      "key": "hero.cta",
+      "type": "link",
+      "instruction": "Primary hero call to action linking to the relevant product or learn page."
+    },
+    {
+      "key": "steps.title",
+      "type": "text",
+      "instruction": "Heading introducing the numbered step-by-step sequence."
+    },
+    {
+      "key": "steps.intro",
+      "type": "text",
+      "instruction": "Short lead-in sentence setting up the steps that follow."
+    },
+    {
+      "key": "item-1.title",
+      "type": "text",
+      "instruction": "Title of the first step in the sequence."
+    },
+    {
+      "key": "item-1.body",
+      "type": "text",
+      "instruction": "Explanation of what happens in the first step."
+    },
+    {
+      "key": "item-2.title",
+      "type": "text",
+      "instruction": "Title of the second step in the sequence."
+    },
+    {
+      "key": "item-2.body",
+      "type": "text",
+      "instruction": "Explanation of what happens in the second step."
+    },
+    {
+      "key": "item-3.title",
+      "type": "text",
+      "instruction": "Title of the third step in the sequence."
+    },
+    {
+      "key": "item-3.body",
+      "type": "text",
+      "instruction": "Explanation of what happens in the third step."
+    },
+    {
+      "key": "item-4.title",
+      "type": "text",
+      "instruction": "Title of the fourth step in the sequence."
+    },
+    {
+      "key": "item-4.body",
+      "type": "text",
+      "instruction": "Explanation of what happens in the fourth step."
+    },
+    {
+      "key": "item-5.title",
+      "type": "text",
+      "instruction": "Title of the optional fifth step. Leave empty to hide."
+    },
+    {
+      "key": "item-5.body",
+      "type": "text",
+      "instruction": "Explanation of the optional fifth step. Leave empty to hide."
+    },
+    {
+      "key": "benefits.title",
+      "type": "text",
+      "instruction": "Heading for the supporting benefits or spec section."
+    },
+    {
+      "key": "benefits.body",
+      "type": "text",
+      "instruction": "Short paragraph connecting how the setup works to the visitor's real-world benefit."
+    },
+    {
+      "key": "benefits.items",
+      "type": "list",
+      "instruction": "Bulleted list of the concrete benefits or specs that result from how it works."
+    },
+    {
+      "key": "benefits.image",
+      "type": "image",
+      "instruction": "Supporting product image. Use a real Xfinity asset URL."
+    },
+    {
+      "key": "cta.title",
+      "type": "text",
+      "instruction": "Closing call-to-action heading."
+    },
+    {
+      "key": "cta.body",
+      "type": "text",
+      "instruction": "Closing call-to-action supporting copy."
+    },
+    {
+      "key": "cta.cta",
+      "type": "link",
+      "instruction": "Final call to action to start the order or continue."
+    }
+  ],
+  "label": "Deep Dive - How It Works"
+}

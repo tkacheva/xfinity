@@ -1,0 +1,222 @@
+{
+  "name": "of1-budget-bill-compare",
+  "intent": "budget",
+  "description": "A side-by-side monthly-bill comparison of two or three plans with included features, add-on costs, and a lowest-total-cost callout.",
+  "minItems": 3,
+  "maxItems": 3,
+  "stylesheet": "/styles/of1-budget-bill-compare.css",
+  "html": "/templates/of1-budget-bill-compare.html",
+  "slots": [
+    {
+      "key": "hero.eyebrow",
+      "type": "text",
+      "instruction": "Short kicker above the headline framing the bill comparison."
+    },
+    {
+      "key": "hero.title",
+      "type": "text",
+      "instruction": "Headline setting up a side-by-side monthly-bill comparison."
+    },
+    {
+      "key": "hero.subtitle",
+      "type": "text",
+      "instruction": "One sentence explaining that the comparison reflects the true total monthly cost."
+    },
+    {
+      "key": "hero.cta",
+      "type": "link",
+      "instruction": "Primary hero call to action linking to the shop or compare flow."
+    },
+    {
+      "key": "compare.title",
+      "type": "text",
+      "instruction": "Heading introducing the side-by-side plan comparison columns."
+    },
+    {
+      "key": "item-1.badge",
+      "type": "text",
+      "instruction": "Badge flagging the first column as the lowest total cost option."
+    },
+    {
+      "key": "item-1.name",
+      "type": "text",
+      "instruction": "Name of the first plan being compared."
+    },
+    {
+      "key": "item-1.price",
+      "type": "text",
+      "instruction": "Base monthly price of the first plan, digits only."
+    },
+    {
+      "key": "item-1.period",
+      "type": "text",
+      "instruction": "Billing period suffix for the first plan, such as /mo."
+    },
+    {
+      "key": "item-1.priceNote",
+      "type": "text",
+      "instruction": "Short note on the first plan's pricing terms."
+    },
+    {
+      "key": "item-1.includes",
+      "type": "list",
+      "instruction": "List of what is included in the first plan."
+    },
+    {
+      "key": "item-1.addonLabel",
+      "type": "text",
+      "instruction": "Label for the first plan's add-on or fee line."
+    },
+    {
+      "key": "item-1.addonPrice",
+      "type": "text",
+      "instruction": "Add-on or fee amount for the first plan."
+    },
+    {
+      "key": "item-1.total",
+      "type": "text",
+      "instruction": "True total monthly cost of the first plan."
+    },
+    {
+      "key": "item-1.cta",
+      "type": "link",
+      "instruction": "Call to action for the first plan."
+    },
+    {
+      "key": "item-2.name",
+      "type": "text",
+      "instruction": "Name of the second plan being compared."
+    },
+    {
+      "key": "item-2.price",
+      "type": "text",
+      "instruction": "Base monthly price of the second plan, digits only."
+    },
+    {
+      "key": "item-2.period",
+      "type": "text",
+      "instruction": "Billing period suffix for the second plan, such as /mo."
+    },
+    {
+      "key": "item-2.priceNote",
+      "type": "text",
+      "instruction": "Short note on the second plan's pricing terms."
+    },
+    {
+      "key": "item-2.includes",
+      "type": "list",
+      "instruction": "List of what is included in the second plan."
+    },
+    {
+      "key": "item-2.addonLabel",
+      "type": "text",
+      "instruction": "Label for the second plan's add-on or fee line."
+    },
+    {
+      "key": "item-2.addonPrice",
+      "type": "text",
+      "instruction": "Add-on or fee amount for the second plan."
+    },
+    {
+      "key": "item-2.total",
+      "type": "text",
+      "instruction": "True total monthly cost of the second plan."
+    },
+    {
+      "key": "item-2.cta",
+      "type": "link",
+      "instruction": "Call to action for the second plan."
+    },
+    {
+      "key": "item-3.name",
+      "type": "text",
+      "instruction": "Name of the third plan being compared."
+    },
+    {
+      "key": "item-3.price",
+      "type": "text",
+      "instruction": "Base monthly price of the third plan, digits only."
+    },
+    {
+      "key": "item-3.period",
+      "type": "text",
+      "instruction": "Billing period suffix for the third plan, such as /mo."
+    },
+    {
+      "key": "item-3.priceNote",
+      "type": "text",
+      "instruction": "Short note on the third plan's pricing terms."
+    },
+    {
+      "key": "item-3.includes",
+      "type": "list",
+      "instruction": "List of what is included in the third plan."
+    },
+    {
+      "key": "item-3.addonLabel",
+      "type": "text",
+      "instruction": "Label for the third plan's add-on or fee line."
+    },
+    {
+      "key": "item-3.addonPrice",
+      "type": "text",
+      "instruction": "Add-on or fee amount for the third plan."
+    },
+    {
+      "key": "item-3.total",
+      "type": "text",
+      "instruction": "True total monthly cost of the third plan."
+    },
+    {
+      "key": "item-3.cta",
+      "type": "link",
+      "instruction": "Call to action for the third plan."
+    },
+    {
+      "key": "callout.eyebrow",
+      "type": "text",
+      "instruction": "Kicker introducing the lowest-total-cost callout."
+    },
+    {
+      "key": "callout.title",
+      "type": "text",
+      "instruction": "Heading for the lowest-total-cost callout."
+    },
+    {
+      "key": "callout.figure",
+      "type": "text",
+      "instruction": "The headline savings figure for choosing the lowest-total plan."
+    },
+    {
+      "key": "callout.body",
+      "type": "text",
+      "instruction": "Copy explaining why the flagged plan has the lowest total cost."
+    },
+    {
+      "key": "notes.title",
+      "type": "text",
+      "instruction": "Heading introducing helpful notes about the comparison."
+    },
+    {
+      "key": "notes.items",
+      "type": "list",
+      "instruction": "List of notes clarifying the terms behind the compared totals."
+    },
+    {
+      "key": "cta.title",
+      "type": "text",
+      "instruction": "Closing call-to-action heading."
+    },
+    {
+      "key": "cta.body",
+      "type": "text",
+      "instruction": "Closing call-to-action supporting copy."
+    },
+    {
+      "key": "cta.cta",
+      "type": "link",
+      "instruction": "Final call to action to check availability or start the order."
+    }
+  ],
+  "label": "Budget - Bill Compare"
+}

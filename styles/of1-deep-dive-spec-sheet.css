@@ -1,0 +1,201 @@
+@import url("/styles/of1-template-base.css");
+
+/* Xfinity deep-dive: structured spec-sheet fact file */
+
+.of1-deep-dive-spec-sheet-hero,
+.of1-deep-dive-spec-sheet-specs,
+.of1-deep-dive-spec-sheet-means,
+.of1-deep-dive-spec-sheet-cta {
+  padding: var(--space-section) var(--space-container);
+}
+
+/* Hero */
+.of1-deep-dive-spec-sheet-hero {
+  background: linear-gradient(135deg, var(--color-accent-deep), var(--color-accent));
+  color: #fff;
+  text-align: center;
+}
+
+.of1-spec-hero-inner {
+  max-width: 60ch;
+  margin: 0 auto;
+}
+
+.of1-deep-dive-spec-sheet-hero h1 {
+  color: #fff;
+}
+
+.of1-spec-eyebrow {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+  color: #d9c7ff;
+  margin: 0 0 0.5em;
+}
+
+.of1-spec-lede {
+  font-size: 1.2rem;
+  color: #eee6ff;
+  max-width: 52ch;
+  margin: 0 auto 1.5em;
+}
+
+.of1-spec-hero-cta,
+.of1-spec-cta-btn {
+  display: inline-block;
+  background: #fff;
+  color: var(--color-accent-dark);
+  text-decoration: none;
+  font-weight: 700;
+  padding: 14px 28px;
+  border-radius: 999px;
+  transition: transform 0.2s ease;
+}
+
+.of1-spec-hero-cta:hover,
+.of1-spec-cta-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Specs */
+.of1-spec-specs-head {
+  max-width: 60ch;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.of1-spec-specs-head p {
+  color: var(--color-fg-dim);
+  font-size: 1.05rem;
+}
+
+.of1-spec-list {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+
+.of1-spec-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4px;
+  padding: 18px 24px;
+  border-top: 1px solid var(--color-border);
+}
+
+.of1-spec-row:first-child {
+  border-top: none;
+}
+
+.of1-spec-row:nth-child(odd) {
+  background: var(--color-surface);
+}
+
+.of1-spec-row dt {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-accent);
+  margin: 0;
+}
+
+.of1-spec-row dd {
+  margin: 0;
+  font-size: 1.05rem;
+  color: var(--color-fg);
+}
+
+/* What this means for you */
+.of1-deep-dive-spec-sheet-means {
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.of1-spec-means-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  padding: 32px;
+}
+
+.of1-spec-means-flag {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.8rem;
+  color: var(--color-accent);
+  margin: 0 0 0.4em;
+}
+
+.of1-spec-means-inner p {
+  color: var(--color-fg-dim);
+  font-size: 1.05rem;
+}
+
+.of1-spec-means-list {
+  list-style: none;
+  margin: 1.25em 0 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.of1-spec-means-list li {
+  position: relative;
+  padding-left: 30px;
+  color: var(--color-fg);
+}
+
+.of1-spec-means-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.15em;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  box-shadow: inset 0 0 0 4px var(--color-bg);
+}
+
+/* Closing CTA */
+.of1-deep-dive-spec-sheet-cta {
+  text-align: center;
+}
+
+.of1-spec-cta-inner {
+  max-width: 55ch;
+  margin: 0 auto;
+}
+
+.of1-spec-cta-btn {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.of1-spec-cta-btn:hover {
+  transform: translateY(-2px);
+}
+
+@media (min-width: 600px) {
+  .of1-spec-row {
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 24px;
+    align-items: baseline;
+  }
+
+  .of1-spec-row dt {
+    text-align: left;
+  }
+}

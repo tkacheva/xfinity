@@ -1,0 +1,31 @@
+{
+  "_meta": { "stylesheet": "/styles/of1-deep-dive-how-it-works.css" },
+  "hero.eyebrow": "How it works",
+  "hero.title": "How fiber-powered Gig WiFi reaches every room",
+  "hero.subtitle": "From the fiber-backed network to the xFi Gateway in your living room, here is the simple path your connection takes to power dozens of devices at once.",
+  "hero.cta": { "label": "See Gig Internet plans", "href": "https://xfinity.com/learn/internet-service/gig" },
+  "steps.title": "Four steps from our network to your screens",
+  "steps.intro": "No technician, no guesswork. Here is exactly how your WiFi gets from the Xfinity network to every device in your home.",
+  "item-1.title": "Fiber-backed speed reaches your home",
+  "item-1.body": "Gig-speed data travels over our fiber-powered network right up to your address, delivering up to 1 gigabit per second with the headroom for 4K streaming, gaming, and video calls at the same time.",
+  "item-2.title": "The xFi Gateway turns it into WiFi",
+  "item-2.body": "Your included xFi Gateway is a modem and router in one. It takes that incoming signal and broadcasts secure, whole-home WiFi, so coverage reaches the back bedroom just as strongly as the living room.",
+  "item-3.title": "You self-install in minutes",
+  "item-3.body": "The Xfinity app walks you through plugging in the Gateway and activating service. Most people are online in about 15 minutes on move-in day, with no technician visit to schedule.",
+  "item-4.title": "You manage it all from the app",
+  "item-4.body": "Turn on Advanced Security, set parental controls, pause WiFi at dinner, and check your speeds anytime. Your whole network lives in your pocket.",
+  "item-5.title": "",
+  "item-5.body": "",
+  "benefits.title": "What that setup means for your home",
+  "benefits.body": "Because the speed is fiber-backed and the Gateway is built for whole-home coverage, you get consistent performance even at peak hours across every connected device.",
+  "benefits.items": [
+    "Up to 1 Gig download speeds with unlimited data",
+    "xFi Gateway included, no equipment to buy",
+    "Whole-home WiFi coverage with Advanced Security",
+    "5-year price guarantee with no annual contract"
+  ],
+  "benefits.image": "https://assets.comcast.com/assets/dotcom/projects/cix-3594_customer_voice_2-0_page/Image_GridFullImage_BlueGateway_Desktop.png",
+  "cta.title": "Now that you know how it works, get connected",
+  "cta.body": "Pick the speed that fits your home, self-install on your schedule, and lock your rate for five years.",
+  "cta.cta": { "label": "Start my order", "href": "https://xfinity.com/learn/internet-service/gig" }
+}

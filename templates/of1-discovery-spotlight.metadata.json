@@ -1,0 +1,182 @@
+{
+  "name": "of1-discovery-spotlight",
+  "intent": "discovery",
+  "description": "A single featured spotlight product anchors the page, backed by a compact row of other favorites to explore and a closing availability check.",
+  "minItems": 4,
+  "maxItems": 5,
+  "stylesheet": "/styles/of1-discovery-spotlight.css",
+  "html": "/templates/of1-discovery-spotlight.html",
+  "slots": [
+    {
+      "key": "hero.eyebrow",
+      "type": "text",
+      "instruction": "Short kicker above the headline inviting the visitor to look closer."
+    },
+    {
+      "key": "hero.title",
+      "type": "text",
+      "instruction": "Headline framing a single standout plan as the thing worth exploring first."
+    },
+    {
+      "key": "hero.subtitle",
+      "type": "text",
+      "instruction": "One or two sentences reassuring the visitor there is no pressure and every plan has the same guarantees."
+    },
+    {
+      "key": "hero.cta",
+      "type": "link",
+      "instruction": "Primary hero call to action pointing to the featured plan or browse flow."
+    },
+    {
+      "key": "hero.image",
+      "type": "image",
+      "instruction": "Lifestyle hero image. Use a real Xfinity asset URL."
+    },
+    {
+      "key": "spotlight.image",
+      "type": "image",
+      "instruction": "Product image for the featured spotlight plan. Use a real Xfinity asset URL."
+    },
+    {
+      "key": "spotlight.eyebrow",
+      "type": "text",
+      "instruction": "Badge label flagging this as the featured pick."
+    },
+    {
+      "key": "spotlight.title",
+      "type": "text",
+      "instruction": "Name of the featured spotlight product."
+    },
+    {
+      "key": "spotlight.price",
+      "type": "text",
+      "instruction": "Monthly price of the featured product."
+    },
+    {
+      "key": "spotlight.priceNote",
+      "type": "text",
+      "instruction": "Short pricing reassurance such as contract or price-guarantee terms."
+    },
+    {
+      "key": "spotlight.body",
+      "type": "text",
+      "instruction": "Paragraph describing the featured product and who it fits."
+    },
+    {
+      "key": "spotlight.features",
+      "type": "list",
+      "instruction": "Bulleted list of the top features of the featured product."
+    },
+    {
+      "key": "spotlight.cta",
+      "type": "link",
+      "instruction": "Call to action to explore the featured product."
+    },
+    {
+      "key": "explore.title",
+      "type": "text",
+      "instruction": "Heading introducing the secondary set of products to explore."
+    },
+    {
+      "key": "explore.subtitle",
+      "type": "text",
+      "instruction": "Supporting line under the explore heading."
+    },
+    {
+      "key": "item-1.title",
+      "type": "text",
+      "instruction": "Name of the first also-explore product."
+    },
+    {
+      "key": "item-1.price",
+      "type": "text",
+      "instruction": "Price or price note for the first product."
+    },
+    {
+      "key": "item-1.body",
+      "type": "text",
+      "instruction": "Short description of the first product."
+    },
+    {
+      "key": "item-1.cta",
+      "type": "link",
+      "instruction": "Link to view the first product."
+    },
+    {
+      "key": "item-2.title",
+      "type": "text",
+      "instruction": "Name of the second also-explore product."
+    },
+    {
+      "key": "item-2.price",
+      "type": "text",
+      "instruction": "Price or price note for the second product."
+    },
+    {
+      "key": "item-2.body",
+      "type": "text",
+      "instruction": "Short description of the second product."
+    },
+    {
+      "key": "item-2.cta",
+      "type": "link",
+      "instruction": "Link to view the second product."
+    },
+    {
+      "key": "item-3.title",
+      "type": "text",
+      "instruction": "Name of the third also-explore product."
+    },
+    {
+      "key": "item-3.price",
+      "type": "text",
+      "instruction": "Price or price note for the third product."
+    },
+    {
+      "key": "item-3.body",
+      "type": "text",
+      "instruction": "Short description of the third product."
+    },
+    {
+      "key": "item-3.cta",
+      "type": "link",
+      "instruction": "Link to view the third product."
+    },
+    {
+      "key": "item-4.title",
+      "type": "text",
+      "instruction": "Name of the fourth also-explore product."
+    },
+    {
+      "key": "item-4.price",
+      "type": "text",
+      "instruction": "Price or price note for the fourth product."
+    },
+    {
+      "key": "item-4.body",
+      "type": "text",
+      "instruction": "Short description of the fourth product."
+    },
+    {
+      "key": "item-4.cta",
+      "type": "link",
+      "instruction": "Link to view the fourth product."
+    },
+    {
+      "key": "closing.title",
+      "type": "text",
+      "instruction": "Closing call-to-action heading."
+    },
+    {
+      "key": "closing.subtitle",
+      "type": "text",
+      "instruction": "Closing call-to-action supporting copy."
+    },
+    {
+      "key": "closing.cta",
+      "type": "link",
+      "instruction": "Final call to action to check availability or start an order."
+    }
+  ],
+  "label": "Discovery - Spotlight"
+}

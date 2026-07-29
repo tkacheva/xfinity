@@ -1,0 +1,157 @@
+{
+  "name": "of1-deep-dive-spec-sheet",
+  "intent": "deep-dive",
+  "description": "A structured spec-sheet fact file presenting the product as labeled label-to-value rows, followed by a what-this-means-for-you callout and a closing call to action.",
+  "minItems": 4,
+  "maxItems": 8,
+  "stylesheet": "/styles/of1-deep-dive-spec-sheet.css",
+  "html": "/templates/of1-deep-dive-spec-sheet.html",
+  "slots": [
+    {
+      "key": "hero.eyebrow",
+      "type": "text",
+      "instruction": "Short kicker above the headline signalling this is a spec sheet or fact file."
+    },
+    {
+      "key": "hero.title",
+      "type": "text",
+      "instruction": "Headline naming the product this spec sheet covers."
+    },
+    {
+      "key": "hero.subtitle",
+      "type": "text",
+      "instruction": "One-sentence summary framing the spec sheet as a plain comparison aid."
+    },
+    {
+      "key": "hero.cta",
+      "type": "link",
+      "instruction": "Primary hero call to action such as checking availability."
+    },
+    {
+      "key": "specs.title",
+      "type": "text",
+      "instruction": "Heading introducing the labeled spec rows."
+    },
+    {
+      "key": "specs.intro",
+      "type": "text",
+      "instruction": "Short lead-in sentence setting up the spec rows that follow."
+    },
+    {
+      "key": "item-1.label",
+      "type": "text",
+      "instruction": "Label for the first spec row, for example the attribute name."
+    },
+    {
+      "key": "item-1.value",
+      "type": "text",
+      "instruction": "Value for the first spec row."
+    },
+    {
+      "key": "item-2.label",
+      "type": "text",
+      "instruction": "Label for the second spec row."
+    },
+    {
+      "key": "item-2.value",
+      "type": "text",
+      "instruction": "Value for the second spec row."
+    },
+    {
+      "key": "item-3.label",
+      "type": "text",
+      "instruction": "Label for the third spec row."
+    },
+    {
+      "key": "item-3.value",
+      "type": "text",
+      "instruction": "Value for the third spec row."
+    },
+    {
+      "key": "item-4.label",
+      "type": "text",
+      "instruction": "Label for the fourth spec row."
+    },
+    {
+      "key": "item-4.value",
+      "type": "text",
+      "instruction": "Value for the fourth spec row."
+    },
+    {
+      "key": "item-5.label",
+      "type": "text",
+      "instruction": "Label for the optional fifth spec row. Leave empty to hide."
+    },
+    {
+      "key": "item-5.value",
+      "type": "text",
+      "instruction": "Value for the optional fifth spec row. Leave empty to hide."
+    },
+    {
+      "key": "item-6.label",
+      "type": "text",
+      "instruction": "Label for the optional sixth spec row. Leave empty to hide."
+    },
+    {
+      "key": "item-6.value",
+      "type": "text",
+      "instruction": "Value for the optional sixth spec row. Leave empty to hide."
+    },
+    {
+      "key": "item-7.label",
+      "type": "text",
+      "instruction": "Label for the optional seventh spec row. Leave empty to hide."
+    },
+    {
+      "key": "item-7.value",
+      "type": "text",
+      "instruction": "Value for the optional seventh spec row. Leave empty to hide."
+    },
+    {
+      "key": "item-8.label",
+      "type": "text",
+      "instruction": "Label for the optional eighth spec row. Leave empty to hide."
+    },
+    {
+      "key": "item-8.value",
+      "type": "text",
+      "instruction": "Value for the optional eighth spec row. Leave empty to hide."
+    },
+    {
+      "key": "means.eyebrow",
+      "type": "text",
+      "instruction": "Kicker flagging the what-this-means-for-you callout."
+    },
+    {
+      "key": "means.title",
+      "type": "text",
+      "instruction": "Heading for the what-this-means-for-you callout."
+    },
+    {
+      "key": "means.body",
+      "type": "text",
+      "instruction": "Short paragraph framing why the specs matter in everyday life."
+    },
+    {
+      "key": "means.items",
+      "type": "list",
+      "instruction": "List translating each key spec into a concrete real-world benefit."
+    },
+    {
+      "key": "cta.title",
+      "type": "text",
+      "instruction": "Closing call-to-action heading."
+    },
+    {
+      "key": "cta.body",
+      "type": "text",
+      "instruction": "Closing call-to-action supporting copy."
+    },
+    {
+      "key": "cta.cta",
+      "type": "link",
+      "instruction": "Final call to action to start the order or check availability."
+    }
+  ],
+  "label": "Deep Dive - Spec Sheet"
+}

@@ -1,0 +1,192 @@
+{
+  "name": "of1-budget-savings-calculator",
+  "intent": "budget",
+  "description": "A how-much-you-save layout with a headline savings figure, a today-vs-Xfinity line-item comparison, and a bundle-savings highlight.",
+  "minItems": 3,
+  "maxItems": 3,
+  "stylesheet": "/styles/of1-budget-savings-calculator.css",
+  "html": "/templates/of1-budget-savings-calculator.html",
+  "slots": [
+    {
+      "key": "hero.eyebrow",
+      "type": "text",
+      "instruction": "Short kicker above the headline framing the savings story."
+    },
+    {
+      "key": "hero.title",
+      "type": "text",
+      "instruction": "Headline promising the visitor a clear savings outcome with Xfinity."
+    },
+    {
+      "key": "hero.subtitle",
+      "type": "text",
+      "instruction": "One-sentence summary of the today-vs-Xfinity comparison shown below."
+    },
+    {
+      "key": "hero.figure",
+      "type": "text",
+      "instruction": "The single big headline savings amount, for example a first-year dollar figure."
+    },
+    {
+      "key": "hero.figureNote",
+      "type": "text",
+      "instruction": "Short note explaining what the headline savings figure represents."
+    },
+    {
+      "key": "hero.cta",
+      "type": "link",
+      "instruction": "Primary hero call to action linking to the shop or order flow."
+    },
+    {
+      "key": "compare.title",
+      "type": "text",
+      "instruction": "Heading introducing the today-versus-Xfinity line-item comparison."
+    },
+    {
+      "key": "compare.todayLabel",
+      "type": "text",
+      "instruction": "Column label for what the visitor pays today."
+    },
+    {
+      "key": "compare.xfinityLabel",
+      "type": "text",
+      "instruction": "Column label for what the visitor pays with Xfinity."
+    },
+    {
+      "key": "item-1.label",
+      "type": "text",
+      "instruction": "Name of the first cost line, such as home internet."
+    },
+    {
+      "key": "item-1.today",
+      "type": "text",
+      "instruction": "What the visitor pays today for the first line item."
+    },
+    {
+      "key": "item-1.xfinity",
+      "type": "text",
+      "instruction": "What the visitor pays with Xfinity for the first line item."
+    },
+    {
+      "key": "item-1.save",
+      "type": "text",
+      "instruction": "Monthly savings on the first line item."
+    },
+    {
+      "key": "item-2.label",
+      "type": "text",
+      "instruction": "Name of the second cost line, such as a mobile line."
+    },
+    {
+      "key": "item-2.today",
+      "type": "text",
+      "instruction": "What the visitor pays today for the second line item."
+    },
+    {
+      "key": "item-2.xfinity",
+      "type": "text",
+      "instruction": "What the visitor pays with Xfinity for the second line item."
+    },
+    {
+      "key": "item-2.save",
+      "type": "text",
+      "instruction": "Monthly savings on the second line item."
+    },
+    {
+      "key": "item-3.label",
+      "type": "text",
+      "instruction": "Name of the third cost line, such as streaming apps."
+    },
+    {
+      "key": "item-3.today",
+      "type": "text",
+      "instruction": "What the visitor pays today for the third line item."
+    },
+    {
+      "key": "item-3.xfinity",
+      "type": "text",
+      "instruction": "What the visitor pays with Xfinity for the third line item."
+    },
+    {
+      "key": "item-3.save",
+      "type": "text",
+      "instruction": "Monthly savings on the third line item."
+    },
+    {
+      "key": "total.label",
+      "type": "text",
+      "instruction": "Label for the combined monthly total row."
+    },
+    {
+      "key": "total.today",
+      "type": "text",
+      "instruction": "Combined amount the visitor pays today across all line items."
+    },
+    {
+      "key": "total.xfinity",
+      "type": "text",
+      "instruction": "Combined amount the visitor pays with Xfinity across all line items."
+    },
+    {
+      "key": "total.save",
+      "type": "text",
+      "instruction": "Combined monthly savings across all line items."
+    },
+    {
+      "key": "bundle.eyebrow",
+      "type": "text",
+      "instruction": "Kicker introducing the bundle-savings highlight."
+    },
+    {
+      "key": "bundle.title",
+      "type": "text",
+      "instruction": "Heading for the bundle-savings highlight section."
+    },
+    {
+      "key": "bundle.body",
+      "type": "text",
+      "instruction": "Paragraph describing how bundling mobile increases the savings."
+    },
+    {
+      "key": "bundle.features",
+      "type": "list",
+      "instruction": "Bulleted list of bundle savings benefits."
+    },
+    {
+      "key": "bundle.cta",
+      "type": "link",
+      "instruction": "Call to action to explore the bundle or mobile savings."
+    },
+    {
+      "key": "bundle.image",
+      "type": "image",
+      "instruction": "Supporting image for the bundle highlight. Use a real Xfinity asset URL."
+    },
+    {
+      "key": "breakdown.title",
+      "type": "text",
+      "instruction": "Heading introducing where the savings come from."
+    },
+    {
+      "key": "breakdown.items",
+      "type": "list",
+      "instruction": "List of reasons that explain how the savings add up."
+    },
+    {
+      "key": "cta.title",
+      "type": "text",
+      "instruction": "Closing call-to-action heading."
+    },
+    {
+      "key": "cta.body",
+      "type": "text",
+      "instruction": "Closing call-to-action supporting copy."
+    },
+    {
+      "key": "cta.cta",
+      "type": "link",
+      "instruction": "Final call to action to check availability or start the order."
+    }
+  ],
+  "label": "Budget - Savings Calculator"
+}

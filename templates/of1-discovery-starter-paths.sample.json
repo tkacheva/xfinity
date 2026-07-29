@@ -1,0 +1,43 @@
+{
+  "_meta": { "stylesheet": "/styles/of1-discovery-starter-paths.css" },
+  "hero.eyebrow": "Pick your path",
+  "hero.title": "Where should we start? Choose the moment that sounds like you",
+  "hero.subtitle": "Every path pairs the Internet, mobile, and streaming that fit how you live, all with no annual contract and a 5-year price guarantee.",
+  "item-1.label": "Just moved in",
+  "item-1.title": "Setting up a new home",
+  "item-1.body": "Get online on day one with gig-fast WiFi you self-install in minutes, plus a free mobile line to keep the first bill light.",
+  "item-1.products": [
+    "Xfinity Gig Internet - $50/mo",
+    "xFi Gateway - included",
+    "Xfinity Mobile - Mobile Select - $30/mo"
+  ],
+  "item-1.cta": { "label": "Start this path", "href": "https://xfinity.com/learn/internet-service/gig" },
+  "item-2.label": "Work from home",
+  "item-2.title": "Keeping every room connected",
+  "item-2.body": "Reliable WiFi that reaches the home office, with whole-home coverage and 4G LTE backup so calls never drop mid-meeting.",
+  "item-2.products": [
+    "Xfinity Internet 500 Mbps - $45/mo",
+    "Xfinity Pro - $15/mo",
+    "Xfinity Mobile - Mobile Select - $30/mo"
+  ],
+  "item-2.cta": { "label": "Start this path", "href": "https://xfinity.com/learn/internet-service" },
+  "item-3.label": "Streaming and gaming",
+  "item-3.title": "Powering movie nights and match nights",
+  "item-3.body": "Gig speeds and unlimited data for 4K streaming and low-lag gaming, with your favorite apps bundled on one simple bill.",
+  "item-3.products": [
+    "Xfinity Gig Internet - $50/mo",
+    "StreamSaver and Streaming Apps - $15/mo",
+    "Xfinity Mobile - Mobile Plus - $45/mo"
+  ],
+  "item-3.cta": { "label": "Start this path", "href": "https://xfinity.com/learn/digital-cable-tv" },
+  "reassure.title": "Whichever path you pick",
+  "reassure.list": [
+    "5-year price guarantee on every plan",
+    "No annual contract, ever",
+    "Same-day self-install in minutes",
+    "Switch paths anytime as your needs change"
+  ],
+  "closing.title": "Not sure which path is yours?",
+  "closing.subtitle": "Check availability at your address and we will help you match a path to the plans ready to go near you.",
+  "closing.cta": { "label": "Check availability", "href": "https://xfinity.com/learn/internet-service" }
+}

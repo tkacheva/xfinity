@@ -1,3 +1,4 @@
+from __future__ import annotations
 #!/usr/bin/env python3
 """Fill an OF1 template HTML file with slot values from a JSON file.
 
@@ -10,8 +11,6 @@ Slot conventions (matching templates/of1-*.metadata.json):
   link  : <a data-slot="key">                   — sets href + label
   list  : element has data-slot-list="key"      — replaces innerHTML with <li> per item
 """
-from __future__ import annotations
-
 
 import json
 import re
