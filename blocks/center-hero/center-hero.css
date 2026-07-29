@@ -1,0 +1,37 @@
+.center-hero .ch-wrap { width: 100vw; margin-left: calc(50% - 50vw); }
+
+.center-hero .ch-media {
+  height: 340px;
+  background: #fff center / contain no-repeat;
+}
+
+.center-hero .ch-copy {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 12px 24px 8px;
+  text-align: center;
+}
+
+.center-hero .ch-eyebrow {
+  color: var(--purple);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 12px;
+}
+
+.center-hero .ch-copy h1 {
+  font-size: clamp(1.9rem, 3.4vw, 2.6rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.08;
+  margin: 0 0 14px;
+}
+
+.center-hero .ch-lede { color: var(--grey-50); font-size: 1rem; line-height: 1.5; margin: 0 auto; max-width: 52ch; }
+.center-hero .ch-actions { margin-top: 18px; }
+
+@media (width <= 900px) {
+  .center-hero .ch-media { height: 220px; }
+}
