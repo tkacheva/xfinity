@@ -34,8 +34,37 @@
 .promo .promo-guar .num { font-weight: 300; font-size: 13rem; line-height: 0.72; letter-spacing: -0.04em; }
 .promo .promo-guar .lbl { font-weight: 500; font-size: 3rem; line-height: 0.98; }
 
+/* --- image hero variant: per-page photo background + legibility gradient --- */
+.promo.has-hero-img {
+  background:
+    linear-gradient(90deg, rgb(39 14 72 / 94%) 0%, rgb(61 24 129 / 74%) 42%, rgb(90 35 185 / 28%) 100%),
+    var(--hero-img);
+  background-size: cover;
+  background-position: center right;
+}
+
+.promo.has-hero-img .promo-inner { padding: 60px 24px 64px; min-height: 300px; align-items: center; }
+.promo.has-hero-img .promo-copy { max-width: 40ch; }
+
+.promo .promo-chip {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 5px;
+  margin: 20px 0 0;
+  padding: 8px 15px;
+  background: rgb(255 255 255 / 15%);
+  border: 1px solid rgb(255 255 255 / 22%);
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.promo .promo-chip span { font-weight: 800; font-size: 0.95rem; }
+
 @media (width <= 900px) {
   .promo .promo-inner { flex-direction: column; align-items: flex-start; padding-bottom: 96px; }
   .promo .promo-guar .num { font-size: 7rem; }
   .promo .promo-guar .lbl { font-size: 1.8rem; }
+  .promo.has-hero-img { background-position: center; }
+  .promo.has-hero-img .promo-inner { padding-bottom: 56px; }
 }
