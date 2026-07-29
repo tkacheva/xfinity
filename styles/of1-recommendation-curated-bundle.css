@@ -54,6 +54,15 @@ main section {
   width: 100%;
 }
 
+/* Raise CTA specificity to >=0,2,0 by qualifying with the section class so the
+   button text beats the site stylesheet's `a:any-link { color: var(--purple) }`
+   (0,1,1); otherwise white-on-accent button text repaints purple and vanishes. */
+.of1-recommendation-curated-bundle-hero .of1-btn,
+.of1-recommendation-curated-bundle-package .of1-btn,
+.of1-recommendation-curated-bundle-cta .of1-btn {
+  color: #fff;
+}
+
 /* Package */
 .of1-recommendation-curated-bundle-package {
   display: grid;
@@ -146,6 +155,7 @@ main section {
 }
 
 .of1-included-card {
+  position: relative;
   background: #fff;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
@@ -159,7 +169,32 @@ main section {
   filter: grayscale(0.6);
 }
 
+/* Contextual Xfinity photo as a CSS-background fallback behind each card's media
+   band, so an empty (stripped) item image slot still shows a relevant photo. The
+   real <img>, when present, sits absolutely on top of the band. */
+.of1-included-card::before {
+  content: "";
+  display: block;
+  height: 180px;
+  background: var(--color-accent-deep) center / cover no-repeat;
+}
+
+.of1-included-card[data-card="1"]::before {
+  background-image: url('https://assets.comcast.com/assets/dotcom/projects_3/2024/nov/cix-7121_ie-learn-page-updates/IE_BAU-Hero-Learn-Desktop.jpg');
+}
+
+.of1-included-card[data-card="2"]::before {
+  background-image: url('https://assets.comcast.com/assets/dotcom/projects_3/2026/june/cix-10733_xm-tmo-competitive-de-positioning-forced-plan-migration/TMO-FullImage-Banner-Desktop.jpg');
+}
+
+.of1-included-card[data-card="3"]::before {
+  background-image: url('https://assets.comcast.com/assets/dotcom/projects/cix-3594_customer_voice_2-0_page/Image_GridFullImage_BlueGateway_Desktop.png');
+}
+
 .of1-included-card img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 180px;
   object-fit: cover;

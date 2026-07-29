@@ -108,7 +108,10 @@
   font-weight: 600;
 }
 
-.of1-discovery-starter-paths-card-cta {
+/* Scoped with the parent card class (specificity 0,2,0) so the CTA color beats
+   the site stylesheet's `a:any-link { color: var(--purple) }` (0,1,1), which would
+   otherwise repaint the white button text purple and make it invisible. */
+.of1-discovery-starter-paths-card .of1-discovery-starter-paths-card-cta {
   margin-top: auto;
   display: inline-block;
   align-self: flex-start;
@@ -121,7 +124,7 @@
   transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
 
-.of1-discovery-starter-paths-card-cta:hover {
+.of1-discovery-starter-paths-card .of1-discovery-starter-paths-card-cta:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow-card);
 }
@@ -165,7 +168,7 @@
 .of1-discovery-starter-paths-closing h2 { color: #fff; }
 .of1-discovery-starter-paths-closing p { color: rgb(255 255 255 / 85%); }
 
-.of1-discovery-starter-paths-closing-cta {
+.of1-discovery-starter-paths-closing .of1-discovery-starter-paths-closing-cta {
   display: inline-block;
   background: #fff;
   color: var(--color-accent-dark);
@@ -176,7 +179,7 @@
   transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
 
-.of1-discovery-starter-paths-closing-cta:hover { transform: translateY(-2px); box-shadow: var(--shadow-card); }
+.of1-discovery-starter-paths-closing .of1-discovery-starter-paths-closing-cta:hover { transform: translateY(-2px); box-shadow: var(--shadow-card); }
 
 @media (min-width: 600px) {
   .of1-discovery-starter-paths-reassure-list { grid-template-columns: repeat(2, 1fr); }

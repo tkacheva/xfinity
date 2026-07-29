@@ -27,6 +27,13 @@ main section {
 
 .btn:hover { background: var(--color-accent-dark); }
 
+/* CTA text contrast - the site's styles.css `a:any-link { color: var(--purple) }`
+   (0,1,1) outranks the single-class `.btn` color (0,1,0) and repaints filled
+   buttons purple-on-purple. Re-scope the color to the section (0,2,0) so it wins. */
+.of1-comparison-pros-cons-hero .btn,
+.of1-comparison-pros-cons-grid .btn,
+.of1-comparison-pros-cons-cta .btn { color: #fff; }
+
 .eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -96,10 +103,27 @@ main section {
   flex-direction: column;
 }
 
+/* Real Xfinity photo as a CSS-background fallback so an empty item image slot
+   still shows a relevant photo; a filled image simply layers on top. Vary the
+   fallback per card across the Xfinity product set. */
 .pc-img {
   width: 100%;
   height: 160px;
   object-fit: cover;
+  display: block;
+  background: var(--color-accent-deep) center / cover no-repeat;
+}
+
+.pc-card[data-card="1"] .pc-img {
+  background-image: url('https://assets.comcast.com/assets/dotcom/projects_3/2024/nov/cix-7121_ie-learn-page-updates/IE_BAU-Hero-Learn-Desktop.jpg');
+}
+
+.pc-card[data-card="2"] .pc-img {
+  background-image: url('https://assets.comcast.com/assets/dotcom/projects/cix-3594_customer_voice_2-0_page/Image_GridFullImage_BlueGateway_Desktop.png');
+}
+
+.pc-card[data-card="3"] .pc-img {
+  background-image: url('https://assets.comcast.com/assets/dotcom/projects_3/2024/nov/cix-7121_ie-learn-page-updates/IE_BAU-Hero-Learn-Desktop.jpg');
 }
 
 .pc-body {

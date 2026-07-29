@@ -41,7 +41,9 @@
   margin: 0 auto 1.5em;
 }
 
-.of1-spec-hero-cta,
+/* Scoped hero CTA (specificity 0,2,x) so the accent-dark text beats the site
+   stylesheet's `a:any-link { color: var(--purple) }` (0,1,1). */
+.of1-deep-dive-spec-sheet-hero .of1-spec-hero-cta,
 .of1-spec-cta-btn {
   display: inline-block;
   background: #fff;
@@ -179,7 +181,9 @@
   margin: 0 auto;
 }
 
-.of1-spec-cta-btn {
+/* Filled accent closing button: scope the color (0,2,0) so the white label
+   wins over `a:any-link` (0,1,1) and stays visible on the accent fill. */
+.of1-deep-dive-spec-sheet-cta .of1-spec-cta-btn {
   background: var(--color-accent);
   color: #fff;
 }

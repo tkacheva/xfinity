@@ -58,6 +58,19 @@
   text-decoration: underline;
 }
 
+/* Raise CTA specificity to >=0,2,0 by qualifying with the section class so the
+   button text beats the site stylesheet's `a:any-link { color: var(--purple) }`
+   (0,1,1); otherwise white-on-accent button text repaints purple and vanishes. */
+.of1-recommendation-quiz-match-hero .of1-btn,
+.of1-recommendation-quiz-match-match .of1-btn,
+.of1-recommendation-quiz-match-cta .of1-btn {
+  color: #fff;
+}
+
+.of1-recommendation-quiz-match-runnerups .of1-link {
+  color: var(--color-accent);
+}
+
 /* Top match */
 .of1-recommendation-quiz-match-match {
   display: grid;
@@ -69,11 +82,22 @@
   box-shadow: var(--shadow-card);
 }
 
+.of1-match-media {
+  align-self: stretch;
+  min-height: 240px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  /* Real Xfinity internet photo as a CSS-background fallback so an empty
+     (stripped) match.image slot still shows a relevant product panel. A filled
+     <img> simply sits on top of it. */
+  background: var(--color-accent-deep) url('https://assets.comcast.com/assets/dotcom/projects_3/2024/nov/cix-7121_ie-learn-page-updates/IE_BAU-Hero-Learn-Desktop.jpg') center / cover no-repeat;
+}
+
 .of1-match-media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: var(--radius);
+  display: block;
 }
 
 .of1-match-flag {

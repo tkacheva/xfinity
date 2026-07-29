@@ -76,6 +76,34 @@
   box-shadow: 0 20px 40px rgb(90 35 185 / 18%);
 }
 
+/* Real Xfinity photo as a CSS-background fallback on each media container: the
+   OF1 renderer strips empty item-N.image slots, so this keeps every card showing
+   a relevant photo instead of a blank thumbnail. A filled <img> sits on top. */
+.of1-discovery-curated-collections-card-media {
+  aspect-ratio: 16 / 10;
+  background: var(--color-accent-deep) url('https://assets.comcast.com/assets/dotcom/projects_3/2024/nov/cix-7121_ie-learn-page-updates/IE_BAU-Hero-Learn-Desktop.jpg') center / cover no-repeat;
+}
+
+/* Equipment: xFi Gateway (item-2) */
+.of1-discovery-curated-collections-card[data-card="2"] .of1-discovery-curated-collections-card-media {
+  background-image: url('https://assets.comcast.com/assets/dotcom/projects/cix-3594_customer_voice_2-0_page/Image_GridFullImage_BlueGateway_Desktop.png');
+}
+
+/* Streaming: StreamSaver (item-5) */
+.of1-discovery-curated-collections-card[data-card="5"] .of1-discovery-curated-collections-card-media {
+  background-image: url('https://assets.comcast.com/assets/dotcom/projects_3/2025/oct/cix-9095_hbo-max-key-art-updates/premium-channels_hbo-max_learn/LS_PremiumChannels_HBO-Max_Hero_Desktop2.jpg');
+}
+
+/* Xfinity Pro / home (item-7) */
+.of1-discovery-curated-collections-card[data-card="7"] .of1-discovery-curated-collections-card-media {
+  background-image: url('https://assets.comcast.com/assets/dotcom/projects_3/2025/jan/cix-7932_xfinity-pro-protection-plus-rebrand-to-xfinity-home-security/HomeSolutions_Hero_Desktop.png');
+}
+
+/* Mobile: Mobile Plus (item-8) */
+.of1-discovery-curated-collections-card[data-card="8"] .of1-discovery-curated-collections-card-media {
+  background-image: url('https://assets.comcast.com/assets/dotcom/projects_3/2026/june/cix-10733_xm-tmo-competitive-de-positioning-forced-plan-migration/TMO-FullImage-Banner-Desktop.jpg');
+}
+
 .of1-discovery-curated-collections-card-media img {
   width: 100%;
   aspect-ratio: 16 / 10;
@@ -106,7 +134,10 @@
 .of1-discovery-curated-collections-closing { text-align: center; }
 .of1-discovery-curated-collections-closing-inner { max-width: 58ch; margin: 0 auto; }
 
-.of1-discovery-curated-collections-closing-cta {
+/* Scoped with the parent/section class (specificity 0,2,x) so the CTA color beats
+   the site stylesheet's `a:any-link { color: var(--purple) }` (0,1,1), which would
+   otherwise repaint the white button text purple and make it invisible. */
+.of1-discovery-curated-collections-closing .of1-discovery-curated-collections-closing-cta {
   display: inline-block;
   background: var(--color-accent);
   color: #fff;
@@ -117,7 +148,7 @@
   transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
 
-.of1-discovery-curated-collections-closing-cta:hover { transform: translateY(-2px); box-shadow: var(--shadow-card); }
+.of1-discovery-curated-collections-closing .of1-discovery-curated-collections-closing-cta:hover { transform: translateY(-2px); box-shadow: var(--shadow-card); }
 
 @media (min-width: 600px) {
   .of1-discovery-curated-collections-row { grid-auto-columns: 46%; }

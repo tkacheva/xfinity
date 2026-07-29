@@ -169,7 +169,9 @@
 
 .bill-col--best .col-total .total-amount { color: var(--color-accent); }
 
-.col-cta {
+/* Scoped with the section class (0,2,0) so the accent text color beats the
+   site's a:any-link (0,1,1); the filled --best variant is scoped deeper still. */
+.of1-budget-bill-compare-columns .col-cta {
   display: block;
   text-align: center;
   text-decoration: none;
@@ -181,10 +183,10 @@
   background: transparent;
 }
 
-.col-cta:hover { background: var(--color-surface); }
+.of1-budget-bill-compare-columns .col-cta:hover { background: var(--color-surface); }
 
-.bill-col--best .col-cta { background: var(--color-accent); color: #fff; }
-.bill-col--best .col-cta:hover { background: var(--color-accent-dark); border-color: var(--color-accent-dark); }
+.of1-budget-bill-compare-columns .bill-col--best .col-cta { background: var(--color-accent); color: #fff; }
+.of1-budget-bill-compare-columns .bill-col--best .col-cta:hover { background: var(--color-accent-dark); border-color: var(--color-accent-dark); }
 
 /* Lowest total callout */
 .of1-budget-bill-compare-callout { max-width: none; padding-left: 0; padding-right: 0; }

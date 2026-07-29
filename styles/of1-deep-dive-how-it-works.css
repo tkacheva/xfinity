@@ -37,8 +37,11 @@
   margin: 0 auto 1.5em;
 }
 
-.of1-hiw-hero-cta,
-.of1-hiw-cta-btn {
+/* Scoped with the section class (specificity 0,2,x) so the CTA color beats the
+   site stylesheet's `a:any-link { color: var(--purple) }` (0,1,1), which would
+   otherwise repaint the white button text purple (invisible on the accent fill). */
+.of1-deep-dive-how-it-works-hero .of1-hiw-hero-cta,
+.of1-deep-dive-how-it-works-cta .of1-hiw-cta-btn {
   display: inline-block;
   background: var(--color-accent);
   color: #fff;
@@ -153,11 +156,16 @@
   box-shadow: inset 0 0 0 4px var(--color-surface);
 }
 
+/* Real Xfinity xFi Gateway photo as a CSS-background fallback so an empty or
+   stripped benefits.image slot still shows a relevant photo behind the <img>. */
 .of1-hiw-benefits-img {
   width: 100%;
+  min-height: 260px;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-card);
   object-fit: cover;
+  display: block;
+  background: var(--color-accent-deep) url('https://assets.comcast.com/assets/dotcom/projects/cix-3594_customer_voice_2-0_page/Image_GridFullImage_BlueGateway_Desktop.png') center / cover no-repeat;
 }
 
 /* Closing CTA */
@@ -177,7 +185,9 @@
   color: #fff;
 }
 
-.of1-hiw-cta-btn {
+/* White-on-accent-deep closing button: scope the color (0,2,0) so accent-dark
+   text wins over `a:any-link` (0,1,1). */
+.of1-deep-dive-how-it-works-cta .of1-hiw-cta-btn {
   background: #fff;
   color: var(--color-accent-dark);
 }

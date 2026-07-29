@@ -1,6 +1,5 @@
 @import url("/styles/of1-template-base.css");
 
-.of1-discovery-gallery-hero,
 .of1-discovery-gallery-grid-section,
 .of1-discovery-gallery-perks,
 .of1-discovery-gallery-spotlight-section,
@@ -8,13 +7,20 @@
   padding: var(--space-section) var(--space-container);
 }
 
-/* Hero */
+/* Hero — full-bleed split with a full-height image that reaches the right edge,
+   mirroring the spotlight hero. */
 .of1-discovery-gallery-hero {
   display: grid;
-  gap: 32px;
-  align-items: center;
+  grid-template-columns: 1fr;
   background: linear-gradient(120deg, var(--color-accent-deep), var(--color-accent-dark));
   color: #fff;
+  padding: 0;
+  overflow: hidden;
+}
+
+.of1-discovery-gallery-hero-inner {
+  /* left-align copy on the same 1100px column as the rest of the page */
+  padding: 48px max(var(--space-container), calc((100vw - 1100px) / 2));
 }
 
 .of1-discovery-gallery-eyebrow {
@@ -34,8 +40,11 @@
   color: rgb(255 255 255 / 88%);
 }
 
-.of1-discovery-gallery-hero-cta,
-.of1-discovery-gallery-closing-cta {
+/* Scoped with the parent/section class (specificity 0,2,x) so the CTA color beats
+   the site stylesheet's `a:any-link { color: var(--purple) }` (0,1,1), which would
+   otherwise repaint button text (e.g. white-on-purple becomes invisible). */
+.of1-discovery-gallery-hero .of1-discovery-gallery-hero-cta,
+.of1-discovery-gallery-closing .of1-discovery-gallery-closing-cta {
   display: inline-block;
   background: #fff;
   color: var(--color-accent-dark);
@@ -46,18 +55,23 @@
   transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
 
-.of1-discovery-gallery-hero-cta:hover,
-.of1-discovery-gallery-closing-cta:hover {
+.of1-discovery-gallery-hero .of1-discovery-gallery-hero-cta:hover,
+.of1-discovery-gallery-closing .of1-discovery-gallery-closing-cta:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow-card);
 }
 
+.of1-discovery-gallery-hero-media {
+  position: relative;
+  min-width: 0;
+  min-height: 240px;
+}
+
 .of1-discovery-gallery-hero-media img {
   width: 100%;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-card);
+  height: 100%;
   object-fit: cover;
-  aspect-ratio: 16 / 10;
+  display: block;
 }
 
 /* Section heads */
@@ -92,6 +106,25 @@
 .of1-discovery-gallery-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 20px 40px rgb(90 35 185 / 18%);
+}
+
+/* Real Xfinity photo as a CSS-background fallback on each media container: the
+   OF1 renderer strips empty item-N.image slots, so this keeps every card showing
+   a relevant photo instead of a blank thumbnail. A filled <img> sits on top. */
+.of1-discovery-gallery-card-media {
+  aspect-ratio: 16 / 10;
+  background: var(--color-accent-deep) url('https://assets.comcast.com/assets/dotcom/projects_3/2024/nov/cix-7121_ie-learn-page-updates/IE_BAU-Hero-Learn-Desktop.jpg') center / cover no-repeat;
+}
+
+/* Mobile cards */
+.of1-discovery-gallery-card[data-card="4"] .of1-discovery-gallery-card-media,
+.of1-discovery-gallery-card[data-card="5"] .of1-discovery-gallery-card-media {
+  background-image: url('https://assets.comcast.com/assets/dotcom/projects_3/2026/june/cix-10733_xm-tmo-competitive-de-positioning-forced-plan-migration/TMO-FullImage-Banner-Desktop.jpg');
+}
+
+/* Streaming card */
+.of1-discovery-gallery-card[data-card="6"] .of1-discovery-gallery-card-media {
+  background-image: url('https://assets.comcast.com/assets/dotcom/projects_3/2025/oct/cix-9095_hbo-max-key-art-updates/premium-channels_hbo-max_learn/LS_PremiumChannels_HBO-Max_Hero_Desktop2.jpg');
 }
 
 .of1-discovery-gallery-card-media img {
@@ -173,6 +206,22 @@
   box-shadow: 0 20px 40px rgb(90 35 185 / 18%);
 }
 
+/* CSS-background fallback for the two "complete your setup" cards (item-7/8). */
+.of1-discovery-gallery-spotlight-media {
+  min-height: 200px;
+  background: var(--color-accent-deep) url('https://assets.comcast.com/assets/dotcom/projects_3/2024/nov/cix-7121_ie-learn-page-updates/IE_BAU-Hero-Learn-Desktop.jpg') center / cover no-repeat;
+}
+
+/* xFi Gateway equipment */
+.of1-discovery-gallery-spotlight-card[data-card="7"] .of1-discovery-gallery-spotlight-media {
+  background-image: url('https://assets.comcast.com/assets/dotcom/projects/cix-3594_customer_voice_2-0_page/Image_GridFullImage_BlueGateway_Desktop.png');
+}
+
+/* Xfinity Pro / home */
+.of1-discovery-gallery-spotlight-card[data-card="8"] .of1-discovery-gallery-spotlight-media {
+  background-image: url('https://assets.comcast.com/assets/dotcom/projects_3/2025/jan/cix-7932_xfinity-pro-protection-plus-rebrand-to-xfinity-home-security/HomeSolutions_Hero_Desktop.png');
+}
+
 .of1-discovery-gallery-spotlight-media img {
   width: 100%;
   height: 100%;
@@ -196,7 +245,7 @@
 /* Closing */
 .of1-discovery-gallery-closing { text-align: center; }
 .of1-discovery-gallery-closing-inner { max-width: 56ch; margin: 0 auto; }
-.of1-discovery-gallery-closing-cta { background: var(--color-accent); color: #fff; }
+.of1-discovery-gallery-closing .of1-discovery-gallery-closing-cta { background: var(--color-accent); color: #fff; }
 
 @media (min-width: 600px) {
   .of1-discovery-gallery-grid { grid-template-columns: repeat(2, 1fr); }
@@ -205,7 +254,29 @@
 }
 
 @media (min-width: 900px) {
-  .of1-discovery-gallery-hero { grid-template-columns: 1.1fr 0.9fr; padding-block: 80px; }
+  .of1-discovery-gallery-hero {
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: stretch;
+    min-height: 460px;
+  }
+
+  .of1-discovery-gallery-hero-inner {
+    align-self: center;
+    padding: 72px 48px 72px max(var(--space-container), calc((100vw - 1100px) / 2));
+  }
+
+  .of1-discovery-gallery-hero-media { min-height: 0; }
+
+  /* diagonal purple blend from the copy side into the photo */
+  .of1-discovery-gallery-hero-media::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(100deg, var(--color-accent-dark) 0%, rgb(61 24 129 / 55%) 24%, transparent 50%);
+    pointer-events: none;
+    z-index: 1;
+  }
+
   .of1-discovery-gallery-grid { grid-template-columns: repeat(3, 1fr); }
   .of1-discovery-gallery-perks-list { grid-template-columns: repeat(4, 1fr); }
 }

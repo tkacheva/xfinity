@@ -57,6 +57,19 @@ main section {
   text-decoration: underline;
 }
 
+/* Raise CTA specificity to >=0,2,0 by qualifying with the section class so the
+   button text beats the site stylesheet's `a:any-link { color: var(--purple) }`
+   (0,1,1); otherwise white-on-accent button text repaints purple and vanishes. */
+.of1-recommendation-ranked-list-hero .of1-btn,
+.of1-recommendation-ranked-list-verdict .of1-btn,
+.of1-recommendation-ranked-list-cta .of1-btn {
+  color: #fff;
+}
+
+.of1-recommendation-ranked-list-ranking .of1-link {
+  color: var(--color-accent);
+}
+
 /* Criteria */
 .of1-recommendation-ranked-list-criteria {
   text-align: center;

@@ -152,10 +152,27 @@
   flex-direction: column;
 }
 
+/* Real Xfinity photo as a CSS-background fallback so an empty item image slot
+   still shows a relevant photo; a filled image simply layers on top. Vary the
+   fallback per card across the Xfinity product set. */
 .of1-comparison-decision-matrix-options .option-img {
   width: 100%;
   height: 170px;
   object-fit: cover;
+  display: block;
+  background: var(--color-accent-deep) center / cover no-repeat;
+}
+
+.of1-comparison-decision-matrix-options .option-card[data-card="1"] .option-img {
+  background-image: url('https://assets.comcast.com/assets/dotcom/projects_3/2024/nov/cix-7121_ie-learn-page-updates/IE_BAU-Hero-Learn-Desktop.jpg');
+}
+
+.of1-comparison-decision-matrix-options .option-card[data-card="2"] .option-img {
+  background-image: url('https://assets.comcast.com/assets/dotcom/projects_3/2026/june/cix-10733_xm-tmo-competitive-de-positioning-forced-plan-migration/TMO-FullImage-Banner-Desktop.jpg');
+}
+
+.of1-comparison-decision-matrix-options .option-card[data-card="3"] .option-img {
+  background-image: url('https://assets.comcast.com/assets/dotcom/projects_3/2025/oct/cix-9095_hbo-max-key-art-updates/premium-channels_hbo-max_learn/LS_PremiumChannels_HBO-Max_Hero_Desktop2.jpg');
 }
 
 .of1-comparison-decision-matrix-options .option-body {

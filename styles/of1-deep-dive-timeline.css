@@ -41,8 +41,11 @@
   margin: 0 auto 1.5em;
 }
 
-.of1-timeline-hero-cta,
-.of1-timeline-closing-cta {
+/* Scoped with the section class (specificity 0,2,x) so the accent-dark CTA
+   text beats the site stylesheet's `a:any-link { color: var(--purple) }`
+   (0,1,1), which would otherwise repaint the button label. */
+.of1-deep-dive-timeline-hero .of1-timeline-hero-cta,
+.of1-deep-dive-timeline-closing .of1-timeline-closing-cta {
   display: inline-block;
   background: #fff;
   color: var(--color-accent-dark);

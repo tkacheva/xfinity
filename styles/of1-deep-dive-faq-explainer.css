@@ -37,8 +37,11 @@
   margin: 0 auto 1.5em;
 }
 
-.of1-faq-hero-cta,
-.of1-faq-closing-cta {
+/* Scoped with the section class (specificity 0,2,x) so the white CTA text beats
+   the site stylesheet's `a:any-link { color: var(--purple) }` (0,1,1), which
+   would otherwise repaint it purple and hide it on the accent fill. */
+.of1-deep-dive-faq-explainer-hero .of1-faq-hero-cta,
+.of1-deep-dive-faq-explainer-closing .of1-faq-closing-cta {
   display: inline-block;
   background: var(--color-accent);
   color: #fff;

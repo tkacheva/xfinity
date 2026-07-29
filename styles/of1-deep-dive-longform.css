@@ -2,20 +2,27 @@
 
 /* Xfinity deep-dive: longform editorial article */
 
-.of1-deep-dive-longform-hero,
 .of1-deep-dive-longform-intro,
 .of1-deep-dive-longform-body,
 .of1-deep-dive-longform-closing {
   padding: var(--space-section) var(--space-container);
 }
 
-/* Hero */
+/* Hero — full-bleed split with a full-height image that reaches the right edge,
+   mirroring the discovery-spotlight hero. */
 .of1-deep-dive-longform-hero {
   display: grid;
-  gap: 32px;
-  align-items: center;
-  background: linear-gradient(180deg, var(--color-surface), var(--color-bg));
-  border-bottom: 1px solid var(--color-border);
+  grid-template-columns: 1fr;
+  gap: 0;
+  background: linear-gradient(120deg, var(--color-accent-deep), var(--color-accent-dark));
+  color: #fff;
+  padding: 0;
+  overflow: hidden;
+}
+
+.of1-longform-hero-inner {
+  /* left-align copy on the same 1100px column as the rest of the page */
+  padding: 48px max(var(--space-container), calc((100vw - 1100px) / 2));
 }
 
 .of1-longform-eyebrow {
@@ -23,42 +30,53 @@
   text-transform: uppercase;
   letter-spacing: 0.08em;
   font-size: 0.8rem;
-  color: var(--color-accent);
+  color: #d9c8ff;
   margin: 0 0 0.5em;
 }
 
 .of1-deep-dive-longform-hero h1 {
+  color: #fff;
   max-width: 16ch;
 }
 
 .of1-longform-lede {
   font-size: 1.2rem;
-  color: var(--color-fg-dim);
+  color: rgb(255 255 255 / 88%);
   max-width: 48ch;
 }
 
-.of1-longform-hero-cta,
-.of1-longform-closing-cta {
+/* Scoped with the parent/section class (specificity 0,2,x) so the CTA color
+   beats the site stylesheet's `a:any-link { color: var(--purple) }` (0,1,1),
+   which would otherwise repaint button text. */
+.of1-deep-dive-longform-hero .of1-longform-hero-cta,
+.of1-deep-dive-longform-closing .of1-longform-closing-cta {
   display: inline-block;
-  background: var(--color-accent);
-  color: #fff;
+  background: #fff;
+  color: var(--color-accent-dark);
   text-decoration: none;
   font-weight: 700;
   padding: 14px 28px;
   border-radius: 999px;
-  transition: background 0.2s ease;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
 
 .of1-longform-hero-cta:hover,
 .of1-longform-closing-cta:hover {
-  background: var(--color-accent-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card);
 }
 
+/* Full-height hero image that bleeds to the right edge. Real Xfinity internet
+   photo as a CSS-background fallback so an empty/stripped hero.image slot still
+   shows a relevant photo; a filled <img> sits on top of it. */
 .of1-longform-hero-img {
   width: 100%;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-card);
+  height: 100%;
+  min-height: 260px;
   object-fit: cover;
+  object-position: 70% center;
+  display: block;
+  background: var(--color-accent-deep) url('https://assets.comcast.com/assets/dotcom/projects_3/2024/nov/cix-7121_ie-learn-page-updates/IE_BAU-Hero-Learn-Desktop.jpg') center / cover no-repeat;
 }
 
 /* Prose measure ~65ch for readable body copy */
@@ -92,9 +110,26 @@
 
 .of1-longform-fig {
   width: 100%;
+  min-height: 260px;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-card);
   object-fit: cover;
+  display: block;
+}
+
+/* Real Xfinity CSS-background fallbacks (chosen per section topic) so empty or
+   stripped section-N.image slots still show a relevant photo behind the <img>. */
+.of1-longform-block[data-card="1"] .of1-longform-fig {
+  background: var(--color-accent-deep) url('https://assets.comcast.com/assets/dotcom/projects_3/2024/nov/cix-7121_ie-learn-page-updates/IE_BAU-Hero-Learn-Desktop.jpg') center / cover no-repeat;
+}
+
+.of1-longform-block[data-card="2"] .of1-longform-fig,
+.of1-longform-block[data-card="3"] .of1-longform-fig {
+  background: var(--color-accent-deep) url('https://assets.comcast.com/assets/dotcom/projects/cix-3594_customer_voice_2-0_page/Image_GridFullImage_BlueGateway_Desktop.png') center / cover no-repeat;
+}
+
+.of1-longform-block[data-card="4"] .of1-longform-fig {
+  background: var(--color-accent-deep) url('https://assets.comcast.com/assets/dotcom/projects_3/2024/nov/cix-7121_ie-learn-page-updates/IE_BAU-Hero-Learn-Desktop.jpg') center / cover no-repeat;
 }
 
 .of1-longform-block[data-card] .of1-longform-prose {
@@ -121,6 +156,28 @@
 @media (min-width: 900px) {
   .of1-deep-dive-longform-hero {
     grid-template-columns: 1.1fr 0.9fr;
+    align-items: stretch;
+    min-height: 460px;
+    position: relative;
+  }
+
+  .of1-longform-hero-inner {
+    align-self: center;
+    padding: 72px 48px 72px max(var(--space-container), calc((100vw - 1100px) / 2));
+  }
+
+  /* diagonal purple blend from the copy side into the photo (the image occupies
+     the right ~45% of the 1.1fr/0.9fr grid), echoing the spotlight hero */
+  .of1-deep-dive-longform-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 55%;
+    background: linear-gradient(100deg, var(--color-accent-dark) 0%, rgb(61 24 129 / 55%) 24%, transparent 50%);
+    pointer-events: none;
+    z-index: 1;
   }
 
   .of1-deep-dive-longform-intro {

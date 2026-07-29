@@ -26,6 +26,13 @@ main section {
 
 .btn:hover { background: var(--color-accent-dark); }
 
+/* CTA text contrast - the site's styles.css `a:any-link { color: var(--purple) }`
+   (0,1,1) outranks the single-class `.btn` color (0,1,0) and repaints filled
+   buttons purple-on-purple. Re-scope the color to the section (0,2,0) so it wins.
+   The hero .btn (white bg / accent-deep text) is already scoped below. */
+.of1-comparison-versus-split .btn,
+.of1-comparison-versus-cta .btn { color: #fff; }
+
 .eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -79,10 +86,22 @@ main section {
   flex-direction: column;
 }
 
+/* Real Xfinity photo as a CSS-background fallback so an empty item image slot
+   still shows a relevant photo; a filled image simply layers on top. */
 .side-img {
   width: 100%;
   height: 180px;
   object-fit: cover;
+  display: block;
+  background: var(--color-accent-deep) center / cover no-repeat;
+}
+
+.side[data-card="1"] .side-img {
+  background-image: url('https://assets.comcast.com/assets/dotcom/projects_3/2024/nov/cix-7121_ie-learn-page-updates/IE_BAU-Hero-Learn-Desktop.jpg');
+}
+
+.side[data-card="2"] .side-img {
+  background-image: url('https://assets.comcast.com/assets/dotcom/projects_3/2026/june/cix-10733_xm-tmo-competitive-de-positioning-forced-plan-migration/TMO-FullImage-Banner-Desktop.jpg');
 }
 
 .side-body {
