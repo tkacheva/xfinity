@@ -5,6 +5,14 @@
   color: #fff;
 }
 
+.split-hero.has-hero-img {
+  background:
+    linear-gradient(105deg, rgb(61 24 129 / 95%) 0%, rgb(90 35 185 / 80%) 60%, rgb(61 24 129 / 78%) 100%),
+    var(--hero-img);
+  background-size: cover;
+  background-position: center;
+}
+
 .split-hero .split-hero-inner {
   max-width: var(--maxw);
   margin: 0 auto;

@@ -1,10 +1,16 @@
 /**
  * split-hero — moving/program purple split hero with a sign-in card.
  * One row, cells: heading | body | CTA (link) | card-heading | card-body | card-CTA (link)
+ *   | image URL (OPTIONAL) — used as a full-bleed photo behind the purple gradient.
  */
 export default function decorate(block) {
   const c = [...block.querySelectorAll(':scope > div > div')];
   const val = (i) => (c[i] ? c[i].innerHTML.trim() : '');
+  const img = c[6] ? c[6].textContent.trim() : '';
+  if (img) {
+    block.classList.add('has-hero-img');
+    block.style.setProperty('--hero-img', `url('${img}')`);
+  }
   block.textContent = '';
   const inner = document.createElement('div');
   inner.className = 'split-hero-inner';
