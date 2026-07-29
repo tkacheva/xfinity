@@ -9,6 +9,18 @@
  *      full-bleed background (with a legibility gradient) and shows the
  *      guarantee as a compact chip instead of the oversized numeral.
  */
+/* Per-image focal point overrides (keyed by filename substring) so the
+   subject isn't cropped by the default vertical-centred fill. Default is
+   "center right" (copy sits left, subject shows right). */
+const FOCAL = [
+  ['Solution_2', 'right 15%'], // home-solutions: woman at smart door
+  ['homephone-overview-half-image-1', 'right 20%'], // home-phone: woman laughing
+  ['homephone-overview-half-image-2', 'center 15%'], // features: woman in red
+  ['tonight-show', 'center 22%'], // membership: keep face in frame
+  ['3UPMetablock-Card_Generic-Phone', 'center 22%'], // plan-builder: smiling woman
+  ['Metablock_Card2_Mobile', 'center bottom'], // xumo: keep the stream box in view
+];
+
 export default function decorate(block) {
   const cells = [...block.querySelectorAll(':scope > div > div')];
   const val = (i) => (cells[i] ? cells[i].textContent.trim() : '');
@@ -23,6 +35,8 @@ export default function decorate(block) {
   if (img) {
     block.classList.add('has-hero-img');
     block.style.setProperty('--hero-img', `url('${img}')`);
+    const focal = FOCAL.find(([k]) => img.includes(k));
+    if (focal) block.style.setProperty('--hero-pos', focal[1]);
     inner.innerHTML = `
       <div class="promo-copy">
         <p class="eyebrow">${val(0)}</p>
