@@ -1,0 +1,45 @@
+{
+  "_meta": { "stylesheet": "/styles/of1-comparison-versus.css" },
+  "hero.eyebrow": "Xfinity Mobile",
+  "hero.title": "Mobile Select vs Mobile Plus",
+  "hero.subtitle": "Two unlimited plans on the most reliable 5G network. Here is how they stack up so you can pick the one that fits.",
+  "hero.cta": { "label": "See mobile plans", "href": "https://xfinity.com/learn/mobile" },
+  "item-1.image": "https://assets.comcast.com/assets/dotcom/projects_3/2026/june/cix-10733_xm-tmo-competitive-de-positioning-forced-plan-migration/TMO-FullImage-Banner-Desktop.jpg",
+  "item-1.name": "Mobile Select",
+  "item-1.price": "$30/mo per line",
+  "item-1.tagline": "Unlimited essentials that cut your bill in half.",
+  "item-1.features": [
+    "Unlimited talk, text, and data",
+    "Most reliable 5G network",
+    "Millions of secure WiFi hotspots",
+    "Free line for a year with Xfinity Internet"
+  ],
+  "item-1.cta": { "label": "Choose Mobile Select", "href": "https://xfinity.com/learn/mobile" },
+  "versus.badge": "VS",
+  "item-2.image": "https://assets.comcast.com/assets/dotcom/projects_3/2026/june/cix-10733_xm-tmo-competitive-de-positioning-forced-plan-migration/DeviceProtection-FullImage.jpg",
+  "item-2.name": "Mobile Plus",
+  "item-2.price": "$45/mo per line",
+  "item-2.tagline": "Everything in Select, plus the best phone perks.",
+  "item-2.features": [
+    "Everything in Mobile Select",
+    "Best phone deals when you switch",
+    "Device protection for life",
+    "Nationwide 5G coverage"
+  ],
+  "item-2.cta": { "label": "Choose Mobile Plus", "href": "https://xfinity.com/learn/mobile/plans" },
+  "shared.title": "What both plans share",
+  "shared.items": [
+    "Unlimited talk, text, and data",
+    "No annual contract",
+    "The most reliable 5G network",
+    "Manage everything in the Xfinity app"
+  ],
+  "decide.title": "Which one is right for you?",
+  "decide.item1title": "Go with Mobile Select if...",
+  "decide.item1body": "You want the lowest price on unlimited data and mostly connect over WiFi at home and work.",
+  "decide.item2title": "Go with Mobile Plus if...",
+  "decide.item2body": "You want a new phone deal and full device protection for the gear you carry everywhere.",
+  "cta.title": "Bring your bill back down to earth",
+  "cta.body": "Add a mobile line to your Xfinity Internet and try your first line free for a year.",
+  "cta.button": { "label": "Get Xfinity Mobile", "href": "https://xfinity.com/learn/mobile" }
+}

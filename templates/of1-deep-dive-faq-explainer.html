@@ -1,0 +1,96 @@
+<main>
+  <section class="of1-deep-dive-faq-explainer-hero of1-hero">
+    <div class="of1-faq-hero-inner">
+      <p class="of1-faq-eyebrow" data-slot="hero.eyebrow">Xfinity Internet Q and A</p>
+      <h1 data-slot="hero.title">Your gig WiFi questions, answered</h1>
+      <p class="of1-faq-lede" data-slot="hero.subtitle">The straight answers on speed, equipment, moving day, and the 5-year price guarantee, in plain language.</p>
+      <a class="of1-faq-hero-cta" data-slot="hero.cta" href="#">See plans</a>
+    </div>
+  </section>
+
+  <section class="of1-deep-dive-faq-explainer-intro">
+    <div class="of1-faq-prose">
+      <h2 data-slot="intro.title">Everything you were wondering about</h2>
+      <p data-slot="intro.body">We hear the same questions a lot, so we put the honest answers in one place. Tap any question to expand it.</p>
+    </div>
+  </section>
+
+  <section class="of1-deep-dive-faq-explainer-list">
+    <div class="of1-faq-accordion">
+      <article class="of1-faq-item" data-card="1">
+        <button class="of1-faq-q" type="button" aria-expanded="true">
+          <span data-slot="faq-1.question">What is the Xfinity 5-Year Price Guarantee?</span>
+          <span class="of1-faq-icon" aria-hidden="true"></span>
+        </button>
+        <div class="of1-faq-a">
+          <p data-slot="faq-1.answer">It locks your base monthly internet rate for 60 months, with the freedom to change or cancel anytime and no annual contract. If you move within our service area, your rate stays the same.</p>
+        </div>
+      </article>
+
+      <article class="of1-faq-item" data-card="2">
+        <button class="of1-faq-q" type="button" aria-expanded="false">
+          <span data-slot="faq-2.question">Can I get internet on move-in day?</span>
+          <span class="of1-faq-icon" aria-hidden="true"></span>
+        </button>
+        <div class="of1-faq-a">
+          <p data-slot="faq-2.answer">Yes. Most Xfinity Internet plans support same-day or next-day delivery and same-day self-install using the Xfinity app, so you can be online the day you move in.</p>
+        </div>
+      </article>
+
+      <article class="of1-faq-item" data-card="3">
+        <button class="of1-faq-q" type="button" aria-expanded="false">
+          <span data-slot="faq-3.question">What does the xFi Gateway do?</span>
+          <span class="of1-faq-icon" aria-hidden="true"></span>
+        </button>
+        <div class="of1-faq-a">
+          <p data-slot="faq-3.answer">The xFi Gateway is your modem and router in one, included with your plan. It delivers whole-home WiFi and unlocks Advanced Security and parental controls in the Xfinity app.</p>
+        </div>
+      </article>
+
+      <article class="of1-faq-item" data-card="4">
+        <button class="of1-faq-q" type="button" aria-expanded="false">
+          <span data-slot="faq-4.question">Is there a contract or early termination fee?</span>
+          <span class="of1-faq-icon" aria-hidden="true"></span>
+        </button>
+        <div class="of1-faq-a">
+          <p data-slot="faq-4.answer">No annual contract required. You can change or cancel anytime without a penalty.</p>
+        </div>
+      </article>
+
+      <article class="of1-faq-item" data-card="5">
+        <button class="of1-faq-q" type="button" aria-expanded="false">
+          <span data-slot="faq-5.question">How much can I save by bundling mobile?</span>
+          <span class="of1-faq-icon" aria-hidden="true"></span>
+        </button>
+        <div class="of1-faq-a">
+          <p data-slot="faq-5.answer">Adding an Xfinity Mobile line to your internet can cut your total bill significantly versus Verizon, AT and T, or T-Mobile, and you can try a line free for a year with Xfinity Internet.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="of1-deep-dive-faq-explainer-closing">
+    <div class="of1-faq-prose">
+      <h2 data-slot="closing.title">Still have questions?</h2>
+      <p data-slot="closing.body">Compare speeds side by side and find the plan that fits your home, all with the price locked for five years.</p>
+      <a class="of1-faq-closing-cta" data-slot="closing.cta" href="#">Compare Internet plans</a>
+    </div>
+  </section>
+
+  <script>
+    (function () {
+      const items = document.querySelectorAll('.of1-deep-dive-faq-explainer-list .of1-faq-item');
+      items.forEach((item) => {
+        const btn = item.querySelector('.of1-faq-q');
+        const setOpen = (open) => {
+          btn.setAttribute('aria-expanded', String(open));
+          item.classList.toggle('is-open', open);
+        };
+        setOpen(btn.getAttribute('aria-expanded') === 'true');
+        btn.addEventListener('click', () => {
+          setOpen(btn.getAttribute('aria-expanded') !== 'true');
+        });
+      });
+    })();
+  </script>
+</main>

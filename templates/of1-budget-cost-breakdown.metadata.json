@@ -1,0 +1,177 @@
+{
+  "name": "of1-budget-cost-breakdown",
+  "intent": "budget",
+  "description": "Itemized line-item breakdown of a bundle's monthly cost with a running total and a monthly/yearly toggle, plus a competitor-savings band.",
+  "minItems": 4,
+  "maxItems": 4,
+  "stylesheet": "/styles/of1-budget-cost-breakdown.css",
+  "html": "/templates/of1-budget-cost-breakdown.html",
+  "slots": [
+    {
+      "key": "hero.eyebrow",
+      "type": "text",
+      "instruction": "Short kicker introducing the itemized bill."
+    },
+    {
+      "key": "hero.title",
+      "type": "text",
+      "instruction": "Hero headline about transparent, itemized pricing."
+    },
+    {
+      "key": "hero.subtitle",
+      "type": "text",
+      "instruction": "One or two sentences describing the bundle broken down with no hidden fees."
+    },
+    {
+      "key": "hero.cta",
+      "type": "link",
+      "instruction": "Primary hero CTA to build or shop a bundle."
+    },
+    {
+      "key": "hero.image",
+      "type": "image",
+      "instruction": "Hero image of the Internet and Mobile bundle. Use a real product image URL."
+    },
+    {
+      "key": "breakdown.title",
+      "type": "text",
+      "instruction": "Heading for the itemized breakdown card."
+    },
+    {
+      "key": "item-1.title",
+      "type": "text",
+      "instruction": "Line item 1 name (Internet plan)."
+    },
+    {
+      "key": "item-1.detail",
+      "type": "text",
+      "instruction": "Line item 1 short description."
+    },
+    {
+      "key": "item-1.price",
+      "type": "text",
+      "instruction": "Line item 1 monthly price with dollar sign, e.g. $45."
+    },
+    {
+      "key": "item-1.period",
+      "type": "text",
+      "instruction": "Line item 1 period suffix, e.g. /mo."
+    },
+    {
+      "key": "item-2.title",
+      "type": "text",
+      "instruction": "Line item 2 name (equipment)."
+    },
+    {
+      "key": "item-2.detail",
+      "type": "text",
+      "instruction": "Line item 2 short description."
+    },
+    {
+      "key": "item-2.price",
+      "type": "text",
+      "instruction": "Line item 2 monthly price with dollar sign, e.g. $0."
+    },
+    {
+      "key": "item-2.period",
+      "type": "text",
+      "instruction": "Line item 2 period suffix, e.g. /mo."
+    },
+    {
+      "key": "item-3.title",
+      "type": "text",
+      "instruction": "Line item 3 name (Mobile line)."
+    },
+    {
+      "key": "item-3.detail",
+      "type": "text",
+      "instruction": "Line item 3 short description."
+    },
+    {
+      "key": "item-3.price",
+      "type": "text",
+      "instruction": "Line item 3 monthly price with dollar sign, e.g. $30."
+    },
+    {
+      "key": "item-3.period",
+      "type": "text",
+      "instruction": "Line item 3 period suffix, e.g. /mo."
+    },
+    {
+      "key": "item-4.title",
+      "type": "text",
+      "instruction": "Line item 4 name (streaming add-on)."
+    },
+    {
+      "key": "item-4.detail",
+      "type": "text",
+      "instruction": "Line item 4 short description."
+    },
+    {
+      "key": "item-4.price",
+      "type": "text",
+      "instruction": "Line item 4 monthly price with dollar sign, e.g. $15."
+    },
+    {
+      "key": "item-4.period",
+      "type": "text",
+      "instruction": "Line item 4 period suffix, e.g. /mo."
+    },
+    {
+      "key": "total.label",
+      "type": "text",
+      "instruction": "Label for the total row, e.g. Total each month."
+    },
+    {
+      "key": "total.amount",
+      "type": "text",
+      "instruction": "Sum of the line items with dollar sign, e.g. $90."
+    },
+    {
+      "key": "total.period",
+      "type": "text",
+      "instruction": "Total period suffix, e.g. /mo."
+    },
+    {
+      "key": "savings.title",
+      "type": "text",
+      "instruction": "Heading for the competitor-savings band."
+    },
+    {
+      "key": "savings.amount",
+      "type": "text",
+      "instruction": "Big annual savings figure vs other carriers, e.g. $600+."
+    },
+    {
+      "key": "savings.copy",
+      "type": "text",
+      "instruction": "Supporting copy quantifying savings over Verizon, AT&T, and T-Mobile."
+    },
+    {
+      "key": "guarantee.title",
+      "type": "text",
+      "instruction": "Heading for the price-guarantee reassurance section."
+    },
+    {
+      "key": "guarantee.items",
+      "type": "list",
+      "instruction": "Reassurance bullets: 5-year price guarantee, no contract, one bill."
+    },
+    {
+      "key": "cta.title",
+      "type": "text",
+      "instruction": "Final call-to-action heading."
+    },
+    {
+      "key": "cta.subtitle",
+      "type": "text",
+      "instruction": "Final call-to-action supporting line."
+    },
+    {
+      "key": "cta.link",
+      "type": "link",
+      "instruction": "Final call-to-action link."
+    }
+  ],
+  "label": "Budget - Cost Breakdown"
+}

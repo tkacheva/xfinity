@@ -1,0 +1,162 @@
+{
+  "name": "of1-budget-roi-story",
+  "intent": "budget",
+  "description": "A savings narrative with a before/after bill comparison, a big animated per-year/per-month savings figure, and cards explaining where the savings come from.",
+  "minItems": 3,
+  "maxItems": 3,
+  "stylesheet": "/styles/of1-budget-roi-story.css",
+  "html": "/templates/of1-budget-roi-story.html",
+  "slots": [
+    {
+      "key": "hero.eyebrow",
+      "type": "text",
+      "instruction": "Short kicker, playful cost-cutting hook."
+    },
+    {
+      "key": "hero.title",
+      "type": "text",
+      "instruction": "Hero headline about cutting the mobile bill roughly in half."
+    },
+    {
+      "key": "hero.subtitle",
+      "type": "text",
+      "instruction": "One or two sentences on switching a line to Xfinity Mobile with Internet."
+    },
+    {
+      "key": "hero.cta",
+      "type": "link",
+      "instruction": "Primary hero CTA to see savings or shop Mobile."
+    },
+    {
+      "key": "hero.image",
+      "type": "image",
+      "instruction": "Hero image of Xfinity Mobile. Use a real product image URL."
+    },
+    {
+      "key": "compare.title",
+      "type": "text",
+      "instruction": "Heading for the before/after bill comparison."
+    },
+    {
+      "key": "before.label",
+      "type": "text",
+      "instruction": "Label for the higher competitor bill."
+    },
+    {
+      "key": "before.amount",
+      "type": "text",
+      "instruction": "Competitor monthly bill amount, numerals only."
+    },
+    {
+      "key": "before.period",
+      "type": "text",
+      "instruction": "Period suffix for the before amount, e.g. /mo."
+    },
+    {
+      "key": "before.note",
+      "type": "text",
+      "instruction": "Small note describing the competitor plan."
+    },
+    {
+      "key": "after.label",
+      "type": "text",
+      "instruction": "Label for the lower Xfinity Mobile bill."
+    },
+    {
+      "key": "after.amount",
+      "type": "text",
+      "instruction": "Xfinity Mobile monthly bill amount, numerals only."
+    },
+    {
+      "key": "after.period",
+      "type": "text",
+      "instruction": "Period suffix for the after amount, e.g. /mo."
+    },
+    {
+      "key": "after.note",
+      "type": "text",
+      "instruction": "Small note describing the Xfinity Mobile plan."
+    },
+    {
+      "key": "savings.kicker",
+      "type": "text",
+      "instruction": "Kicker above the big savings figure, e.g. You keep."
+    },
+    {
+      "key": "savings.amount",
+      "type": "text",
+      "instruction": "Big annual savings figure with dollar sign, e.g. $600. The toggle divides this by 12 for the monthly view."
+    },
+    {
+      "key": "savings.copy",
+      "type": "text",
+      "instruction": "Copy explaining the recurring, guaranteed nature of the savings."
+    },
+    {
+      "key": "sources.title",
+      "type": "text",
+      "instruction": "Heading for the savings-sources cards."
+    },
+    {
+      "key": "item-1.value",
+      "type": "text",
+      "instruction": "Savings source 1 headline figure, e.g. $360."
+    },
+    {
+      "key": "item-1.title",
+      "type": "text",
+      "instruction": "Savings source 1 title (free line for a year)."
+    },
+    {
+      "key": "item-1.detail",
+      "type": "text",
+      "instruction": "Savings source 1 description."
+    },
+    {
+      "key": "item-2.value",
+      "type": "text",
+      "instruction": "Savings source 2 headline figure, e.g. $0."
+    },
+    {
+      "key": "item-2.title",
+      "type": "text",
+      "instruction": "Savings source 2 title (no price increases)."
+    },
+    {
+      "key": "item-2.detail",
+      "type": "text",
+      "instruction": "Savings source 2 description referencing the 5-year price guarantee and no contract."
+    },
+    {
+      "key": "item-3.value",
+      "type": "text",
+      "instruction": "Savings source 3 headline figure, e.g. 1 bill."
+    },
+    {
+      "key": "item-3.title",
+      "type": "text",
+      "instruction": "Savings source 3 title (one simple bill)."
+    },
+    {
+      "key": "item-3.detail",
+      "type": "text",
+      "instruction": "Savings source 3 description about bundling Internet, Mobile, and streaming."
+    },
+    {
+      "key": "cta.title",
+      "type": "text",
+      "instruction": "Final call-to-action heading."
+    },
+    {
+      "key": "cta.subtitle",
+      "type": "text",
+      "instruction": "Final call-to-action supporting line."
+    },
+    {
+      "key": "cta.link",
+      "type": "link",
+      "instruction": "Final call-to-action link."
+    }
+  ],
+  "label": "Budget - ROI Story"
+}

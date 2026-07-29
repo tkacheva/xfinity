@@ -1,0 +1,58 @@
+{
+  "_meta": { "stylesheet": "/styles/of1-budget-price-tiers.css" },
+  "hero.eyebrow": "Internet pricing",
+  "hero.title": "Fast WiFi, honestly priced",
+  "hero.subtitle": "Pick the speed that fits your home and lock your price for 5 years. No annual contract, no surprise hikes.",
+  "hero.cta": { "label": "Shop Internet plans", "href": "https://xfinity.com/learn/internet-service" },
+  "hero.image": "https://assets.comcast.com/assets/dotcom/projects_3/2024/nov/cix-7121_ie-learn-page-updates/IE_BAU-Hero-Learn-Desktop.jpg",
+  "item-1.title": "300 Mbps",
+  "item-1.price": "40",
+  "item-1.period": "/mo",
+  "item-1.tagline": "Best value starter plan",
+  "item-1.features": [
+    "300 Mbps speeds",
+    "99.9% reliability",
+    "Same-day self-install",
+    "A free Xfinity Mobile line for 1 year",
+    "5-year price guarantee"
+  ],
+  "item-1.cta": { "label": "Get 300 Mbps", "href": "https://xfinity.com/learn/internet-service" },
+  "item-2.badge": "Best value",
+  "item-2.title": "500 Mbps",
+  "item-2.price": "45",
+  "item-2.period": "/mo",
+  "item-2.tagline": "Keep up on all your devices",
+  "item-2.features": [
+    "500 Mbps speeds",
+    "Fast, consistent speed even at peak hours",
+    "A free Xfinity Mobile line for 1 year",
+    "xFi Gateway included",
+    "5-year price guarantee"
+  ],
+  "item-2.cta": { "label": "Get 500 Mbps", "href": "https://xfinity.com/learn/internet-service" },
+  "item-3.title": "Gig",
+  "item-3.price": "50",
+  "item-3.period": "/mo",
+  "item-3.tagline": "Our fastest home plan",
+  "item-3.features": [
+    "Up to 1 Gig download speeds",
+    "Unlimited data",
+    "xFi Gateway included",
+    "Peacock Premium for 2 years",
+    "5-year price guarantee"
+  ],
+  "item-3.cta": { "label": "Get Gig", "href": "https://xfinity.com/learn/internet-service/gig" },
+  "included.title": "Every plan comes with",
+  "included.items": [
+    "No annual contract",
+    "xFi Gateway available with your plan",
+    "Millions of secure WiFi hotspots nationwide",
+    "Manage everything in the Xfinity app"
+  ],
+  "guarantee.title": "Your price, guaranteed for 5 years",
+  "guarantee.body": "Lock in your monthly rate and keep it for five years, with no contract holding you down. Add an Xfinity Mobile line and save hundreds a year over Verizon, AT&T, and T-Mobile.",
+  "guarantee.cta": { "label": "See the guarantee", "href": "https://xfinity.com/learn/internet-service" },
+  "cta.title": "Ready to save?",
+  "cta.subtitle": "Check availability at your address and pick the plan that fits your budget.",
+  "cta.link": { "label": "Check availability", "href": "https://xfinity.com/learn/internet-service" }
+}

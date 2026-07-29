@@ -1,0 +1,69 @@
+<main>
+  <section class="of1-comparison-versus-hero of1-hero">
+    <div class="of1-container">
+      <p class="eyebrow" data-slot="hero.eyebrow"></p>
+      <h1 data-slot="hero.title"></h1>
+      <p class="hero-sub" data-slot="hero.subtitle"></p>
+      <a class="btn" data-slot="hero.cta"></a>
+    </div>
+  </section>
+
+  <section class="of1-comparison-versus-split">
+    <div class="of1-container split-inner">
+      <article class="side" data-card="1">
+        <img class="side-img" data-slot="item-1.image" alt="" />
+        <div class="side-body">
+          <h2 class="side-name" data-slot="item-1.name"></h2>
+          <p class="side-price" data-slot="item-1.price"></p>
+          <p class="side-tagline" data-slot="item-1.tagline"></p>
+          <ul class="side-features" data-slot-list="item-1.features"></ul>
+          <a class="btn" data-slot="item-1.cta"></a>
+        </div>
+      </article>
+
+      <div class="versus-badge" data-slot="versus.badge" aria-hidden="true"></div>
+
+      <article class="side" data-card="2">
+        <img class="side-img" data-slot="item-2.image" alt="" />
+        <div class="side-body">
+          <h2 class="side-name" data-slot="item-2.name"></h2>
+          <p class="side-price" data-slot="item-2.price"></p>
+          <p class="side-tagline" data-slot="item-2.tagline"></p>
+          <ul class="side-features" data-slot-list="item-2.features"></ul>
+          <a class="btn" data-slot="item-2.cta"></a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="of1-comparison-versus-shared">
+    <div class="of1-container">
+      <h2 data-slot="shared.title"></h2>
+      <ul class="shared-list" data-slot-list="shared.items"></ul>
+    </div>
+  </section>
+
+  <section class="of1-comparison-versus-decide">
+    <div class="of1-container">
+      <h2 data-slot="decide.title"></h2>
+      <div class="decide-grid">
+        <div class="decide-card">
+          <h3 data-slot="decide.item1title"></h3>
+          <p data-slot="decide.item1body"></p>
+        </div>
+        <div class="decide-card">
+          <h3 data-slot="decide.item2title"></h3>
+          <p data-slot="decide.item2body"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="of1-comparison-versus-cta">
+    <div class="of1-container cta-inner">
+      <h2 data-slot="cta.title"></h2>
+      <p data-slot="cta.body"></p>
+      <a class="btn" data-slot="cta.button"></a>
+    </div>
+  </section>
+</main>

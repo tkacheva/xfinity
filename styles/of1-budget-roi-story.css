@@ -1,0 +1,220 @@
+@import url("/styles/of1-template-base.css");
+
+.of1-budget-roi-story-hero,
+.of1-budget-roi-story-compare,
+.of1-budget-roi-story-headline,
+.of1-budget-roi-story-sources,
+.of1-budget-roi-story-cta {
+  padding: var(--space-section) var(--space-container);
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+/* Hero */
+.of1-budget-roi-story-hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.of1-budget-roi-story-hero .eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  margin: 0 0 12px;
+}
+
+.of1-budget-roi-story-hero h1 { margin-bottom: 16px; }
+
+.of1-budget-roi-story-hero .lede {
+  font-size: 1.15rem;
+  color: var(--color-fg-dim);
+  max-width: 42ch;
+}
+
+.of1-budget-roi-story-hero .hero-cta,
+.of1-budget-roi-story-cta .final-cta {
+  display: inline-block;
+  background: var(--color-accent);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 14px 28px;
+  border-radius: var(--radius);
+  margin-top: 8px;
+}
+
+.of1-budget-roi-story-hero .hero-cta:hover,
+.of1-budget-roi-story-cta .final-cta:hover { background: var(--color-accent-dark); }
+
+.of1-budget-roi-story-hero .hero-img {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  object-fit: cover;
+}
+
+/* Before / after */
+.of1-budget-roi-story-compare { text-align: center; }
+.of1-budget-roi-story-compare h2 { margin-bottom: 32px; }
+
+.compare-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  align-items: center;
+  justify-items: center;
+}
+
+.compare-card {
+  width: 100%;
+  max-width: 380px;
+  border-radius: var(--radius-lg);
+  padding: 32px 28px;
+  box-shadow: var(--shadow-card);
+}
+
+.compare-card--before {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+}
+
+.compare-card--before .compare-amount { color: var(--color-fg-dim); text-decoration: line-through; text-decoration-color: rgb(98 98 108 / 45%); }
+
+.compare-card--after {
+  background: linear-gradient(135deg, var(--color-accent-deep), var(--color-accent));
+  color: #fff;
+}
+
+.compare-label { font-weight: 700; margin: 0 0 8px; }
+.compare-card--after .compare-label { color: rgb(255 255 255 / 88%); }
+
+.compare-amount {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 2px;
+  margin: 0 0 12px;
+}
+
+.compare-amount .currency { font-size: 1.6rem; font-weight: 700; }
+.compare-amount .value { font-family: var(--font-display); font-weight: 700; font-size: clamp(3rem, 7vw, 4.5rem); line-height: 1; letter-spacing: -0.03em; }
+.compare-amount .per { font-size: 1rem; font-weight: 600; }
+
+.compare-note { font-size: 0.9rem; margin: 0; }
+.compare-card--before .compare-note { color: var(--color-fg-dim); }
+.compare-card--after .compare-note { color: rgb(255 255 255 / 85%); }
+
+.compare-arrow { font-size: 2rem; color: var(--color-accent); font-weight: 700; transform: rotate(90deg); }
+
+/* Big savings headline */
+.of1-budget-roi-story-headline { max-width: none; padding-left: 0; padding-right: 0; }
+
+.of1-budget-roi-story-headline .headline-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: 56px 40px;
+  text-align: center;
+  border: 1px solid var(--color-border);
+}
+
+.headline-kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  color: var(--color-accent);
+  margin: 0 0 8px;
+}
+
+.headline-figure {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(4rem, 14vw, 8rem);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  color: var(--color-accent-deep);
+  margin: 0 0 16px;
+}
+
+.headline-copy { color: var(--color-fg-dim); max-width: 46ch; margin: 0 auto 28px; font-size: 1.1rem; }
+
+.headline-toggle {
+  display: inline-flex;
+  gap: 4px;
+  padding: 4px;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+}
+
+.toggle-btn {
+  border: 0;
+  background: transparent;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--color-fg-dim);
+  padding: 8px 20px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.toggle-btn.is-active { background: var(--color-accent); color: #fff; }
+
+/* Savings sources */
+.of1-budget-roi-story-sources { text-align: center; }
+.of1-budget-roi-story-sources h2 { margin-bottom: 28px; }
+
+.sources-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.source-card {
+  position: relative;
+  overflow: hidden;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 28px 24px;
+  box-shadow: var(--shadow-card);
+  text-align: left;
+}
+
+.source-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 4px;
+  background: var(--color-accent);
+}
+
+.source-value {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--color-accent);
+  margin: 0 0 12px;
+}
+
+.source-title { font-weight: 700; font-size: 1.1rem; margin: 0 0 6px; }
+.source-detail { color: var(--color-fg-dim); font-size: 0.95rem; margin: 0; }
+
+/* Final CTA */
+.of1-budget-roi-story-cta { text-align: center; }
+.of1-budget-roi-story-cta p { color: var(--color-fg-dim); max-width: 50ch; margin: 0 auto 24px; }
+
+@media (min-width: 900px) {
+  .of1-budget-roi-story-hero { grid-template-columns: 1.05fr 0.95fr; }
+  .compare-grid { grid-template-columns: 1fr auto 1fr; }
+  .compare-arrow { transform: none; }
+  .sources-grid { grid-template-columns: repeat(3, 1fr); }
+}

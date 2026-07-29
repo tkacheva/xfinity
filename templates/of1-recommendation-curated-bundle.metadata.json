@@ -1,0 +1,177 @@
+{
+  "name": "of1-recommendation-curated-bundle",
+  "intent": "recommendation",
+  "description": "A curated internet + mobile + equipment bundle presented as one package with a first-year total and an interactive toggle for the free mobile line.",
+  "minItems": 3,
+  "maxItems": 3,
+  "stylesheet": "/styles/of1-recommendation-curated-bundle.css",
+  "html": "/templates/of1-recommendation-curated-bundle.html",
+  "slots": [
+    {
+      "key": "hero.eyebrow",
+      "type": "text",
+      "instruction": "Short kicker signaling this is a bundle recommendation."
+    },
+    {
+      "key": "hero.title",
+      "type": "text",
+      "instruction": "Headline naming the bundle recommended for the visitor's situation."
+    },
+    {
+      "key": "hero.subtitle",
+      "type": "text",
+      "instruction": "One-sentence summary of what the bundle includes."
+    },
+    {
+      "key": "hero.cta",
+      "type": "link",
+      "instruction": "Primary hero call to action to get the bundle."
+    },
+    {
+      "key": "bundle.title",
+      "type": "text",
+      "instruction": "Name of the curated bundle."
+    },
+    {
+      "key": "bundle.body",
+      "type": "text",
+      "instruction": "Paragraph describing the bundle and its overall value."
+    },
+    {
+      "key": "bundle.perks",
+      "type": "list",
+      "instruction": "Short list of the bundle's headline perks."
+    },
+    {
+      "key": "bundle.summaryLabel",
+      "type": "text",
+      "instruction": "Label above the headline price, e.g. the first-year total."
+    },
+    {
+      "key": "bundle.total",
+      "type": "text",
+      "instruction": "The headline bundle price shown in the summary panel."
+    },
+    {
+      "key": "bundle.saveNote",
+      "type": "text",
+      "instruction": "Savings note shown under the total."
+    },
+    {
+      "key": "bundle.toggleLabel",
+      "type": "text",
+      "instruction": "Label for the toggle that includes or excludes the free mobile line."
+    },
+    {
+      "key": "bundle.cta",
+      "type": "link",
+      "instruction": "Call to action to build or order the bundle."
+    },
+    {
+      "key": "included.title",
+      "type": "text",
+      "instruction": "Heading introducing the items included in the bundle."
+    },
+    {
+      "key": "item-1.image",
+      "type": "image",
+      "instruction": "Image for the internet component. Use a real Xfinity asset URL."
+    },
+    {
+      "key": "item-1.tag",
+      "type": "text",
+      "instruction": "Category tag for the first item, e.g. Internet."
+    },
+    {
+      "key": "item-1.title",
+      "type": "text",
+      "instruction": "Name of the internet plan in the bundle."
+    },
+    {
+      "key": "item-1.price",
+      "type": "text",
+      "instruction": "Price of the internet plan."
+    },
+    {
+      "key": "item-1.body",
+      "type": "text",
+      "instruction": "Short description of the internet plan."
+    },
+    {
+      "key": "item-2.image",
+      "type": "image",
+      "instruction": "Image for the mobile component. Use a real Xfinity asset URL."
+    },
+    {
+      "key": "item-2.tag",
+      "type": "text",
+      "instruction": "Category tag for the second item, e.g. Mobile."
+    },
+    {
+      "key": "item-2.title",
+      "type": "text",
+      "instruction": "Name of the mobile plan in the bundle."
+    },
+    {
+      "key": "item-2.price",
+      "type": "text",
+      "instruction": "Price of the mobile plan, noting the free-year offer."
+    },
+    {
+      "key": "item-2.body",
+      "type": "text",
+      "instruction": "Short description of the mobile plan."
+    },
+    {
+      "key": "item-3.image",
+      "type": "image",
+      "instruction": "Image for the equipment component. Use a real Xfinity asset URL."
+    },
+    {
+      "key": "item-3.tag",
+      "type": "text",
+      "instruction": "Category tag for the third item, e.g. Equipment."
+    },
+    {
+      "key": "item-3.title",
+      "type": "text",
+      "instruction": "Name of the equipment in the bundle."
+    },
+    {
+      "key": "item-3.price",
+      "type": "text",
+      "instruction": "Price of the equipment, e.g. Included."
+    },
+    {
+      "key": "item-3.body",
+      "type": "text",
+      "instruction": "Short description of the equipment."
+    },
+    {
+      "key": "value.title",
+      "type": "text",
+      "instruction": "Heading introducing why the bundle is a good value."
+    },
+    {
+      "key": "value.items",
+      "type": "list",
+      "instruction": "List of value and savings points for the bundle."
+    },
+    {
+      "key": "cta.title",
+      "type": "text",
+      "instruction": "Closing call-to-action heading."
+    },
+    {
+      "key": "cta.body",
+      "type": "text",
+      "instruction": "Closing call-to-action supporting copy."
+    },
+    {
+      "key": "cta.cta",
+      "type": "link",
+      "instruction": "Final call to action to start the order."
+    }
+  ],
+  "label": "Recommendation - Curated Bundle"
+}

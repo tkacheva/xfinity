@@ -1,0 +1,162 @@
+{
+  "name": "of1-recommendation-hero-pick",
+  "intent": "recommendation",
+  "description": "One standout recommended plan presented as a big hero pick, backed by personalized reasons and a couple of secondary alternatives.",
+  "minItems": 3,
+  "maxItems": 3,
+  "stylesheet": "/styles/of1-recommendation-hero-pick.css",
+  "html": "/templates/of1-recommendation-hero-pick.html",
+  "slots": [
+    {
+      "key": "hero.eyebrow",
+      "type": "text",
+      "instruction": "Short kicker above the headline setting the recommendation context."
+    },
+    {
+      "key": "hero.title",
+      "type": "text",
+      "instruction": "Personalized headline naming the single recommended plan for the visitor's situation."
+    },
+    {
+      "key": "hero.subtitle",
+      "type": "text",
+      "instruction": "One-sentence benefit-first summary of why this setup fits the visitor."
+    },
+    {
+      "key": "hero.cta",
+      "type": "link",
+      "instruction": "Primary hero call to action linking to the recommendation or order flow."
+    },
+    {
+      "key": "pick.image",
+      "type": "image",
+      "instruction": "Product image for the recommended pick. Use a real Xfinity asset URL."
+    },
+    {
+      "key": "pick.eyebrow",
+      "type": "text",
+      "instruction": "Badge label flagging this as the top recommendation."
+    },
+    {
+      "key": "pick.title",
+      "type": "text",
+      "instruction": "Name of the recommended product."
+    },
+    {
+      "key": "pick.price",
+      "type": "text",
+      "instruction": "Monthly price of the recommended product."
+    },
+    {
+      "key": "pick.priceNote",
+      "type": "text",
+      "instruction": "Short pricing reassurance such as contract or price-guarantee terms."
+    },
+    {
+      "key": "pick.body",
+      "type": "text",
+      "instruction": "Paragraph describing the recommended product and its core benefits."
+    },
+    {
+      "key": "pick.features",
+      "type": "list",
+      "instruction": "Bulleted list of the top features of the recommended product."
+    },
+    {
+      "key": "pick.cta",
+      "type": "link",
+      "instruction": "Call to action to select the recommended product."
+    },
+    {
+      "key": "reasons.title",
+      "type": "text",
+      "instruction": "Heading introducing the personalized reasons this pick fits the visitor."
+    },
+    {
+      "key": "reasons.items",
+      "type": "list",
+      "instruction": "List of personalized reasons the recommendation matches the visitor's needs."
+    },
+    {
+      "key": "alt.title",
+      "type": "text",
+      "instruction": "Heading introducing the secondary alternative options."
+    },
+    {
+      "key": "item-1.title",
+      "type": "text",
+      "instruction": "Name of the first alternative product."
+    },
+    {
+      "key": "item-1.price",
+      "type": "text",
+      "instruction": "Monthly price of the first alternative."
+    },
+    {
+      "key": "item-1.body",
+      "type": "text",
+      "instruction": "Short description of the first alternative product."
+    },
+    {
+      "key": "item-1.cta",
+      "type": "link",
+      "instruction": "Link to view or select the first alternative."
+    },
+    {
+      "key": "item-2.title",
+      "type": "text",
+      "instruction": "Name of the second alternative product."
+    },
+    {
+      "key": "item-2.price",
+      "type": "text",
+      "instruction": "Monthly price of the second alternative."
+    },
+    {
+      "key": "item-2.body",
+      "type": "text",
+      "instruction": "Short description of the second alternative product."
+    },
+    {
+      "key": "item-2.cta",
+      "type": "link",
+      "instruction": "Link to view or select the second alternative."
+    },
+    {
+      "key": "item-3.title",
+      "type": "text",
+      "instruction": "Name of the third alternative product."
+    },
+    {
+      "key": "item-3.price",
+      "type": "text",
+      "instruction": "Monthly price of the third alternative."
+    },
+    {
+      "key": "item-3.body",
+      "type": "text",
+      "instruction": "Short description of the third alternative product."
+    },
+    {
+      "key": "item-3.cta",
+      "type": "link",
+      "instruction": "Link to view or select the third alternative."
+    },
+    {
+      "key": "cta.title",
+      "type": "text",
+      "instruction": "Closing call-to-action heading."
+    },
+    {
+      "key": "cta.body",
+      "type": "text",
+      "instruction": "Closing call-to-action supporting copy."
+    },
+    {
+      "key": "cta.cta",
+      "type": "link",
+      "instruction": "Final call to action to start the order."
+    }
+  ],
+  "label": "Recommendation - Hero Pick"
+}

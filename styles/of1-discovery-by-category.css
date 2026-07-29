@@ -1,0 +1,154 @@
+@import url("/styles/of1-template-base.css");
+
+.of1-discovery-by-category-hero,
+.of1-discovery-by-category-group,
+.of1-discovery-by-category-closing {
+  padding: var(--space-section) var(--space-container);
+}
+
+/* Hero */
+.of1-discovery-by-category-hero {
+  background: radial-gradient(circle at 20% 20%, var(--color-accent-dark), var(--color-accent-deep));
+  color: #fff;
+  text-align: center;
+}
+
+.of1-discovery-by-category-hero-inner { max-width: 62ch; margin: 0 auto; }
+.of1-discovery-by-category-hero h1 { color: #fff; }
+
+.of1-discovery-by-category-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #d9c8ff;
+  margin: 0 0 0.6em;
+}
+
+.of1-discovery-by-category-lede { font-size: 1.125rem; color: rgb(255 255 255 / 88%); margin: 0; }
+
+/* Chips */
+.of1-discovery-by-category-chips {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  padding: 20px var(--space-container);
+  background: rgb(255 255 255 / 92%);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.of1-discovery-by-category-chip {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--color-accent-dark);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  padding: 10px 22px;
+  cursor: pointer;
+  transition: background 0.18s ease, color 0.18s ease, transform 0.18s ease;
+}
+
+.of1-discovery-by-category-chip:hover { transform: translateY(-1px); }
+
+.of1-discovery-by-category-chip.is-active {
+  background: var(--color-accent);
+  color: #fff;
+  border-color: var(--color-accent);
+}
+
+/* Groups */
+.of1-discovery-by-category-group-head {
+  max-width: 1100px;
+  margin: 0 auto var(--space-container);
+  text-align: center;
+}
+
+.of1-discovery-by-category-group-head p { color: var(--color-fg-dim); margin: 0; }
+
+.of1-discovery-by-category-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.of1-discovery-by-category-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.of1-discovery-by-category-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgb(90 35 185 / 18%);
+}
+
+.of1-discovery-by-category-card-media img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.of1-discovery-by-category-card-body {
+  padding: 20px 22px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.of1-discovery-by-category-card-body h3 { margin: 0; }
+.of1-discovery-by-category-card-body p { color: var(--color-fg-dim); margin: 0; flex: 1; }
+
+.of1-discovery-by-category-card-body a {
+  margin-top: 8px;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--color-accent);
+}
+
+.of1-discovery-by-category-card-body a::after { content: " \2192"; }
+
+/* Alternating group backgrounds */
+.of1-discovery-by-category-group[data-group="mobile"],
+.of1-discovery-by-category-group[data-group="bundles"] { background: var(--color-surface); }
+
+/* Closing */
+.of1-discovery-by-category-closing { text-align: center; background: var(--color-accent-deep); color: #fff; }
+.of1-discovery-by-category-closing-inner { max-width: 56ch; margin: 0 auto; }
+.of1-discovery-by-category-closing h2 { color: #fff; }
+.of1-discovery-by-category-closing p { color: rgb(255 255 255 / 85%); }
+
+.of1-discovery-by-category-closing-cta {
+  display: inline-block;
+  background: #fff;
+  color: var(--color-accent-dark);
+  font-weight: 700;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 999px;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.of1-discovery-by-category-closing-cta:hover { transform: translateY(-2px); box-shadow: var(--shadow-card); }
+
+@media (min-width: 600px) {
+  .of1-discovery-by-category-cards { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 900px) {
+  .of1-discovery-by-category-cards { grid-template-columns: repeat(3, 1fr); }
+}

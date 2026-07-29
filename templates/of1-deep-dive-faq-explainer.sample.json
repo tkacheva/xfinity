@@ -1,0 +1,22 @@
+{
+  "_meta": { "stylesheet": "/styles/of1-deep-dive-faq-explainer.css" },
+  "hero.eyebrow": "Xfinity Internet Q and A",
+  "hero.title": "Your gig WiFi questions, answered",
+  "hero.subtitle": "The straight answers on speed, equipment, moving day, and the 5-year price guarantee, in plain language.",
+  "hero.cta": { "label": "See plans", "href": "https://xfinity.com/learn/internet-service" },
+  "intro.title": "Everything you were wondering about",
+  "intro.body": "We hear the same questions a lot, so we put the honest answers in one place. Tap any question to expand it.",
+  "faq-1.question": "What is the Xfinity 5-Year Price Guarantee?",
+  "faq-1.answer": "It locks your base monthly internet rate for 60 months, with the freedom to change or cancel anytime and no annual contract. If you move within our service area, your rate stays the same.",
+  "faq-2.question": "Can I get internet on move-in day?",
+  "faq-2.answer": "Yes. Most Xfinity Internet plans support same-day or next-day delivery and same-day self-install using the Xfinity app, so you can be online the day you move in.",
+  "faq-3.question": "What does the xFi Gateway do?",
+  "faq-3.answer": "The xFi Gateway is your modem and router in one, included with your plan. It delivers whole-home WiFi and unlocks Advanced Security and parental controls in the Xfinity app.",
+  "faq-4.question": "Is there a contract or early termination fee?",
+  "faq-4.answer": "No annual contract required. You can change or cancel anytime without a penalty.",
+  "faq-5.question": "How much can I save by bundling mobile?",
+  "faq-5.answer": "Adding an Xfinity Mobile line to your internet can cut your total bill significantly versus Verizon, AT and T, or T-Mobile, and you can try a line free for a year with Xfinity Internet.",
+  "closing.title": "Still have questions?",
+  "closing.body": "Compare speeds side by side and find the plan that fits your home, all with the price locked for five years.",
+  "closing.cta": { "label": "Compare Internet plans", "href": "https://xfinity.com/learn/internet-service" }
+}

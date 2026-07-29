@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>See exactly what you pay</title>
+  <link rel="stylesheet" href="/styles/of1-budget-cost-breakdown.css">
+</head>
+<body>
+<main>
+  <section class="of1-budget-cost-breakdown-hero of1-hero">
+    <div class="hero-copy">
+      <p class="eyebrow" data-slot="hero.eyebrow">Your monthly bill, itemized</p>
+      <h1 data-slot="hero.title">See exactly what you pay</h1>
+      <p class="lede" data-slot="hero.subtitle">Here is a full Xfinity Internet and Mobile bundle broken down line by line. No hidden fees, no fine print.</p>
+      <a href="https://xfinity.com/learn/internet-service" class="hero-cta" data-slot="hero.cta">Build your bundle</a>
+    </div>
+    <img class="hero-img" / src="https://assets.comcast.com/assets/dotcom/projects_3/2024/nov/cix-7121_ie-learn-page-updates/IE_BAU-Hero-Learn-Desktop.jpg" alt="" data-slot="hero.image">
+  </section>
+
+  <section class="of1-budget-cost-breakdown-table">
+    <h2 data-slot="breakdown.title">What is in your bundle</h2>
+    <div class="breakdown-card">
+      <div class="line-item" data-card="1">
+        <div class="li-main">
+          <p class="li-title" data-slot="item-1.title">Xfinity Internet 500 Mbps</p>
+          <p class="li-detail" data-slot="item-1.detail">Fast, reliable WiFi for the whole home</p>
+        </div>
+        <p class="li-price"><span data-slot="item-1.price">$45</span><span class="li-period" data-slot="item-1.period">/mo</span></p>
+      </div>
+      <div class="line-item" data-card="2">
+        <div class="li-main">
+          <p class="li-title" data-slot="item-2.title">xFi Gateway</p>
+          <p class="li-detail" data-slot="item-2.detail">Modem plus router, included with your plan</p>
+        </div>
+        <p class="li-price"><span data-slot="item-2.price">$0</span><span class="li-period" data-slot="item-2.period">/mo</span></p>
+      </div>
+      <div class="line-item" data-card="3">
+        <div class="li-main">
+          <p class="li-title" data-slot="item-3.title">Xfinity Mobile - Mobile Select</p>
+          <p class="li-detail" data-slot="item-3.detail">One unlimited line on the most reliable 5G network</p>
+        </div>
+        <p class="li-price"><span data-slot="item-3.price">$30</span><span class="li-period" data-slot="item-3.period">/mo</span></p>
+      </div>
+      <div class="line-item" data-card="4">
+        <div class="li-main">
+          <p class="li-title" data-slot="item-4.title">StreamSaver</p>
+          <p class="li-detail" data-slot="item-4.detail">Peacock, Netflix, and Apple TV+ on one bill</p>
+        </div>
+        <p class="li-price"><span data-slot="item-4.price">$15</span><span class="li-period" data-slot="item-4.period">/mo</span></p>
+      </div>
+      <div class="line-item line-item--total">
+        <div class="li-main">
+          <p class="li-title" data-slot="total.label">Total each month</p>
+        </div>
+        <p class="li-price li-price--total" data-total><span data-slot="total.amount">$90</span><span class="li-period" data-slot="total.period">/mo</span></p>
+      </div>
+      <div class="breakdown-toggle">
+        <button type="button" class="toggle-btn is-active" data-period="mo">Monthly</button>
+        <button type="button" class="toggle-btn" data-period="yr">Yearly</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="of1-budget-cost-breakdown-savings">
+    <div class="savings-inner">
+      <h2 data-slot="savings.title">The bill you would pay elsewhere</h2>
+      <p class="savings-figure"><span data-slot="savings.amount">$600+</span></p>
+      <p class="savings-copy" data-slot="savings.copy">That is what a comparable plan can cost you every year over Verizon, AT&amp;T, and T-Mobile. Bundle with Xfinity and keep the difference.</p>
+    </div>
+  </section>
+
+  <section class="of1-budget-cost-breakdown-guarantee">
+    <h2 data-slot="guarantee.title">Locked in for 5 years</h2>
+    <ul class="guarantee-list" data-slot-list="guarantee.items"><li>5-year price guarantee on your Internet</li><li>No annual contract, cancel anytime</li><li>One simple bill for Internet, Mobile, and streaming</li></ul>
+  </section>
+
+  <section class="of1-budget-cost-breakdown-cta">
+    <h2 data-slot="cta.title">Build a bill you can actually predict</h2>
+    <p data-slot="cta.subtitle">Check availability and see your itemized price before you commit to anything.</p>
+    <a href="https://xfinity.com/learn/internet-service" class="final-cta" data-slot="cta.link">Check availability</a>
+  </section>
+
+  <script>
+    (function () {
+      var root = document.querySelector('.of1-budget-cost-breakdown-table');
+      if (!root) return;
+      var buttons = root.querySelectorAll('.toggle-btn');
+      var priceEls = root.querySelectorAll('.li-price');
+      function parse(t) { var n = parseFloat(String(t).replace(/[^0-9.]/g, '')); return isNaN(n) ? null : n; }
+      priceEls.forEach(function (el) {
+        var span = el.querySelector('[data-slot]');
+        var val = span ? parse(span.textContent) : null;
+        if (val !== null) el.setAttribute('data-monthly', String(val));
+      });
+      var periods = root.querySelectorAll('.li-period');
+      function render(mode) {
+        priceEls.forEach(function (el) {
+          var m = parseFloat(el.getAttribute('data-monthly'));
+          if (isNaN(m)) return;
+          var span = el.querySelector('[data-slot]');
+          if (!span) return;
+          var amount = mode === 'yr' ? m * 12 : m;
+          span.textContent = '$' + amount.toLocaleString('en-US');
+        });
+        periods.forEach(function (p) { p.textContent = mode === 'yr' ? '/yr' : '/mo'; });
+      }
+      buttons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          buttons.forEach(function (b) { b.classList.toggle('is-active', b === btn); });
+          render(btn.getAttribute('data-period'));
+        });
+      });
+      render('mo');
+    })();
+  </script>
+</main>
+
+</body>
+</html>

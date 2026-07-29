@@ -1,0 +1,100 @@
+<main>
+  <section class="of1-comparison-pros-cons-hero of1-hero">
+    <div class="of1-container">
+      <p class="eyebrow" data-slot="hero.eyebrow"></p>
+      <h1 data-slot="hero.title"></h1>
+      <p class="hero-sub" data-slot="hero.subtitle"></p>
+      <a class="btn" data-slot="hero.cta"></a>
+    </div>
+  </section>
+
+  <section class="of1-comparison-pros-cons-grid">
+    <div class="of1-container">
+      <div class="filter-bar" role="tablist" aria-label="Filter plans">
+        <button type="button" class="filter is-active" data-filter="all" data-slot="filters.all"></button>
+        <button type="button" class="filter" data-filter="value" data-slot="filters.value"></button>
+        <button type="button" class="filter" data-filter="speed" data-slot="filters.speed"></button>
+      </div>
+
+      <div class="card-grid">
+        <article class="pc-card" data-card="1" data-category="value">
+          <img class="pc-img" data-slot="item-1.image" alt="" />
+          <div class="pc-body">
+            <span class="pc-tag" data-slot="item-1.tag"></span>
+            <h2 class="pc-name" data-slot="item-1.name"></h2>
+            <p class="pc-price" data-slot="item-1.price"></p>
+            <p class="pc-summary" data-slot="item-1.summary"></p>
+            <p class="pc-label pc-label-pro">Pros</p>
+            <ul class="pc-pros" data-slot-list="item-1.pros"></ul>
+            <p class="pc-label pc-label-con">Cons</p>
+            <ul class="pc-cons" data-slot-list="item-1.cons"></ul>
+            <a class="btn" data-slot="item-1.cta"></a>
+          </div>
+        </article>
+
+        <article class="pc-card" data-card="2" data-category="value">
+          <img class="pc-img" data-slot="item-2.image" alt="" />
+          <div class="pc-body">
+            <span class="pc-tag" data-slot="item-2.tag"></span>
+            <h2 class="pc-name" data-slot="item-2.name"></h2>
+            <p class="pc-price" data-slot="item-2.price"></p>
+            <p class="pc-summary" data-slot="item-2.summary"></p>
+            <p class="pc-label pc-label-pro">Pros</p>
+            <ul class="pc-pros" data-slot-list="item-2.pros"></ul>
+            <p class="pc-label pc-label-con">Cons</p>
+            <ul class="pc-cons" data-slot-list="item-2.cons"></ul>
+            <a class="btn" data-slot="item-2.cta"></a>
+          </div>
+        </article>
+
+        <article class="pc-card" data-card="3" data-category="speed">
+          <img class="pc-img" data-slot="item-3.image" alt="" />
+          <div class="pc-body">
+            <span class="pc-tag" data-slot="item-3.tag"></span>
+            <h2 class="pc-name" data-slot="item-3.name"></h2>
+            <p class="pc-price" data-slot="item-3.price"></p>
+            <p class="pc-summary" data-slot="item-3.summary"></p>
+            <p class="pc-label pc-label-pro">Pros</p>
+            <ul class="pc-pros" data-slot-list="item-3.pros"></ul>
+            <p class="pc-label pc-label-con">Cons</p>
+            <ul class="pc-cons" data-slot-list="item-3.cons"></ul>
+            <a class="btn" data-slot="item-3.cta"></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="of1-comparison-pros-cons-verdict">
+    <div class="of1-container">
+      <h2 data-slot="verdict.title"></h2>
+      <p data-slot="verdict.body"></p>
+      <ul class="verdict-list" data-slot-list="verdict.items"></ul>
+    </div>
+  </section>
+
+  <section class="of1-comparison-pros-cons-cta">
+    <div class="of1-container cta-inner">
+      <h2 data-slot="cta.title"></h2>
+      <p data-slot="cta.body"></p>
+      <a class="btn" data-slot="cta.button"></a>
+    </div>
+  </section>
+
+  <script>
+    (() => {
+      const root = document.querySelector('.of1-comparison-pros-cons-grid');
+      if (!root) return;
+      const tabs = root.querySelectorAll('[data-filter]');
+      const cards = root.querySelectorAll('[data-card]');
+      tabs.forEach((tab) => tab.addEventListener('click', () => {
+        const f = tab.dataset.filter;
+        tabs.forEach((t) => t.classList.toggle('is-active', t === tab));
+        cards.forEach((c) => {
+          const show = f === 'all' || (c.dataset.category || '').includes(f);
+          c.hidden = !show;
+        });
+      }));
+    })();
+  </script>
+</main>

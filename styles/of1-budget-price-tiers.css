@@ -1,0 +1,240 @@
+@import url("/styles/of1-template-base.css");
+
+.of1-budget-price-tiers-hero,
+.of1-budget-price-tiers-cards,
+.of1-budget-price-tiers-included,
+.of1-budget-price-tiers-guarantee,
+.of1-budget-price-tiers-cta {
+  padding: var(--space-section) var(--space-container);
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+/* Hero */
+.of1-budget-price-tiers-hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.of1-budget-price-tiers-hero .eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  margin: 0 0 12px;
+}
+
+.of1-budget-price-tiers-hero h1 { margin-bottom: 16px; }
+
+.of1-budget-price-tiers-hero .lede {
+  font-size: 1.15rem;
+  color: var(--color-fg-dim);
+  max-width: 40ch;
+}
+
+.of1-budget-price-tiers-hero .hero-cta {
+  display: inline-block;
+  background: var(--color-accent);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 14px 28px;
+  border-radius: var(--radius);
+  margin-top: 8px;
+}
+
+.of1-budget-price-tiers-hero .hero-cta:hover { background: var(--color-accent-dark); }
+
+.of1-budget-price-tiers-hero .hero-img {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  object-fit: cover;
+}
+
+/* Pricing cards */
+.of1-budget-price-tiers-cards .tier-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.tier-card {
+  position: relative;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-card);
+  cursor: pointer;
+  transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.tier-card:hover { transform: translateY(-4px); }
+
+.tier-card.is-selected { border-color: var(--color-accent); }
+
+.tier-card--best {
+  border: 2px solid var(--color-accent);
+  box-shadow: 0 18px 40px rgb(90 35 185 / 18%);
+}
+
+.tier-badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-accent);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 6px 16px;
+  border-radius: 999px;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.tier-name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.35rem;
+  margin: 0 0 8px;
+}
+
+.tier-price {
+  margin: 0 0 4px;
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+  color: var(--color-accent-deep);
+}
+
+.tier-price .currency { font-size: 1.5rem; font-weight: 700; }
+.tier-price .amount { font-family: var(--font-display); font-weight: 700; font-size: 3.5rem; line-height: 1; letter-spacing: -0.03em; }
+.tier-price .period { font-size: 1rem; color: var(--color-fg-dim); font-weight: 600; }
+
+.tier-tagline { color: var(--color-fg-dim); font-size: 0.95rem; margin: 0 0 20px; }
+
+.tier-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px;
+  flex: 1;
+}
+
+.tier-features li {
+  position: relative;
+  padding: 6px 0 6px 26px;
+  font-size: 0.95rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.tier-features li:first-child { border-top: 0; }
+
+.tier-features li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 12px;
+  width: 14px;
+  height: 8px;
+  border-left: 2px solid var(--color-accent);
+  border-bottom: 2px solid var(--color-accent);
+  transform: rotate(-45deg);
+}
+
+.tier-cta {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 13px 20px;
+  border-radius: var(--radius);
+  border: 2px solid var(--color-accent);
+  color: var(--color-accent);
+  background: transparent;
+}
+
+.tier-cta:hover { background: var(--color-surface); }
+
+.tier-card--best .tier-cta { background: var(--color-accent); color: #fff; border-color: var(--color-accent); }
+.tier-card--best .tier-cta:hover { background: var(--color-accent-dark); border-color: var(--color-accent-dark); }
+
+/* Included */
+.of1-budget-price-tiers-included {
+  text-align: center;
+}
+
+.of1-budget-price-tiers-included .included-list {
+  list-style: none;
+  padding: 0;
+  margin: 24px auto 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  max-width: 720px;
+}
+
+.of1-budget-price-tiers-included .included-list li {
+  background: var(--color-surface);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  font-weight: 600;
+}
+
+/* Guarantee band */
+.of1-budget-price-tiers-guarantee { max-width: none; padding-left: 0; padding-right: 0; }
+
+.of1-budget-price-tiers-guarantee .guarantee-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, var(--color-accent-deep), var(--color-accent));
+  color: #fff;
+  border-radius: var(--radius-lg);
+  padding: 48px 40px;
+  text-align: center;
+}
+
+.of1-budget-price-tiers-guarantee h2 { color: #fff; }
+.of1-budget-price-tiers-guarantee p { color: rgb(255 255 255 / 90%); max-width: 60ch; margin: 0 auto 24px; }
+
+.of1-budget-price-tiers-guarantee .guarantee-cta {
+  display: inline-block;
+  background: #fff;
+  color: var(--color-accent);
+  text-decoration: none;
+  font-weight: 700;
+  padding: 13px 28px;
+  border-radius: var(--radius);
+}
+
+/* Final CTA */
+.of1-budget-price-tiers-cta { text-align: center; }
+.of1-budget-price-tiers-cta p { color: var(--color-fg-dim); max-width: 50ch; margin: 0 auto 24px; }
+
+.of1-budget-price-tiers-cta .final-cta {
+  display: inline-block;
+  background: var(--color-accent);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 14px 32px;
+  border-radius: var(--radius);
+}
+
+.of1-budget-price-tiers-cta .final-cta:hover { background: var(--color-accent-dark); }
+
+@media (min-width: 900px) {
+  .of1-budget-price-tiers-hero { grid-template-columns: 1.1fr 0.9fr; }
+  .of1-budget-price-tiers-cards .tier-grid { grid-template-columns: repeat(3, 1fr); align-items: stretch; }
+  .of1-budget-price-tiers-cards .tier-card--best { transform: scale(1.04); }
+  .of1-budget-price-tiers-cards .tier-card--best:hover { transform: scale(1.04) translateY(-4px); }
+  .of1-budget-price-tiers-included .included-list { grid-template-columns: repeat(2, 1fr); }
+}

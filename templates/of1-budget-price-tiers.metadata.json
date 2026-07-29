@@ -1,0 +1,172 @@
+{
+  "name": "of1-budget-price-tiers",
+  "intent": "budget",
+  "description": "Three Internet plan cards side by side with a highlighted best-value tier, big price numerals, feature lists, and per-card CTAs.",
+  "minItems": 3,
+  "maxItems": 3,
+  "stylesheet": "/styles/of1-budget-price-tiers.css",
+  "html": "/templates/of1-budget-price-tiers.html",
+  "slots": [
+    {
+      "key": "hero.eyebrow",
+      "type": "text",
+      "instruction": "Short kicker above the hero title, e.g. the pricing category."
+    },
+    {
+      "key": "hero.title",
+      "type": "text",
+      "instruction": "Hero headline focused on affordable, transparent pricing."
+    },
+    {
+      "key": "hero.subtitle",
+      "type": "text",
+      "instruction": "One or two sentences on picking a plan and the 5-year price lock, no contract."
+    },
+    {
+      "key": "hero.cta",
+      "type": "link",
+      "instruction": "Primary hero CTA linking to Internet plans."
+    },
+    {
+      "key": "hero.image",
+      "type": "image",
+      "instruction": "Hero image of Xfinity home WiFi. Use a real product image URL."
+    },
+    {
+      "key": "item-1.title",
+      "type": "text",
+      "instruction": "Tier 1 plan name (entry / lowest price)."
+    },
+    {
+      "key": "item-1.price",
+      "type": "text",
+      "instruction": "Tier 1 monthly price, numerals only."
+    },
+    {
+      "key": "item-1.period",
+      "type": "text",
+      "instruction": "Tier 1 billing period suffix, e.g. /mo."
+    },
+    {
+      "key": "item-1.tagline",
+      "type": "text",
+      "instruction": "Tier 1 short value tagline."
+    },
+    {
+      "key": "item-1.features",
+      "type": "list",
+      "instruction": "Tier 1 feature bullet list."
+    },
+    {
+      "key": "item-1.cta",
+      "type": "link",
+      "instruction": "Tier 1 CTA link."
+    },
+    {
+      "key": "item-2.badge",
+      "type": "text",
+      "instruction": "Best-value badge label for the highlighted middle tier."
+    },
+    {
+      "key": "item-2.title",
+      "type": "text",
+      "instruction": "Tier 2 plan name (best value / highlighted)."
+    },
+    {
+      "key": "item-2.price",
+      "type": "text",
+      "instruction": "Tier 2 monthly price, numerals only."
+    },
+    {
+      "key": "item-2.period",
+      "type": "text",
+      "instruction": "Tier 2 billing period suffix, e.g. /mo."
+    },
+    {
+      "key": "item-2.tagline",
+      "type": "text",
+      "instruction": "Tier 2 short value tagline."
+    },
+    {
+      "key": "item-2.features",
+      "type": "list",
+      "instruction": "Tier 2 feature bullet list."
+    },
+    {
+      "key": "item-2.cta",
+      "type": "link",
+      "instruction": "Tier 2 CTA link."
+    },
+    {
+      "key": "item-3.title",
+      "type": "text",
+      "instruction": "Tier 3 plan name (premium / fastest)."
+    },
+    {
+      "key": "item-3.price",
+      "type": "text",
+      "instruction": "Tier 3 monthly price, numerals only."
+    },
+    {
+      "key": "item-3.period",
+      "type": "text",
+      "instruction": "Tier 3 billing period suffix, e.g. /mo."
+    },
+    {
+      "key": "item-3.tagline",
+      "type": "text",
+      "instruction": "Tier 3 short value tagline."
+    },
+    {
+      "key": "item-3.features",
+      "type": "list",
+      "instruction": "Tier 3 feature bullet list."
+    },
+    {
+      "key": "item-3.cta",
+      "type": "link",
+      "instruction": "Tier 3 CTA link."
+    },
+    {
+      "key": "included.title",
+      "type": "text",
+      "instruction": "Heading for the shared benefits band."
+    },
+    {
+      "key": "included.items",
+      "type": "list",
+      "instruction": "Benefits every plan includes."
+    },
+    {
+      "key": "guarantee.title",
+      "type": "text",
+      "instruction": "Heading for the 5-year price guarantee band."
+    },
+    {
+      "key": "guarantee.body",
+      "type": "text",
+      "instruction": "Body copy on the price guarantee and savings vs other carriers."
+    },
+    {
+      "key": "guarantee.cta",
+      "type": "link",
+      "instruction": "CTA link for the guarantee band."
+    },
+    {
+      "key": "cta.title",
+      "type": "text",
+      "instruction": "Final call-to-action heading."
+    },
+    {
+      "key": "cta.subtitle",
+      "type": "text",
+      "instruction": "Final call-to-action supporting line."
+    },
+    {
+      "key": "cta.link",
+      "type": "link",
+      "instruction": "Final call-to-action link."
+    }
+  ],
+  "label": "Budget - Price Tiers"
+}

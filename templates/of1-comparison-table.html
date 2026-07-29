@@ -1,0 +1,105 @@
+<main>
+  <section class="of1-comparison-table-hero of1-hero">
+    <div class="of1-container hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow" data-slot="hero.eyebrow"></p>
+        <h1 data-slot="hero.title"></h1>
+        <p class="hero-sub" data-slot="hero.subtitle"></p>
+        <a class="btn" data-slot="hero.cta"></a>
+      </div>
+      <img class="hero-img" data-slot="hero.image" alt="" />
+    </div>
+  </section>
+
+  <section class="of1-comparison-table-intro">
+    <div class="of1-container">
+      <h2 data-slot="intro.title"></h2>
+      <p data-slot="intro.body"></p>
+    </div>
+  </section>
+
+  <section class="of1-comparison-table-grid">
+    <div class="of1-container">
+      <table class="plan-table">
+        <thead>
+          <tr>
+            <th scope="col" class="corner" data-slot="table.corner"></th>
+            <th scope="col" class="plan-head">
+              <span class="badge" data-slot="item-1.badge"></span>
+              <span class="plan-name" data-slot="item-1.name"></span>
+            </th>
+            <th scope="col" class="plan-head is-featured">
+              <span class="badge" data-slot="item-2.badge"></span>
+              <span class="plan-name" data-slot="item-2.name"></span>
+            </th>
+            <th scope="col" class="plan-head">
+              <span class="badge" data-slot="item-3.badge"></span>
+              <span class="plan-name" data-slot="item-3.name"></span>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row" data-slot="table.row1"></th>
+            <td data-slot="item-1.speed"></td>
+            <td class="is-featured" data-slot="item-2.speed"></td>
+            <td data-slot="item-3.speed"></td>
+          </tr>
+          <tr>
+            <th scope="row" data-slot="table.row2"></th>
+            <td class="price" data-slot="item-1.price"></td>
+            <td class="price is-featured" data-slot="item-2.price"></td>
+            <td class="price" data-slot="item-3.price"></td>
+          </tr>
+          <tr>
+            <th scope="row" data-slot="table.row3"></th>
+            <td data-slot="item-1.data"></td>
+            <td class="is-featured" data-slot="item-2.data"></td>
+            <td data-slot="item-3.data"></td>
+          </tr>
+          <tr>
+            <th scope="row" data-slot="table.row4"></th>
+            <td data-slot="item-1.mobile"></td>
+            <td class="is-featured" data-slot="item-2.mobile"></td>
+            <td data-slot="item-3.mobile"></td>
+          </tr>
+          <tr>
+            <th scope="row" data-slot="table.row5"></th>
+            <td data-slot="item-1.install"></td>
+            <td class="is-featured" data-slot="item-2.install"></td>
+            <td data-slot="item-3.install"></td>
+          </tr>
+          <tr>
+            <th scope="row" data-slot="table.row6"></th>
+            <td data-slot="item-1.bestfor"></td>
+            <td class="is-featured" data-slot="item-2.bestfor"></td>
+            <td data-slot="item-3.bestfor"></td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td class="corner"></td>
+            <td><a class="btn btn-outline" data-slot="item-1.cta"></a></td>
+            <td class="is-featured"><a class="btn" data-slot="item-2.cta"></a></td>
+            <td><a class="btn btn-outline" data-slot="item-3.cta"></a></td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </section>
+
+  <section class="of1-comparison-table-highlights">
+    <div class="of1-container">
+      <h2 data-slot="highlights.title"></h2>
+      <ul class="highlight-list" data-slot-list="highlights.items"></ul>
+    </div>
+  </section>
+
+  <section class="of1-comparison-table-cta">
+    <div class="of1-container cta-inner">
+      <h2 data-slot="cta.title"></h2>
+      <p data-slot="cta.body"></p>
+      <a class="btn" data-slot="cta.button"></a>
+    </div>
+  </section>
+</main>

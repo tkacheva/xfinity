@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fast WiFi, honestly priced</title>
+  <link rel="stylesheet" href="/styles/of1-budget-price-tiers.css">
+</head>
+<body>
+<main>
+  <section class="of1-budget-price-tiers-hero of1-hero">
+    <div class="hero-copy">
+      <p class="eyebrow" data-slot="hero.eyebrow">Internet pricing</p>
+      <h1 data-slot="hero.title">Fast WiFi, honestly priced</h1>
+      <p class="lede" data-slot="hero.subtitle">Pick the speed that fits your home and lock your price for 5 years. No annual contract, no surprise hikes.</p>
+      <a href="https://xfinity.com/learn/internet-service" class="hero-cta" data-slot="hero.cta">Shop Internet plans</a>
+    </div>
+    <img class="hero-img" / src="https://assets.comcast.com/assets/dotcom/projects_3/2024/nov/cix-7121_ie-learn-page-updates/IE_BAU-Hero-Learn-Desktop.jpg" alt="" data-slot="hero.image">
+  </section>
+
+  <section class="of1-budget-price-tiers-cards">
+    <div class="tier-grid">
+      <article class="tier-card" data-card="1">
+        <p class="tier-name" data-slot="item-1.title">300 Mbps</p>
+        <p class="tier-price"><span class="currency">$</span><span class="amount" data-slot="item-1.price">40</span><span class="period" data-slot="item-1.period">/mo</span></p>
+        <p class="tier-tagline" data-slot="item-1.tagline">Best value starter plan</p>
+        <ul class="tier-features" data-slot-list="item-1.features"><li>300 Mbps speeds</li><li>99.9% reliability</li><li>Same-day self-install</li><li>A free Xfinity Mobile line for 1 year</li><li>5-year price guarantee</li></ul>
+        <a href="https://xfinity.com/learn/internet-service" class="tier-cta" data-slot="item-1.cta">Get 300 Mbps</a>
+      </article>
+
+      <article class="tier-card tier-card--best" data-card="2">
+        <p class="tier-badge" data-slot="item-2.badge">Best value</p>
+        <p class="tier-name" data-slot="item-2.title">500 Mbps</p>
+        <p class="tier-price"><span class="currency">$</span><span class="amount" data-slot="item-2.price">45</span><span class="period" data-slot="item-2.period">/mo</span></p>
+        <p class="tier-tagline" data-slot="item-2.tagline">Keep up on all your devices</p>
+        <ul class="tier-features" data-slot-list="item-2.features"><li>500 Mbps speeds</li><li>Fast, consistent speed even at peak hours</li><li>A free Xfinity Mobile line for 1 year</li><li>xFi Gateway included</li><li>5-year price guarantee</li></ul>
+        <a href="https://xfinity.com/learn/internet-service" class="tier-cta" data-slot="item-2.cta">Get 500 Mbps</a>
+      </article>
+
+      <article class="tier-card" data-card="3">
+        <p class="tier-name" data-slot="item-3.title">Gig</p>
+        <p class="tier-price"><span class="currency">$</span><span class="amount" data-slot="item-3.price">50</span><span class="period" data-slot="item-3.period">/mo</span></p>
+        <p class="tier-tagline" data-slot="item-3.tagline">Our fastest home plan</p>
+        <ul class="tier-features" data-slot-list="item-3.features"><li>Up to 1 Gig download speeds</li><li>Unlimited data</li><li>xFi Gateway included</li><li>Peacock Premium for 2 years</li><li>5-year price guarantee</li></ul>
+        <a href="https://xfinity.com/learn/internet-service/gig" class="tier-cta" data-slot="item-3.cta">Get Gig</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="of1-budget-price-tiers-included">
+    <h2 data-slot="included.title">Every plan comes with</h2>
+    <ul class="included-list" data-slot-list="included.items"><li>No annual contract</li><li>xFi Gateway available with your plan</li><li>Millions of secure WiFi hotspots nationwide</li><li>Manage everything in the Xfinity app</li></ul>
+  </section>
+
+  <section class="of1-budget-price-tiers-guarantee">
+    <div class="guarantee-inner">
+      <h2 data-slot="guarantee.title">Your price, guaranteed for 5 years</h2>
+      <p data-slot="guarantee.body">Lock in your monthly rate and keep it for five years, with no contract holding you down. Add an Xfinity Mobile line and save hundreds a year over Verizon, AT&amp;T, and T-Mobile.</p>
+      <a href="https://xfinity.com/learn/internet-service" class="guarantee-cta" data-slot="guarantee.cta">See the guarantee</a>
+    </div>
+  </section>
+
+  <section class="of1-budget-price-tiers-cta">
+    <h2 data-slot="cta.title">Ready to save?</h2>
+    <p data-slot="cta.subtitle">Check availability at your address and pick the plan that fits your budget.</p>
+    <a href="https://xfinity.com/learn/internet-service" class="final-cta" data-slot="cta.link">Check availability</a>
+  </section>
+
+  <script>
+    (function () {
+      var cards = document.querySelectorAll('.of1-budget-price-tiers-cards .tier-card');
+      if (!cards.length) return;
+      function select(card) {
+        cards.forEach(function (c) {
+          var on = c === card;
+          c.classList.toggle('is-selected', on);
+          c.setAttribute('aria-pressed', on ? 'true' : 'false');
+        });
+      }
+      cards.forEach(function (card) {
+        card.setAttribute('role', 'button');
+        card.setAttribute('tabindex', '0');
+        card.addEventListener('click', function () { select(card); });
+        card.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); select(card); }
+        });
+      });
+      var best = document.querySelector('.of1-budget-price-tiers-cards .tier-card--best') || cards[0];
+      select(best);
+    })();
+  </script>
+</main>
+
+</body>
+</html>

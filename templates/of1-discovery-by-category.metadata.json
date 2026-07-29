@@ -1,0 +1,242 @@
+{
+  "name": "of1-discovery-by-category",
+  "intent": "discovery",
+  "description": "Category-filtered browsing (Internet, Mobile, Equipment, Bundles) with chip filters that reveal one group of product cards at a time.",
+  "minItems": 6,
+  "maxItems": 8,
+  "stylesheet": "/styles/of1-discovery-by-category.css",
+  "html": "/templates/of1-discovery-by-category.html",
+  "slots": [
+    {
+      "key": "hero.eyebrow",
+      "type": "text",
+      "instruction": "Short overline, e.g. 'Browse by what you need'."
+    },
+    {
+      "key": "hero.title",
+      "type": "text",
+      "instruction": "Hero headline about browsing Xfinity organized by category."
+    },
+    {
+      "key": "hero.subtitle",
+      "type": "text",
+      "instruction": "One or two low-pressure sentences inviting the visitor to explore each category."
+    },
+    {
+      "key": "category-1.title",
+      "type": "text",
+      "instruction": "Title for the Internet category, e.g. 'Internet'."
+    },
+    {
+      "key": "category-1.subtitle",
+      "type": "text",
+      "instruction": "One line describing the Internet category."
+    },
+    {
+      "key": "item-1.title",
+      "type": "text",
+      "instruction": "Internet plan card 1 name (recommend Xfinity Gig Internet)."
+    },
+    {
+      "key": "item-1.body",
+      "type": "text",
+      "instruction": "One-line benefit for Internet card 1."
+    },
+    {
+      "key": "item-1.image",
+      "type": "image",
+      "instruction": "Image for Internet card 1."
+    },
+    {
+      "key": "item-1.cta",
+      "type": "link",
+      "instruction": "Learn-more link for Internet card 1."
+    },
+    {
+      "key": "item-2.title",
+      "type": "text",
+      "instruction": "Internet plan card 2 name (recommend Xfinity Internet 500 Mbps)."
+    },
+    {
+      "key": "item-2.body",
+      "type": "text",
+      "instruction": "One-line benefit for Internet card 2."
+    },
+    {
+      "key": "item-2.image",
+      "type": "image",
+      "instruction": "Image for Internet card 2."
+    },
+    {
+      "key": "item-2.cta",
+      "type": "link",
+      "instruction": "Learn-more link for Internet card 2."
+    },
+    {
+      "key": "item-3.title",
+      "type": "text",
+      "instruction": "Internet plan card 3 name (recommend Xfinity Internet 300 Mbps)."
+    },
+    {
+      "key": "item-3.body",
+      "type": "text",
+      "instruction": "One-line benefit for Internet card 3."
+    },
+    {
+      "key": "item-3.image",
+      "type": "image",
+      "instruction": "Image for Internet card 3."
+    },
+    {
+      "key": "item-3.cta",
+      "type": "link",
+      "instruction": "Learn-more link for Internet card 3."
+    },
+    {
+      "key": "category-2.title",
+      "type": "text",
+      "instruction": "Title for the Mobile category, e.g. 'Mobile'."
+    },
+    {
+      "key": "category-2.subtitle",
+      "type": "text",
+      "instruction": "One line describing the Mobile category."
+    },
+    {
+      "key": "item-4.title",
+      "type": "text",
+      "instruction": "Mobile card 4 name (recommend Xfinity Mobile - Mobile Select)."
+    },
+    {
+      "key": "item-4.body",
+      "type": "text",
+      "instruction": "One-line benefit for Mobile card 4."
+    },
+    {
+      "key": "item-4.image",
+      "type": "image",
+      "instruction": "Image for Mobile card 4."
+    },
+    {
+      "key": "item-4.cta",
+      "type": "link",
+      "instruction": "Learn-more link for Mobile card 4."
+    },
+    {
+      "key": "item-5.title",
+      "type": "text",
+      "instruction": "Mobile card 5 name (recommend Xfinity Mobile - Mobile Plus)."
+    },
+    {
+      "key": "item-5.body",
+      "type": "text",
+      "instruction": "One-line benefit for Mobile card 5."
+    },
+    {
+      "key": "item-5.image",
+      "type": "image",
+      "instruction": "Image for Mobile card 5."
+    },
+    {
+      "key": "item-5.cta",
+      "type": "link",
+      "instruction": "Learn-more link for Mobile card 5."
+    },
+    {
+      "key": "category-3.title",
+      "type": "text",
+      "instruction": "Title for the Equipment category, e.g. 'Equipment'."
+    },
+    {
+      "key": "category-3.subtitle",
+      "type": "text",
+      "instruction": "One line describing the Equipment category."
+    },
+    {
+      "key": "item-6.title",
+      "type": "text",
+      "instruction": "Equipment card 6 name (recommend xFi Gateway)."
+    },
+    {
+      "key": "item-6.body",
+      "type": "text",
+      "instruction": "One-line benefit for Equipment card 6."
+    },
+    {
+      "key": "item-6.image",
+      "type": "image",
+      "instruction": "Image for Equipment card 6."
+    },
+    {
+      "key": "item-6.cta",
+      "type": "link",
+      "instruction": "Learn-more link for Equipment card 6."
+    },
+    {
+      "key": "item-7.title",
+      "type": "text",
+      "instruction": "Equipment card 7 name (recommend Xfinity Pro)."
+    },
+    {
+      "key": "item-7.body",
+      "type": "text",
+      "instruction": "One-line benefit for Equipment card 7."
+    },
+    {
+      "key": "item-7.image",
+      "type": "image",
+      "instruction": "Image for Equipment card 7."
+    },
+    {
+      "key": "item-7.cta",
+      "type": "link",
+      "instruction": "Learn-more link for Equipment card 7."
+    },
+    {
+      "key": "category-4.title",
+      "type": "text",
+      "instruction": "Title for the Bundles category, e.g. 'Bundles'."
+    },
+    {
+      "key": "category-4.subtitle",
+      "type": "text",
+      "instruction": "One line describing the Bundles category."
+    },
+    {
+      "key": "item-8.title",
+      "type": "text",
+      "instruction": "Bundle card 8 name (recommend StreamSaver and Streaming Apps)."
+    },
+    {
+      "key": "item-8.body",
+      "type": "text",
+      "instruction": "One-line benefit for Bundle card 8."
+    },
+    {
+      "key": "item-8.image",
+      "type": "image",
+      "instruction": "Image for Bundle card 8."
+    },
+    {
+      "key": "item-8.cta",
+      "type": "link",
+      "instruction": "Learn-more link for Bundle card 8."
+    },
+    {
+      "key": "closing.title",
+      "type": "text",
+      "instruction": "Low-pressure closing headline for undecided visitors."
+    },
+    {
+      "key": "closing.subtitle",
+      "type": "text",
+      "instruction": "Supporting line, e.g. check availability at your address."
+    },
+    {
+      "key": "closing.cta",
+      "type": "link",
+      "instruction": "Closing link to check availability."
+    }
+  ],
+  "label": "Discovery - By Category"
+}

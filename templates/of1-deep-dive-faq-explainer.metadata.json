@@ -1,0 +1,107 @@
+{
+  "name": "of1-deep-dive-faq-explainer",
+  "intent": "deep-dive",
+  "description": "Intro plus an expandable accordion of Xfinity Internet questions and answers, first item open.",
+  "minItems": 2,
+  "maxItems": 9,
+  "stylesheet": "/styles/of1-deep-dive-faq-explainer.css",
+  "html": "/templates/of1-deep-dive-faq-explainer.html",
+  "slots": [
+    {
+      "key": "hero.eyebrow",
+      "type": "text",
+      "instruction": "Short label above the title, e.g. 'Xfinity Internet Q and A'."
+    },
+    {
+      "key": "hero.title",
+      "type": "text",
+      "instruction": "Headline framing the FAQ topic, benefit-first."
+    },
+    {
+      "key": "hero.subtitle",
+      "type": "text",
+      "instruction": "One-sentence lede on what the questions cover."
+    },
+    {
+      "key": "hero.cta",
+      "type": "link",
+      "instruction": "Primary CTA link, e.g. 'See plans'."
+    },
+    {
+      "key": "intro.title",
+      "type": "text",
+      "instruction": "Heading introducing the FAQ list."
+    },
+    {
+      "key": "intro.body",
+      "type": "text",
+      "instruction": "Short paragraph inviting the reader to expand questions."
+    },
+    {
+      "key": "faq-1.question",
+      "type": "text",
+      "instruction": "First question. This item is expanded by default."
+    },
+    {
+      "key": "faq-1.answer",
+      "type": "text",
+      "instruction": "Clear, jargon-free answer to the first question."
+    },
+    {
+      "key": "faq-2.question",
+      "type": "text",
+      "instruction": "Second question."
+    },
+    {
+      "key": "faq-2.answer",
+      "type": "text",
+      "instruction": "Answer to the second question."
+    },
+    {
+      "key": "faq-3.question",
+      "type": "text",
+      "instruction": "Third question."
+    },
+    {
+      "key": "faq-3.answer",
+      "type": "text",
+      "instruction": "Answer to the third question."
+    },
+    {
+      "key": "faq-4.question",
+      "type": "text",
+      "instruction": "Fourth question."
+    },
+    {
+      "key": "faq-4.answer",
+      "type": "text",
+      "instruction": "Answer to the fourth question."
+    },
+    {
+      "key": "faq-5.question",
+      "type": "text",
+      "instruction": "Fifth question."
+    },
+    {
+      "key": "faq-5.answer",
+      "type": "text",
+      "instruction": "Answer to the fifth question."
+    },
+    {
+      "key": "closing.title",
+      "type": "text",
+      "instruction": "Closing heading, e.g. 'Still have questions?'."
+    },
+    {
+      "key": "closing.body",
+      "type": "text",
+      "instruction": "Closing paragraph, encouraging and low-pressure."
+    },
+    {
+      "key": "closing.cta",
+      "type": "link",
+      "instruction": "Closing CTA link, e.g. 'Compare Internet plans'."
+    }
+  ],
+  "label": "Deep Dive - FAQ Explainer"
+}

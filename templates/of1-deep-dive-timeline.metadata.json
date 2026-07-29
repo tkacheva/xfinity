@@ -1,0 +1,132 @@
+{
+  "name": "of1-deep-dive-timeline",
+  "intent": "deep-dive",
+  "description": "Step-by-step vertical timeline that walks through how to self-install Xfinity gig WiFi.",
+  "minItems": 3,
+  "maxItems": 9,
+  "stylesheet": "/styles/of1-deep-dive-timeline.css",
+  "html": "/templates/of1-deep-dive-timeline.html",
+  "slots": [
+    {
+      "key": "hero.eyebrow",
+      "type": "text",
+      "instruction": "Short label above the title, e.g. 'Same-day self-install'."
+    },
+    {
+      "key": "hero.title",
+      "type": "text",
+      "instruction": "Headline framing the process being walked through, benefit-first."
+    },
+    {
+      "key": "hero.subtitle",
+      "type": "text",
+      "instruction": "One-sentence lede reassuring the reader the setup is easy."
+    },
+    {
+      "key": "hero.cta",
+      "type": "link",
+      "instruction": "Primary CTA link, e.g. 'Get started'."
+    },
+    {
+      "key": "intro.title",
+      "type": "text",
+      "instruction": "Heading for the pre-step context, e.g. 'What you will need'."
+    },
+    {
+      "key": "intro.body",
+      "type": "text",
+      "instruction": "Short paragraph on what to have ready before starting."
+    },
+    {
+      "key": "step-1.duration",
+      "type": "text",
+      "instruction": "How long step 1 takes, e.g. 'About 2 minutes'."
+    },
+    {
+      "key": "step-1.title",
+      "type": "text",
+      "instruction": "Title of the first step."
+    },
+    {
+      "key": "step-1.body",
+      "type": "text",
+      "instruction": "Plain-language description of the first step."
+    },
+    {
+      "key": "step-2.duration",
+      "type": "text",
+      "instruction": "How long step 2 takes."
+    },
+    {
+      "key": "step-2.title",
+      "type": "text",
+      "instruction": "Title of the second step."
+    },
+    {
+      "key": "step-2.body",
+      "type": "text",
+      "instruction": "Description of the second step."
+    },
+    {
+      "key": "step-3.duration",
+      "type": "text",
+      "instruction": "How long step 3 takes."
+    },
+    {
+      "key": "step-3.title",
+      "type": "text",
+      "instruction": "Title of the third step."
+    },
+    {
+      "key": "step-3.body",
+      "type": "text",
+      "instruction": "Description of the third step."
+    },
+    {
+      "key": "step-4.duration",
+      "type": "text",
+      "instruction": "How long step 4 takes."
+    },
+    {
+      "key": "step-4.title",
+      "type": "text",
+      "instruction": "Title of the fourth step."
+    },
+    {
+      "key": "step-4.body",
+      "type": "text",
+      "instruction": "Description of the fourth step."
+    },
+    {
+      "key": "step-5.duration",
+      "type": "text",
+      "instruction": "How long step 5 takes, or 'Ongoing'."
+    },
+    {
+      "key": "step-5.title",
+      "type": "text",
+      "instruction": "Title of the fifth step."
+    },
+    {
+      "key": "step-5.body",
+      "type": "text",
+      "instruction": "Description of the fifth step."
+    },
+    {
+      "key": "closing.title",
+      "type": "text",
+      "instruction": "Closing heading confirming success."
+    },
+    {
+      "key": "closing.body",
+      "type": "text",
+      "instruction": "Closing paragraph, encouraging and low-pressure."
+    },
+    {
+      "key": "closing.cta",
+      "type": "link",
+      "instruction": "Closing CTA link, e.g. 'Choose your plan'."
+    }
+  ],
+  "label": "Deep Dive - Timeline"
+}

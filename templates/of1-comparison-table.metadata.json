@@ -1,0 +1,242 @@
+{
+  "name": "of1-comparison-table",
+  "intent": "comparison",
+  "description": "Side-by-side spec table comparing 2-4 plans across fixed feature rows, with a featured middle column, per-plan CTAs, and a shared-benefits list.",
+  "minItems": 2,
+  "maxItems": 4,
+  "stylesheet": "/styles/of1-comparison-table.css",
+  "html": "/templates/of1-comparison-table.html",
+  "slots": [
+    {
+      "key": "hero.eyebrow",
+      "type": "text",
+      "instruction": "Short kicker above the hero title, e.g. the product line being compared."
+    },
+    {
+      "key": "hero.title",
+      "type": "text",
+      "instruction": "Benefit-first hero headline framing the plan comparison."
+    },
+    {
+      "key": "hero.subtitle",
+      "type": "text",
+      "instruction": "One or two sentences explaining what the table helps the reader decide."
+    },
+    {
+      "key": "hero.cta",
+      "type": "link",
+      "instruction": "Primary hero call to action linking to the shop or learn page."
+    },
+    {
+      "key": "hero.image",
+      "type": "image",
+      "instruction": "Hero image showing the product in context; decorative."
+    },
+    {
+      "key": "intro.title",
+      "type": "text",
+      "instruction": "Section heading introducing the comparison table."
+    },
+    {
+      "key": "intro.body",
+      "type": "text",
+      "instruction": "Short paragraph noting what all plans share or how to read the table."
+    },
+    {
+      "key": "table.corner",
+      "type": "text",
+      "instruction": "Label for the top-left corner cell of the table, e.g. 'Compare plans'."
+    },
+    {
+      "key": "table.row1",
+      "type": "text",
+      "instruction": "Label for the first comparison row, e.g. 'Download speed'."
+    },
+    {
+      "key": "table.row2",
+      "type": "text",
+      "instruction": "Label for the second comparison row, e.g. 'Monthly price'."
+    },
+    {
+      "key": "table.row3",
+      "type": "text",
+      "instruction": "Label for the third comparison row, e.g. 'Data'."
+    },
+    {
+      "key": "table.row4",
+      "type": "text",
+      "instruction": "Label for the fourth comparison row, e.g. 'Free Xfinity Mobile line'."
+    },
+    {
+      "key": "table.row5",
+      "type": "text",
+      "instruction": "Label for the fifth comparison row, e.g. 'Same-day self-install'."
+    },
+    {
+      "key": "table.row6",
+      "type": "text",
+      "instruction": "Label for the sixth comparison row, e.g. 'Best for'."
+    },
+    {
+      "key": "item-1.badge",
+      "type": "text",
+      "instruction": "Short badge for the first plan column, e.g. 'Best value'."
+    },
+    {
+      "key": "item-1.name",
+      "type": "text",
+      "instruction": "Name of the first plan."
+    },
+    {
+      "key": "item-1.speed",
+      "type": "text",
+      "instruction": "First plan value for the row1 (speed) feature."
+    },
+    {
+      "key": "item-1.price",
+      "type": "text",
+      "instruction": "First plan monthly price value for row2."
+    },
+    {
+      "key": "item-1.data",
+      "type": "text",
+      "instruction": "First plan value for the row3 (data) feature."
+    },
+    {
+      "key": "item-1.mobile",
+      "type": "text",
+      "instruction": "First plan value for the row4 (mobile line) feature."
+    },
+    {
+      "key": "item-1.install",
+      "type": "text",
+      "instruction": "First plan value for the row5 (install) feature."
+    },
+    {
+      "key": "item-1.bestfor",
+      "type": "text",
+      "instruction": "First plan value for the row6 (best for) feature."
+    },
+    {
+      "key": "item-1.cta",
+      "type": "link",
+      "instruction": "Call to action for the first plan."
+    },
+    {
+      "key": "item-2.badge",
+      "type": "text",
+      "instruction": "Short badge for the featured middle plan, e.g. 'Most popular'."
+    },
+    {
+      "key": "item-2.name",
+      "type": "text",
+      "instruction": "Name of the second plan."
+    },
+    {
+      "key": "item-2.speed",
+      "type": "text",
+      "instruction": "Second plan value for the row1 (speed) feature."
+    },
+    {
+      "key": "item-2.price",
+      "type": "text",
+      "instruction": "Second plan monthly price value for row2."
+    },
+    {
+      "key": "item-2.data",
+      "type": "text",
+      "instruction": "Second plan value for the row3 (data) feature."
+    },
+    {
+      "key": "item-2.mobile",
+      "type": "text",
+      "instruction": "Second plan value for the row4 (mobile line) feature."
+    },
+    {
+      "key": "item-2.install",
+      "type": "text",
+      "instruction": "Second plan value for the row5 (install) feature."
+    },
+    {
+      "key": "item-2.bestfor",
+      "type": "text",
+      "instruction": "Second plan value for the row6 (best for) feature."
+    },
+    {
+      "key": "item-2.cta",
+      "type": "link",
+      "instruction": "Call to action for the second plan."
+    },
+    {
+      "key": "item-3.badge",
+      "type": "text",
+      "instruction": "Short badge for the third plan column, e.g. 'Fastest'."
+    },
+    {
+      "key": "item-3.name",
+      "type": "text",
+      "instruction": "Name of the third plan."
+    },
+    {
+      "key": "item-3.speed",
+      "type": "text",
+      "instruction": "Third plan value for the row1 (speed) feature."
+    },
+    {
+      "key": "item-3.price",
+      "type": "text",
+      "instruction": "Third plan monthly price value for row2."
+    },
+    {
+      "key": "item-3.data",
+      "type": "text",
+      "instruction": "Third plan value for the row3 (data) feature."
+    },
+    {
+      "key": "item-3.mobile",
+      "type": "text",
+      "instruction": "Third plan value for the row4 (mobile line) feature."
+    },
+    {
+      "key": "item-3.install",
+      "type": "text",
+      "instruction": "Third plan value for the row5 (install) feature."
+    },
+    {
+      "key": "item-3.bestfor",
+      "type": "text",
+      "instruction": "Third plan value for the row6 (best for) feature."
+    },
+    {
+      "key": "item-3.cta",
+      "type": "link",
+      "instruction": "Call to action for the third plan."
+    },
+    {
+      "key": "highlights.title",
+      "type": "text",
+      "instruction": "Heading for the list of benefits shared across all plans."
+    },
+    {
+      "key": "highlights.items",
+      "type": "list",
+      "instruction": "3-5 benefits included on every plan, each a short phrase."
+    },
+    {
+      "key": "cta.title",
+      "type": "text",
+      "instruction": "Closing call-to-action heading."
+    },
+    {
+      "key": "cta.body",
+      "type": "text",
+      "instruction": "One sentence encouraging the next step."
+    },
+    {
+      "key": "cta.button",
+      "type": "link",
+      "instruction": "Closing primary button link."
+    }
+  ],
+  "label": "Comparison — Spec Table"
+}

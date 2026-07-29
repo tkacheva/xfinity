@@ -1,0 +1,98 @@
+<main>
+  <section class="of1-recommendation-curated-bundle-hero of1-hero">
+    <p class="of1-eyebrow" data-slot="hero.eyebrow">Your move-in bundle</p>
+    <h1 data-slot="hero.title">Gig Internet plus a free Mobile line, ready to go</h1>
+    <p class="of1-hero-sub" data-slot="hero.subtitle">One curated package for your new apartment: gig-speed WiFi, the xFi Gateway, and an Xfinity Mobile line free for a year.</p>
+    <a class="of1-btn" data-slot="hero.cta" href="#">Get this bundle</a>
+  </section>
+
+  <section class="of1-recommendation-curated-bundle-package">
+    <div class="of1-package-copy">
+      <h2 data-slot="bundle.title">The Mover's Bundle</h2>
+      <p data-slot="bundle.body">Everything you need online on day one, self-installed in minutes and on one simple bill. No annual contract, backed by a 5-year price guarantee.</p>
+      <ul class="of1-package-perks" data-slot-list="bundle.perks">
+        <li>No annual contract</li>
+        <li>Same-day self-install</li>
+        <li>One simple monthly bill</li>
+      </ul>
+    </div>
+    <aside class="of1-package-summary">
+      <p class="of1-summary-label" data-slot="bundle.summaryLabel">Your first-year total</p>
+      <p class="of1-summary-total" data-slot="bundle.total" data-total-with="$50/mo" data-total-without="$50/mo">$50/mo</p>
+      <p class="of1-summary-save" data-save-with="You save $360 in year one" data-save-without="Add the free mobile line to save $360" data-slot="bundle.saveNote">You save $360 in year one</p>
+      <label class="of1-summary-toggle">
+        <input type="checkbox" id="of1-mobile-toggle" checked />
+        <span data-slot="bundle.toggleLabel">Include the free Xfinity Mobile line</span>
+      </label>
+      <a class="of1-btn of1-btn-block" data-slot="bundle.cta" href="#">Build my bundle</a>
+    </aside>
+  </section>
+
+  <section class="of1-recommendation-curated-bundle-included">
+    <h2 data-slot="included.title">What is in the box</h2>
+    <div class="of1-included-grid">
+      <article class="of1-included-card" data-card="1">
+        <img data-slot="item-1.image" src="https://assets.comcast.com/assets/dotcom/projects_3/2024/nov/cix-7121_ie-learn-page-updates/IE_BAU-Hero-Learn-Desktop.jpg" alt="Xfinity Gig Internet" />
+        <div class="of1-included-body">
+          <p class="of1-included-tag" data-slot="item-1.tag">Internet</p>
+          <h3 data-slot="item-1.title">Xfinity Gig Internet</h3>
+          <p class="of1-included-price" data-slot="item-1.price">$50/mo</p>
+          <p data-slot="item-1.body">Up to 1 Gig download speeds with unlimited data, built for streaming in 4K, gaming, and working from home.</p>
+        </div>
+      </article>
+      <article class="of1-included-card of1-mobile-item" data-card="2">
+        <img data-slot="item-2.image" src="https://assets.comcast.com/assets/dotcom/projects_3/2026/june/cix-10733_xm-tmo-competitive-de-positioning-forced-plan-migration/TMO-FullImage-Banner-Desktop.jpg" alt="Xfinity Mobile" />
+        <div class="of1-included-body">
+          <p class="of1-included-tag" data-slot="item-2.tag">Mobile</p>
+          <h3 data-slot="item-2.title">Xfinity Mobile - Mobile Select</h3>
+          <p class="of1-included-price" data-slot="item-2.price">Free for 1 year, then $30/mo</p>
+          <p data-slot="item-2.body">Unlimited talk, text, and data on the most reliable 5G network. Your first line is free for a year with Internet.</p>
+        </div>
+      </article>
+      <article class="of1-included-card" data-card="3">
+        <img data-slot="item-3.image" src="https://assets.comcast.com/assets/dotcom/projects/cix-3594_customer_voice_2-0_page/Image_GridFullImage_BlueGateway_Desktop.png" alt="xFi Gateway" />
+        <div class="of1-included-body">
+          <p class="of1-included-tag" data-slot="item-3.tag">Equipment</p>
+          <h3 data-slot="item-3.title">xFi Gateway</h3>
+          <p class="of1-included-price" data-slot="item-3.price">Included</p>
+          <p data-slot="item-3.body">The all-in-one modem and router for whole-home WiFi, plus Advanced Security and parental controls in the Xfinity app.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="of1-recommendation-curated-bundle-value">
+    <h2 data-slot="value.title">Why the bundle wins</h2>
+    <ul class="of1-value-list" data-slot-list="value.items">
+      <li>A free mobile line saves you $360 over your first year</li>
+      <li>The xFi Gateway is included, so there is no equipment to buy</li>
+      <li>Peacock Premium is on us for 2 years with Gig Internet</li>
+      <li>One bill, one app, and a 5-year price guarantee</li>
+    </ul>
+  </section>
+
+  <section class="of1-recommendation-curated-bundle-cta">
+    <h2 data-slot="cta.title">Move in, plug in, done</h2>
+    <p data-slot="cta.body">Order the Mover's Bundle today and self-install the same day your keys arrive.</p>
+    <a class="of1-btn" data-slot="cta.cta" href="#">Start my order</a>
+  </section>
+
+  <script>
+    (function () {
+      var toggle = document.getElementById('of1-mobile-toggle');
+      if (!toggle) return;
+      var scope = document.querySelector('.of1-recommendation-curated-bundle-package');
+      var total = scope.querySelector('.of1-summary-total');
+      var save = scope.querySelector('.of1-summary-save');
+      var mobileItem = document.querySelector('.of1-recommendation-curated-bundle-included .of1-mobile-item');
+      function sync() {
+        var on = toggle.checked;
+        if (total) total.textContent = on ? total.dataset.totalWith : total.dataset.totalWithout;
+        if (save) save.textContent = on ? save.dataset.saveWith : save.dataset.saveWithout;
+        if (mobileItem) mobileItem.classList.toggle('is-dimmed', !on);
+      }
+      toggle.addEventListener('change', sync);
+      sync();
+    })();
+  </script>
+</main>

@@ -1,0 +1,68 @@
+{
+  "_meta": { "stylesheet": "/styles/of1-comparison-pros-cons.css" },
+  "hero.eyebrow": "Xfinity Internet",
+  "hero.title": "The honest plan comparison",
+  "hero.subtitle": "The upside and the trade-offs of each Internet plan, laid out plainly so you can choose with confidence.",
+  "hero.cta": { "label": "Shop all plans", "href": "https://xfinity.com/learn/internet-service" },
+  "filters.all": "All plans",
+  "filters.value": "Best value",
+  "filters.speed": "Fastest",
+  "item-1.image": "https://assets.comcast.com/assets/dotcom/projects_3/2024/nov/cix-7121_ie-learn-page-updates/IE_BAU-Hero-Learn-Desktop.jpg",
+  "item-1.tag": "Best value",
+  "item-1.name": "Internet 300 Mbps",
+  "item-1.price": "$40/mo",
+  "item-1.summary": "Simple, reliable WiFi for everyday work and play.",
+  "item-1.pros": [
+    "Lowest monthly price",
+    "99.9% reliability",
+    "Free Xfinity Mobile line for a year",
+    "Same-day self-install"
+  ],
+  "item-1.cons": [
+    "Not ideal for heavy 4K gaming",
+    "Fewer devices at once than higher tiers"
+  ],
+  "item-1.cta": { "label": "Get 300 Mbps", "href": "https://xfinity.com/learn/internet-service" },
+  "item-2.image": "https://assets.comcast.com/assets/dotcom/projects_3/2025/oct/10-10_xm-refresh/banner-components/Banner_Inclusive-Customers_Desktop.jpg",
+  "item-2.tag": "Most popular",
+  "item-2.name": "Internet 500 Mbps",
+  "item-2.price": "$45/mo",
+  "item-2.summary": "Fast, consistent speed that keeps up with a full house.",
+  "item-2.pros": [
+    "Handles lots of devices at once",
+    "Stays fast even at peak hours",
+    "Free Xfinity Mobile line for a year",
+    "No annual contract"
+  ],
+  "item-2.cons": [
+    "A little more than the 300 Mbps plan",
+    "More speed than light users need"
+  ],
+  "item-2.cta": { "label": "Get 500 Mbps", "href": "https://xfinity.com/learn/internet-service" },
+  "item-3.image": "https://assets.comcast.com/assets/dotcom/projects_2/cix-6965_hbo-page-redesign/full-image-banner-dt.jpg",
+  "item-3.tag": "Fastest",
+  "item-3.name": "Gig Internet",
+  "item-3.price": "$50/mo",
+  "item-3.summary": "Fiber-powered gigabit WiFi for the busiest, always-online homes.",
+  "item-3.pros": [
+    "Up to 1 Gig download speeds",
+    "Unlimited data and xFi Gateway included",
+    "Peacock Premium for 2 years",
+    "Built for 4K streaming and gaming"
+  ],
+  "item-3.cons": [
+    "Highest monthly price",
+    "More speed than smaller homes need"
+  ],
+  "item-3.cta": { "label": "Get Gig", "href": "https://xfinity.com/learn/internet-service/gig" },
+  "verdict.title": "The bottom line",
+  "verdict.body": "You cannot go wrong, and every plan is covered by a 5-year price guarantee. Match the speed to your household and upgrade anytime.",
+  "verdict.items": [
+    "Light home on a budget: go 300 Mbps",
+    "Busy household, lots of devices: go 500 Mbps",
+    "Gamers, streamers, and big homes: go Gig"
+  ],
+  "cta.title": "Find the plan for your home",
+  "cta.body": "Check availability at your address and self-install as soon as today.",
+  "cta.button": { "label": "Check availability", "href": "https://xfinity.com/learn/internet-service" }
+}

@@ -1,0 +1,238 @@
+@import url("/styles/of1-template-base.css");
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 var(--space-container);
+}
+
+main section {
+  padding: var(--space-section) 0;
+}
+
+/* Hero */
+.of1-recommendation-ranked-list-hero {
+  text-align: center;
+}
+
+.of1-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  margin: 0 0 0.75em;
+}
+
+.of1-hero-sub {
+  font-size: 1.2rem;
+  color: var(--color-fg-dim);
+  max-width: 620px;
+  margin: 0 auto 1.75em;
+}
+
+.of1-btn {
+  display: inline-block;
+  background: var(--color-accent);
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 0.85em 1.75em;
+  border-radius: 999px;
+  transition: background 0.2s ease;
+}
+
+.of1-btn:hover {
+  background: var(--color-accent-dark);
+}
+
+.of1-link {
+  display: inline-block;
+  color: var(--color-accent);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.of1-link:hover {
+  text-decoration: underline;
+}
+
+/* Criteria */
+.of1-recommendation-ranked-list-criteria {
+  text-align: center;
+}
+
+.of1-criteria {
+  list-style: none;
+  padding: 0;
+  margin: 1.5em auto 0;
+  max-width: 720px;
+  display: grid;
+  gap: 12px;
+  text-align: left;
+}
+
+.of1-criteria li {
+  position: relative;
+  padding-left: 2em;
+  color: var(--color-fg-dim);
+}
+
+.of1-criteria li::before {
+  content: "\2713";
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+/* Ranked accordion */
+.of1-rank-list {
+  display: grid;
+  gap: 16px;
+  margin-top: 2em;
+}
+
+.of1-rank-card {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+}
+
+.of1-rank-card.is-open {
+  border-color: var(--color-accent);
+}
+
+.of1-rank-head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  padding: 1.1em 1.35em;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  font-family: var(--font-display);
+  text-align: left;
+}
+
+.of1-rank-num {
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  width: 2.2em;
+  height: 2.2em;
+  border-radius: 50%;
+  background: var(--color-surface);
+  color: var(--color-accent);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.of1-rank-card.is-open .of1-rank-num {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.of1-rank-name {
+  flex: 1 1 auto;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-fg);
+}
+
+.of1-rank-price {
+  flex: 0 0 auto;
+  font-weight: 700;
+  color: var(--color-accent);
+}
+
+.of1-rank-toggle {
+  flex: 0 0 auto;
+  width: 12px;
+  height: 12px;
+  border-right: 2px solid var(--color-fg-dim);
+  border-bottom: 2px solid var(--color-fg-dim);
+  transform: rotate(45deg);
+  transition: transform 0.2s ease;
+}
+
+.of1-rank-card.is-open .of1-rank-toggle {
+  transform: rotate(-135deg);
+}
+
+.of1-rank-panel {
+  display: none;
+  padding: 0 1.35em 1.35em 1.35em;
+}
+
+.of1-rank-card.is-open .of1-rank-panel {
+  display: block;
+}
+
+.of1-rank-reasons {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1em;
+}
+
+.of1-rank-reasons li {
+  position: relative;
+  padding-left: 1.6em;
+  margin-bottom: 0.4em;
+}
+
+.of1-rank-reasons li::before {
+  content: "\2713";
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+/* Verdict */
+.of1-recommendation-ranked-list-verdict {
+  text-align: center;
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: var(--space-section) var(--space-container);
+}
+
+.of1-recommendation-ranked-list-verdict p {
+  max-width: 600px;
+  margin: 0 auto 1.75em;
+  color: var(--color-fg-dim);
+}
+
+/* Closing CTA */
+.of1-recommendation-ranked-list-cta {
+  text-align: center;
+  background: var(--color-accent-deep);
+  color: #fff;
+  border-radius: var(--radius-lg);
+  padding: var(--space-section) var(--space-container);
+  margin-bottom: var(--space-section);
+}
+
+.of1-recommendation-ranked-list-cta h2 {
+  color: #fff;
+}
+
+.of1-recommendation-ranked-list-cta p {
+  color: rgb(255 255 255 / 85%);
+  max-width: 560px;
+  margin: 0 auto 1.75em;
+}
+
+@media (max-width: 599px) {
+  .of1-rank-head {
+    flex-wrap: wrap;
+  }
+
+  .of1-rank-price {
+    order: 3;
+    margin-left: 3.4em;
+  }
+}

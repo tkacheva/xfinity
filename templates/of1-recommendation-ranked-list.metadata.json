@@ -1,0 +1,177 @@
+{
+  "name": "of1-recommendation-ranked-list",
+  "intent": "recommendation",
+  "description": "A numbered, ranked list of recommended plans in an interactive accordion, each with its reasons, from top pick to runners-up.",
+  "minItems": 3,
+  "maxItems": 5,
+  "stylesheet": "/styles/of1-recommendation-ranked-list.css",
+  "html": "/templates/of1-recommendation-ranked-list.html",
+  "slots": [
+    {
+      "key": "hero.eyebrow",
+      "type": "text",
+      "instruction": "Short kicker signaling this is a ranked recommendation."
+    },
+    {
+      "key": "hero.title",
+      "type": "text",
+      "instruction": "Headline framing a ranked list of plans for the visitor's situation."
+    },
+    {
+      "key": "hero.subtitle",
+      "type": "text",
+      "instruction": "One-sentence summary of what the ranking covers."
+    },
+    {
+      "key": "hero.cta",
+      "type": "link",
+      "instruction": "Primary hero call to action."
+    },
+    {
+      "key": "criteria.title",
+      "type": "text",
+      "instruction": "Heading introducing the ranking criteria."
+    },
+    {
+      "key": "criteria.items",
+      "type": "list",
+      "instruction": "List of the criteria used to rank the plans for this visitor."
+    },
+    {
+      "key": "ranking.title",
+      "type": "text",
+      "instruction": "Heading above the ranked list."
+    },
+    {
+      "key": "item-1.title",
+      "type": "text",
+      "instruction": "Name of the number one ranked plan."
+    },
+    {
+      "key": "item-1.price",
+      "type": "text",
+      "instruction": "Monthly price of the number one plan."
+    },
+    {
+      "key": "item-1.body",
+      "type": "text",
+      "instruction": "Description of the number one plan and why it ranks first."
+    },
+    {
+      "key": "item-1.reasons",
+      "type": "list",
+      "instruction": "List of standout reasons the number one plan earns the top spot."
+    },
+    {
+      "key": "item-1.cta",
+      "type": "link",
+      "instruction": "Link to select the number one plan."
+    },
+    {
+      "key": "item-2.title",
+      "type": "text",
+      "instruction": "Name of the number two ranked plan."
+    },
+    {
+      "key": "item-2.price",
+      "type": "text",
+      "instruction": "Monthly price of the number two plan."
+    },
+    {
+      "key": "item-2.body",
+      "type": "text",
+      "instruction": "Description of the number two plan."
+    },
+    {
+      "key": "item-2.reasons",
+      "type": "list",
+      "instruction": "List of reasons for the number two plan's ranking."
+    },
+    {
+      "key": "item-2.cta",
+      "type": "link",
+      "instruction": "Link to select the number two plan."
+    },
+    {
+      "key": "item-3.title",
+      "type": "text",
+      "instruction": "Name of the number three ranked plan."
+    },
+    {
+      "key": "item-3.price",
+      "type": "text",
+      "instruction": "Monthly price of the number three plan."
+    },
+    {
+      "key": "item-3.body",
+      "type": "text",
+      "instruction": "Description of the number three plan."
+    },
+    {
+      "key": "item-3.reasons",
+      "type": "list",
+      "instruction": "List of reasons for the number three plan's ranking."
+    },
+    {
+      "key": "item-3.cta",
+      "type": "link",
+      "instruction": "Link to select the number three plan."
+    },
+    {
+      "key": "item-4.title",
+      "type": "text",
+      "instruction": "Name of the number four ranked plan or add-on."
+    },
+    {
+      "key": "item-4.price",
+      "type": "text",
+      "instruction": "Monthly price of the number four item."
+    },
+    {
+      "key": "item-4.body",
+      "type": "text",
+      "instruction": "Description of the number four item."
+    },
+    {
+      "key": "item-4.reasons",
+      "type": "list",
+      "instruction": "List of reasons for the number four item's ranking."
+    },
+    {
+      "key": "item-4.cta",
+      "type": "link",
+      "instruction": "Link to select the number four item."
+    },
+    {
+      "key": "verdict.title",
+      "type": "text",
+      "instruction": "Heading for the closing verdict."
+    },
+    {
+      "key": "verdict.body",
+      "type": "text",
+      "instruction": "Short paragraph naming the overall winner and why."
+    },
+    {
+      "key": "verdict.cta",
+      "type": "link",
+      "instruction": "Call to action to choose the winning plan."
+    },
+    {
+      "key": "cta.title",
+      "type": "text",
+      "instruction": "Closing call-to-action heading."
+    },
+    {
+      "key": "cta.body",
+      "type": "text",
+      "instruction": "Closing call-to-action supporting copy."
+    },
+    {
+      "key": "cta.cta",
+      "type": "link",
+      "instruction": "Final call to action to start the order."
+    }
+  ],
+  "label": "Recommendation - Ranked List"
+}

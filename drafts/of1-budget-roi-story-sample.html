@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Make half your mobile bill disappear</title>
+  <link rel="stylesheet" href="/styles/of1-budget-roi-story.css">
+</head>
+<body>
+<main>
+  <section class="of1-budget-roi-story-hero of1-hero">
+    <div class="hero-copy">
+      <p class="eyebrow" data-slot="hero.eyebrow">Cut the bill</p>
+      <h1 data-slot="hero.title">Make half your mobile bill disappear</h1>
+      <p class="lede" data-slot="hero.subtitle">Switch your line to Xfinity Mobile with your Internet and watch what you pay drop, month after month.</p>
+      <a href="https://xfinity.com/learn/mobile" class="hero-cta" data-slot="hero.cta">See your savings</a>
+    </div>
+    <img class="hero-img" / src="https://assets.comcast.com/assets/dotcom/projects_3/2026/june/cix-10733_xm-tmo-competitive-de-positioning-forced-plan-migration/TMO-FullImage-Banner-Desktop.jpg" alt="" data-slot="hero.image">
+  </section>
+
+  <section class="of1-budget-roi-story-compare">
+    <h2 data-slot="compare.title">Before and after you switch</h2>
+    <div class="compare-grid">
+      <div class="compare-card compare-card--before">
+        <p class="compare-label" data-slot="before.label">Your bill with the other guys</p>
+        <p class="compare-amount"><span class="currency">$</span><span class="value" data-slot="before.amount">80</span><span class="per" data-slot="before.period">/mo</span></p>
+        <p class="compare-note" data-slot="before.note">One unlimited line on Verizon, AT&amp;T, or T-Mobile</p>
+      </div>
+      <div class="compare-arrow" aria-hidden="true">&rarr;</div>
+      <div class="compare-card compare-card--after">
+        <p class="compare-label" data-slot="after.label">Your bill on Xfinity Mobile</p>
+        <p class="compare-amount"><span class="currency">$</span><span class="value" data-slot="after.amount">30</span><span class="per" data-slot="after.period">/mo</span></p>
+        <p class="compare-note" data-slot="after.note">One unlimited line on the most reliable 5G network</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="of1-budget-roi-story-headline">
+    <div class="headline-inner">
+      <p class="headline-kicker" data-slot="savings.kicker">You keep</p>
+      <p class="headline-figure" data-figure><span data-slot="savings.amount">$600</span></p>
+      <p class="headline-copy" data-slot="savings.copy">every single year, just by moving your line. That is real money back in your pocket, not a limited-time gimmick.</p>
+      <div class="headline-toggle">
+        <button type="button" class="toggle-btn is-active" data-view="yr">Per year</button>
+        <button type="button" class="toggle-btn" data-view="mo">Per month</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="of1-budget-roi-story-sources">
+    <h2 data-slot="sources.title">Where the savings come from</h2>
+    <div class="sources-grid">
+      <article class="source-card" data-card="1">
+        <p class="source-value" data-slot="item-1.value">$360</p>
+        <p class="source-title" data-slot="item-1.title">A free line for a year</p>
+        <p class="source-detail" data-slot="item-1.detail">Add an Xfinity Mobile line free for 12 months when you have Xfinity Internet.</p>
+      </article>
+      <article class="source-card" data-card="2">
+        <p class="source-value" data-slot="item-2.value">$0</p>
+        <p class="source-title" data-slot="item-2.title">Price increases</p>
+        <p class="source-detail" data-slot="item-2.detail">The 5-year price guarantee keeps your Internet rate flat, with no annual contract.</p>
+      </article>
+      <article class="source-card" data-card="3">
+        <p class="source-value" data-slot="item-3.value">1 bill</p>
+        <p class="source-title" data-slot="item-3.title">Everything together</p>
+        <p class="source-detail" data-slot="item-3.detail">Internet, Mobile, and streaming on one simple bill you can manage in the Xfinity app.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="of1-budget-roi-story-cta">
+    <h2 data-slot="cta.title">Start saving on move-in day</h2>
+    <p data-slot="cta.subtitle">Only pay for the data you use, keep your number, and switch with no contract.</p>
+    <a href="https://xfinity.com/learn/mobile" class="final-cta" data-slot="cta.link">Switch and save</a>
+  </section>
+
+  <script>
+    (function () {
+      var section = document.querySelector('.of1-budget-roi-story-headline');
+      if (!section) return;
+      var figure = section.querySelector('[data-figure] [data-slot]');
+      var buttons = section.querySelectorAll('.toggle-btn');
+      if (!figure) return;
+      var yearly = parseFloat(figure.textContent.replace(/[^0-9.]/g, ''));
+      if (isNaN(yearly)) return;
+      function render(view) {
+        var amount = view === 'mo' ? Math.round(yearly / 12) : yearly;
+        figure.textContent = '$' + amount.toLocaleString('en-US');
+      }
+      buttons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          buttons.forEach(function (b) { b.classList.toggle('is-active', b === btn); });
+          render(btn.getAttribute('data-view'));
+        });
+      });
+      render('yr');
+    })();
+  </script>
+</main>
+
+</body>
+</html>

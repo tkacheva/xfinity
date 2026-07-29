@@ -1,0 +1,147 @@
+{
+  "name": "of1-comparison-versus",
+  "intent": "comparison",
+  "description": "Two-column head-to-head split of exactly two plans separated by a center VS badge, each side with image, price, feature list and CTA, plus shared-benefits and a which-is-right decision section.",
+  "minItems": 2,
+  "maxItems": 2,
+  "stylesheet": "/styles/of1-comparison-versus.css",
+  "html": "/templates/of1-comparison-versus.html",
+  "slots": [
+    {
+      "key": "hero.eyebrow",
+      "type": "text",
+      "instruction": "Short kicker above the hero title, e.g. the product line."
+    },
+    {
+      "key": "hero.title",
+      "type": "text",
+      "instruction": "Hero headline naming the two options being compared, e.g. 'Plan A vs Plan B'."
+    },
+    {
+      "key": "hero.subtitle",
+      "type": "text",
+      "instruction": "One or two sentences framing the head-to-head decision."
+    },
+    {
+      "key": "hero.cta",
+      "type": "link",
+      "instruction": "Primary hero call to action."
+    },
+    {
+      "key": "item-1.image",
+      "type": "image",
+      "instruction": "Image representing the first (left) option."
+    },
+    {
+      "key": "item-1.name",
+      "type": "text",
+      "instruction": "Name of the first option."
+    },
+    {
+      "key": "item-1.price",
+      "type": "text",
+      "instruction": "Price line for the first option, e.g. '$30/mo per line'."
+    },
+    {
+      "key": "item-1.tagline",
+      "type": "text",
+      "instruction": "One-line pitch for the first option."
+    },
+    {
+      "key": "item-1.features",
+      "type": "list",
+      "instruction": "3-5 key features of the first option, each a short phrase."
+    },
+    {
+      "key": "item-1.cta",
+      "type": "link",
+      "instruction": "Call to action for the first option."
+    },
+    {
+      "key": "versus.badge",
+      "type": "text",
+      "instruction": "Short center divider label, typically 'VS'."
+    },
+    {
+      "key": "item-2.image",
+      "type": "image",
+      "instruction": "Image representing the second (right) option."
+    },
+    {
+      "key": "item-2.name",
+      "type": "text",
+      "instruction": "Name of the second option."
+    },
+    {
+      "key": "item-2.price",
+      "type": "text",
+      "instruction": "Price line for the second option."
+    },
+    {
+      "key": "item-2.tagline",
+      "type": "text",
+      "instruction": "One-line pitch for the second option."
+    },
+    {
+      "key": "item-2.features",
+      "type": "list",
+      "instruction": "3-5 key features of the second option, each a short phrase."
+    },
+    {
+      "key": "item-2.cta",
+      "type": "link",
+      "instruction": "Call to action for the second option."
+    },
+    {
+      "key": "shared.title",
+      "type": "text",
+      "instruction": "Heading for benefits both options share."
+    },
+    {
+      "key": "shared.items",
+      "type": "list",
+      "instruction": "3-5 benefits common to both options, each a short phrase."
+    },
+    {
+      "key": "decide.title",
+      "type": "text",
+      "instruction": "Heading for the which-is-right-for-you section."
+    },
+    {
+      "key": "decide.item1title",
+      "type": "text",
+      "instruction": "Label for the first guidance card, e.g. 'Go with Plan A if...'."
+    },
+    {
+      "key": "decide.item1body",
+      "type": "text",
+      "instruction": "Sentence describing who should pick the first option."
+    },
+    {
+      "key": "decide.item2title",
+      "type": "text",
+      "instruction": "Label for the second guidance card, e.g. 'Go with Plan B if...'."
+    },
+    {
+      "key": "decide.item2body",
+      "type": "text",
+      "instruction": "Sentence describing who should pick the second option."
+    },
+    {
+      "key": "cta.title",
+      "type": "text",
+      "instruction": "Closing call-to-action heading."
+    },
+    {
+      "key": "cta.body",
+      "type": "text",
+      "instruction": "One sentence encouraging the next step."
+    },
+    {
+      "key": "cta.button",
+      "type": "link",
+      "instruction": "Closing primary button link."
+    }
+  ],
+  "label": "Comparison — Head-to-Head Versus"
+}

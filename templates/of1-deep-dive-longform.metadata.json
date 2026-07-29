@@ -1,0 +1,122 @@
+{
+  "name": "of1-deep-dive-longform",
+  "intent": "deep-dive",
+  "description": "Editorial long-read that explains Xfinity Internet in depth through alternating text and image sections.",
+  "minItems": 2,
+  "maxItems": 6,
+  "stylesheet": "/styles/of1-deep-dive-longform.css",
+  "html": "/templates/of1-deep-dive-longform.html",
+  "slots": [
+    {
+      "key": "hero.eyebrow",
+      "type": "text",
+      "instruction": "Short category label above the title, e.g. 'Xfinity Internet, explained'."
+    },
+    {
+      "key": "hero.title",
+      "type": "text",
+      "instruction": "Headline naming the topic being explained. Benefit-first, jargon-free."
+    },
+    {
+      "key": "hero.subtitle",
+      "type": "text",
+      "instruction": "One-sentence lede previewing what the article covers."
+    },
+    {
+      "key": "hero.cta",
+      "type": "link",
+      "instruction": "Primary CTA link, e.g. 'Explore Internet plans'."
+    },
+    {
+      "key": "hero.image",
+      "type": "image",
+      "instruction": "Wide hero image of Xfinity Internet or WiFi in the home."
+    },
+    {
+      "key": "intro.title",
+      "type": "text",
+      "instruction": "Section heading that sets up the guide."
+    },
+    {
+      "key": "intro.body",
+      "type": "text",
+      "instruction": "Intro paragraph, clear and jargon-free, framing what the reader will learn."
+    },
+    {
+      "key": "section-1.title",
+      "type": "text",
+      "instruction": "Heading for the first explainer section (e.g. gig-speed fiber)."
+    },
+    {
+      "key": "section-1.body",
+      "type": "text",
+      "instruction": "Body paragraph explaining the concept in everyday terms."
+    },
+    {
+      "key": "section-1.image",
+      "type": "image",
+      "instruction": "Supporting image for section 1."
+    },
+    {
+      "key": "section-2.title",
+      "type": "text",
+      "instruction": "Heading for the second explainer section (e.g. xFi Gateway)."
+    },
+    {
+      "key": "section-2.body",
+      "type": "text",
+      "instruction": "Body paragraph for section 2."
+    },
+    {
+      "key": "section-2.image",
+      "type": "image",
+      "instruction": "Supporting image for section 2."
+    },
+    {
+      "key": "section-3.title",
+      "type": "text",
+      "instruction": "Heading for the third explainer section (e.g. self-install)."
+    },
+    {
+      "key": "section-3.body",
+      "type": "text",
+      "instruction": "Body paragraph for section 3."
+    },
+    {
+      "key": "section-3.image",
+      "type": "image",
+      "instruction": "Supporting image for section 3."
+    },
+    {
+      "key": "section-4.title",
+      "type": "text",
+      "instruction": "Heading for the fourth explainer section (e.g. price guarantee)."
+    },
+    {
+      "key": "section-4.body",
+      "type": "text",
+      "instruction": "Body paragraph for section 4."
+    },
+    {
+      "key": "section-4.image",
+      "type": "image",
+      "instruction": "Supporting image for section 4."
+    },
+    {
+      "key": "closing.title",
+      "type": "text",
+      "instruction": "Closing heading inviting the next step."
+    },
+    {
+      "key": "closing.body",
+      "type": "text",
+      "instruction": "Closing paragraph, low-pressure and encouraging."
+    },
+    {
+      "key": "closing.cta",
+      "type": "link",
+      "instruction": "Closing CTA link, e.g. 'See plans in your area'."
+    }
+  ],
+  "label": "Deep Dive - Longform"
+}

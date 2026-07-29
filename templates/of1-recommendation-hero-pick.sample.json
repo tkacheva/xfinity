@@ -1,0 +1,43 @@
+{
+  "_meta": { "stylesheet": "/styles/of1-recommendation-hero-pick.css" },
+  "hero.eyebrow": "Your move-in WiFi, sorted",
+  "hero.title": "For your new apartment, we recommend Gig Internet",
+  "hero.subtitle": "Fast, no-contract WiFi you can self-install on day one, plus a free Xfinity Mobile line to shrink your monthly bill.",
+  "hero.cta": { "label": "See your recommendation", "href": "https://xfinity.com/learn/internet-service/gig" },
+  "pick.image": "https://assets.comcast.com/assets/dotcom/projects_3/2024/nov/cix-7121_ie-learn-page-updates/IE_BAU-Hero-Learn-Desktop.jpg",
+  "pick.eyebrow": "Top pick for movers",
+  "pick.title": "Xfinity Gig Internet",
+  "pick.price": "$50/mo",
+  "pick.priceNote": "No annual contract, 5-year price guarantee",
+  "pick.body": "Gig-speed fiber-powered WiFi built for streaming in 4K, gaming, and working from home across dozens of devices. The xFi Gateway is included, so you self-install in minutes and you are online on move-in day.",
+  "pick.features": [
+    "Up to 1 Gig download speeds",
+    "Unlimited data",
+    "xFi Gateway included",
+    "Peacock Premium for 2 years"
+  ],
+  "pick.cta": { "label": "Get Gig Internet", "href": "https://xfinity.com/learn/internet-service/gig" },
+  "reasons.title": "Why this is the right fit for you",
+  "reasons.items": [
+    "You wanted no-contract gig speeds, and this plan delivers exactly that with a 5-year price guarantee.",
+    "Same-day self-install means your WiFi is up the moment you unpack the box.",
+    "Add a free Xfinity Mobile line for a year and cut your phone bill while you are at it.",
+    "Unlimited data keeps every device online, from your laptop to the smart TV."
+  ],
+  "alt.title": "Prefer to start smaller? Two solid alternatives",
+  "item-1.title": "Xfinity Internet 300 Mbps",
+  "item-1.price": "$40/mo",
+  "item-1.body": "Our best-value starter plan with 99.9% reliability, same-day self-install, and a free Xfinity Mobile line for a year.",
+  "item-1.cta": { "label": "See 300 Mbps", "href": "https://xfinity.com/learn/internet-service" },
+  "item-2.title": "Xfinity Internet 500 Mbps",
+  "item-2.price": "$45/mo",
+  "item-2.body": "Fast, consistent WiFi that keeps up with all your devices at once, with a free Xfinity Mobile line and no annual contract.",
+  "item-2.cta": { "label": "See 500 Mbps", "href": "https://xfinity.com/learn/internet-service" },
+  "item-3.title": "Xfinity Mobile - Mobile Select",
+  "item-3.price": "$30/mo",
+  "item-3.body": "Unlimited talk, text, and data on the most reliable 5G network. Try a line free for a year when you add it to Internet.",
+  "item-3.cta": { "label": "Add a mobile line", "href": "https://xfinity.com/learn/mobile" },
+  "cta.title": "Ready to get online on move-in day?",
+  "cta.body": "Order Gig Internet today, self-install in minutes, and add a free mobile line whenever you are ready.",
+  "cta.cta": { "label": "Start my order", "href": "https://xfinity.com/learn/internet-service/gig" }
+}

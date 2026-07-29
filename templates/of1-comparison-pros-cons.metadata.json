@@ -1,0 +1,197 @@
+{
+  "name": "of1-comparison-pros-cons",
+  "intent": "comparison",
+  "description": "Filterable card grid where each plan is an article with a summary plus separate pros and cons lists; filter tabs toggle which cards show, followed by a verdict recap section.",
+  "minItems": 2,
+  "maxItems": 3,
+  "stylesheet": "/styles/of1-comparison-pros-cons.css",
+  "html": "/templates/of1-comparison-pros-cons.html",
+  "slots": [
+    {
+      "key": "hero.eyebrow",
+      "type": "text",
+      "instruction": "Short kicker above the hero title."
+    },
+    {
+      "key": "hero.title",
+      "type": "text",
+      "instruction": "Hero headline promising a candid, balanced comparison."
+    },
+    {
+      "key": "hero.subtitle",
+      "type": "text",
+      "instruction": "One or two sentences setting up the pros-and-cons framing."
+    },
+    {
+      "key": "hero.cta",
+      "type": "link",
+      "instruction": "Primary hero call to action."
+    },
+    {
+      "key": "filters.all",
+      "type": "text",
+      "instruction": "Label for the tab that shows all cards, e.g. 'All plans'."
+    },
+    {
+      "key": "filters.value",
+      "type": "text",
+      "instruction": "Label for the tab filtering to value plans, e.g. 'Best value'."
+    },
+    {
+      "key": "filters.speed",
+      "type": "text",
+      "instruction": "Label for the tab filtering to the fastest plans, e.g. 'Fastest'."
+    },
+    {
+      "key": "item-1.image",
+      "type": "image",
+      "instruction": "Image for the first plan card."
+    },
+    {
+      "key": "item-1.tag",
+      "type": "text",
+      "instruction": "Short chip on the first card, e.g. 'Best value'."
+    },
+    {
+      "key": "item-1.name",
+      "type": "text",
+      "instruction": "Name of the first plan."
+    },
+    {
+      "key": "item-1.price",
+      "type": "text",
+      "instruction": "Monthly price for the first plan."
+    },
+    {
+      "key": "item-1.summary",
+      "type": "text",
+      "instruction": "One-line summary of the first plan."
+    },
+    {
+      "key": "item-1.pros",
+      "type": "list",
+      "instruction": "2-4 upsides of the first plan, each a short phrase."
+    },
+    {
+      "key": "item-1.cons",
+      "type": "list",
+      "instruction": "1-3 trade-offs of the first plan, each a short phrase."
+    },
+    {
+      "key": "item-1.cta",
+      "type": "link",
+      "instruction": "Call to action for the first plan."
+    },
+    {
+      "key": "item-2.image",
+      "type": "image",
+      "instruction": "Image for the second plan card."
+    },
+    {
+      "key": "item-2.tag",
+      "type": "text",
+      "instruction": "Short chip on the second card, e.g. 'Most popular'."
+    },
+    {
+      "key": "item-2.name",
+      "type": "text",
+      "instruction": "Name of the second plan."
+    },
+    {
+      "key": "item-2.price",
+      "type": "text",
+      "instruction": "Monthly price for the second plan."
+    },
+    {
+      "key": "item-2.summary",
+      "type": "text",
+      "instruction": "One-line summary of the second plan."
+    },
+    {
+      "key": "item-2.pros",
+      "type": "list",
+      "instruction": "2-4 upsides of the second plan, each a short phrase."
+    },
+    {
+      "key": "item-2.cons",
+      "type": "list",
+      "instruction": "1-3 trade-offs of the second plan, each a short phrase."
+    },
+    {
+      "key": "item-2.cta",
+      "type": "link",
+      "instruction": "Call to action for the second plan."
+    },
+    {
+      "key": "item-3.image",
+      "type": "image",
+      "instruction": "Image for the third plan card."
+    },
+    {
+      "key": "item-3.tag",
+      "type": "text",
+      "instruction": "Short chip on the third card, e.g. 'Fastest'."
+    },
+    {
+      "key": "item-3.name",
+      "type": "text",
+      "instruction": "Name of the third plan."
+    },
+    {
+      "key": "item-3.price",
+      "type": "text",
+      "instruction": "Monthly price for the third plan."
+    },
+    {
+      "key": "item-3.summary",
+      "type": "text",
+      "instruction": "One-line summary of the third plan."
+    },
+    {
+      "key": "item-3.pros",
+      "type": "list",
+      "instruction": "2-4 upsides of the third plan, each a short phrase."
+    },
+    {
+      "key": "item-3.cons",
+      "type": "list",
+      "instruction": "1-3 trade-offs of the third plan, each a short phrase."
+    },
+    {
+      "key": "item-3.cta",
+      "type": "link",
+      "instruction": "Call to action for the third plan."
+    },
+    {
+      "key": "verdict.title",
+      "type": "text",
+      "instruction": "Heading for the closing verdict section."
+    },
+    {
+      "key": "verdict.body",
+      "type": "text",
+      "instruction": "Short paragraph summarizing how to choose."
+    },
+    {
+      "key": "verdict.items",
+      "type": "list",
+      "instruction": "2-4 quick 'pick this if' recommendations, each a short phrase."
+    },
+    {
+      "key": "cta.title",
+      "type": "text",
+      "instruction": "Closing call-to-action heading."
+    },
+    {
+      "key": "cta.body",
+      "type": "text",
+      "instruction": "One sentence encouraging the next step."
+    },
+    {
+      "key": "cta.button",
+      "type": "link",
+      "instruction": "Closing primary button link."
+    }
+  ],
+  "label": "Comparison — Pros & Cons Cards"
+}

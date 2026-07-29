@@ -1,0 +1,44 @@
+/* of1-template-base.css — shared design tokens + thin reset for OF1 templates.
+   Tokens mirror the xfinity replica's validated brand system (styles/styles.css). */
+:root {
+  /* Colors */
+  --color-bg: #ffffff;
+  --color-fg: #141417;
+  --color-fg-dim: #62626c;
+  --color-accent: #5a23b9;
+  --color-accent-dark: #3d1881;
+  --color-accent-deep: #270e48;
+  --color-surface: #f6f6f9;
+  --color-border: #dde2e6;
+
+  /* Typography */
+  --font-display: 'DM Sans', 'Xfinity Sans', system-ui, -apple-system, sans-serif;
+  --font-body: 'DM Sans', 'Xfinity Sans', system-ui, -apple-system, sans-serif;
+  --weight-display: 700;
+  --weight-body: 400;
+
+  /* Scale */
+  --size-h1: clamp(2rem, 4vw, 3rem);
+  --size-h2: 2rem;
+  --size-h3: 1.25rem;
+  --size-body: 1rem;
+  --line-tight: 1.08;
+  --line-relaxed: 1.55;
+
+  /* Spacing & shape */
+  --space-section: 64px;
+  --space-container: 24px;
+  --radius: 8px;
+  --radius-lg: 16px;
+  --shadow-card: 0 12px 28px rgb(8 8 10 / 8%);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; font-family: var(--font-body); color: var(--color-fg); background: var(--color-bg); line-height: var(--line-relaxed); -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); font-weight: var(--weight-display); line-height: var(--line-tight); letter-spacing: -0.02em; margin: 0 0 0.4em; color: var(--color-fg); }
+h1 { font-size: var(--size-h1); }
+h2 { font-size: var(--size-h2); }
+h3 { font-size: var(--size-h3); }
+p { margin: 0 0 1em; }
+a { color: var(--color-accent); }
+img { max-width: 100%; display: block; }
