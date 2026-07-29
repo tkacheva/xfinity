@@ -1,0 +1,19 @@
+{
+  "title": "What do you need from your internet?",
+  "subtitle": "Tell us what you're looking for and we'll build a page with the right Xfinity plans, deals, and answers.",
+  "placeholder": "Ask about internet, mobile, deals, or moving...",
+  "suggestions": [
+    { "type": "explore", "label": "No-contract gig for a new apartment", "query": "Best no-contract gig internet for a new apartment I can self-install on move-in day" },
+    { "type": "explore", "label": "Bundle internet + mobile to save", "query": "How much can I save by bundling Xfinity Internet with a mobile line?" },
+    { "type": "explore", "label": "Compare 300 Mbps vs Gig", "query": "Compare Xfinity Internet 300 Mbps vs Gig Internet" },
+    { "type": "explore", "label": "Mobile Select vs Mobile Plus", "query": "Compare Xfinity Mobile Select vs Mobile Plus" },
+    { "type": "explore", "label": "Internet under $50 a month", "query": "Show me Xfinity Internet plans under $50 a month" },
+    { "type": "explore", "label": "Best plan for a family", "query": "Best Xfinity internet and mobile plan for a connected family" },
+    { "type": "explore", "label": "How does the xFi Gateway work?", "query": "Tell me how the Xfinity xFi Gateway works and what it includes" },
+    { "type": "explore", "label": "What's the 5-year price guarantee?", "query": "Explain the Xfinity 5-year price guarantee" },
+    { "type": "explore", "label": "Best internet for streaming & gaming", "query": "Best Xfinity internet for 4K streaming and low-latency gaming" },
+    { "type": "explore", "label": "Show me all Xfinity plans", "query": "Show me all Xfinity internet, mobile, and equipment options" },
+    { "type": "explore", "label": "Cut my mobile bill in half", "query": "How can I cut my mobile bill in half with Xfinity Mobile?" },
+    { "type": "explore", "label": "Same-day self-install for movers", "query": "How do I get same-day self-install internet when I move in?" }
+  ]
+}
