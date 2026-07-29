@@ -14,6 +14,10 @@
   align-items: center;
   background: linear-gradient(120deg, var(--color-accent-deep), var(--color-accent-dark));
   color: #fff;
+  /* Center hero content on the same 1100px column as the rest of the page,
+     so the headline left-aligns with the featured card and explore grid
+     instead of hugging the viewport edge. */
+  padding-inline: max(var(--space-container), calc((100% - 1100px) / 2));
 }
 
 .of1-discovery-spotlight-eyebrow {
@@ -33,7 +37,10 @@
   color: rgb(255 255 255 / 88%);
 }
 
-.of1-discovery-spotlight-hero-cta {
+/* Scoped with the parent class (specificity 0,2,x) so the CTA color beats the
+   site stylesheet's `a:any-link { color: var(--purple) }` (0,1,1), which would
+   otherwise repaint button text (e.g. white-on-purple becomes invisible). */
+.of1-discovery-spotlight-hero .of1-discovery-spotlight-hero-cta {
   display: inline-block;
   background: #fff;
   color: var(--color-accent-dark);
@@ -47,6 +54,10 @@
 .of1-discovery-spotlight-hero-cta:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow-card);
+}
+
+.of1-discovery-spotlight-hero-media {
+  min-width: 0;
 }
 
 .of1-discovery-spotlight-hero-media img {
@@ -72,11 +83,20 @@
   box-shadow: var(--shadow-card);
 }
 
+/* Brand-gradient backing so any transparent/letterboxed asset still reads as an
+   intentional panel rather than a blank gap. */
+.of1-discovery-spotlight-feature-media {
+  background: linear-gradient(135deg, var(--color-accent-deep), var(--color-accent-dark));
+}
+
 .of1-discovery-spotlight-feature-media img {
   width: 100%;
   height: 100%;
   min-height: 240px;
   object-fit: cover;
+  /* Xfinity marketing banners place their subject on the right and leave the
+     left as empty gradient; bias the crop toward the subject. */
+  object-position: 70% center;
 }
 
 .of1-discovery-spotlight-feature-body {
@@ -139,7 +159,7 @@
   font-weight: 700;
 }
 
-.of1-discovery-spotlight-feature-cta {
+.of1-discovery-spotlight-feature .of1-discovery-spotlight-feature-cta {
   display: inline-block;
   align-self: flex-start;
   background: var(--color-accent);
@@ -222,7 +242,7 @@
 .of1-discovery-spotlight-closing h2 { color: #fff; }
 .of1-discovery-spotlight-closing p { color: rgb(255 255 255 / 85%); }
 
-.of1-discovery-spotlight-closing-cta {
+.of1-discovery-spotlight-closing .of1-discovery-spotlight-closing-cta {
   display: inline-block;
   background: #fff;
   color: var(--color-accent-dark);
