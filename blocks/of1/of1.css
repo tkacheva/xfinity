@@ -628,9 +628,11 @@ div.generated-section > section {
 }
 
 /* ─── Full-width fix for generated sections ───────────────── */
-/* Generated sections themselves are full-width; wrappers for content blocks
-   (cards, columns, table) keep their max-width to constrain inner content. */
-.generated-section,
+/* Legacy EDS-decorated flow sections (div.generated-section) are full-width;
+   wrappers for content blocks (cards, columns, table) keep their max-width.
+   Scoped to `div` so template-routed <section> roots keep the horizontal
+   padding their own stylesheet sets (otherwise their heroes hug the edge). */
+div.generated-section,
 main > .section.generated-section {
   max-width: 100% !important;
   width: 100% !important;
