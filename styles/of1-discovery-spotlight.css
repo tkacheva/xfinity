@@ -1,23 +1,25 @@
 @import url("/styles/of1-template-base.css");
 
-.of1-discovery-spotlight-hero,
 .of1-discovery-spotlight-feature,
 .of1-discovery-spotlight-explore,
 .of1-discovery-spotlight-closing {
   padding: var(--space-section) var(--space-container);
 }
 
-/* Hero */
+/* Hero — full-bleed split with a full-height image that reaches the right edge,
+   matching the xfinity /learn/internet-service/internet-essentials hero. */
 .of1-discovery-spotlight-hero {
   display: grid;
-  gap: 32px;
-  align-items: center;
+  grid-template-columns: 1fr;
   background: linear-gradient(120deg, var(--color-accent-deep), var(--color-accent-dark));
   color: #fff;
-  /* Center hero content on the same 1100px column as the rest of the page,
-     so the headline left-aligns with the featured card and explore grid
-     instead of hugging the viewport edge. */
-  padding-inline: max(var(--space-container), calc((100% - 1100px) / 2));
+  padding: 0;
+  overflow: hidden;
+}
+
+.of1-discovery-spotlight-hero-inner {
+  /* left-align copy on the same 1100px column as the rest of the page */
+  padding: 48px max(var(--space-container), calc((100vw - 1100px) / 2));
 }
 
 .of1-discovery-spotlight-eyebrow {
@@ -60,12 +62,17 @@
   min-width: 0;
 }
 
+.of1-discovery-spotlight-hero-media {
+  position: relative;
+  min-width: 0;
+  min-height: 240px;
+}
+
 .of1-discovery-spotlight-hero-media img {
   width: 100%;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-card);
+  height: 100%;
   object-fit: cover;
-  aspect-ratio: 16 / 10;
+  display: block;
 }
 
 /* Featured spotlight */
@@ -83,10 +90,12 @@
   box-shadow: var(--shadow-card);
 }
 
-/* Brand-gradient backing so any transparent/letterboxed asset still reads as an
-   intentional panel rather than a blank gap. */
+/* Real Xfinity internet image as a CSS-background fallback: when the worker
+   returns an empty spotlight.image slot the renderer strips the <img>, so this
+   guarantees the panel still shows a relevant photo (not a blank block). A
+   filled <img> simply sits on top of it. */
 .of1-discovery-spotlight-feature-media {
-  background: linear-gradient(135deg, var(--color-accent-deep), var(--color-accent-dark));
+  background: var(--color-accent-deep) url('https://assets.comcast.com/assets/dotcom/projects_3/2024/nov/cix-7121_ie-learn-page-updates/IE_BAU-Hero-Learn-Desktop.jpg') center / cover no-repeat;
 }
 
 .of1-discovery-spotlight-feature-media img {
@@ -260,7 +269,30 @@
 }
 
 @media (min-width: 900px) {
-  .of1-discovery-spotlight-hero { grid-template-columns: 1.1fr 0.9fr; padding-block: 80px; }
+  .of1-discovery-spotlight-hero {
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: stretch;
+    min-height: 460px;
+  }
+
+  .of1-discovery-spotlight-hero-inner {
+    align-self: center;
+    padding: 72px 48px 72px max(var(--space-container), calc((100vw - 1100px) / 2));
+  }
+
+  .of1-discovery-spotlight-hero-media { min-height: 0; }
+
+  /* diagonal purple blend from the copy side into the photo, echoing the
+     xfinity internet-essentials hero */
+  .of1-discovery-spotlight-hero-media::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(100deg, var(--color-accent-dark) 0%, rgb(61 24 129 / 55%) 24%, transparent 50%);
+    pointer-events: none;
+    z-index: 1;
+  }
+
   .of1-discovery-spotlight-feature-card { grid-template-columns: 0.9fr 1.1fr; }
   .of1-discovery-spotlight-grid { grid-template-columns: repeat(4, 1fr); }
 }

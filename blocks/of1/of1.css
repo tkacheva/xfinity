@@ -529,6 +529,9 @@ div.generated-section > section {
   top: 50%;
   transform: translateY(-50%);
   background: var(--primary);
+  /* arrow <path> uses stroke="currentColor"; keep color white so it stays
+     visible against the purple button (was inheriting black). */
+  color: #fff;
   border: none;
   border-radius: 50%;
   width: 36px;
