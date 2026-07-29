@@ -14,13 +14,13 @@
 const FOCAL = [
   ['homephone-overview-half-image-1', 'right 20%'], // home-phone pillar: woman laughing
   ['BlueGateway', 'left center'], // internet equipment: gateway is centre-left → shift right
-  ['2UP_Phone-Upgrades', 'left center'], // cell-phones: subject centre → shift right
+  ['2UP_Phone-Upgrades', 'left 28%'], // cell-phones: shift right + lift to the face
 ];
 /* Per-image zoom for centre-composed images whose subject would otherwise sit
    under the copy panel — enlarge so it moves into the right panel. */
 const SIZE = [
   ['BlueGateway', '185% auto'],
-  ['2UP_Phone-Upgrades', '150% auto'],
+  ['2UP_Phone-Upgrades', '138% auto'],
 ];
 
 export default function decorate(block) {
