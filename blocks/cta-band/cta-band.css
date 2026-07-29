@@ -17,7 +17,7 @@
 .cta-band .cta-band-actions a:not(.button) { color: #fff; font-weight: 600; margin-left: 16px; text-decoration: underline; }
 
 /* grey variant (light band, dark text) — e.g. "Your benefits start on day one" */
-.cta-band.grey { background: var(--grey-05); color: var(--black); }
+.cta-band.grey .cta-band-inner { background: var(--grey-05); color: var(--black); }
 .cta-band.grey h2 { color: var(--black); }
 .cta-band.grey .cta-body { color: var(--grey-50); opacity: 1; }
 .cta-band.grey .cta-band-actions a.button { background: var(--purple); color: #fff; }
