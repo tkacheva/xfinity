@@ -18,12 +18,14 @@ export default function decorate(block) {
   rows.slice(1).forEach((row) => {
     const c = [...row.children];
     const title = c[0] ? c[0].textContent.trim() : '';
-    const linkCell = c[1];
-    const img = c[2] ? c[2].textContent.trim() : '';
+    const img = c[c.length - 1] ? c[c.length - 1].textContent.trim() : '';
+    // 3 cells: heading | link | image (legacy). 4+ cells: heading | body | link | image.
+    const body = c.length >= 4 && c[1] ? c[1].innerHTML.trim() : '';
+    const linkCell = c.length >= 4 ? c[2] : c[1];
     const card = document.createElement('div');
     card.className = 'fc-card';
-    if (img) card.style.backgroundImage = `linear-gradient(180deg, rgb(39 14 72 / 15%), rgb(39 14 72 / 50%)), url('${img}')`;
-    card.innerHTML = `<h3>${title}</h3><div class="fc-card-actions"></div>`;
+    if (img) card.style.backgroundImage = `linear-gradient(180deg, rgb(39 14 72 / 15%), rgb(39 14 72 / 55%)), url('${img}')`;
+    card.innerHTML = `<h3>${title}</h3>${body ? `<p class="fc-body">${body}</p>` : ''}<div class="fc-card-actions"></div>`;
     const ca = card.querySelector('.fc-card-actions');
     if (linkCell) [...linkCell.childNodes].forEach((n) => ca.append(n.cloneNode(true)));
     grid.append(card);

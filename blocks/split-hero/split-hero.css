@@ -1,35 +1,55 @@
-.split-hero {
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
+.split-hero { width: 100vw; margin-left: calc(50% - 50vw); }
+
+.split-hero .sph-hero {
   background: linear-gradient(105deg, var(--purple), var(--purple-dark));
   color: #fff;
-}
-
-.split-hero.has-hero-img {
-  background:
-    linear-gradient(105deg, rgb(61 24 129 / 95%) 0%, rgb(90 35 185 / 80%) 60%, rgb(61 24 129 / 78%) 100%),
-    var(--hero-img);
-  background-size: cover;
-  background-position: center;
-}
-
-.split-hero .split-hero-inner {
-  max-width: var(--maxw);
-  margin: 0 auto;
-  padding: 48px 24px;
   display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  gap: 28px;
-  align-items: center;
+  grid-template-columns: 1.05fr 1fr;
+  align-items: stretch;
+  min-height: 420px;
+  overflow: hidden;
 }
 
-.split-hero h1 { color: #fff; font-size: 2.6rem; font-weight: 700; letter-spacing: -0.02em; line-height: 1.05; margin: 0; }
-.split-hero .sph-copy p { opacity: 0.95; margin: 14px 0 20px; }
-.split-hero .sph-actions a.button { background: #fff; color: var(--black); border-radius: var(--r-md); padding: 12px 24px; font-weight: 700; }
-.split-hero .sph-actions a:not(.button) { color: #fff; font-weight: 600; margin-left: 10px; }
-.split-hero .sph-card { background: #fff; color: var(--black); border-radius: var(--r-lg); padding: 26px; }
-.split-hero .sph-card h3 { font-size: 1.2rem; font-weight: 700; margin: 0 0 6px; }
-.split-hero .sph-card p { color: var(--grey-50); font-size: 0.9rem; margin: 0 0 16px; }
-.split-hero .sph-card-actions a.button { border-radius: var(--r-md); padding: 12px 24px; font-weight: 700; }
+.split-hero .sph-copy { align-self: center; max-width: 620px; margin-left: auto; padding: 56px 40px 56px 24px; width: 100%; box-sizing: border-box; }
+.split-hero .sph-copy h1 { color: #fff; font-size: clamp(2.2rem, 4vw, 3rem); font-weight: 700; letter-spacing: -0.02em; line-height: 1.02; margin: 0 0 16px; }
+.split-hero .sph-lede { font-size: 1rem; line-height: 1.45; opacity: 0.96; margin: 0 0 20px; max-width: 42ch; }
 
-@media (width <= 900px) { .split-hero .split-hero-inner { grid-template-columns: 1fr; } }
+.split-hero .sph-price { display: flex; align-items: flex-start; gap: 10px; margin: 0 0 22px; }
+.split-hero .sph-amt { font-size: 4.4rem; font-weight: 700; line-height: 0.9; letter-spacing: -0.03em; }
+.split-hero .sph-suf { font-size: 1rem; font-weight: 700; line-height: 1.15; padding-top: 6px; }
+
+.split-hero .sph-actions { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+.split-hero .sph-actions a.button { background: #fff; color: var(--black); border-radius: var(--r-md); padding: 13px 28px; font-weight: 700; }
+.split-hero .sph-actions a:not(.button) { color: #fff; font-weight: 600; text-decoration: underline; }
+.split-hero .sph-fine { font-size: 0.7rem; line-height: 1.4; opacity: 0.8; margin: 20px 0 0; max-width: 52ch; }
+
+.split-hero .sph-art { background: center / cover no-repeat; min-height: 300px; }
+
+/* full-width sign-in bar below the hero */
+.split-hero .sph-signin { background: #fff; }
+.split-hero .sph-signin-inner {
+  max-width: var(--maxw);
+  margin: -28px auto 0;
+  position: relative;
+  z-index: 2;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  box-shadow: 0 10px 30px rgb(8 8 10 / 8%);
+  padding: 20px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.split-hero .sph-signin-copy h3 { font-size: 1.05rem; font-weight: 700; color: var(--purple); margin: 0 0 4px; }
+.split-hero .sph-signin-copy p { color: var(--grey-50); font-size: 0.9rem; margin: 0; }
+.split-hero .sph-signin-cta a.button { background: var(--purple); color: #fff; border-radius: var(--r-md); padding: 12px 30px; font-weight: 700; }
+
+@media (width <= 900px) {
+  .split-hero .sph-hero { grid-template-columns: 1fr; }
+  .split-hero .sph-copy { margin: 0 auto; padding: 40px 24px; }
+  .split-hero .sph-art { min-height: 240px; order: -1; }
+  .split-hero .sph-signin-inner { flex-direction: column; align-items: flex-start; }
+}

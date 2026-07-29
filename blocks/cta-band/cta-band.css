@@ -21,3 +21,6 @@
 .cta-band.grey h2 { color: var(--black); }
 .cta-band.grey .cta-body { color: var(--grey-50); opacity: 1; }
 .cta-band.grey .cta-band-actions a.button { background: var(--purple); color: #fff; }
+
+/* image-background variant (e.g. membership benefits band) */
+.cta-band.has-bg .cta-band-inner { background-size: cover; background-position: center; }
