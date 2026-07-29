@@ -14,3 +14,4 @@
 .cta-band .cta-body { opacity: 0.95; margin: 12px 0 0; font-size: 0.95rem; }
 .cta-band .cta-band-actions { margin-top: 18px; }
 .cta-band .cta-band-actions a.button { background: #fff; color: var(--black); border-radius: var(--r-md); padding: 12px 24px; font-weight: 700; }
+.cta-band .cta-band-actions a:not(.button) { color: #fff; font-weight: 600; margin-left: 16px; text-decoration: underline; }
