@@ -3,8 +3,8 @@
 .marquee .mq-head h2 em { color: var(--purple); font-style: normal; }
 .marquee .mq-head p { color: var(--grey-50); margin: 0; }
 
-.marquee .mq-wrap { width: 100vw; margin-left: calc(50% - 50vw); }
-.marquee .mq-row { overflow: hidden; padding: 8px 0; }
+.marquee .mq-wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+.marquee .mq-row { overflow: hidden; padding: 8px 0; border-radius: var(--r-md); }
 .marquee .mq-track { display: flex; gap: 16px; width: max-content; animation: mq-scroll 45s linear infinite; }
 .marquee .mq-track.right { animation-direction: reverse; }
 .marquee .mq-row:hover .mq-track { animation-play-state: paused; }
