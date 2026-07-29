@@ -1,0 +1,89 @@
+[
+  {
+    "id": "new-home-setup",
+    "name": "Setting up internet in a new home",
+    "description": "A mover getting fast WiFi installed and running on move-in day, ideally self-install and no contract.",
+    "keywords": [
+      "moving internet",
+      "new apartment wifi",
+      "move in day internet",
+      "set up internet new home",
+      "self install internet",
+      "transfer internet",
+      "same day wifi"
+    ],
+    "recommendedProducts": [
+      "gig-internet",
+      "internet-300",
+      "xfi-gateway"
+    ],
+    "relatedPersonas": [
+      "maya-llm-mover",
+      "student"
+    ]
+  },
+  {
+    "id": "cut-the-bill-bundle",
+    "name": "Cutting the monthly bill by bundling",
+    "description": "Combining Internet + Mobile to lower the total monthly cost, often switching from another carrier.",
+    "keywords": [
+      "cut mobile bill",
+      "bundle internet mobile",
+      "switch and save",
+      "lower monthly bill",
+      "free mobile line",
+      "internet mobile deal",
+      "save vs verizon att tmobile"
+    ],
+    "recommendedProducts": [
+      "xfinity-mobile-select",
+      "gig-internet",
+      "xfinity-mobile-plus"
+    ],
+    "relatedPersonas": [
+      "maya-llm-mover",
+      "family"
+    ]
+  },
+  {
+    "id": "work-from-home",
+    "name": "Working from home",
+    "description": "Reliable, whole-home WiFi with backup for video calls and uploads across the house.",
+    "keywords": [
+      "work from home internet",
+      "reliable wifi calls",
+      "home office internet",
+      "whole home coverage",
+      "internet backup",
+      "no outages wifi"
+    ],
+    "recommendedProducts": [
+      "internet-500",
+      "xfinity-pro"
+    ],
+    "relatedPersonas": [
+      "family"
+    ]
+  },
+  {
+    "id": "streaming-gaming",
+    "name": "Streaming and gaming",
+    "description": "Gigabit speeds + a streaming bundle for 4K streaming and low-latency gaming.",
+    "keywords": [
+      "streaming internet",
+      "gaming wifi",
+      "4k streaming",
+      "gigabit gaming",
+      "streaming bundle",
+      "low latency",
+      "best internet for streaming"
+    ],
+    "recommendedProducts": [
+      "gig-internet",
+      "streaming-bundle"
+    ],
+    "relatedPersonas": [
+      "gamer-streamer"
+    ]
+  }
+]

@@ -1,0 +1,105 @@
+[
+  {
+    "id": "maya-llm-mover",
+    "name": "Maya — the LLM-referred mover",
+    "description": "A recent mover in her late 20s who researches internet providers inside LLM assistants (Gemini, ChatGPT) and clicks through from the LLM app to xfinity.com carrying her research context. She wants fast, no-contract WiFi she can self-install on move-in day and is open to bundling mobile to cut her bill. She expects the page to already reflect what she asked the LLM.",
+    "keywords": [
+      "best internet provider",
+      "no contract gig internet",
+      "moving new apartment internet",
+      "chatgpt recommended internet",
+      "gemini internet provider",
+      "self install move in wifi",
+      "bundle internet and mobile to save",
+      "same day wifi",
+      "which internet should i get",
+      "compare internet plans"
+    ],
+    "priorities": [
+      "fast gig speeds",
+      "no annual contract",
+      "same-day self-install",
+      "bundle savings with mobile",
+      "transparent pricing"
+    ],
+    "recommendedProducts": [
+      "gig-internet",
+      "internet-300",
+      "xfi-gateway",
+      "xfinity-mobile-select"
+    ]
+  },
+  {
+    "id": "family",
+    "name": "Connected Family",
+    "description": "A household with many devices that values reliable coverage in every room, parental controls, and savings from bundling internet + mobile.",
+    "keywords": [
+      "family internet plan",
+      "wifi for whole house",
+      "many devices",
+      "parental controls",
+      "reliable home wifi",
+      "bundle and save family",
+      "best wifi coverage",
+      "kids online safety"
+    ],
+    "priorities": [
+      "reliability",
+      "whole-home coverage",
+      "parental controls",
+      "bundle savings"
+    ],
+    "recommendedProducts": [
+      "internet-500",
+      "xfinity-pro",
+      "xfinity-mobile-plus"
+    ]
+  },
+  {
+    "id": "gamer-streamer",
+    "name": "Gamer & Streamer",
+    "description": "A speed-obsessed streamer/gamer who needs low latency, gigabit speeds, and a simple streaming bundle.",
+    "keywords": [
+      "gaming internet",
+      "low latency wifi",
+      "4k streaming internet",
+      "gigabit for gaming",
+      "best internet for twitch",
+      "streaming bundle deal",
+      "fast upload internet"
+    ],
+    "priorities": [
+      "gigabit speed",
+      "low latency",
+      "streaming bundle",
+      "unlimited data"
+    ],
+    "recommendedProducts": [
+      "gig-internet",
+      "streaming-bundle"
+    ]
+  },
+  {
+    "id": "student",
+    "name": "Student Saver",
+    "description": "A budget-conscious student who wants affordable internet + mobile with student perks and no long commitment.",
+    "keywords": [
+      "student internet deal",
+      "cheap internet student",
+      "back to school wifi",
+      "student mobile plan",
+      "affordable no contract internet",
+      "dorm apartment internet"
+    ],
+    "priorities": [
+      "low price",
+      "no contract",
+      "student perks",
+      "flexible"
+    ],
+    "recommendedProducts": [
+      "internet-300",
+      "xfinity-mobile-select"
+    ]
+  }
+]

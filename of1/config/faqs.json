@@ -1,0 +1,43 @@
+[
+  {
+    "id": "what-is-5yr-guarantee",
+    "question": "What is the Xfinity 5-Year Price Guarantee?",
+    "answer": "It locks your base monthly internet rate for 60 months, with the freedom to change or cancel anytime and no annual contract. If you move within our service area, your rate stays the same.",
+    "relatedProducts": [
+      "gig-internet",
+      "internet-300"
+    ],
+    "category": "pricing"
+  },
+  {
+    "id": "same-day-install",
+    "question": "Can I get internet on move-in day?",
+    "answer": "Yes. Most Xfinity Internet plans support same-day or next-day delivery and same-day self-install using the Xfinity app, so you can be online the day you move in.",
+    "relatedProducts": [
+      "internet-300",
+      "gig-internet"
+    ],
+    "category": "moving"
+  },
+  {
+    "id": "contract",
+    "question": "Is there a contract or early termination fee?",
+    "answer": "No annual contract required. You can change or cancel anytime without a penalty.",
+    "relatedProducts": [
+      "gig-internet",
+      "internet-500",
+      "internet-300"
+    ],
+    "category": "pricing"
+  },
+  {
+    "id": "bundle-mobile",
+    "question": "How much can I save by bundling mobile?",
+    "answer": "Adding an Xfinity Mobile line to your internet can cut your total bill significantly versus Verizon, AT&T, or T-Mobile, and you can try a line free for a year with Xfinity Internet.",
+    "relatedProducts": [
+      "xfinity-mobile-select",
+      "gig-internet"
+    ],
+    "category": "mobile"
+  }
+]

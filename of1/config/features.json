@@ -1,0 +1,62 @@
+[
+  {
+    "id": "five-year-price-guarantee",
+    "name": "5-Year Price Guarantee",
+    "description": "Lock your base monthly rate for 60 months with the freedom to change or cancel anytime.",
+    "productIds": [
+      "gig-internet",
+      "internet-500",
+      "internet-300"
+    ],
+    "category": "value"
+  },
+  {
+    "id": "gig-speed",
+    "name": "Gig-speed fiber WiFi",
+    "description": "Fiber-powered gigabit download speeds for the busiest homes.",
+    "productIds": [
+      "gig-internet"
+    ],
+    "category": "performance"
+  },
+  {
+    "id": "wifi-hotspots",
+    "name": "Millions of WiFi hotspots",
+    "description": "Stay connected on the go with Xfinity WiFi hotspots included with your plan.",
+    "productIds": [
+      "xfinity-mobile-select",
+      "xfinity-mobile-plus"
+    ],
+    "category": "connectivity"
+  },
+  {
+    "id": "same-day-self-install",
+    "name": "Same-day self-install",
+    "description": "Get online on move-in day with same-day WiFi you set up yourself in minutes via the Xfinity app.",
+    "productIds": [
+      "internet-300",
+      "gig-internet",
+      "xfi-gateway"
+    ],
+    "category": "convenience"
+  },
+  {
+    "id": "best-5g-coverage",
+    "name": "Most reliable 5G network",
+    "description": "Xfinity Mobile runs on the network with the best coverage in the US.",
+    "productIds": [
+      "xfinity-mobile-select",
+      "xfinity-mobile-plus"
+    ],
+    "category": "connectivity"
+  },
+  {
+    "id": "device-protection-for-life",
+    "name": "Device protection for life",
+    "description": "Lifetime protection for your phone and eligible tablets/smartwatches with Mobile Plus.",
+    "productIds": [
+      "xfinity-mobile-plus"
+    ],
+    "category": "protection"
+  }
+]

@@ -1,0 +1,301 @@
+[
+  {
+    "id": "gig-internet",
+    "name": "Xfinity Gig Internet",
+    "category": "internet",
+    "price": 50,
+    "currency": "USD",
+    "images": [
+      "https://content.da.live/tkacheva/xfinity/media/product-gig-internet-1.jpg",
+      "https://content.da.live/tkacheva/xfinity/media/product-gig-internet-2.png",
+      "https://content.da.live/tkacheva/xfinity/media/product-gig-internet-3.jpg",
+      "https://content.da.live/tkacheva/xfinity/media/product-gig-internet-4.jpg",
+      "https://content.da.live/tkacheva/xfinity/media/product-gig-internet-5.jpg"
+    ],
+    "url": "https://xfinity.com/learn/internet-service/gig",
+    "description": "Fiber-powered Gig WiFi built for busy, always-online homes: ultra-fast gigabit download speeds, unlimited data, and the xFi Gateway included. Great for streaming in 4K, gaming, and working from home across dozens of devices.",
+    "features": [
+      "Up to 1 Gig download speeds",
+      "Unlimited data",
+      "xFi Gateway included",
+      "Peacock Premium for 2 years",
+      "5-year price guarantee"
+    ],
+    "highlights": [
+      "Fastest home plan",
+      "No annual contract"
+    ],
+    "persona": "maya-llm-mover",
+    "useCase": "new-home-setup",
+    "keywords": [
+      "gig internet",
+      "gigabit wifi",
+      "fastest home internet",
+      "fiber internet",
+      "no contract gig",
+      "1 gig plan",
+      "best internet for streaming",
+      "best internet for gaming",
+      "work from home internet",
+      "gig speed"
+    ]
+  },
+  {
+    "id": "internet-500",
+    "name": "Xfinity Internet 500 Mbps",
+    "category": "internet",
+    "price": 45,
+    "currency": "USD",
+    "images": [
+      "https://content.da.live/tkacheva/xfinity/media/product-internet-500-1.jpg",
+      "https://content.da.live/tkacheva/xfinity/media/product-internet-500-2.jpg",
+      "https://content.da.live/tkacheva/xfinity/media/product-internet-500-3.png",
+      "https://content.da.live/tkacheva/xfinity/media/product-internet-500-4.jpg",
+      "https://content.da.live/tkacheva/xfinity/media/product-internet-500-5.jpg"
+    ],
+    "url": "https://xfinity.com/learn/internet-service",
+    "description": "Fast, reliable 500 Mbps WiFi that keeps up with all your devices at once, with a free Xfinity Mobile line for a year and no annual contract.",
+    "features": [
+      "500 Mbps speeds",
+      "Fast, consistent speed even at peak hours",
+      "A free Xfinity Mobile line for 1 year",
+      "5-year price guarantee"
+    ],
+    "highlights": [
+      "Keep up on all your devices",
+      "No annual contract"
+    ],
+    "persona": "family",
+    "useCase": "work-from-home",
+    "keywords": [
+      "500 mbps internet",
+      "fast home wifi",
+      "reliable internet",
+      "internet for family",
+      "multiple devices wifi",
+      "no contract internet",
+      "mid tier internet plan",
+      "home wifi deal"
+    ]
+  },
+  {
+    "id": "internet-300",
+    "name": "Xfinity Internet 300 Mbps",
+    "category": "internet",
+    "price": 40,
+    "currency": "USD",
+    "images": [
+      "https://content.da.live/tkacheva/xfinity/media/product-internet-300-1.jpg",
+      "https://content.da.live/tkacheva/xfinity/media/product-internet-300-2.jpg",
+      "https://content.da.live/tkacheva/xfinity/media/product-internet-300-3.png",
+      "https://content.da.live/tkacheva/xfinity/media/product-internet-300-4.jpg",
+      "https://content.da.live/tkacheva/xfinity/media/product-internet-300-5.jpg"
+    ],
+    "url": "https://xfinity.com/learn/internet-service",
+    "description": "Simple, seamless WiFi with 99.9% reliability for everyday work and play, plus a free Xfinity Mobile line for a year. Same-day self-install and no annual contract.",
+    "features": [
+      "300 Mbps speeds",
+      "99.9% reliability",
+      "Same-day self-install",
+      "A free Xfinity Mobile line for 1 year",
+      "5-year price guarantee"
+    ],
+    "highlights": [
+      "Best value starter plan",
+      "Same-day WiFi"
+    ],
+    "persona": "maya-llm-mover",
+    "useCase": "new-home-setup",
+    "keywords": [
+      "300 mbps internet",
+      "cheap home internet",
+      "starter internet plan",
+      "same day wifi",
+      "self install internet",
+      "move in internet",
+      "no contract wifi",
+      "best value internet",
+      "affordable internet"
+    ]
+  },
+  {
+    "id": "xfi-gateway",
+    "name": "xFi Gateway",
+    "category": "equipment",
+    "price": 0,
+    "currency": "USD",
+    "images": [
+      "https://content.da.live/tkacheva/xfinity/media/product-xfi-gateway-1.png",
+      "https://content.da.live/tkacheva/xfinity/media/product-xfi-gateway-2.png",
+      "https://content.da.live/tkacheva/xfinity/media/product-xfi-gateway-3.jpg",
+      "https://content.da.live/tkacheva/xfinity/media/product-xfi-gateway-4.jpg"
+    ],
+    "url": "https://xfinity.com/learn/internet-service/equipment",
+    "description": "The all-in-one modem + router that delivers powerful whole-home WiFi and unlocks Advanced Security and parental controls in the Xfinity app. Included with your plan.",
+    "features": [
+      "Modem + router in one",
+      "Whole-home WiFi coverage",
+      "Advanced Security",
+      "Manage from the Xfinity app"
+    ],
+    "highlights": [
+      "No equipment to buy",
+      "Self-install in minutes"
+    ],
+    "persona": "maya-llm-mover",
+    "useCase": "new-home-setup",
+    "keywords": [
+      "xfi gateway",
+      "modem router",
+      "wifi equipment",
+      "self install modem",
+      "whole home wifi",
+      "xfinity app wifi",
+      "advanced security router"
+    ]
+  },
+  {
+    "id": "xfinity-mobile-select",
+    "name": "Xfinity Mobile \u2014 Mobile Select",
+    "category": "mobile",
+    "price": 30,
+    "currency": "USD",
+    "images": [
+      "https://content.da.live/tkacheva/xfinity/media/product-xfinity-mobile-select-1.jpg",
+      "https://content.da.live/tkacheva/xfinity/media/product-xfinity-mobile-select-2.jpg",
+      "https://content.da.live/tkacheva/xfinity/media/product-xfinity-mobile-select-3.jpg",
+      "https://content.da.live/tkacheva/xfinity/media/product-xfinity-mobile-select-4.jpg"
+    ],
+    "url": "https://xfinity.com/learn/mobile",
+    "description": "Unlimited talk, text, and data on the most reliable 5G network. Try a line free for a year with Xfinity Internet, and only pay for the data you use.",
+    "features": [
+      "Unlimited talk, text, and data",
+      "Most reliable 5G network",
+      "Millions of secure WiFi hotspots",
+      "Free line for a year with Internet"
+    ],
+    "highlights": [
+      "Cut your mobile bill in half",
+      "No annual contract"
+    ],
+    "persona": "maya-llm-mover",
+    "useCase": "cut-the-bill-bundle",
+    "keywords": [
+      "xfinity mobile",
+      "cheap phone plan",
+      "cut mobile bill",
+      "bundle internet and mobile",
+      "free mobile line",
+      "unlimited 5g plan",
+      "switch carrier save",
+      "mobile deal"
+    ]
+  },
+  {
+    "id": "xfinity-mobile-plus",
+    "name": "Xfinity Mobile \u2014 Mobile Plus",
+    "category": "mobile",
+    "price": 45,
+    "currency": "USD",
+    "images": [
+      "https://content.da.live/tkacheva/xfinity/media/product-xfinity-mobile-plus-1.jpg",
+      "https://content.da.live/tkacheva/xfinity/media/product-xfinity-mobile-plus-2.jpg",
+      "https://content.da.live/tkacheva/xfinity/media/product-xfinity-mobile-plus-3.jpg",
+      "https://content.da.live/tkacheva/xfinity/media/product-xfinity-mobile-plus-4.jpg"
+    ],
+    "url": "https://xfinity.com/learn/mobile/plans",
+    "description": "Everything in Mobile Select plus the best phone deals and lifetime device protection for your phone and eligible tablets and smartwatches.",
+    "features": [
+      "Unlimited talk, text, and data",
+      "Best phone deals",
+      "Device protection for life",
+      "Nationwide 5G coverage"
+    ],
+    "highlights": [
+      "Best phone deals",
+      "Lifetime device protection"
+    ],
+    "persona": "family",
+    "useCase": "cut-the-bill-bundle",
+    "keywords": [
+      "mobile plus",
+      "device protection",
+      "best phone deals",
+      "family mobile plan",
+      "trade in phone deal",
+      "unlimited data plan",
+      "premium mobile plan"
+    ]
+  },
+  {
+    "id": "streaming-bundle",
+    "name": "StreamSaver & Streaming Apps",
+    "category": "entertainment",
+    "price": 15,
+    "currency": "USD",
+    "images": [
+      "https://content.da.live/tkacheva/xfinity/media/product-streaming-bundle-1.jpg",
+      "https://content.da.live/tkacheva/xfinity/media/product-streaming-bundle-2.jpg",
+      "https://content.da.live/tkacheva/xfinity/media/product-streaming-bundle-3.jpg",
+      "https://content.da.live/tkacheva/xfinity/media/product-streaming-bundle-4.jpg"
+    ],
+    "url": "https://xfinity.com/learn/digital-cable-tv",
+    "description": "Bundle your favorite streaming apps and save. StreamSaver brings Peacock, Netflix, and Apple TV+ together, managed on one simple bill with your Internet plan.",
+    "features": [
+      "Peacock, Netflix & Apple TV+ bundle",
+      "One simple bill",
+      "Manage in the Xfinity app",
+      "Save vs subscribing separately"
+    ],
+    "highlights": [
+      "Streaming, simplified",
+      "Save on your favorite apps"
+    ],
+    "persona": "gamer-streamer",
+    "useCase": "streaming-gaming",
+    "keywords": [
+      "streaming bundle",
+      "streamsaver",
+      "peacock netflix bundle",
+      "save on streaming",
+      "streaming apps one bill",
+      "entertainment bundle"
+    ]
+  },
+  {
+    "id": "xfinity-pro",
+    "name": "Xfinity Pro",
+    "category": "equipment",
+    "price": 15,
+    "currency": "USD",
+    "images": [
+      "https://content.da.live/tkacheva/xfinity/media/product-xfinity-pro-1.jpg",
+      "https://content.da.live/tkacheva/xfinity/media/product-xfinity-pro-2.png",
+      "https://content.da.live/tkacheva/xfinity/media/product-xfinity-pro-3.jpg",
+      "https://content.da.live/tkacheva/xfinity/media/product-xfinity-pro-4.jpg"
+    ],
+    "url": "https://xfinity.com/learn/internet-service/xfinity-pro",
+    "description": "Professional-grade WiFi that expands coverage to every room with WiFi extenders and adds built-in 4G LTE + battery backup so you stay connected during outages.",
+    "features": [
+      "Whole-home WiFi extenders",
+      "4G LTE network backup",
+      "Optional battery backup",
+      "Priority support"
+    ],
+    "highlights": [
+      "Every room connected",
+      "Stay online in outages"
+    ],
+    "persona": "family",
+    "useCase": "work-from-home",
+    "keywords": [
+      "xfinity pro",
+      "wifi extender",
+      "whole home coverage",
+      "internet backup",
+      "network outage backup",
+      "battery backup wifi",
+      "best wifi coverage"
+    ]
+  }
+]
