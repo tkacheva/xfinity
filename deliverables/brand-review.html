@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brand Extraction Report — xfinity.com</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+  
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:       #1C1917;
+      --bg2:      #242220;
+      --bg3:      #2E2B28;
+      --fg:       #F5F0E8;
+      --accent:   #FF3D00;
+      --teal:     #00E5A0;
+      --fg-dim:   rgba(245, 240, 232, 0.55);
+      --border:   rgba(245, 240, 232, 0.10);
+      --radius:   10px;
+      --font-mono: 'JetBrains Mono', 'Fira Mono', monospace;
+      --font-head: 'Cormorant Garamond', Georgia, serif;
+    }
+
+    html { font-size: 16px; }
+
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: var(--font-mono);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    /* ── Layout ─────────────────────────────── */
+    .page-wrap {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 60px 32px 120px;
+    }
+
+    /* ── Header ─────────────────────────────── */
+    .report-header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 40px;
+      margin-bottom: 64px;
+    }
+
+    .report-header .eyebrow {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 16px;
+    }
+
+    .report-header h1 {
+      font-family: var(--font-head);
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      font-weight: 300;
+      letter-spacing: -0.01em;
+      line-height: 1.1;
+      color: var(--fg);
+    }
+
+    .report-header .domain-pill {
+      display: inline-block;
+      margin-top: 14px;
+      padding: 4px 14px;
+      border: 1px solid var(--accent);
+      border-radius: 999px;
+      font-size: 13px;
+      color: var(--accent);
+      letter-spacing: 0.04em;
+    }
+
+    .report-header .timestamp {
+      margin-top: 20px;
+      font-size: 12px;
+      color: var(--fg-dim);
+    }
+
+    /* ── Section ─────────────────────────────── */
+    .section {
+      margin-bottom: 72px;
+    }
+
+    .section-title {
+      font-family: var(--font-head);
+      font-size: 1.6rem;
+      font-weight: 400;
+      color: var(--fg);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .section-title .badge {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--bg);
+      background: var(--teal);
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+
+    .section-divider {
+      height: 1px;
+      background: var(--border);
+      margin-bottom: 32px;
+    }
+
+    /* ── Color Swatches ─────────────────────── */
+    .swatches-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+      gap: 16px;
+    }
+
+    .swatch {
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: var(--bg3);
+    }
+
+    .swatch-color {
+      height: 90px;
+      width: 100%;
+    }
+
+    .swatch-info {
+      padding: 10px 12px;
+    }
+
+    .swatch-name {
+      display: block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--fg-dim);
+      margin-bottom: 3px;
+    }
+
+    .swatch-hex {
+      display: block;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--fg);
+    }
+
+    /* ── Typography ─────────────────────────── */
+    .typo-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    @media (max-width: 600px) {
+      .typo-grid { grid-template-columns: 1fr; }
+    }
+
+    .typo-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+    }
+
+    .typo-card .typo-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 14px;
+    }
+
+    .typo-preview-heading {
+      font-size: 2rem;
+      line-height: 1.2;
+      color: var(--fg);
+      margin-bottom: 16px;
+    }
+
+    .typo-preview-body {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--fg);
+      margin-bottom: 16px;
+    }
+
+    .typo-meta {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--fg-dim);
+      line-height: 1.8;
+    }
+
+    .typo-meta span {
+      display: block;
+    }
+
+    /* ── Shapes & Spacing ───────────────────── */
+    .shapes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 16px;
+    }
+
+    .shape-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .shape-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--fg-dim);
+    }
+
+    .shape-preview-box {
+      width: 80px;
+      height: 44px;
+      background: var(--accent);
+      opacity: 0.85;
+    }
+
+    .shape-value {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      color: var(--teal);
+    }
+
+    .spacing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .spacing-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+    }
+
+    .spacing-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--fg-dim);
+      margin-bottom: 8px;
+    }
+
+    .spacing-value {
+      font-family: var(--font-mono);
+      font-size: 15px;
+      color: var(--teal);
+    }
+
+    /* ── Logo ───────────────────────────────── */
+    .logo-well {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 48px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 24px;
+    }
+
+    .logo-well .logo-display {
+      max-width: 300px;
+      max-height: 120px;
+    }
+
+    .logo-well .logo-display svg {
+      max-width: 300px;
+      max-height: 120px;
+      height: auto;
+      width: auto;
+    }
+
+    .logo-on-dark {
+      background: var(--bg);
+      padding: 24px;
+      border-radius: 6px;
+    }
+
+    .logo-on-light {
+      background: #FFFFFF;
+      padding: 24px;
+      border-radius: 6px;
+    }
+
+    .logo-variants {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .logo-variant-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--fg-dim);
+      margin-bottom: 8px;
+    }
+
+    .logo-not-found {
+      font-size: 13px;
+      color: var(--fg-dim);
+      font-style: italic;
+    }
+
+    /* ── Screenshots ────────────────────────── */
+    .screenshots-list {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .screenshot-item {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    .screenshot-caption {
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--border);
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--fg-dim);
+      letter-spacing: 0.04em;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .screenshot-caption::before {
+      content: '';
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background: var(--teal);
+      border-radius: 50%;
+    }
+
+    .screenshot-item img {
+      display: block;
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+    }
+
+    /* ── Empty state ─────────────────────────── */
+    .empty-state {
+      background: var(--bg2);
+      border: 1px dashed var(--border);
+      border-radius: var(--radius);
+      padding: 36px;
+      text-align: center;
+      color: var(--fg-dim);
+      font-size: 13px;
+      font-style: italic;
+    }
+
+    /* ── Footer ─────────────────────────────── */
+    .report-footer {
+      margin-top: 80px;
+      padding-top: 28px;
+      border-top: 1px solid var(--border);
+      font-size: 11px;
+      color: var(--fg-dim);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrap">
+
+    <!-- ── Header ──────────────────────────── -->
+    <header class="report-header">
+      <p class="eyebrow">OF1 Demo Pipeline · Step 4 Output</p>
+      <h1>Brand Extraction Report</h1>
+      <span class="domain-pill">xfinity.com</span>
+      <p class="timestamp">Generated 2026-07-29 14:24 UTC</p>
+    </header>
+
+    <!-- ── 1. Color Palette ─────────────────── -->
+    <section class="section" id="colors">
+      <h2 class="section-title">
+        Color Palette
+        <span class="badge">Step 4</span>
+      </h2>
+      <div class="section-divider"></div>
+      <div class="empty-state">No color data extracted.</div>
+    </section>
+
+    <!-- ── 2. Typography ────────────────────── -->
+    <section class="section" id="typography">
+      <h2 class="section-title">Typography</h2>
+      <div class="section-divider"></div>
+      <div class="empty-state">No typography data extracted.</div>
+    </section>
+
+    <!-- ── 3. Shapes & Spacing ──────────────── -->
+    <section class="section" id="shapes">
+      <h2 class="section-title">Shapes &amp; Spacing</h2>
+      <div class="section-divider"></div>
+      <div class="empty-state">No shape or spacing data extracted.</div>
+    </section>
+
+    <!-- ── 4. Logo ──────────────────────────── -->
+    <section class="section" id="logo">
+      <h2 class="section-title">Logo</h2>
+      <div class="section-divider"></div>
+      <div class="logo-well">  <div class="logo-variants">    <div>      <div class="logo-variant-label">On Dark</div>      <div class="logo-on-dark logo-display"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 379.76 119.89" width="379.76" height="119.89" focusable="false" role="img" class="" aria-hidden="true">
+  <path d="M68.6 32.67H57.42c-4.46 0-7.6 1.53-10.17 4.95L35.22 53.79 23.56 37.62c-2.57-3.43-5.7-4.95-10.17-4.95H2.22L26.2 65.18.74 99.56l-.74 1h10.65c4.46 0 7.6-1.53 10.17-4.95l14.39-19.05 27.66 38.38c2.4 3.39 5.63 4.97 10.18 4.97h11.43L44.37 65.19l24.25-32.51ZM371.4 32.67c-5.06 0-8.39 1.65-10.22 5.03l-18.61 34.58-16.07-34.55c-1.64-3.4-4.98-5.06-10.23-5.06h-8.04l25.89 54.96-17.67 32.26h8.37c5.17 0 8.79-1.78 10.74-5.29l43.72-81.01.49-.92h-8.36ZM126.97 100.56h14.7V32.67h-14.7v67.89z"></path>
+  <path d="M112.04 0C98.85 0 85.55 8.68 85.55 28.06v4.61h-6.76l-9.37 13.27h16.13v54.62h14.71V45.94h17.25V32.67h-17.25v-4.34c0-13.12 8.98-14.53 12.84-14.53 1.51 0 3.03.22 4.39.63l.64.19 3.01-13.06-.5-.2c-1.6-.62-4.39-1.35-8.59-1.35ZM191.32 31.23c-7.7 0-14.7 2.49-20.28 7.21v-5.77h-14.71v67.89h14.71V54.4c4.31-5.96 10.19-9.11 17.02-9.11 10.23 0 16.1 6.63 16.1 18.19v30.06c0 4.14 2.84 7.03 6.9 7.03h7.81V61.14c0-17.6-11.32-29.89-27.54-29.89ZM232.68 100.56h14.71V32.67h-14.71v67.89zM304.09 87.3l-.56.13c-1.8.42-3.88.64-6 .64-3.5 0-11.66-1.17-11.66-12.05V45.94h19.16l-5.99-13.13-.07-.14h-13.11V5.55l-14.71 6.43v20.69h-14.24v13.27h14.24v30.34c0 15.7 9.75 25.45 25.45 25.45 3.67 0 7.03-.45 9.99-1.34l2.98-1.01-5.41-11.9-.09-.18Z"></path>
+</svg></div>    </div>    <div>      <div class="logo-variant-label">On Light</div>      <div class="logo-on-light logo-display"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 379.76 119.89" width="379.76" height="119.89" focusable="false" role="img" class="" aria-hidden="true">
+  <path d="M68.6 32.67H57.42c-4.46 0-7.6 1.53-10.17 4.95L35.22 53.79 23.56 37.62c-2.57-3.43-5.7-4.95-10.17-4.95H2.22L26.2 65.18.74 99.56l-.74 1h10.65c4.46 0 7.6-1.53 10.17-4.95l14.39-19.05 27.66 38.38c2.4 3.39 5.63 4.97 10.18 4.97h11.43L44.37 65.19l24.25-32.51ZM371.4 32.67c-5.06 0-8.39 1.65-10.22 5.03l-18.61 34.58-16.07-34.55c-1.64-3.4-4.98-5.06-10.23-5.06h-8.04l25.89 54.96-17.67 32.26h8.37c5.17 0 8.79-1.78 10.74-5.29l43.72-81.01.49-.92h-8.36ZM126.97 100.56h14.7V32.67h-14.7v67.89z"></path>
+  <path d="M112.04 0C98.85 0 85.55 8.68 85.55 28.06v4.61h-6.76l-9.37 13.27h16.13v54.62h14.71V45.94h17.25V32.67h-17.25v-4.34c0-13.12 8.98-14.53 12.84-14.53 1.51 0 3.03.22 4.39.63l.64.19 3.01-13.06-.5-.2c-1.6-.62-4.39-1.35-8.59-1.35ZM191.32 31.23c-7.7 0-14.7 2.49-20.28 7.21v-5.77h-14.71v67.89h14.71V54.4c4.31-5.96 10.19-9.11 17.02-9.11 10.23 0 16.1 6.63 16.1 18.19v30.06c0 4.14 2.84 7.03 6.9 7.03h7.81V61.14c0-17.6-11.32-29.89-27.54-29.89ZM232.68 100.56h14.71V32.67h-14.71v67.89zM304.09 87.3l-.56.13c-1.8.42-3.88.64-6 .64-3.5 0-11.66-1.17-11.66-12.05V45.94h19.16l-5.99-13.13-.07-.14h-13.11V5.55l-14.71 6.43v20.69h-14.24v13.27h14.24v30.34c0 15.7 9.75 25.45 25.45 25.45 3.67 0 7.03-.45 9.99-1.34l2.98-1.01-5.41-11.9-.09-.18Z"></path>
+</svg></div>    </div>  </div></div>
+    </section>
+
+    <!-- ── 5. Screenshots ───────────────────── -->
+    <section class="section" id="screenshots">
+      <h2 class="section-title">Screenshots</h2>
+      <div class="section-divider"></div>
+      <div class="screenshots-list"><div class="screenshot-item">  <div class="screenshot-caption">Accessibility</div>  <img src="/deliverables/assets/screenshots/accessibility.png" alt="Screenshot: Accessibility" loading="lazy"></div><div class="screenshot-item">  <div class="screenshot-caption">Index</div>  <img src="/deliverables/assets/screenshots/index.png" alt="Screenshot: Index" loading="lazy"></div><div class="screenshot-item">  <div class="screenshot-caption">Learn Deals</div>  <img src="/deliverables/assets/screenshots/learn-deals.png" alt="Screenshot: Learn Deals" loading="lazy"></div><div class="screenshot-item">  <div class="screenshot-caption">Learn Digital Cable Tv Premium Channels Max</div>  <img src="/deliverables/assets/screenshots/learn-digital-cable-tv-premium-channels-max.png" alt="Screenshot: Learn Digital Cable Tv Premium Channels Max" loading="lazy"></div><div class="screenshot-item">  <div class="screenshot-caption">Learn Digital Cable Tv Sports College</div>  <img src="/deliverables/assets/screenshots/learn-digital-cable-tv-sports-college.png" alt="Screenshot: Learn Digital Cable Tv Sports College" loading="lazy"></div><div class="screenshot-item">  <div class="screenshot-caption">Learn Digital Cable Tv Svod Acorntv</div>  <img src="/deliverables/assets/screenshots/learn-digital-cable-tv-svod-acorntv.png" alt="Screenshot: Learn Digital Cable Tv Svod Acorntv" loading="lazy"></div><div class="screenshot-item">  <div class="screenshot-caption">Learn Digital Cable Tv</div>  <img src="/deliverables/assets/screenshots/learn-digital-cable-tv.png" alt="Screenshot: Learn Digital Cable Tv" loading="lazy"></div><div class="screenshot-item">  <div class="screenshot-caption">Learn Home Phone Services</div>  <img src="/deliverables/assets/screenshots/learn-home-phone-services.png" alt="Screenshot: Learn Home Phone Services" loading="lazy"></div><div class="screenshot-item">  <div class="screenshot-caption">Learn Home Solutions</div>  <img src="/deliverables/assets/screenshots/learn-home-solutions.png" alt="Screenshot: Learn Home Solutions" loading="lazy"></div><div class="screenshot-item">  <div class="screenshot-caption">Learn Internet Service Internet Essentials</div>  <img src="/deliverables/assets/screenshots/learn-internet-service-internet-essentials.png" alt="Screenshot: Learn Internet Service Internet Essentials" loading="lazy"></div><div class="screenshot-item">  <div class="screenshot-caption">Learn Internet Service</div>  <img src="/deliverables/assets/screenshots/learn-internet-service.png" alt="Screenshot: Learn Internet Service" loading="lazy"></div><div class="screenshot-item">  <div class="screenshot-caption">Learn Mobile</div>  <img src="/deliverables/assets/screenshots/learn-mobile.png" alt="Screenshot: Learn Mobile" loading="lazy"></div><div class="screenshot-item">  <div class="screenshot-caption">Learn Moving</div>  <img src="/deliverables/assets/screenshots/learn-moving.png" alt="Screenshot: Learn Moving" loading="lazy"></div><div class="screenshot-item">  <div class="screenshot-caption">Learn Protection Plans</div>  <img src="/deliverables/assets/screenshots/learn-protection-plans.png" alt="Screenshot: Learn Protection Plans" loading="lazy"></div><div class="screenshot-item">  <div class="screenshot-caption">Local Il Chicago</div>  <img src="/deliverables/assets/screenshots/local-il-chicago.png" alt="Screenshot: Local Il Chicago" loading="lazy"></div><div class="screenshot-item">  <div class="screenshot-caption">Now</div>  <img src="/deliverables/assets/screenshots/now.png" alt="Screenshot: Now" loading="lazy"></div><div class="screenshot-item">  <div class="screenshot-caption">Planbuilder</div>  <img src="/deliverables/assets/screenshots/planbuilder.png" alt="Screenshot: Planbuilder" loading="lazy"></div><div class="screenshot-item">  <div class="screenshot-caption">Support</div>  <img src="/deliverables/assets/screenshots/support.png" alt="Screenshot: Support" loading="lazy"></div></div>
+    </section>
+
+    <footer class="report-footer">
+      <span>Brand Extraction Report · xfinity.com</span>
+      <span>2026-07-29 14:24 UTC</span>
+    </footer>
+
+  </div>
+</body>
+</html>

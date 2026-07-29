@@ -1,0 +1,164 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-07-27",
+  "title": "Design System: Xfinity (current state)",
+  "_provenance": {
+    "writtenBy": "stardust:extract",
+    "source": "https://www.xfinity.com (5-page crawl)",
+    "note": "Descriptive current-state sidecar. extensions carry stardust motifs/componentStyle/voice/systemComponents/scaleAudit consumed by brand-review.html and downstream direct/prototype."
+  },
+  "extensions": {
+    "colorMeta": {
+      "primary":       { "role": "primary", "displayName": "Xfinity Purple", "canonical": "#5a23b9", "token": "--palette-purple-50", "tonalRamp": ["#270e48", "#291155", "#3d1881", "#481c94", "#5a23b9", "#916cd0", "#bda7e3", "#f1ecf8"] },
+      "primary-dark":  { "role": "primary", "displayName": "Deep Purple", "canonical": "#3d1881", "token": "--palette-purple-70" },
+      "info":          { "role": "secondary", "displayName": "Link Blue", "canonical": "#1f69ff", "token": "--palette-blue-50", "tonalRamp": ["#131e34", "#003485", "#0040a3", "#0051d0", "#1f69ff", "#3376ff", "#8baff9", "#d9e1f2"] },
+      "text-primary":  { "role": "neutral", "displayName": "Near-Black", "canonical": "#141417", "token": "--palette-grey-90", "tonalRamp": ["#141417", "#232328", "#35353b", "#484851", "#62626c", "#8b8b97", "#ceceda", "#f6f6f9"] },
+      "text-secondary":{ "role": "neutral", "displayName": "Mid Grey", "canonical": "#62626c", "token": "--palette-grey-50" },
+      "surface":       { "role": "neutral", "displayName": "Cool Grey Surface", "canonical": "#f6f6f9", "token": "--palette-grey-05" },
+      "border":        { "role": "neutral", "displayName": "Hairline Border", "canonical": "#dde2e6", "token": "--color-border-light" },
+      "background":    { "role": "neutral", "displayName": "White", "canonical": "#ffffff", "token": "--palette-white" }
+    },
+    "semanticColors": {
+      "positive": "#008558",
+      "negative": "#e6004a",
+      "caution": "#b33d00",
+      "info": "#0051d0",
+      "note": "Full green/red/caution ramps exist in the token layer for states but are near-absent from the marketing surface."
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display (XSans 700)", "purpose": "Section-opening and hero-scale headlines; tight −0.04px tracking." },
+      "headline": { "displayName": "Headline (XSans 600)", "purpose": "Card and sub-section titles." },
+      "body": { "displayName": "Body (DMSans 400)", "purpose": "Paragraph copy and lists." },
+      "label": { "displayName": "Label (DMSans 500)", "purpose": "Captions, meta, disclosure copy." }
+    },
+    "scaleAudit": {
+      "kind": "ad-hoc",
+      "ratios": [1.11, 1.125, 1.333, 1.20, 1.25],
+      "matchedScale": null,
+      "note": "Deliberate two-track scale (display ~1.12 / headline ~1.20-1.25), not a single modular ratio."
+    },
+    "shadows": [
+      { "name": "resting", "value": "0 1px 2px rgba(8,8,10,0.10)", "purpose": "Subtle card definition (often replaced by a border)." },
+      { "name": "raised", "value": "0 4px 16px rgba(8,8,10,0.14)", "purpose": "Hover / elevated cards." },
+      { "name": "overlay", "value": "0 8px 24px rgba(0,0,0,0.20)", "purpose": "Modals and sticky nav on scroll." }
+    ],
+    "gradients": [
+      { "name": "promo-band", "value": "linear-gradient(120deg, #5a23b9 0%, #3d1881 60%, #270e48 100%)", "purpose": "Signature full-bleed campaign band." }
+    ],
+    "radius": { "none": "0px", "xsmall": "2px", "small": "4px", "medium": "8px", "large": "16px", "xlarge": "32px", "pill": "9999px" },
+    "spacing": { "baseUnit": 4, "scale": [4, 8, 12, 16, 24, 32, 48, 64], "containerMaxWidth": "1280px", "gridGap": "8px" },
+    "motifs": {
+      "borderRadius": { "primary": "8px", "secondary": "16px", "pill": "9999px" },
+      "patterns": ["hero-with-address-form", "purple-promo-band", "pricing-3up", "offer-card-pair", "feature-icon-row", "competitive-comparison-table", "streaming-app-logo-grid", "device-deals-cross-promo", "social-proof-award", "faq-accordion", "support-category-cards", "nav-mega", "footer-mega"]
+    },
+    "componentStyle": {
+      "buttons": {
+        "primary": { "background": "#141417", "color": "#ffffff", "borderRadius": "8px", "padding": "12px 24px", "fontFamily": "XSans", "fontWeight": 600 },
+        "secondary": { "style": "brand-purple text link with chevron" },
+        "ghost": { "style": "pill chip", "borderRadius": "9999px" }
+      },
+      "dualCTAPattern": "primary-black-button-then-purple-text-link",
+      "cards": { "background": "#ffffff", "borderRadius": "16px", "padding": "24px", "border": "1px solid #dde2e6", "shadow": "subtle or none" },
+      "inputs": { "borderRadius": "8px", "padding": "12px 16px", "border": "1px solid #dde2e6" }
+    },
+    "voice": {
+      "heroHeadline": "Where do you live? Enter your address to see your plan options.",
+      "promoLine": "Our best price on WiFi is back — 5 year price guarantee",
+      "primaryCTALabel": "Find My Plan",
+      "ctaSamples": ["Find My Plan", "Shop internet", "Build your plan", "Shop plans", "See student offers"],
+      "sampleHeadlines": ["Cut your mobile bill in half. Plus, try free for a year. No commitment.", "Only Xfinity includes device protection for life", "Poof! Make half your mobile bill disappear", "The best school year starts here", "New home, same great service. Make your move with Xfinity."],
+      "tone": "bold-direct; benefit- and price-led; sentence case; occasional playful flourish",
+      "navItems": ["Internet", "Mobile", "TV & Streaming", "Home Solutions", "Home Phone", "Build Your Plan", "Membership Benefits", "Move", "Comcast Business", "Sign In"],
+      "footerHeadings": ["About Us", "Services", "Policies"]
+    },
+    "systemComponents": [
+      { "name": "site-header", "kind": "header", "occurrences": 5 },
+      { "name": "site-footer", "kind": "footer", "occurrences": 5 },
+      { "name": "device-deals-cross-promo", "kind": "cross-promo", "occurrences": 3 },
+      { "name": "streaming-simplified-band", "kind": "cross-promo", "occurrences": 2 },
+      { "name": "address-locator-band", "kind": "cta-band", "occurrences": 4 }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Near-black conversion button ('Shop internet', 'Find My Plan').",
+      "html": "<button class=\"ds-btn-primary\">Shop internet</button>",
+      "css": ".ds-btn-primary { background: #141417; color: #fff; padding: 12px 24px; font-family: XSans, DMSans, Helvetica, sans-serif; font-weight: 600; border: none; border-radius: 8px; cursor: pointer; transition: background .2s, transform .2s; } .ds-btn-primary:hover { background: #3d1881; transform: translateY(-1px); } .ds-btn-primary:focus-visible { outline: 3px solid rgba(90,35,185,.35); outline-offset: 2px; }"
+    },
+    {
+      "name": "Secondary Link",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Brand-purple text link with chevron ('Pricing & other info').",
+      "html": "<a class=\"ds-link\" href=\"#\">Pricing &amp; other info <svg viewBox=\"0 0 16 16\" width=\"14\" height=\"14\" aria-hidden=\"true\"><path d=\"M6 3l5 5-5 5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/></svg></a>",
+      "css": ".ds-link { color: #5a23b9; font-family: DMSans, Helvetica, sans-serif; font-weight: 500; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; } .ds-link:hover { color: #3d1881; text-decoration: underline; }"
+    },
+    {
+      "name": "Nav Chip",
+      "kind": "chip",
+      "refersTo": "chip-nav",
+      "description": "Pill sub-navigation chip (Overview / Plans / ...).",
+      "html": "<button class=\"ds-chip\" aria-pressed=\"true\">Overview</button>",
+      "css": ".ds-chip { background: #f6f6f9; color: #141417; border: 1px solid #dde2e6; border-radius: 9999px; padding: 8px 16px; font-family: DMSans, Helvetica, sans-serif; font-weight: 500; cursor: pointer; } .ds-chip[aria-pressed=\"true\"] { background: #f1ecf8; color: #3d1881; border-color: #5a23b9; }"
+    },
+    {
+      "name": "Offer Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "White offer/pricing card with hairline border and price.",
+      "html": "<div class=\"ds-card\"><h3>300 Mbps WiFi for work and play</h3><p class=\"ds-price\"><span>$</span>40<small>/mo for 5 years</small></p><button class=\"ds-btn-primary\">Shop internet</button></div>",
+      "css": ".ds-card { background: #fff; border: 1px solid #dde2e6; border-radius: 16px; padding: 24px; } .ds-card h3 { font-family: XSans, DMSans, sans-serif; font-weight: 600; margin: 0 0 8px; } .ds-price { font-family: XSans, DMSans, sans-serif; font-weight: 700; font-size: 3rem; line-height: 1; } .ds-price small { font-size: .9rem; font-weight: 400; color: #62626c; }"
+    },
+    {
+      "name": "Address Input",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Signature availability-check address field + black CTA.",
+      "html": "<form class=\"ds-address\"><input class=\"ds-input\" placeholder=\"123 Main St, Apt 2, Pleasantville, MA 01040\" aria-label=\"Street address and apartment\"><button class=\"ds-btn-primary\">Find My Plan</button></form>",
+      "css": ".ds-address { display: flex; gap: 8px; } .ds-input { flex: 1; background: #fff; color: #141417; border: 1px solid #dde2e6; border-radius: 8px; padding: 12px 16px; font-family: DMSans, Helvetica, sans-serif; } .ds-input:focus-visible { outline: 3px solid rgba(90,35,185,.35); border-color: #5a23b9; }"
+    },
+    {
+      "name": "Purple Promo Band",
+      "kind": "custom",
+      "refersTo": "promo-band",
+      "description": "Signature full-bleed purple campaign band with oversized numeral.",
+      "html": "<section class=\"ds-promo\"><div><p class=\"ds-eyebrow\">Back to school event</p><h2>Our best price on WiFi is back</h2></div><div class=\"ds-bignum\">5<span>year price<br>guarantee</span></div></section>",
+      "css": ".ds-promo { display: flex; justify-content: space-between; align-items: center; gap: 24px; background: linear-gradient(120deg, #5a23b9 0%, #3d1881 60%, #270e48 100%); color: #fff; border-radius: 16px; padding: 40px 48px; } .ds-promo h2 { font-family: XSans, DMSans, sans-serif; font-weight: 700; margin: 4px 0 0; } .ds-eyebrow { font-size: .75rem; letter-spacing: .5px; opacity: .85; margin: 0; } .ds-bignum { font-family: XSans, sans-serif; font-weight: 700; font-size: 6rem; line-height: .9; display: flex; align-items: flex-start; gap: 8px; } .ds-bignum span { font-size: 1.5rem; align-self: center; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Converged Storefront",
+    "overview": "A high-volume, promotion-driven retail storefront for home connectivity on a disciplined enterprise token system. Clean neutral chrome (white surfaces, near-black text and buttons, generous whitespace) lets concentrated bursts of purple — gradient campaign bands, line icons, check-bullets, emphasis phrases — carry the brand while loud, time-bound offers do the shouting.",
+    "keyCharacteristics": [
+      "Near-black primary actions; purple as a sparing brand accent, not the button color.",
+      "Signature purple gradient promo band with an oversized numeral.",
+      "Clean white / #f6f6f9 surfaces, hairline #dde2e6 borders, mostly flat.",
+      "Sentence-case, benefit- and price-led voice.",
+      "Modular, card-based, long-scroll marketing pages with recurring system bands."
+    ],
+    "rules": [
+      { "name": "The Black-Button Rule", "body": "Primary conversion buttons are near-black (#141417), never purple. Purple is the brand's voice, not its action color.", "section": "colors" },
+      { "name": "The Rare-Purple Rule", "body": "Saturated purple appears on a small fraction of any screen; its scarcity against the neutral frame is what reads as Xfinity.", "section": "colors" },
+      { "name": "The Two-Track Scale Rule", "body": "The type scale runs on two ratios — display ~1.12 and headline ~1.20-1.25 — bridged by a larger jump.", "section": "typography" },
+      { "name": "The Sentence-Case Rule", "body": "Headings are sentence case; emphasis comes from size, weight, and a purple fragment, not capitalization.", "section": "typography" },
+      { "name": "The Border-First Rule", "body": "Separation is a hairline border before it is a shadow.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do keep primary actions near-black and reserve purple for brand voice (promo bands, icons, check-bullets, emphasis).",
+      "Do lead shopping surfaces with the address-capture step; it is the site's real hero.",
+      "Do build pages as stacked modular bands on a 4px spacing rhythm within a 1280px container.",
+      "Do use sentence case and let size/weight/a purple fragment carry emphasis.",
+      "Do separate surfaces with hairline #dde2e6 borders first, soft shadows second."
+    ],
+    "donts": [
+      "Don't paint primary buttons purple.",
+      "Don't spread purple across large surfaces; its scarcity is the signal.",
+      "Don't set headings in all-caps.",
+      "Don't ship images with empty alt text (a current-state gap on ~84% of images).",
+      "Don't rely on heavy drop-shadows as the default surface style."
+    ]
+  }
+}
