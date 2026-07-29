@@ -35,16 +35,27 @@
 .promo .promo-guar .lbl { font-weight: 500; font-size: 3rem; line-height: 0.98; }
 
 /* --- image hero variant: per-page photo background + legibility gradient --- */
+/* xfinity.com pattern: solid purple panel (copy) on the LEFT, untinted photo
+   on the RIGHT, split by a diagonal seam with a thin light line. */
 .promo.has-hero-img {
   background:
-    linear-gradient(90deg, rgb(39 14 72 / 94%) 0%, rgb(61 24 129 / 74%) 42%, rgb(90 35 185 / 28%) 100%),
+    linear-gradient(101deg, var(--purple-90) 0%, var(--purple-dark) 40%, var(--purple-dark) 49%, rgb(61 24 129 / 0%) 55%),
     var(--hero-img);
   background-size: cover;
   background-position: var(--hero-pos, center right);
 }
 
-.promo.has-hero-img .promo-inner { padding: 60px 24px 64px; min-height: 300px; align-items: center; }
-.promo.has-hero-img .promo-copy { max-width: 40ch; }
+/* the thin diagonal seam line */
+.promo.has-hero-img::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(101deg, transparent 49.4%, rgb(255 255 255 / 70%) 49.4%, rgb(255 255 255 / 70%) 49.9%, transparent 49.9%);
+}
+
+.promo.has-hero-img .promo-inner { position: relative; padding: 66px 24px; min-height: 420px; align-items: center; }
+.promo.has-hero-img .promo-copy { max-width: 45%; }
 
 .promo .promo-chip {
   display: inline-flex;
@@ -65,6 +76,15 @@
   .promo .promo-inner { flex-direction: column; align-items: flex-start; padding-bottom: 96px; }
   .promo .promo-guar .num { font-size: 7rem; }
   .promo .promo-guar .lbl { font-size: 1.8rem; }
-  .promo.has-hero-img { background-position: center; }
-  .promo.has-hero-img .promo-inner { padding-bottom: 56px; }
+  /* stack: purple copy on top, photo peeking at the bottom (no diagonal) */
+  .promo.has-hero-img {
+    background:
+      linear-gradient(180deg, var(--purple-90) 0%, var(--purple-dark) 42%, rgb(61 24 129 / 0%) 82%),
+      var(--hero-img);
+    background-position: center bottom;
+  }
+
+  .promo.has-hero-img::before { display: none; }
+  .promo.has-hero-img .promo-inner { min-height: 380px; padding: 44px 24px 180px; }
+  .promo.has-hero-img .promo-copy { max-width: 100%; }
 }
