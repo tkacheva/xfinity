@@ -17,7 +17,7 @@ const FOCAL = [
   ['homephone-overview-half-image-1', 'right 20%'], // home-phone: woman laughing
   ['homephone-overview-half-image-2', 'center 15%'], // features: woman in red
   ['tonight-show', 'center 22%'], // membership: keep face in frame
-  ['3UPMetablock-Card_Generic-Phone', 'center 22%'], // plan-builder: smiling woman
+  ['3UPMetablock-Card_Generic-Phone', 'center 42%'], // plan-builder: smiling woman
   ['Metablock_Card2_Mobile', 'center bottom'], // xumo: keep the stream box in view
 ];
 
