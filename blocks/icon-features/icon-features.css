@@ -19,6 +19,16 @@
 .icon-features .ifx-actions { margin-top: 12px; }
 .icon-features .ifx-actions a { color: var(--purple); font-weight: 600; }
 
+.icon-features .ifx-foot { text-align: center; margin-top: 30px; }
+.icon-features .ifx-foot a.button {
+  background: #fff;
+  color: var(--purple);
+  border: 1px solid var(--purple);
+  border-radius: var(--r-md);
+  padding: 11px 26px;
+  font-weight: 700;
+}
+
 /* grey band variant (full-bleed) */
 .icon-features.grey {
   width: 100vw;

@@ -13,6 +13,9 @@ const ICONS = {
   e911: '<path d="M12 3.2 4.5 6v5.2c0 4.8 3.2 8.3 7.5 9.6 4.3-1.3 7.5-4.8 7.5-9.6V6z"/><path d="M12 8v4M12 15h.01"/>',
   phone: '<path d="M6.5 3.5h3.2l1.3 4.6-2 1.2a12.5 12.5 0 0 0 5.7 5.7l1.2-2 4.6 1.3v3.2a2 2 0 0 1-2.1 2A16.5 16.5 0 0 1 4.5 5.6a2 2 0 0 1 2-2.1z"/>',
   check: '<circle cx="12" cy="12" r="8.2"/><path d="m8.5 12 2.4 2.4 4.6-4.8"/>',
+  heart: '<path d="M12 20s-7-4.4-9.3-8.8C1.2 8 3 4.8 6.3 4.8c2 0 3.4 1.2 4.4 2.6l1.3 1.7 1.3-1.7c1-1.4 2.4-2.6 4.4-2.6 3.3 0 5.1 3.2 3.6 6.4C19 15.6 12 20 12 20z"/>',
+  gift: '<rect x="3.5" y="8.5" width="17" height="12" rx="1"/><path d="M2.5 8.5h19M12 8.5v12M12 8.5S9.5 3.5 7 5s.5 3.5 5 3.5zM12 8.5s2.5-5 5-3.5-.5 3.5-5 3.5z"/>',
+  sparkle: '<path d="M12 3.2l1.9 5.4 5.4 1.9-5.4 1.9L12 17.8l-1.9-5.4L4.7 10.5l5.4-1.9z"/><path d="M18.5 15.5l.7 2 2 .7-2 .7-.7 2-.7-2-2-.7 2-.7z"/>',
 };
 
 function icon(key) {
@@ -33,6 +36,14 @@ export default function decorate(block) {
     wrap.append(head);
     items = rows.slice(1);
   }
+  // an optional trailing single-cell row is a centered footer (e.g. a button)
+  let foot = null;
+  if (items.length > 1 && [...items[items.length - 1].children].length === 1) {
+    foot = document.createElement('div');
+    foot.className = 'ifx-foot';
+    foot.innerHTML = items[items.length - 1].children[0].innerHTML;
+    items = items.slice(0, -1);
+  }
   const grid = document.createElement('div');
   grid.className = 'ifx-grid';
   grid.style.setProperty('--n', items.length);
@@ -49,5 +60,6 @@ export default function decorate(block) {
     grid.append(item);
   });
   wrap.append(grid);
+  if (foot) wrap.append(foot);
   block.append(wrap);
 }

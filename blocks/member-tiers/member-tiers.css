@@ -1,0 +1,55 @@
+.member-tiers .mt-head { max-width: 720px; margin: 0 auto 30px; padding: 0 24px; text-align: center; }
+.member-tiers .mt-head h2 { font-size: 1.9rem; font-weight: 700; letter-spacing: -0.02em; margin: 0 0 8px; }
+.member-tiers .mt-head p { color: var(--grey-50); margin: 0; }
+
+.member-tiers .mt-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.member-tiers .mt-card { border: 1px solid var(--border); border-radius: var(--r-md); overflow: hidden; background: #fff; }
+.member-tiers .mt-headband { padding: 18px 18px 16px; color: #fff; }
+.member-tiers .mt-headband h3 { font-size: 1.5rem; font-weight: 700; margin: 0 0 6px; }
+.member-tiers .mt-headband p { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.04em; margin: 0; opacity: 0.95; }
+
+.member-tiers .t-silver .mt-headband { background: linear-gradient(120deg, #8e8ea6, var(--purple)); }
+.member-tiers .t-gold .mt-headband { background: linear-gradient(120deg, #d99a3a, #b9761a); }
+.member-tiers .t-platinum .mt-headband { background: linear-gradient(120deg, #5b6ad0, var(--purple)); }
+.member-tiers .t-diamond .mt-headband { background: linear-gradient(120deg, var(--purple), var(--purple-90)); }
+
+.member-tiers .mt-sec { border-top: 1px solid var(--border); }
+.member-tiers .mt-sec:first-child { border-top: 0; }
+.member-tiers .mt-sec > button {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: none;
+  border: 0;
+  padding: 14px 16px;
+  font: inherit;
+  font-weight: 700;
+  color: var(--black);
+  cursor: pointer;
+  text-align: left;
+}
+
+.member-tiers .mt-caret { width: 8px; height: 8px; border-right: 2px solid var(--grey-50); border-bottom: 2px solid var(--grey-50); transform: rotate(45deg); transition: transform 0.2s; }
+.member-tiers .mt-sec.open .mt-caret { transform: rotate(225deg); }
+
+.member-tiers .mt-panel { display: none; padding: 0 16px 14px; }
+.member-tiers .mt-sec.open .mt-panel { display: block; }
+.member-tiers .mt-panel ul { margin: 0; padding-left: 18px; }
+.member-tiers .mt-panel li { font-size: 0.86rem; color: var(--grey-50); margin: 0 0 8px; line-height: 1.4; }
+
+@media (width <= 900px) {
+  .member-tiers .mt-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (width <= 600px) {
+  .member-tiers .mt-grid { grid-template-columns: 1fr; }
+}

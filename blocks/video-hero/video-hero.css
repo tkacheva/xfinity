@@ -1,0 +1,56 @@
+.video-hero {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  min-height: 440px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: var(--purple-90);
+  color: #fff;
+}
+
+.video-hero .vh-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* legibility scrim over the video */
+.video-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(180deg, rgb(39 14 72 / 55%), rgb(39 14 72 / 30%) 45%, rgb(39 14 72 / 60%));
+}
+
+.video-hero .vh-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+  padding: 64px 24px;
+  text-align: center;
+}
+
+.video-hero .vh-copy h1 {
+  color: #fff;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.06;
+  margin: 0 0 16px;
+}
+
+.video-hero .vh-lede { font-size: 1.05rem; line-height: 1.45; margin: 0 auto 26px; max-width: 46ch; }
+.video-hero .vh-actions a.button { background: #fff; color: var(--black); border-radius: var(--r-md); padding: 13px 30px; font-weight: 700; }
+.video-hero .vh-sub { margin: 16px 0 0; font-size: 0.9rem; }
+.video-hero .vh-sub a { color: #fff; text-decoration: underline; font-weight: 600; }
+
+@media (width <= 900px) {
+  .video-hero { min-height: 380px; }
+}
