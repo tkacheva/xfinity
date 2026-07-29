@@ -9,16 +9,18 @@
  *      full-bleed background (with a legibility gradient) and shows the
  *      guarantee as a compact chip instead of the oversized numeral.
  */
-/* Per-image focal point overrides (keyed by filename substring) so the
-   subject isn't cropped by the default vertical-centred fill. Default is
-   "center right" (copy sits left, subject shows right). */
+/* Per-image background-position so the subject lands in the visible right panel
+   (copy sits left, image shows right). Default is "center right". */
 const FOCAL = [
-  ['Solution_2', 'right 15%'], // home-solutions: woman at smart door
-  ['homephone-overview-half-image-1', 'right 20%'], // home-phone: woman laughing
-  ['homephone-overview-half-image-2', 'center 15%'], // features: woman in red
-  ['tonight-show', 'center 22%'], // membership: keep face in frame
-  ['3UPMetablock-Card_Generic-Phone', 'center 42%'], // plan-builder: smiling woman
-  ['Metablock_Card2_Mobile', 'center bottom'], // xumo: keep the stream box in view
+  ['homephone-overview-half-image-1', 'right 20%'], // home-phone pillar: woman laughing
+  ['BlueGateway', 'left center'], // internet equipment: gateway is centre-left → shift right
+  ['2UP_Phone-Upgrades', 'left center'], // cell-phones: subject centre → shift right
+];
+/* Per-image zoom for centre-composed images whose subject would otherwise sit
+   under the copy panel — enlarge so it moves into the right panel. */
+const SIZE = [
+  ['BlueGateway', '185% auto'],
+  ['2UP_Phone-Upgrades', '150% auto'],
 ];
 
 export default function decorate(block) {
@@ -37,6 +39,8 @@ export default function decorate(block) {
     block.style.setProperty('--hero-img', `url('${img}')`);
     const focal = FOCAL.find(([k]) => img.includes(k));
     if (focal) block.style.setProperty('--hero-pos', focal[1]);
+    const size = SIZE.find(([k]) => img.includes(k));
+    if (size) block.style.setProperty('--hero-size', size[1]);
     inner.innerHTML = `
       <div class="promo-copy">
         <p class="eyebrow">${val(0)}</p>

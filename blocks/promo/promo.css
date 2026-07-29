@@ -41,8 +41,9 @@
   background:
     linear-gradient(101deg, var(--purple-90) 0%, var(--purple-dark) 40%, var(--purple-dark) 49%, rgb(61 24 129 / 0%) 55%),
     var(--hero-img);
-  background-size: cover;
-  background-position: var(--hero-pos, center right);
+  background-repeat: no-repeat;
+  background-size: cover, var(--hero-size, cover);
+  background-position: center, var(--hero-pos, center right);
 }
 
 /* the thin diagonal seam line */
