@@ -2,7 +2,7 @@
 header .nav-wrapper {
   background-color: var(--background-color);
   width: 100%;
-  z-index: 2;
+  z-index: 100; /* keep header + hover drawers above page content (e.g. video-hero) */
   position: fixed;
 }
 
