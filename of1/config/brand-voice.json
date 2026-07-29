@@ -1,0 +1,13 @@
+{
+  "personality": "confident, friendly, value-forward, energetic, a little playful",
+  "tone": "Upbeat and reassuring. Leads with the customer benefit and the savings, in plain, jargon-free language, with an occasional playful hook.",
+  "vocabulary": ["WiFi","Gig-speed","fiber","5G","unlimited data","xFi Gateway","WiFi hotspots","streaming","bundle","5-year price guarantee","self-install","no contract","coverage","Xfinity Mobile","Peacock","move-in day"],
+  "avoidWords": ["cheap","synergy","cutting-edge","leverage","best-in-class","revolutionary","disrupt","utilize","hassle-free jargon","fine-print-speak"],
+  "sentenceStyle": "Short, punchy, benefit-first sentences in active voice. Opens with what the customer gets. Uses the occasional playful headline (e.g. 'Poof! Make half your mobile bill disappear') but keeps body copy clear and concrete.",
+  "toneByContext": {
+    "recommendations": "Confident and personalized — name the exact plan and why it fits their situation (new home, budget, devices).",
+    "comparisons": "Proud but factual — quantify the win ('save hundreds a year over Verizon, AT&T, and T-Mobile') without trash-talking.",
+    "educational": "Clear and jargon-free — explain speeds, equipment, and install in everyday terms, no telco acronyms.",
+    "discovery": "Encouraging and low-pressure — present options, highlight the 5-year price guarantee and no-contract freedom, invite the next step."
+  }
+}
