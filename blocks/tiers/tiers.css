@@ -55,8 +55,21 @@
 /* Dark variant — `tiers (dark)`: xfinity dark-purple cards with light text,
    light header, and an inverted (white) CTA that pops against the dark card. */
 .tiers.dark .tier {
-  background: linear-gradient(160deg, var(--purple-dark), var(--purple-90));
+  background: linear-gradient(155deg, var(--purple-dark), var(--purple-90));
   border-color: rgb(255 255 255 / 14%);
+}
+
+/* each card a slightly different on-brand dark gradient */
+.tiers.dark .tier:nth-child(1) {
+  background: linear-gradient(155deg, var(--purple-dark) 0%, var(--purple-90) 100%);
+}
+
+.tiers.dark .tier:nth-child(2) {
+  background: linear-gradient(155deg, var(--purple) 0%, var(--purple-dark) 100%);
+}
+
+.tiers.dark .tier:nth-child(3) {
+  background: linear-gradient(155deg, var(--purple-90) 0%, var(--black) 100%);
 }
 
 .tiers.dark .tier-name { color: #fff; }
