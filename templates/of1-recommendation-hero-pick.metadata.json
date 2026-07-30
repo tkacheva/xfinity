@@ -83,6 +83,11 @@
       "instruction": "Heading introducing the secondary alternative options."
     },
     {
+      "key": "item-1.image",
+      "type": "image",
+      "instruction": "Product image for alternative 1."
+    },
+    {
       "key": "item-1.title",
       "type": "text",
       "instruction": "Name of the first alternative product."
@@ -103,6 +108,11 @@
       "instruction": "Link to view or select the first alternative."
     },
     {
+      "key": "item-2.image",
+      "type": "image",
+      "instruction": "Product image for alternative 2."
+    },
+    {
       "key": "item-2.title",
       "type": "text",
       "instruction": "Name of the second alternative product."
@@ -121,6 +131,11 @@
       "key": "item-2.cta",
       "type": "link",
       "instruction": "Link to view or select the second alternative."
+    },
+    {
+      "key": "item-3.image",
+      "type": "image",
+      "instruction": "Product image for alternative 3."
     },
     {
       "key": "item-3.title",

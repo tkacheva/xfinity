@@ -189,6 +189,31 @@
   border-radius: var(--radius-lg);
   padding: 1.75em;
   box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+
+/* Top media band per situational card: bleeds flush to the card's top and side
+   edges (negating the card padding) and inherits the card's rounded top corners
+   via the card's overflow:hidden. Fixed aspect ratio keeps the row even. A real
+   Xfinity product photo is set as a CSS background so a stripped/empty
+   item-N.image slot still shows a relevant panel; a filled <img> sits on top. */
+.of1-recommendation-editors-choice-alt-media {
+  margin: -1.75em -1.75em 1.5em;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--color-accent-deep) url('https://assets.comcast.com/assets/dotcom/projects_3/2024/nov/cix-7121_ie-learn-page-updates/IE_BAU-Hero-Learn-Desktop.jpg') center / cover no-repeat;
+}
+
+/* Mobile pick */
+.of1-situational-card[data-card="3"] .of1-recommendation-editors-choice-alt-media {
+  background-image: url('https://assets.comcast.com/assets/dotcom/projects_3/2026/june/cix-10733_xm-tmo-competitive-de-positioning-forced-plan-migration/TMO-FullImage-Banner-Desktop.jpg');
+}
+
+.of1-recommendation-editors-choice-alt-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .of1-situational-for {

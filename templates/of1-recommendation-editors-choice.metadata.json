@@ -83,6 +83,11 @@
       "instruction": "Heading introducing the situational 'also great for' alternatives, e.g. 'Also great for...'."
     },
     {
+      "key": "item-1.image",
+      "type": "image",
+      "instruction": "Product image for the first situational pick, matching its product. Use a real Xfinity asset URL."
+    },
+    {
       "key": "item-1.context",
       "type": "text",
       "instruction": "Short situational label for the first pick, e.g. 'For a smaller place'."
@@ -108,6 +113,11 @@
       "instruction": "Link to view or select the first situational pick."
     },
     {
+      "key": "item-2.image",
+      "type": "image",
+      "instruction": "Product image for the second situational pick, matching its product. Use a real Xfinity asset URL."
+    },
+    {
       "key": "item-2.context",
       "type": "text",
       "instruction": "Short situational label for the second pick, e.g. 'For a busy household'."
@@ -131,6 +141,11 @@
       "key": "item-2.cta",
       "type": "link",
       "instruction": "Link to view or select the second situational pick."
+    },
+    {
+      "key": "item-3.image",
+      "type": "image",
+      "instruction": "Product image for the third situational pick, matching its product. Use a real Xfinity asset URL."
     },
     {
       "key": "item-3.context",

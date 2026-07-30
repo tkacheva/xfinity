@@ -194,8 +194,41 @@ main section {
   background: #fff;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
-  padding: 1.75em;
+  padding: 0 0 1.75em;
+  overflow: hidden;
   box-shadow: var(--shadow-card);
+}
+
+/* Media band at the top of each alternative card. A real Xfinity photo is set as
+   a CSS-background fallback so an empty (stripped) item-N.image slot still shows a
+   relevant product image. A filled <img> simply sits on top of it. */
+.of1-recommendation-hero-pick-alt-media {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  background: var(--color-accent-deep) url('https://assets.comcast.com/assets/dotcom/projects_3/2024/nov/cix-7121_ie-learn-page-updates/IE_BAU-Hero-Learn-Desktop.jpg') center / cover no-repeat;
+}
+
+/* Mobile alternative */
+.of1-alt-card[data-card="3"] .of1-recommendation-hero-pick-alt-media {
+  background-image: url('https://assets.comcast.com/assets/dotcom/projects_3/2026/june/cix-10733_xm-tmo-competitive-de-positioning-forced-plan-migration/TMO-FullImage-Banner-Desktop.jpg');
+}
+
+.of1-recommendation-hero-pick-alt-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Card copy sits below the media band, restoring the original inner padding. */
+.of1-alt-card > :not(.of1-recommendation-hero-pick-alt-media) {
+  margin-left: 1.75em;
+  margin-right: 1.75em;
+}
+
+.of1-alt-card > h3 {
+  margin-top: 1.25em;
 }
 
 .of1-alt-price {

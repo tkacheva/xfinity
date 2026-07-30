@@ -210,6 +210,7 @@
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
   padding: 22px 22px 24px;
+  overflow: hidden;
   box-shadow: var(--shadow-card);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -217,6 +218,42 @@
 .of1-discovery-spotlight-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 20px 40px rgb(90 35 185 / 18%);
+}
+
+/* Media band at the top of each explore card, pulled out to the card edges so it
+   sits flush under the rounded top corners while the text keeps its padding.
+   Each card carries a real Xfinity photo as a CSS-background fallback: the OF1
+   renderer strips empty item-N.image slots, so this keeps every card showing a
+   relevant photo instead of a blank stripe. A filled <img> sits on top. */
+.of1-discovery-spotlight-card-media {
+  margin: -22px -22px 4px;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+  background: var(--color-accent-deep) url('https://assets.comcast.com/assets/dotcom/projects_3/2024/nov/cix-7121_ie-learn-page-updates/IE_BAU-Hero-Learn-Desktop.jpg') center / cover no-repeat;
+}
+
+/* Mobile card */
+.of1-discovery-spotlight-card[data-card="2"] .of1-discovery-spotlight-card-media {
+  background-image: url('https://assets.comcast.com/assets/dotcom/projects_3/2026/june/cix-10733_xm-tmo-competitive-de-positioning-forced-plan-migration/TMO-FullImage-Banner-Desktop.jpg');
+}
+
+/* Streaming card */
+.of1-discovery-spotlight-card[data-card="3"] .of1-discovery-spotlight-card-media {
+  background-image: url('https://assets.comcast.com/assets/dotcom/projects_3/2025/oct/cix-9095_hbo-max-key-art-updates/premium-channels_hbo-max_learn/LS_PremiumChannels_HBO-Max_Hero_Desktop2.jpg');
+}
+
+/* xFi Gateway equipment card */
+.of1-discovery-spotlight-card[data-card="4"] .of1-discovery-spotlight-card-media {
+  background-image: url('https://assets.comcast.com/assets/dotcom/projects/cix-3594_customer_voice_2-0_page/Image_GridFullImage_BlueGateway_Desktop.png');
+}
+
+.of1-discovery-spotlight-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .of1-discovery-spotlight-card h3 { margin: 0; }

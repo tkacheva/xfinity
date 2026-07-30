@@ -83,6 +83,11 @@
       "instruction": "Supporting line under the explore heading."
     },
     {
+      "key": "item-1.image",
+      "type": "image",
+      "instruction": "Product image for explore card 1."
+    },
+    {
       "key": "item-1.title",
       "type": "text",
       "instruction": "Name of the first also-explore product."
@@ -101,6 +106,11 @@
       "key": "item-1.cta",
       "type": "link",
       "instruction": "Link to view the first product."
+    },
+    {
+      "key": "item-2.image",
+      "type": "image",
+      "instruction": "Product image for explore card 2."
     },
     {
       "key": "item-2.title",
@@ -123,6 +133,11 @@
       "instruction": "Link to view the second product."
     },
     {
+      "key": "item-3.image",
+      "type": "image",
+      "instruction": "Product image for explore card 3."
+    },
+    {
       "key": "item-3.title",
       "type": "text",
       "instruction": "Name of the third also-explore product."
@@ -141,6 +156,11 @@
       "key": "item-3.cta",
       "type": "link",
       "instruction": "Link to view the third product."
+    },
+    {
+      "key": "item-4.image",
+      "type": "image",
+      "instruction": "Product image for explore card 4."
     },
     {
       "key": "item-4.title",

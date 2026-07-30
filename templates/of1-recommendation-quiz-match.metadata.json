@@ -88,6 +88,11 @@
       "instruction": "Heading introducing the close runner-up options."
     },
     {
+      "key": "item-1.image",
+      "type": "image",
+      "instruction": "Product image for the first runner-up card. Use a real Xfinity asset URL matching the product."
+    },
+    {
       "key": "item-1.title",
       "type": "text",
       "instruction": "Name of the first runner-up product."
@@ -113,6 +118,11 @@
       "instruction": "Link to view or select the first runner-up."
     },
     {
+      "key": "item-2.image",
+      "type": "image",
+      "instruction": "Product image for the second runner-up card. Use a real Xfinity asset URL matching the product."
+    },
+    {
       "key": "item-2.title",
       "type": "text",
       "instruction": "Name of the second runner-up product."
@@ -136,6 +146,11 @@
       "key": "item-2.cta",
       "type": "link",
       "instruction": "Link to view or select the second runner-up."
+    },
+    {
+      "key": "item-3.image",
+      "type": "image",
+      "instruction": "Product image for the third runner-up card. Use a real Xfinity asset URL matching the product."
     },
     {
       "key": "item-3.title",
