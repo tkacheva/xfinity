@@ -34,6 +34,9 @@ export default function decorate(block) {
     const actions = document.createElement('div');
     actions.className = 'tier-actions';
     if (ctaCell) [...ctaCell.childNodes].forEach((n) => actions.append(n.cloneNode(true)));
+    // Ensure the CTA renders as a button even when EDS button-decoration was
+    // skipped (e.g. authored links whose paragraph carried surrounding whitespace).
+    actions.querySelectorAll('a:not(.button)').forEach((a) => a.classList.add('button'));
     card.append(actions);
     grid.append(card);
   });
