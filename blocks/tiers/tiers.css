@@ -12,7 +12,12 @@
   border: 1px solid var(--border);
   border-radius: var(--r-lg);
   padding: 28px;
+  /* equal-height cards (grid stretch) with the CTA pinned to the bottom */
+  display: flex;
+  flex-direction: column;
 }
+
+.tiers .tier-actions { margin-top: auto; padding-top: 8px; }
 
 .tiers .tier-name { font-weight: 700; color: var(--purple); font-size: 1.4rem; }
 .tiers .tier-use { color: var(--grey-50); font-size: 0.9rem; margin: 2px 0 14px; }
@@ -46,6 +51,22 @@
 }
 
 .tiers .tier-actions a.button:hover { background: var(--purple-dark); }
+
+/* Dark variant — `tiers (dark)`: xfinity dark-purple cards with light text,
+   light header, and an inverted (white) CTA that pops against the dark card. */
+.tiers.dark .tier {
+  background: linear-gradient(160deg, var(--purple-dark), var(--purple-90));
+  border-color: rgb(255 255 255 / 14%);
+}
+
+.tiers.dark .tier-name { color: #fff; }
+.tiers.dark .tier-use { color: rgb(255 255 255 / 72%); }
+.tiers.dark .tier-price { color: #fff; }
+.tiers.dark .tier-feats li { color: rgb(255 255 255 / 90%); }
+.tiers.dark .tier-feats li::before { background: #fff; }
+
+.tiers.dark .tier-actions a.button { background: #fff; color: var(--purple); }
+.tiers.dark .tier-actions a.button:hover { background: var(--grey-05); color: var(--purple-dark); }
 
 @media (width <= 900px) {
   .tiers .tiers-grid { grid-template-columns: 1fr; }
