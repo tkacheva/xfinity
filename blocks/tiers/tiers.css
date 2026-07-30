@@ -34,7 +34,18 @@
   mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='white' d='M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z'/></svg>") center / 14px no-repeat;
 }
 
-.tiers .tier-actions a.button { border-radius: var(--r-md); padding: 12px 22px; font-weight: 700; }
+.tiers .tier-actions a.button {
+  display: inline-block;
+  background: var(--purple);
+  color: #fff;
+  border: none;
+  border-radius: var(--r-md);
+  padding: 12px 22px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.tiers .tier-actions a.button:hover { background: var(--purple-dark); }
 
 @media (width <= 900px) {
   .tiers .tiers-grid { grid-template-columns: 1fr; }
