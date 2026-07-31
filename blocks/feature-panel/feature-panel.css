@@ -14,8 +14,8 @@
 .feature-panel .fp-media {
   position: relative;
   min-height: 340px;
-  /* anchor left so the crop removes the right side of the image */
-  background: var(--purple-90) var(--fp-img) left center / cover no-repeat;
+  /* anchor right so the crop keeps the image's right side (the streaming tiles) */
+  background: var(--purple-90) var(--fp-img) right center / cover no-repeat;
 }
 
 /* soft diagonal blend from the photo into the copy side */
