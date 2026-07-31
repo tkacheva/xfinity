@@ -2,7 +2,8 @@
   max-width: var(--maxw);
   margin: 24px auto;
   display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
+  /* image column is a fixed share (>= 30%) that never collapses under the copy */
+  grid-template-columns: minmax(0, 1fr) 44%;
   align-items: stretch;
   background: linear-gradient(150deg, var(--purple-dark), var(--purple-90));
   border: 1px solid rgb(255 255 255 / 14%);
@@ -18,17 +19,9 @@
 .feature-panel .fp-media {
   position: relative;
   min-height: 340px;
-  /* anchor right so the crop keeps the image's right side (the streaming tiles) */
-  background: var(--purple-90) var(--fp-img) right center / cover no-repeat;
-}
-
-/* soft diagonal blend from the photo into the copy side (image is on the right) */
-.feature-panel .fp-media::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(255deg, transparent 55%, var(--purple-dark) 100%);
-  pointer-events: none;
+  /* cover fills the whole column (no panel colour shows); anchored to the
+     streaming collage on the image's right, biased toward the copy on the left */
+  background: var(--purple-90) var(--fp-img) 78% center / cover no-repeat;
 }
 
 .feature-panel .fp-body {
@@ -89,7 +82,9 @@
 /* stay horizontal on mobile; a squarer, non-stretched media keeps the right-hand
    streaming collage in the (right-anchored) crop instead of a thin sliver */
 @media (width <= 900px) {
-  .feature-panel .fp-panel { grid-template-columns: 1.15fr 0.85fr; }
-  .feature-panel .fp-media { min-height: 0; }
+  .feature-panel .fp-panel { grid-template-columns: minmax(0, 1fr) 34%; }
+  /* narrow tall column: shift the crop into the collage tiles (off the right
+     gradient margin) and toward the copy side */
+  .feature-panel .fp-media { min-height: 0; background-position: 62% center; }
   .feature-panel .fp-body { padding: 26px 22px; gap: 10px; }
 }
