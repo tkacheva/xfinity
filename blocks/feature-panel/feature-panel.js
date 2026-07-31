@@ -23,7 +23,7 @@ export default function decorate(block) {
   const body = document.createElement('div');
   body.className = 'fp-body';
   body.innerHTML = `
-    <p class="fp-eyebrow">${txt(1)}</p>
+    ${txt(1) ? `<p class="fp-eyebrow">${txt(1)}</p>` : ''}
     <h2 class="fp-title">${txt(2)}</h2>
     <p class="fp-price">${txt(3)}</p>
     <p class="fp-lede">${txt(4)}</p>`;
