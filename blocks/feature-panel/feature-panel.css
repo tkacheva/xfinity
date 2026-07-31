@@ -14,7 +14,8 @@
 .feature-panel .fp-media {
   position: relative;
   min-height: 340px;
-  background: var(--purple-90) var(--fp-img) center / cover no-repeat;
+  /* anchor left so the crop removes the right side of the image */
+  background: var(--purple-90) var(--fp-img) left center / cover no-repeat;
 }
 
 /* soft diagonal blend from the photo into the copy side */
@@ -81,9 +82,12 @@
 
 .feature-panel .fp-actions a.button:hover { background: var(--grey-05); color: var(--purple-dark); }
 
+/* stay horizontal on mobile — give the copy more room and let the image fill
+   the (shorter) media column, cropping off its right side */
 @media (width <= 900px) {
-  .feature-panel .fp-panel { grid-template-columns: 1fr; }
-  .feature-panel .fp-media { min-height: 220px; }
-  .feature-panel .fp-media::after { background: linear-gradient(0deg, var(--purple-dark) 0%, transparent 45%); }
-  .feature-panel .fp-body { padding: 32px 24px; }
+  .feature-panel .fp-panel { grid-template-columns: 0.72fr 1.28fr; }
+  .feature-panel .fp-media { min-height: 0; }
+  .feature-panel .fp-body { padding: 26px 22px; gap: 10px; }
+  .feature-panel .fp-title { font-size: 1.5rem; }
+  .feature-panel .fp-price { font-size: 1.35rem; }
 }
