@@ -19,15 +19,15 @@
 
 .tiers .tier-actions { margin-top: auto; padding-top: 8px; }
 
-.tiers .tier-name { font-weight: 700; color: var(--purple); font-size: 1.4rem; }
-.tiers .tier-use { color: var(--grey-50); font-size: 0.9rem; margin: 2px 0 14px; }
+.tiers .tier-name { font-weight: 700; color: var(--purple); font-size: clamp(1.2rem, 0.9rem + 1.4vw, 1.5rem); }
+.tiers .tier-use { color: var(--grey-50); font-size: clamp(0.82rem, 0.75rem + 0.35vw, 0.95rem); margin: 2px 0 14px; }
 .tiers .tier-price { display: flex; align-items: flex-start; gap: 6px; margin-bottom: 16px; }
-.tiers .tier-price .amt { font-weight: 800; font-size: 3rem; line-height: 0.9; }
-.tiers .tier-price .amt sup { font-size: 1.2rem; top: -1.2rem; font-weight: 700; }
-.tiers .tier-price .per { font-size: 0.8rem; align-self: flex-end; margin-bottom: 4px; line-height: 1.15; }
+.tiers .tier-price .amt { font-weight: 800; font-size: clamp(2.3rem, 1.2rem + 4vw, 3.2rem); line-height: 0.9; }
+.tiers .tier-price .amt sup { font-size: clamp(1rem, 0.7rem + 1.2vw, 1.3rem); top: -1.2rem; font-weight: 700; }
+.tiers .tier-price .per { font-size: clamp(0.72rem, 0.65rem + 0.3vw, 0.85rem); align-self: flex-end; margin-bottom: 4px; line-height: 1.15; }
 
 .tiers .tier-feats { list-style: none; padding: 0; margin: 0 0 18px; }
-.tiers .tier-feats li { display: flex; gap: 8px; align-items: flex-start; font-size: 0.9rem; padding: 5px 0; }
+.tiers .tier-feats li { display: flex; gap: 8px; align-items: flex-start; font-size: clamp(0.85rem, 0.8rem + 0.3vw, 0.98rem); padding: 5px 0; }
 .tiers .tier-feats li::before {
   content: "";
   width: 18px;

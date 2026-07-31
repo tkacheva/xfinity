@@ -38,15 +38,15 @@
 .feature-panel .fp-eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  font-size: 0.75rem;
+  font-size: clamp(0.7rem, 0.66rem + 0.2vw, 0.8rem);
   font-weight: 700;
   color: #d9c8ff;
   margin: 0;
 }
 
-.feature-panel .fp-title { color: #fff; font-size: 2rem; font-weight: 800; letter-spacing: -0.02em; margin: 0; }
-.feature-panel .fp-price { font-size: 1.6rem; font-weight: 800; margin: 0; }
-.feature-panel .fp-lede { color: rgb(255 255 255 / 88%); margin: 0; line-height: 1.5; max-width: 52ch; }
+.feature-panel .fp-title { color: #fff; font-size: clamp(1.5rem, 0.9rem + 2.6vw, 2.1rem); font-weight: 800; letter-spacing: -0.02em; margin: 0; }
+.feature-panel .fp-price { font-size: clamp(1.3rem, 0.9rem + 1.8vw, 1.7rem); font-weight: 800; margin: 0; }
+.feature-panel .fp-lede { color: rgb(255 255 255 / 88%); margin: 0; line-height: 1.5; max-width: 52ch; font-size: clamp(0.95rem, 0.9rem + 0.4vw, 1.08rem); }
 
 .feature-panel .fp-feats { list-style: none; padding: 0; margin: 6px 0 4px; display: grid; gap: 10px; }
 .feature-panel .fp-feats li {
@@ -54,7 +54,7 @@
   gap: 10px;
   align-items: flex-start;
   color: rgb(255 255 255 / 92%);
-  font-size: 0.95rem;
+  font-size: clamp(0.88rem, 0.83rem + 0.35vw, 1rem);
 }
 
 .feature-panel .fp-feats li::before {
@@ -82,12 +82,10 @@
 
 .feature-panel .fp-actions a.button:hover { background: var(--grey-05); color: var(--purple-dark); }
 
-/* stay horizontal on mobile — give the copy more room and let the image fill
-   the (shorter) media column, cropping off its right side */
+/* stay horizontal on mobile; a squarer, non-stretched media keeps the right-hand
+   streaming collage in the (right-anchored) crop instead of a thin sliver */
 @media (width <= 900px) {
-  .feature-panel .fp-panel { grid-template-columns: 0.72fr 1.28fr; }
-  .feature-panel .fp-media { min-height: 0; }
+  .feature-panel .fp-panel { grid-template-columns: 0.92fr 1.08fr; align-items: center; }
+  .feature-panel .fp-media { min-height: 0; aspect-ratio: 1 / 1; align-self: center; }
   .feature-panel .fp-body { padding: 26px 22px; gap: 10px; }
-  .feature-panel .fp-title { font-size: 1.5rem; }
-  .feature-panel .fp-price { font-size: 1.35rem; }
 }
