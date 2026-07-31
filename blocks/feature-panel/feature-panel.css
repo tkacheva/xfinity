@@ -1,0 +1,89 @@
+.feature-panel .fp-panel {
+  max-width: var(--maxw);
+  margin: 24px auto;
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  align-items: stretch;
+  background: linear-gradient(150deg, var(--purple-dark), var(--purple-90));
+  border: 1px solid rgb(255 255 255 / 14%);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  color: #fff;
+}
+
+.feature-panel .fp-media {
+  position: relative;
+  min-height: 340px;
+  background: var(--purple-90) var(--fp-img) center / cover no-repeat;
+}
+
+/* soft diagonal blend from the photo into the copy side */
+.feature-panel .fp-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, transparent 55%, var(--purple-dark) 100%);
+  pointer-events: none;
+}
+
+.feature-panel .fp-body {
+  padding: 44px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: center;
+}
+
+.feature-panel .fp-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #d9c8ff;
+  margin: 0;
+}
+
+.feature-panel .fp-title { color: #fff; font-size: 2rem; font-weight: 800; letter-spacing: -0.02em; margin: 0; }
+.feature-panel .fp-price { font-size: 1.6rem; font-weight: 800; margin: 0; }
+.feature-panel .fp-lede { color: rgb(255 255 255 / 88%); margin: 0; line-height: 1.5; max-width: 52ch; }
+
+.feature-panel .fp-feats { list-style: none; padding: 0; margin: 6px 0 4px; display: grid; gap: 10px; }
+.feature-panel .fp-feats li {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  color: rgb(255 255 255 / 92%);
+  font-size: 0.95rem;
+}
+
+.feature-panel .fp-feats li::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  flex: none;
+  border-radius: 50%;
+  background: #fff;
+  margin-top: 1px;
+  mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='white' d='M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z'/></svg>") center / 14px no-repeat;
+}
+
+.feature-panel .fp-actions { margin-top: 10px; }
+.feature-panel .fp-actions a.button {
+  display: inline-block;
+  background: #fff;
+  color: var(--purple);
+  border: none;
+  border-radius: var(--r-md);
+  padding: 13px 26px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.feature-panel .fp-actions a.button:hover { background: var(--grey-05); color: var(--purple-dark); }
+
+@media (width <= 900px) {
+  .feature-panel .fp-panel { grid-template-columns: 1fr; }
+  .feature-panel .fp-media { min-height: 220px; }
+  .feature-panel .fp-media::after { background: linear-gradient(0deg, var(--purple-dark) 0%, transparent 45%); }
+  .feature-panel .fp-body { padding: 32px 24px; }
+}
