@@ -68,11 +68,6 @@
       "instruction": "Bulleted list of the top features of the featured product."
     },
     {
-      "key": "spotlight.cta",
-      "type": "link",
-      "instruction": "Call to action to explore the featured product."
-    },
-    {
       "key": "explore.title",
       "type": "text",
       "instruction": "Heading introducing the secondary set of products to explore."
