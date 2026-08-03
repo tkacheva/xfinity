@@ -185,6 +185,56 @@
   box-shadow: var(--shadow-card);
 }
 
+/* FAQ drawers */
+.of1-discovery-spotlight-faq { background: var(--color-bg); }
+.of1-discovery-spotlight-faq-inner { max-width: 820px; margin: 0 auto; }
+.of1-discovery-spotlight-faq-title { text-align: center; margin: 0 0 var(--space-container); }
+
+.of1-discovery-spotlight-faq-item {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+.of1-discovery-spotlight-faq-item summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 22px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(0.98rem, 0.9rem + 0.5vw, 1.15rem);
+  color: var(--color-fg);
+}
+
+.of1-discovery-spotlight-faq-item summary::-webkit-details-marker { display: none; }
+
+.of1-discovery-spotlight-faq-item summary::after {
+  content: "";
+  flex: none;
+  width: 12px;
+  height: 12px;
+  border-right: 2px solid var(--color-accent);
+  border-bottom: 2px solid var(--color-accent);
+  transform: rotate(45deg);
+  transition: transform 0.2s ease;
+}
+
+.of1-discovery-spotlight-faq-item[open] summary::after { transform: rotate(-135deg); }
+
+.of1-discovery-spotlight-faq-item > p {
+  margin: 0;
+  padding: 0 22px 20px;
+  color: var(--color-fg-dim);
+  line-height: 1.55;
+  font-size: clamp(0.9rem, 0.85rem + 0.35vw, 1rem);
+}
+
 /* Explore row */
 .of1-discovery-spotlight-section-head {
   max-width: 60ch;
