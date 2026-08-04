@@ -23,11 +23,6 @@
       "instruction": "One or two sentences reassuring the visitor there is no pressure and every plan has the same guarantees."
     },
     {
-      "key": "hero.cta",
-      "type": "link",
-      "instruction": "Primary hero call to action pointing to the featured plan or browse flow."
-    },
-    {
       "key": "hero.image",
       "type": "image",
       "instruction": "Lifestyle hero image. Use a real Xfinity asset URL."
