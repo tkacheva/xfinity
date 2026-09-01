@@ -290,9 +290,14 @@ async function applyMboxPersonalization(mboxName) {
         sendDisplayEvent: true,
       },
     });
-    // eslint-disable-next-line no-console
-    console.debug('[mbox-debug]', mboxName, result);
-    const proposition = result?.propositions?.find((p) => p.scope === mboxName);
+    // Classic (non-VEC) Target activities delivered over the Edge Network come back with
+    // `scope: "__view__"` (the mbox name is NOT preserved in scope), wrapped as a dom-action
+    // proposition with a meaningless selector (e.g. "head") since they have no real CSS
+    // selector — so match by content-bearing dom-action items instead of by scope/mbox name.
+    const domActionSchema = 'https://ns.adobe.com/personalization/dom-action';
+    const proposition = result?.propositions?.find(
+      (p) => p.items?.some((i) => i.schema === domActionSchema && i.data?.content),
+    );
     const item = proposition?.items?.find((i) => i.data?.content);
     if (item) container.innerHTML = item.data.content;
   } catch (error) {
