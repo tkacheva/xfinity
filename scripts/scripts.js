@@ -73,19 +73,74 @@ function buildWidgetAutoBlocks(main) {
   });
 }
 
+const AI_REFERRAL_UTM_SOURCES = [
+  'chatgpt', 'chatgpt.com', 'openai',
+  'perplexity', 'perplexity.ai',
+  'claude', 'claude.ai',
+  'copilot', 'gemini',
+];
+
+// Set by seedQueryFromAiReferral, consumed by restoreUrlAfterSeed once the of1 block
+// has read `q` off `location.search` — keeps the synthesized query out of the address bar.
+let pendingUrlRestore = null;
+
 /**
- * If the URL has a `q` param, mounts an `of1` generative block at the top of
- * the page so any page (not just /of1) can serve the generative experience
- * for that query. Domain/api-endpoint are left unset — the of1 block itself
- * already derives them from the page's meta tag/hostname.
+ * If the page was reached from an AI assistant (`utm_source=chatgpt.com` etc.) and has
+ * no explicit `q`/`llm_app_ctx`, seeds `q` from a per-path preset question set
+ * (`of1/config/page-questions.json`) so the `buildOf1QueryAutoBlock` hook picks it up.
+ * The seeded URL is transient — `restoreUrlAfterSeed` strips `q` back out once the of1
+ * block has consumed it, so the visible address bar never shows the synthesized query.
+ * Mock-level: static site-authored mapping, no server involved. Only the non-competitor
+ * question set is used — competitor pricing questions are a known content gap and are
+ * left out to avoid hallucinated answers.
+ */
+async function seedQueryFromAiReferral() {
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('q') || params.get('llm_app_ctx')) return;
+  const utmSource = (params.get('utm_source') || '').toLowerCase();
+  if (!utmSource || !AI_REFERRAL_UTM_SOURCES.some((src) => utmSource.includes(src))) return;
+  try {
+    const res = await fetch(`${window.hlx.codeBasePath}/of1/config/page-questions.json`);
+    if (!res.ok) return;
+    const pageQuestions = await res.json();
+    const entry = pageQuestions[window.location.pathname];
+    if (!entry || !entry.questions?.length) return;
+    const cleanUrl = `${window.location.pathname}${params.toString() ? `?${params.toString()}` : ''}${window.location.hash}`;
+    params.set('q', entry.questions.join(' '));
+    const seededUrl = `${window.location.pathname}?${params.toString()}${window.location.hash}`;
+    window.history.replaceState(null, '', seededUrl);
+    pendingUrlRestore = cleanUrl;
+  } catch (error) {
+    // eslint-disable-next-line no-console
+    console.error('AI-referral query seeding failed', error);
+  }
+}
+
+/**
+ * Strips the synthesized `q` back out of the address bar. Must run only after the of1
+ * block has finished reading `location.search` (i.e. after `loadEager`, since `loadBlock`
+ * awaits the block's `decorate()`, which awaits the SDK's `init()`).
+ */
+function restoreUrlAfterSeed() {
+  if (!pendingUrlRestore) return;
+  window.history.replaceState(null, '', pendingUrlRestore);
+  pendingUrlRestore = null;
+}
+
+/**
+ * If the URL has a `q` param, replaces the page's entire main content with a single
+ * `of1` block — the same experience as visiting `/of1?q=...` — instead of the page's
+ * normal static blocks. Header/footer are untouched. Domain/api-endpoint are left
+ * unset — the of1 block itself already derives them from the page's meta tag/hostname.
  * @param {Element} main The container element
  */
 function buildOf1QueryAutoBlock(main) {
   const q = new URLSearchParams(window.location.search).get('q');
-  if (!q || main.querySelector('.of1')) return;
+  if (!q) return;
+  main.textContent = '';
   const section = document.createElement('div');
   section.append(buildBlock('of1', ''));
-  main.prepend(section);
+  main.append(section);
 }
 
 /**
@@ -226,7 +281,9 @@ function loadDelayed() {
 }
 
 async function loadPage() {
+  await seedQueryFromAiReferral();
   await loadEager(document);
+  restoreUrlAfterSeed();
   await loadLazy(document);
   loadDelayed();
 }
