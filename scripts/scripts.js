@@ -272,6 +272,10 @@ async function loadEager(doc) {
  * so form-based mbox HTML offers are fetched and injected into their container manually.
  * The container is a section tagged via Section Metadata (`Style: <mboxName>`), since DA's
  * markdown round-trip strips arbitrary `id` attributes off plain content divs.
+ *
+ * The global mbox is requested implicitly on every page-view event and must NOT be listed
+ * explicitly in `decisionScopes` (the Edge Network rejects it with a TGT-12005-400 "global
+ * mbox is not allowed in mboxes" error) — its proposition just shows up in the response.
  * @param {String} mboxName The name of the mbox location to personalize
  */
 async function applyMboxPersonalization(mboxName) {
@@ -281,7 +285,6 @@ async function applyMboxPersonalization(mboxName) {
     const result = await sendEvent({
       renderDecisions: false,
       personalization: {
-        decisionScopes: [mboxName],
         sendDisplayEvent: true,
       },
     });
