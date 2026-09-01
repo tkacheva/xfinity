@@ -283,11 +283,14 @@ async function applyMboxPersonalization(mboxName) {
   if (!container) return;
   try {
     const result = await sendEvent({
+      type: 'decisioning.propositionFetch',
       renderDecisions: false,
       personalization: {
         sendDisplayEvent: true,
       },
     });
+    // eslint-disable-next-line no-console
+    console.debug('[mbox-debug]', mboxName, result);
     const proposition = result?.propositions?.find((p) => p.scope === mboxName);
     const item = proposition?.items?.find((i) => i.data?.content);
     if (item) container.innerHTML = item.data.content;
