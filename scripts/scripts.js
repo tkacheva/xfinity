@@ -286,6 +286,7 @@ async function applyMboxPersonalization(mboxName) {
       type: 'decisioning.propositionFetch',
       renderDecisions: false,
       personalization: {
+        decisionScopes: ['__view__'],
         sendDisplayEvent: true,
       },
     });
