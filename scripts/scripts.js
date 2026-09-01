@@ -74,6 +74,21 @@ function buildWidgetAutoBlocks(main) {
 }
 
 /**
+ * If the URL has a `q` param, mounts an `of1` generative block at the top of
+ * the page so any page (not just /of1) can serve the generative experience
+ * for that query. Domain/api-endpoint are left unset — the of1 block itself
+ * already derives them from the page's meta tag/hostname.
+ * @param {Element} main The container element
+ */
+function buildOf1QueryAutoBlock(main) {
+  const q = new URLSearchParams(window.location.search).get('q');
+  if (!q || main.querySelector('.of1')) return;
+  const section = document.createElement('div');
+  section.append(buildBlock('of1', ''));
+  main.prepend(section);
+}
+
+/**
  * Builds all synthetic blocks in a container element.
  * @param {Element} main The container element
  */
@@ -97,6 +112,7 @@ function buildAutoBlocks(main) {
       });
     }
     buildWidgetAutoBlocks(main);
+    buildOf1QueryAutoBlock(main);
   } catch (error) {
     // eslint-disable-next-line no-console
     console.error('Auto Blocking failed', error);
