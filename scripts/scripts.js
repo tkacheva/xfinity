@@ -270,10 +270,12 @@ async function loadEager(doc) {
  * Fetches and applies classic mbox-based Target personalization for the given mbox name.
  * The martech plugin's automatic `applyPropositions` only renders VEC (dom-action) content,
  * so form-based mbox HTML offers are fetched and injected into their container manually.
+ * The container is a section tagged via Section Metadata (`Style: <mboxName>`), since DA's
+ * markdown round-trip strips arbitrary `id` attributes off plain content divs.
  * @param {String} mboxName The name of the mbox location to personalize
  */
 async function applyMboxPersonalization(mboxName) {
-  const container = document.getElementById(mboxName);
+  const container = document.querySelector(`.${mboxName}`);
   if (!container) return;
   try {
     const result = await sendEvent({
