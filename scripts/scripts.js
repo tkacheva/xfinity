@@ -10,7 +10,9 @@ import {
   loadSections,
   loadCSS,
   buildBlock,
+  getMetadata,
 } from './aem.js';
+import initMartech, { martechEager, martechLazy, sendEvent } from '../plugins/martech/src/index.js';
 
 if (window.trustedTypes && window.trustedTypes.createPolicy) {
   const innerTT = window.trustedTypes.createPolicy('tt-inner', {
@@ -232,11 +234,25 @@ export function decorateMain(main) {
  */
 async function loadEager(doc) {
   document.documentElement.lang = 'en';
+
+  const martechLoadedPromise = initMartech({
+    datastreamId: 'cc68fdd3-4db1-432c-adce-288917ddf108',
+    orgId: '908936ED5D35CC220A495CD4@AdobeOrg',
+    defaultConsent: 'in',
+  }, {
+    launchUrls: [
+      'https://assets.adobedtm.com/1281f6ff0c59/10bd8e51e424/launch-c7a9cd9019d1-development.min.js',
+    ],
+    personalization: getMetadata('target') || new URLSearchParams(window.location.search).has('target'),
+  });
+
   decorateTemplateAndTheme();
   const main = doc.querySelector('main');
   if (main) {
     decorateMain(main);
     document.body.classList.add('appear');
+    await martechLoadedPromise;
+    martechEager();
     await loadSection(main.querySelector('.section'), waitForFirstImage);
   }
 
@@ -251,11 +267,41 @@ async function loadEager(doc) {
 }
 
 /**
+ * Fetches and applies classic mbox-based Target personalization for the given mbox name.
+ * The martech plugin's automatic `applyPropositions` only renders VEC (dom-action) content,
+ * so form-based mbox HTML offers are fetched and injected into their container manually.
+ * @param {String} mboxName The name of the mbox location to personalize
+ */
+async function applyMboxPersonalization(mboxName) {
+  const container = document.getElementById(mboxName);
+  if (!container) return;
+  try {
+    const result = await sendEvent({
+      renderDecisions: false,
+      personalization: {
+        decisionScopes: [mboxName],
+        sendDisplayEvent: true,
+      },
+    });
+    const proposition = result?.propositions?.find((p) => p.scope === mboxName);
+    const item = proposition?.items?.find((i) => i.data?.content);
+    if (item) container.innerHTML = item.data.content;
+  } catch (error) {
+    // eslint-disable-next-line no-console
+    console.error(`Mbox personalization failed for "${mboxName}"`, error);
+  }
+}
+
+/**
  * Loads everything that doesn't need to be delayed.
  * @param {Element} doc The container element
  */
 async function loadLazy(doc) {
   loadHeader(doc.querySelector('header'));
+  martechLazy();
+  if (getMetadata('target') || new URLSearchParams(window.location.search).has('target')) {
+    applyMboxPersonalization('target-global-mbox');
+  }
 
   const main = doc.querySelector('main');
   await loadSections(main);
