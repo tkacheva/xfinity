@@ -130,12 +130,13 @@
       "https://assets.comcast.com/assets/dotcom/projects_3/2024/nov/cix-7121_ie-learn-page-updates/IE_BAU-Hero-Learn-Desktop.jpg",
       "https://assets.comcast.com/assets/dotcom/projects_3/2025/oct/10-10_xm-refresh/banner-components/Banner_Inclusive-Customers_Desktop.jpg"
     ],
-    "url": "https://xfinity.com/learn/internet-service/equipment",
-    "description": "The all-in-one modem + router that delivers powerful whole-home WiFi and unlocks Advanced Security and parental controls in the Xfinity app. Included with your plan.",
+    "url": "https://www.xfinity.com/learn/internet-service/modems-and-routers",
+    "description": "The all-in-one modem + router that delivers powerful whole-home WiFi and unlocks WiFi Shield (WiFi Motion, Xfinity CyberSecure) in the Xfinity app. Included with your plan.",
     "features": [
       "Modem + router in one",
+      "Tri-Band WiFi — 2.4GHz, 5GHz, and 6GHz",
       "Whole-home WiFi coverage",
-      "Advanced Security",
+      "WiFi Shield: WiFi Motion + Xfinity CyberSecure device protection",
       "Manage from the Xfinity app"
     ],
     "highlights": [
@@ -172,7 +173,11 @@
       "Unlimited talk, text, and data",
       "Most reliable 5G network",
       "Millions of secure WiFi hotspots",
-      "Free line for a year with Internet"
+      "Free line for a year with Internet",
+      "Unlimited talk, text, and data in 215+ international destinations",
+      "WiFi PowerBoost — automatic gig-speed boosts on WiFi",
+      "720p video streaming",
+      "No annual contract — cancel anytime"
     ],
     "highlights": [
       "Cut your mobile bill in half",
@@ -209,7 +214,13 @@
       "Unlimited talk, text, and data",
       "Best phone deals",
       "Device protection for life",
-      "Nationwide 5G coverage"
+      "Nationwide 5G coverage",
+      "Unlimited talk, text, and data in 215+ international destinations",
+      "WiFi PowerBoost — automatic gig-speed boosts on WiFi",
+      "4K video streaming",
+      "Xfinity Mobile Care Plus — $0 unlimited screen repair, included",
+      "Xfinity Call Guard — spam call protection, included",
+      "No annual contract — cancel anytime"
     ],
     "highlights": [
       "Best phone deals",
@@ -231,7 +242,7 @@
     "id": "streaming-bundle",
     "name": "StreamSaver & Streaming Apps",
     "category": "entertainment",
-    "price": 15,
+    "price": 22,
     "currency": "USD",
     "images": [
       "https://assets.comcast.com/assets/dotcom/projects_3/2025/oct/cix-9095_hbo-max-key-art-updates/premium-channels_hbo-max_learn/LS_PremiumChannels_HBO-Max_Hero_Desktop2.jpg",
@@ -239,13 +250,15 @@
       "https://assets.comcast.com/assets/dotcom/projects_3/2026/march/youtube-tv-trial/Carousel-Slide1-Desktop.png",
       "https://assets.comcast.com/assets/dotcom/projects_3/2025/sept/cix-9306_xfinity-tv-/2-multiview--desktop-min.jpg"
     ],
-    "url": "https://xfinity.com/learn/digital-cable-tv",
-    "description": "Bundle your favorite streaming apps and save. StreamSaver brings Peacock, Netflix, and Apple TV+ together, managed on one simple bill with your Internet plan.",
+    "url": "https://www.xfinity.com/learn/digital-cable-tv/streaming-services",
+    "description": "Pick a StreamSaver bundle and save over 25% vs subscribing to each app separately, all on one simple bill with your Internet plan. Bundles range from Peacock+Netflix+HBO Max ($22/mo) up to a 6-app bundle with Apple TV, Disney+, and Hulu ($35/mo).",
     "features": [
-      "Peacock, Netflix & Apple TV+ bundle",
-      "One simple bill",
-      "Manage in the Xfinity app",
-      "Save vs subscribing separately"
+      "Peacock, Netflix, HBO Max — $22/mo (33% off, vs $32.97/mo retail)",
+      "Adds Disney+ & Hulu Bundle — $30/mo (35% off)",
+      "Adds Apple TV — $35/mo (41% off, vs $58.95/mo retail)",
+      "Peacock Premium (with ads) included, a $12.99/mo value",
+      "One simple bill, manage in the Xfinity app",
+      "Free 4K stream box on first activation (additional boxes $5/mo)"
     ],
     "highlights": [
       "Streaming, simplified",
@@ -296,6 +309,183 @@
       "network outage backup",
       "battery backup wifi",
       "best wifi coverage"
+    ]
+  },
+  {
+    "id": "xfinity-mobile-care",
+    "name": "Xfinity Mobile Care",
+    "category": "mobile",
+    "price": "9-19",
+    "currency": "USD",
+    "images": [
+      "https://assets.comcast.com/assets/dotcom/projects_3/2026/apr/cix-9715_xm-mobile-plan-8-0-learn-journey-revamp/cix-9916_xmlp-xmc-landing-page/XMC-Hero-Desktop.jpg",
+      "https://assets.comcast.com/assets/dotcom/projects_3/2026/apr/cix-9715_xm-mobile-plan-8-0-learn-journey-revamp/cix-9916_xmlp-xmc-landing-page/DeviceProtection-2UP_Desktop.jpg"
+    ],
+    "url": "https://www.xfinity.com/learn/protection-plans",
+    "description": "Optional per-device protection add-on for Mobile Select customers. Up to 3 covered accidental damage/loss/theft claims per rolling 12-month period, plus unlimited mechanical breakdown claims.",
+    "features": [
+      "Add-on for Mobile Select ($9-19/mo per device)",
+      "Up to 3 damage/loss/theft claims per 12 months",
+      "Unlimited mechanical breakdown claims",
+      "Day-1 coverage on Xfinity-purchased devices"
+    ],
+    "highlights": [
+      "Per-device, pay-as-needed protection"
+    ],
+    "persona": "maya-llm-mover",
+    "useCase": "cut-the-bill-bundle",
+    "keywords": [
+      "xfinity mobile care",
+      "device protection",
+      "screen repair",
+      "phone insurance"
+    ]
+  },
+  {
+    "id": "xfinity-mobile-care-plus",
+    "name": "Xfinity Mobile Care Plus",
+    "category": "mobile",
+    "price": 0,
+    "currency": "USD",
+    "images": [
+      "https://assets.comcast.com/assets/dotcom/projects_3/2026/apr/cix-9715_xm-mobile-plan-8-0-learn-journey-revamp/cix-9916_xmlp-xmc-landing-page/2UP-Bottom_XMC-Phone_Desktop.jpg",
+      "https://assets.comcast.com/assets/dotcom/projects_3/2026/apr/cix-9715_xm-mobile-plan-8-0-learn-journey-revamp/cix-9916_xmlp-xmc-landing-page/XMC-Smartwatches.png",
+      "https://assets.comcast.com/assets/dotcom/projects_3/2026/apr/cix-9715_xm-mobile-plan-8-0-learn-journey-revamp/cix-9916_xmlp-xmc-landing-page/XMC-Tablets.png"
+    ],
+    "url": "https://www.xfinity.com/learn/protection-plans",
+    "description": "Lifetime device protection included free with Mobile Plus, covering the phone and every eligible tablet/watch on the account.",
+    "features": [
+      "Included free with Mobile Plus",
+      "$0 unlimited screen/back-glass repair",
+      "Unlimited claims, up to $5k value per device per 12 months",
+      "Covers phones, tablets, and watches whether bought or brought",
+      "Day-1 coverage on Xfinity-purchased devices, day-31 on others"
+    ],
+    "highlights": [
+      "Included with Mobile Plus, no extra cost"
+    ],
+    "persona": "family",
+    "useCase": "cut-the-bill-bundle",
+    "keywords": [
+      "care plus",
+      "device protection",
+      "screen repair",
+      "lifetime protection"
+    ]
+  },
+  {
+    "id": "xfinity-mobile-tablet-watch-plan",
+    "name": "All-In Tablet & Watch Plan",
+    "category": "mobile",
+    "price": 35,
+    "currency": "USD",
+    "images": [
+      "https://assets.comcast.com/assets/dotcom/projects_3/2026/apr/cix-9715_xm-mobile-plan-8-0-learn-journey-revamp/repeating-components/Metablock-WatchTablet-Desktop.jpg",
+      "https://assets.comcast.com/assets/dotcom/projects_3/2026/apr/cix-9715_xm-mobile-plan-8-0-learn-journey-revamp/repeating-components/All_In_Desktop.jpg"
+    ],
+    "url": "https://www.xfinity.com/learn/mobile/plan",
+    "description": "Connect up to 10 cellular tablets and smartwatches (including Apple Watch) for one flat monthly fee, included with Mobile Select/Plus.",
+    "features": [
+      "Up to 10 tablet/watch lines for $35/mo total",
+      "Standalone: $20/mo per tablet, $10/mo per smartwatch",
+      "Apple Watch, Galaxy Watch, Pixel Watch all supported"
+    ],
+    "highlights": [
+      "One bill for phones, tablets, and watches"
+    ],
+    "persona": "family",
+    "useCase": "cut-the-bill-bundle",
+    "keywords": [
+      "apple watch",
+      "smartwatch line",
+      "tablet line",
+      "one bill"
+    ]
+  },
+  {
+    "id": "now-mobile-prepaid",
+    "name": "NOW Mobile",
+    "category": "mobile-prepaid",
+    "price": 25,
+    "currency": "USD",
+    "images": [
+      "https://assets.comcast.com/assets/dotcom/projects_3/2025/oct/cix-9307_now-xfinity-microsite-refresh/insetHero--desktop-min.jpg"
+    ],
+    "url": "https://www.xfinity.com/now/mobile",
+    "description": "Xfinity's prepaid mobile plan: unlimited talk, text, and data on nationwide 5G, no annual contract, no credit check.",
+    "features": [
+      "$25/mo per line, taxes and fees included",
+      "Unlimited talk, text, data on nationwide 5G",
+      "Reduced speed after 20GB/line",
+      "Up to 5 lines",
+      "No annual contract, no credit check, pause/resume anytime",
+      "Requires existing Xfinity post-paid or NOW Internet service"
+    ],
+    "highlights": [
+      "Prepaid, no contract, no credit check"
+    ],
+    "persona": "maya-llm-mover",
+    "useCase": "cut-the-bill-bundle",
+    "keywords": [
+      "prepaid mobile",
+      "no contract phone plan",
+      "now mobile"
+    ]
+  },
+  {
+    "id": "now-internet-100",
+    "name": "NOW Internet 100 Mbps",
+    "category": "internet-prepaid",
+    "price": 30,
+    "currency": "USD",
+    "images": [
+      "https://assets.comcast.com/assets/dotcom/projects_3/2025/may/cix-8778_test-winner-now-enhanced-hero/InternetHero--desktop-min.jpg"
+    ],
+    "url": "https://www.xfinity.com/now/internet",
+    "description": "Prepaid home internet, no credit check, self-install with WiFi equipment included.",
+    "features": [
+      "100 Mbps",
+      "No credit check",
+      "Self-install, WiFi equipment included",
+      "Pause/resume anytime, no annual contract"
+    ],
+    "highlights": [
+      "Prepaid, no credit check"
+    ],
+    "persona": "maya-llm-mover",
+    "useCase": "new-home-setup",
+    "keywords": [
+      "prepaid internet",
+      "no contract internet",
+      "now internet"
+    ]
+  },
+  {
+    "id": "now-internet-200",
+    "name": "NOW Internet 200 Mbps",
+    "category": "internet-prepaid",
+    "price": 45,
+    "currency": "USD",
+    "images": [
+      "https://assets.comcast.com/assets/dotcom/projects_3/2025/may/cix-8778_test-winner-now-enhanced-hero/InternetHero--desktop-min.jpg"
+    ],
+    "url": "https://www.xfinity.com/now/internet",
+    "description": "Faster tier of prepaid home internet, no credit check, self-install with WiFi equipment included.",
+    "features": [
+      "200 Mbps",
+      "No credit check",
+      "Self-install, WiFi equipment included",
+      "Pause/resume anytime, no annual contract"
+    ],
+    "highlights": [
+      "Faster prepaid tier"
+    ],
+    "persona": "maya-llm-mover",
+    "useCase": "new-home-setup",
+    "keywords": [
+      "prepaid internet",
+      "faster prepaid internet",
+      "now internet 200"
     ]
   }
 ]

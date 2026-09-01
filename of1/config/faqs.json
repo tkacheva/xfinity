@@ -39,5 +39,203 @@
       "gig-internet"
     ],
     "category": "mobile"
+  },
+  {
+    "id": "byod",
+    "question": "Can I bring my own device to Xfinity Mobile?",
+    "answer": "Yes. Bring a compatible phone and pay $0 today, only paying for data. Setup is fast with eSIM, and Xfinity handles porting your existing number.",
+    "relatedProducts": [],
+    "category": "mobile"
+  },
+  {
+    "id": "apple-watch",
+    "question": "Can I add an Apple Watch cellular plan to my Xfinity Mobile line?",
+    "answer": "Yes. Apple Watch Series 11, SE 3, Ultra 3, and Series 10 are all available, and a cellular watch line costs $10/mo standalone, or is included in the $35/mo All-In Tablet & Watch Plan (up to 10 devices).",
+    "relatedProducts": [
+      "xfinity-mobile-tablet-watch-plan"
+    ],
+    "category": "mobile"
+  },
+  {
+    "id": "care-vs-care-plus",
+    "question": "How are Xfinity Mobile Care and Xfinity Mobile Care Plus different?",
+    "answer": "Care Plus is included free with Mobile Plus and covers unlimited claims (up to $5k/device/12 months) with $0 unlimited screen repair. Care is a paid add-on for Mobile Select customers ($9-19/mo per device) covering up to 3 damage/loss/theft claims per rolling 12 months plus unlimited mechanical breakdown claims. Neither includes AppleCare/AppleCare+.",
+    "relatedProducts": [
+      "xfinity-mobile-care",
+      "xfinity-mobile-care-plus"
+    ],
+    "category": "mobile"
+  },
+  {
+    "id": "screen-repair",
+    "question": "Does Xfinity Mobile Care Plus include screen repairs?",
+    "answer": "Yes — Care Plus includes $0 unlimited smartphone screen and eligible back-glass repair, same-day after claim approval at Assurant-authorized repair centers.",
+    "relatedProducts": [
+      "xfinity-mobile-care-plus"
+    ],
+    "category": "mobile"
+  },
+  {
+    "id": "upgrade-process",
+    "question": "How does Xfinity Mobile's phone upgrade process work?",
+    "answer": "On Mobile Plus, upgrade anytime after 60 days on your device payment plan, even if it isn't paid off or is damaged, with a guaranteed discount. On Mobile Select, you can upgrade early once your device payment plan is at least 50% paid off and the device is in good condition, waiting 60 days between upgrades.",
+    "relatedProducts": [
+      "xfinity-mobile-select",
+      "xfinity-mobile-plus"
+    ],
+    "category": "mobile"
+  },
+  {
+    "id": "cancellation-terms",
+    "question": "What is Xfinity Mobile's trial period and cancellation policy?",
+    "answer": "There's no fixed trial period, but there are no annual contracts — you can cancel anytime with no penalty and no early termination fee.",
+    "relatedProducts": [],
+    "category": "mobile"
+  },
+  {
+    "id": "data-congestion",
+    "question": "Does Xfinity Mobile's network prioritization affect my speeds during peak hours?",
+    "answer": "Xfinity Mobile plans are unlimited, but on Mobile Select, data may be slowed during network congestion after 50GB of usage. Mobile hotspot data specifically is reduced after 15GB on Select and 50GB on Plus.",
+    "relatedProducts": [
+      "xfinity-mobile-select",
+      "xfinity-mobile-plus"
+    ],
+    "category": "mobile"
+  },
+  {
+    "id": "powerboost",
+    "question": "What is WiFi PowerBoost on Xfinity Mobile?",
+    "answer": "WiFi PowerBoost automatically boosts your speed up to a gig on WiFi at home and on Xfinity hotspots. It's included with Mobile Select and Plus, but requires an Xfinity gateway (XB7 or XB8).",
+    "relatedProducts": [
+      "xfinity-mobile-select",
+      "xfinity-mobile-plus"
+    ],
+    "category": "mobile"
+  },
+  {
+    "id": "hotspot-included",
+    "question": "Does my Xfinity internet plan include free access to the nationwide Xfinity hotspot network?",
+    "answer": "Yes. Both Xfinity Internet and Xfinity Mobile customers get free access to Xfinity's WiFi hotspots included. Non-customers can buy a NOW WiFi Pass ($10 per 30 days).",
+    "relatedProducts": [],
+    "category": "internet"
+  },
+  {
+    "id": "roaming-ukraine-fiji",
+    "question": "Does Xfinity Mobile work in Ukraine and Fiji?",
+    "answer": "Yes, both are covered under Xfinity Mobile's 215+ destination international coverage for Mobile Select, Mobile Plus, and Premium Unlimited plans — unlimited talk, text, and data included, no daily pass needed.",
+    "relatedProducts": [
+      "xfinity-mobile-select",
+      "xfinity-mobile-plus"
+    ],
+    "category": "mobile"
+  },
+  {
+    "id": "id-protection-gap",
+    "question": "Does Xfinity Mobile offer any ID protection or cybersecurity extras?",
+    "answer": "Xfinity Mobile includes Xfinity Call Guard (spam call blocking, premium caller ID) with Mobile Plus. Broader identity/cybersecurity protection (CyberSecure, Dark Watch dark-web monitoring) is part of WiFi Shield, a free Xfinity Internet feature — not a Mobile-specific perk.",
+    "relatedProducts": [],
+    "category": "mobile"
+  },
+  {
+    "id": "cloud-storage-gap",
+    "question": "Does Xfinity Mobile include any cloud storage or backup service as a perk?",
+    "answer": "No. Xfinity's cloud storage offering (X1 Cloud DVR) is a TV/streaming feature for storing DVR recordings, unrelated to Xfinity Mobile plans.",
+    "relatedProducts": [],
+    "category": "mobile"
+  },
+  {
+    "id": "prepaid-mobile",
+    "question": "Does Xfinity offer a prepaid mobile plan?",
+    "answer": "Yes — NOW Mobile: $25/mo per line, unlimited talk/text/data on nationwide 5G, no annual contract, no credit check, up to 5 lines. Requires existing Xfinity post-paid or NOW Internet service.",
+    "relatedProducts": [
+      "now-mobile-prepaid"
+    ],
+    "category": "mobile"
+  },
+  {
+    "id": "prepaid-internet",
+    "question": "How does Xfinity's prepaid internet plan work?",
+    "answer": "NOW Internet offers 100 Mbps for $30/mo or 200 Mbps for $45/mo, no credit check, self-install with WiFi equipment included, pause/resume anytime, no annual contract.",
+    "relatedProducts": [
+      "now-internet-100",
+      "now-internet-200"
+    ],
+    "category": "internet"
+  },
+  {
+    "id": "additional-line-cost",
+    "question": "How much does it cost to add a second device line to my existing Xfinity Mobile plan?",
+    "answer": "Each additional phone line is billed at the same per-line rate as the plan itself — $30/mo for Select or $45/mo for Plus (after the first-year promo). There's no separate discounted multi-line phone price; the flat multi-device discount only applies to tablet/watch lines under the All-In Tablet & Watch Plan.",
+    "relatedProducts": [
+      "xfinity-mobile-select",
+      "xfinity-mobile-plus"
+    ],
+    "category": "mobile"
+  },
+  {
+    "id": "signal-booster-gap",
+    "question": "Does Xfinity Mobile offer any signal booster solutions for areas with poor coverage?",
+    "answer": "No. Xfinity Mobile doesn't publish a phone signal booster or femtocell product. The only booster-type offering is WiFi PowerBoost, which boosts WiFi (not cellular) speed at home via an Xfinity gateway.",
+    "relatedProducts": [],
+    "category": "mobile"
+  },
+  {
+    "id": "network-infrastructure",
+    "question": "What network infrastructure does Xfinity Mobile rely on to deliver coverage nationwide?",
+    "answer": "Xfinity Mobile is an MVNO (mobile virtual network operator) — it doesn't own towers, it leases network capacity. Xfinity itself doesn't name the host carrier on xfinity.com, but it's widely reported (e.g. SDxCentral) that Xfinity Mobile runs on Verizon's cellular network, marketed as \"the nation's most reliable 5G network\" (RootMetrics, 2H 2025) with about 98% US population coverage. On top of that, Xfinity adds its own 20+ million WiFi hotspots for offload, which is Comcast's own infrastructure, not leased.",
+    "relatedProducts": [
+      "xfinity-mobile-select",
+      "xfinity-mobile-plus"
+    ],
+    "category": "mobile"
+  },
+  {
+    "id": "international-carrier-comparison",
+    "question": "How does Xfinity Mobile compare to AT&T, Verizon, and T-Mobile for international plans?",
+    "answer": "Xfinity Mobile includes unlimited talk, text, and data in 215+ international destinations at no extra cost on Select and Plus. By contrast, Xfinity's own marketing states \"providers like Verizon and AT&T charge you a $12 daily fee to use your phone abroad.\"",
+    "relatedProducts": [
+      "xfinity-mobile-select",
+      "xfinity-mobile-plus"
+    ],
+    "category": "mobile"
+  },
+  {
+    "id": "premium-unlimited-retired",
+    "question": "Does Xfinity Mobile's premium unlimited tier include any travel-related benefits?",
+    "answer": "\"Premium Unlimited\" was Xfinity Mobile's old plan name — the page for it now redirects to \"Meet the New Mobile Select and Mobile Plus Plans,\" confirming it was renamed/retired. Current travel-related benefits (215+ destination international coverage, WiFi PowerBoost) live under Mobile Select and Mobile Plus instead.",
+    "relatedProducts": [
+      "xfinity-mobile-select",
+      "xfinity-mobile-plus"
+    ],
+    "category": "mobile"
+  },
+  {
+    "id": "5g-device-requirements",
+    "question": "What phone do I need to access Xfinity Mobile's 5G network for the fastest speeds?",
+    "answer": "Xfinity states you can \"access the 5G Ultra Wideband network on 5G-capable devices in 5G coverage areas\" — i.e. any 5G-capable phone works; Xfinity does not publish a specific required model/generation list.",
+    "relatedProducts": [
+      "xfinity-mobile-select",
+      "xfinity-mobile-plus"
+    ],
+    "category": "mobile"
+  },
+  {
+    "id": "vs-mint-network",
+    "question": "How does Xfinity Mobile's pricing compare to Mint Mobile as an alternative carrier?",
+    "answer": "The bigger structural difference is the network each rides on, not just price: Xfinity Mobile is an MVNO on Verizon's network, while Mint Mobile is an MVNO on T-Mobile's network — different host carrier, different coverage footprint and congestion/prioritization behavior. Xfinity Mobile also layers on Comcast's own 20+ million WiFi hotspots for offload, an option Mint Mobile customers don't have since Mint isn't tied to a home-internet WiFi network.",
+    "relatedProducts": [
+      "xfinity-mobile-select",
+      "xfinity-mobile-plus"
+    ],
+    "category": "mobile"
+  },
+  {
+    "id": "vs-cricket-metro-network",
+    "question": "How does Xfinity Mobile prepaid pricing compare to Cricket Wireless or Metro by T-Mobile?",
+    "answer": "Again, the key difference is the underlying network, not just the price tag: Xfinity's prepaid plan (NOW Mobile) runs on the same Verizon network as core Xfinity Mobile. Cricket Wireless is AT&T's own prepaid brand, running on AT&T's network. Metro by T-Mobile is T-Mobile's own directly-operated prepaid brand (not technically an MVNO) running on T-Mobile's network. So the real choice is which host network's coverage fits your area — Verizon (Xfinity/NOW), AT&T (Cricket), or T-Mobile (Metro) — not just which sticker price is lowest.",
+    "relatedProducts": [
+      "now-mobile-prepaid"
+    ],
+    "category": "mobile"
   }
 ]
