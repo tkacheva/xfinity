@@ -12,7 +12,9 @@ import {
   buildBlock,
   getMetadata,
 } from './aem.js';
-import { initMartech, martechEager, martechLazy, sendEvent } from '../plugins/martech/src/index.js';
+import {
+  initMartech, martechEager, martechLazy, sendEvent,
+} from '../plugins/martech/src/index.js';
 
 if (window.trustedTypes && window.trustedTypes.createPolicy) {
   const innerTT = window.trustedTypes.createPolicy('tt-inner', {
