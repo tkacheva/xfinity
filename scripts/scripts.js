@@ -10,7 +10,9 @@ import {
   loadSections,
   loadCSS,
   buildBlock,
+  getMetadata,
 } from './aem.js';
+import { initMartech, martechEager, martechLazy, sendEvent } from '../plugins/martech/src/index.js';
 
 if (window.trustedTypes && window.trustedTypes.createPolicy) {
   const innerTT = window.trustedTypes.createPolicy('tt-inner', {
@@ -226,11 +228,25 @@ export function decorateMain(main) {
  */
 async function loadEager(doc) {
   document.documentElement.lang = 'en';
+
+  const martechLoadedPromise = initMartech({
+    datastreamId: 'cc68fdd3-4db1-432c-adce-288917ddf108',
+    orgId: '908936ED5D35CC220A495CD4@AdobeOrg',
+    defaultConsent: 'in',
+  }, {
+    launchUrls: [
+      'https://assets.adobedtm.com/1281f6ff0c59/10bd8e51e424/launch-c7a9cd9019d1-development.min.js',
+    ],
+    personalization: getMetadata('target') || new URLSearchParams(window.location.search).has('target'),
+  });
+
   decorateTemplateAndTheme();
   const main = doc.querySelector('main');
   if (main) {
     decorateMain(main);
     document.body.classList.add('appear');
+    await martechLoadedPromise;
+    martechEager();
     await loadSection(main.querySelector('.section'), waitForFirstImage);
   }
 
@@ -245,11 +261,55 @@ async function loadEager(doc) {
 }
 
 /**
+ * Fetches and applies classic mbox-based Target personalization for the given mbox name.
+ * The martech plugin's automatic `applyPropositions` only renders VEC (dom-action) content,
+ * so form-based mbox HTML offers are fetched and injected into their container manually.
+ * The container is a section tagged via Section Metadata (`Style: <mboxName>`), since DA's
+ * markdown round-trip strips arbitrary `id` attributes off plain content divs.
+ *
+ * The global mbox is requested implicitly on every page-view event and must NOT be listed
+ * explicitly in `decisionScopes` (the Edge Network rejects it with a TGT-12005-400 "global
+ * mbox is not allowed in mboxes" error) — its proposition just shows up in the response.
+ * @param {String} mboxName The name of the mbox location to personalize
+ */
+async function applyMboxPersonalization(mboxName) {
+  const container = document.querySelector(`.${mboxName}`);
+  if (!container) return;
+  try {
+    const result = await sendEvent({
+      type: 'decisioning.propositionFetch',
+      renderDecisions: false,
+      personalization: {
+        decisionScopes: ['__view__'],
+        sendDisplayEvent: true,
+      },
+    });
+    // Classic (non-VEC) Target activities delivered over the Edge Network come back with
+    // `scope: "__view__"` (the mbox name is NOT preserved in scope), wrapped as a dom-action
+    // proposition with a meaningless selector (e.g. "head") since they have no real CSS
+    // selector — so match by content-bearing dom-action items instead of by scope/mbox name.
+    const domActionSchema = 'https://ns.adobe.com/personalization/dom-action';
+    const proposition = result?.propositions?.find(
+      (p) => p.items?.some((i) => i.schema === domActionSchema && i.data?.content),
+    );
+    const item = proposition?.items?.find((i) => i.data?.content);
+    if (item) container.innerHTML = item.data.content;
+  } catch (error) {
+    // eslint-disable-next-line no-console
+    console.error(`Mbox personalization failed for "${mboxName}"`, error);
+  }
+}
+
+/**
  * Loads everything that doesn't need to be delayed.
  * @param {Element} doc The container element
  */
 async function loadLazy(doc) {
   loadHeader(doc.querySelector('header'));
+  martechLazy();
+  if (getMetadata('target') || new URLSearchParams(window.location.search).has('target')) {
+    applyMboxPersonalization('target-global-mbox');
+  }
 
   const main = doc.querySelector('main');
   await loadSections(main);

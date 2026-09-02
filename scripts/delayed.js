@@ -1,4 +1,6 @@
-// add delayed functionality here
+import { martechDelayed } from '../plugins/martech/src/index.js';
+
+martechDelayed();
 
 /**
  * Floating "Ask Xfinity" AI search launcher.
