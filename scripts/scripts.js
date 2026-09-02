@@ -80,19 +80,18 @@ const AI_REFERRAL_UTM_SOURCES = [
   'copilot', 'gemini',
 ];
 
-// Set by seedQueryFromAiReferral, consumed by restoreUrlAfterSeed once the of1 block
-// has read `q` off `location.search` — keeps the synthesized query out of the address bar.
-let pendingUrlRestore = null;
+// Set by seedQueryFromAiReferral, consumed by buildOf1QueryAutoBlock. Passed to the of1
+// block as an authored `query` config row (read by the SDK's `config.query` fallback) —
+// never touches the URL, so the address bar never shows the synthesized query.
+let seededQuery = null;
 
 /**
  * If the page was reached from an AI assistant (`utm_source=chatgpt.com` etc.) and has
- * no explicit `q`/`llm_app_ctx`, seeds `q` from a per-path preset question set
- * (`of1/config/page-questions.json`) so the `buildOf1QueryAutoBlock` hook picks it up.
- * The seeded URL is transient — `restoreUrlAfterSeed` strips `q` back out once the of1
- * block has consumed it, so the visible address bar never shows the synthesized query.
- * Mock-level: static site-authored mapping, no server involved. Only the non-competitor
- * question set is used — competitor pricing questions are a known content gap and are
- * left out to avoid hallucinated answers.
+ * no explicit `q`/`llm_app_ctx`, resolves a per-path preset question set
+ * (`of1/config/page-questions.json`) so `buildOf1QueryAutoBlock` can seed the of1 block
+ * with it directly. Mock-level: static site-authored mapping, no server involved. Only
+ * the non-competitor question set is used — competitor pricing questions are a known
+ * content gap and are left out to avoid hallucinated answers.
  */
 async function seedQueryFromAiReferral() {
   const params = new URLSearchParams(window.location.search);
@@ -105,11 +104,7 @@ async function seedQueryFromAiReferral() {
     const pageQuestions = await res.json();
     const entry = pageQuestions[window.location.pathname];
     if (!entry || !entry.questions?.length) return;
-    const cleanUrl = `${window.location.pathname}${params.toString() ? `?${params.toString()}` : ''}${window.location.hash}`;
-    params.set('q', entry.questions.join(' '));
-    const seededUrl = `${window.location.pathname}?${params.toString()}${window.location.hash}`;
-    window.history.replaceState(null, '', seededUrl);
-    pendingUrlRestore = cleanUrl;
+    seededQuery = entry.questions.join(' ');
   } catch (error) {
     // eslint-disable-next-line no-console
     console.error('AI-referral query seeding failed', error);
@@ -117,29 +112,28 @@ async function seedQueryFromAiReferral() {
 }
 
 /**
- * Strips the synthesized `q` back out of the address bar. Must run only after the of1
- * block has finished reading `location.search` (i.e. after `loadEager`, since `loadBlock`
- * awaits the block's `decorate()`, which awaits the SDK's `init()`).
- */
-function restoreUrlAfterSeed() {
-  if (!pendingUrlRestore) return;
-  window.history.replaceState(null, '', pendingUrlRestore);
-  pendingUrlRestore = null;
-}
-
-/**
- * If the URL has a `q` param, replaces the page's entire main content with a single
- * `of1` block — the same experience as visiting `/of1?q=...` — instead of the page's
- * normal static blocks. Header/footer are untouched. Domain/api-endpoint are left
- * unset — the of1 block itself already derives them from the page's meta tag/hostname.
+ * If the URL has a `q` param, or an AI-referral query was seeded, replaces the page's
+ * entire main content with a single `of1` block — the same experience as visiting
+ * `/of1?q=...` — instead of the page's normal static blocks. Header/footer are
+ * untouched. Domain is left unset — the of1 block itself already derives it from the
+ * page's meta tag/hostname. The seeded query (when there's no explicit `?q=`) is passed
+ * as an authored `query` config row rather than a URL param. `?of1-endpoint=<url>` lets
+ * testing point the block at a non-prod worker (e.g. a personal dev deploy) instead of
+ * the of1 block's own default; unset in normal use.
  * @param {Element} main The container element
  */
 function buildOf1QueryAutoBlock(main) {
-  const q = new URLSearchParams(window.location.search).get('q');
-  if (!q) return;
+  const params = new URLSearchParams(window.location.search);
+  const explicitQuery = params.get('q');
+  const query = explicitQuery || seededQuery;
+  if (!query) return;
+  const endpointOverride = params.get('of1-endpoint');
+  const rows = [];
+  if (!explicitQuery) rows.push(['query', query]);
+  if (endpointOverride) rows.push(['api-endpoint', endpointOverride]);
   main.textContent = '';
   const section = document.createElement('div');
-  section.append(buildBlock('of1', ''));
+  section.append(buildBlock('of1', rows.length ? rows : ''));
   main.append(section);
 }
 
@@ -283,7 +277,6 @@ function loadDelayed() {
 async function loadPage() {
   await seedQueryFromAiReferral();
   await loadEager(document);
-  restoreUrlAfterSeed();
   await loadLazy(document);
   loadDelayed();
 }
