@@ -84,24 +84,34 @@ const AI_REFERRAL_UTM_SOURCES = [
   'copilot', 'gemini',
 ];
 
-// Set by seedQueryFromAiReferral, consumed by buildOf1QueryAutoBlock. Passed to the of1
-// block as an authored `query` config row (read by the SDK's `config.query` fallback) —
-// never touches the URL, so the address bar never shows the synthesized query.
+/**
+ * Whether the page was reached from an AI assistant (`utm_source=chatgpt.com` etc.).
+ * @returns {boolean}
+ */
+function isAiReferral() {
+  const utmSource = (new URLSearchParams(window.location.search).get('utm_source') || '').toLowerCase();
+  return !!utmSource && AI_REFERRAL_UTM_SOURCES.some((src) => utmSource.includes(src));
+}
+
+// Set by seedQueryFromAiReferral, consumed by buildOf1QueryAutoBlock: `query` is the
+// real, full text sent to generate() (good retrieval needs the whole preset question
+// set); `label` is what's actually shown in the of1 input box — a short, readable
+// stand-in, since echoing 25 concatenated questions back at the visitor as if it were
+// one typed question produced an unreadable wall of text in the UI.
 let seededQuery = null;
+let seededLabel = null;
 
 /**
- * If the page was reached from an AI assistant (`utm_source=chatgpt.com` etc.) and has
- * no explicit `q`/`llm_app_ctx`, resolves a per-path preset question set
- * (`of1/config/page-questions.json`) so `buildOf1QueryAutoBlock` can seed the of1 block
- * with it directly. Mock-level: static site-authored mapping, no server involved. Only
- * the non-competitor question set is used — competitor pricing questions are a known
- * content gap and are left out to avoid hallucinated answers.
+ * If the page was reached from an AI assistant and has no explicit `q`/`llm_app_ctx`,
+ * resolves a per-path preset question set (`of1/config/page-questions.json`) so
+ * `buildOf1QueryAutoBlock` can seed the of1 block with it. Only the non-competitor
+ * question set is used — competitor pricing questions are a known content gap and are
+ * left out to avoid hallucinated answers.
  */
 async function seedQueryFromAiReferral() {
+  if (!isAiReferral()) return;
   const params = new URLSearchParams(window.location.search);
   if (params.get('q') || params.get('llm_app_ctx')) return;
-  const utmSource = (params.get('utm_source') || '').toLowerCase();
-  if (!utmSource || !AI_REFERRAL_UTM_SOURCES.some((src) => utmSource.includes(src))) return;
   try {
     const res = await fetch(`${window.hlx.codeBasePath}/of1/config/page-questions.json`);
     if (!res.ok) return;
@@ -109,35 +119,54 @@ async function seedQueryFromAiReferral() {
     const entry = pageQuestions[window.location.pathname];
     if (!entry || !entry.questions?.length) return;
     seededQuery = entry.questions.join(' ');
+    seededLabel = entry.label || document.title;
   } catch (error) {
     // eslint-disable-next-line no-console
     console.error('AI-referral query seeding failed', error);
   }
 }
 
+// Same tenant id the real DA-authored /of1 page hardcodes as its own `domain` config
+// row. Without it, of1.js falls back to the page's own hostname (blocks/of1/of1.js's
+// `!config.domain` branch) — fine on the real `.aem.page`/`.aem.live` host, but on a
+// local `aem up` dev server that resolves to the literal string "localhost", which
+// isn't a registered tenant anywhere: the worker then has no products/features/faqs/
+// templates to ground on and falls back to fully ungrounded, generic generation.
+const TENANT_DOMAIN = 'main--xfinity--tkacheva';
+
 /**
  * If the URL has a `q` param, or an AI-referral query was seeded, replaces the page's
  * entire main content with a single `of1` block — the same experience as visiting
  * `/of1?q=...` — instead of the page's normal static blocks. Header/footer are
- * untouched. Domain is left unset — the of1 block itself already derives it from the
- * page's meta tag/hostname. The seeded query (when there's no explicit `?q=`) is passed
- * as an authored `query` config row rather than a URL param. `?of1-endpoint=<url>` lets
- * testing point the block at a non-prod worker (e.g. a personal dev deploy) instead of
- * the of1 block's own default; unset in normal use.
+ * untouched. The seeded query (when there's no explicit `?q=`) is passed as an authored
+ * `query` config row rather than a URL param, along with a short `query-label` row so
+ * the of1 input box shows a readable stand-in instead of the full preset question set
+ * (see `seedQueryFromAiReferral`'s doc comment). `?of1-endpoint=<url>` lets testing
+ * point the block at a non-prod worker (e.g. a personal dev deploy) instead of the of1
+ * block's own default; unset in normal use.
+ *
+ * `decorateMain` (and therefore `buildAutoBlocks`) also runs on detached, temporary
+ * `<main>` containers built by `loadFragment` (used by the header for `/nav` and — via
+ * the generic `/fragments/` auto-block above — any other fragment reference on the
+ * page), not just the real page `<main>`. Only the real one should ever be replaced.
  * @param {Element} main The container element
  */
 function buildOf1QueryAutoBlock(main) {
+  if (main !== document.querySelector('main')) return;
   const params = new URLSearchParams(window.location.search);
   const explicitQuery = params.get('q');
   const query = explicitQuery || seededQuery;
   if (!query) return;
   const endpointOverride = params.get('of1-endpoint');
-  const rows = [];
-  if (!explicitQuery) rows.push(['query', query]);
+  const rows = [['domain', TENANT_DOMAIN]];
+  if (!explicitQuery) {
+    rows.push(['query', query]);
+    if (seededLabel) rows.push(['query-label', seededLabel]);
+  }
   if (endpointOverride) rows.push(['api-endpoint', endpointOverride]);
   main.textContent = '';
   const section = document.createElement('div');
-  section.append(buildBlock('of1', rows.length ? rows : ''));
+  section.append(buildBlock('of1', rows));
   main.append(section);
 }
 
