@@ -1,32 +1,60 @@
 {
   "/learn/mobile/plans": {
     "label": "Xfinity Mobile plans, add-ons & coverage",
-    "questions": [
-      "What is WiFi PowerBoost on Xfinity Mobile?",
-      "Does Xfinity Mobile's network prioritization policy affect my speeds during peak hours?",
-      "Does Xfinity Mobile Care Plus include screen repairs?",
-      "How much does it cost to add a second device line to my existing Xfinity Mobile plan?",
-      "Does Xfinity Mobile offer plans that cover phones, tablets and smartwatches on one bill?",
-      "Does Xfinity Mobile work in Ukraine?",
-      "Can I bring my own device to Xfinity Mobile?",
-      "Does Xfinity Mobile offer any signal booster solutions for areas with poor coverage?",
-      "How does Xfinity Mobile's phone upgrade process work for existing versus new customers?",
-      "How are Xfinity Mobile Care and Xfinity Mobile Care Plus different?",
-      "What network infrastructure does Xfinity Mobile rely on to deliver coverage nationwide?",
-      "Does my Xfinity internet plan include free access to the nationwide Xfinity hotspot network?",
-      "Does Xfinity Mobile include any cloud storage or backup service as a perk?",
-      "What is the current Xfinity Mobile family plan deal for Xfinity internet subscribers?",
-      "What is the length of Xfinity Mobile's trial period and can I cancel without penalty?",
-      "Does Xfinity Mobile offer any ID protection or cybersecurity extras with its plans?",
-      "Can I stream live sports on Xfinity Mobile without hitting a data cap?",
-      "Does Xfinity Mobile's premium unlimited tier include any travel-related benefits?",
-      "Does Xfinity Mobile work in Fiji?",
-      "Can I add an Apple Watch cellular plan to my Xfinity Mobile phone line?",
-      "What's the difference between Xfinity Mobile plans?",
-      "How does Xfinity's prepaid internet plan work and what speeds does it include?",
-      "What are the data limits on Xfinity's wireless plans for streaming and gaming?",
-      "What phone do I need to access Xfinity Mobile's 5G network for the fastest speeds?",
-      "How does Xfinity Mobile handle roaming when I travel outside my home coverage area?"
+    "topics": [
+      {
+        "id": "plans-pricing",
+        "label": "Xfinity Mobile plans & pricing",
+        "query": "What are the differences between Xfinity Mobile's plans, including the cost of adding a line, the family plan deal for Xfinity Internet customers, data limits for streaming and gaming, and the trial and cancellation terms?",
+        "questions": [
+          "What's the difference between Xfinity Mobile plans?",
+          "How much does it cost to add a second device line to my existing Xfinity Mobile plan?",
+          "What is the current Xfinity Mobile family plan deal for Xfinity internet subscribers?",
+          "What is the length of Xfinity Mobile's trial period and can I cancel without penalty?",
+          "How does Xfinity's prepaid internet plan work and what speeds does it include?",
+          "What are the data limits on Xfinity's wireless plans for streaming and gaming?"
+        ]
+      },
+      {
+        "id": "network-coverage",
+        "label": "Xfinity Mobile network & coverage",
+        "query": "How does Xfinity Mobile's network work, including WiFi PowerBoost speed boosts, network prioritization at peak hours, the nationwide hotspot network, 5G coverage, signal boosters for weak-coverage areas, and roaming when traveling internationally?",
+        "questions": [
+          "What is WiFi PowerBoost on Xfinity Mobile?",
+          "Does Xfinity Mobile's network prioritization policy affect my speeds during peak hours?",
+          "Does Xfinity Mobile work in Ukraine?",
+          "Does Xfinity Mobile offer any signal booster solutions for areas with poor coverage?",
+          "What network infrastructure does Xfinity Mobile rely on to deliver coverage nationwide?",
+          "Does my Xfinity internet plan include free access to the nationwide Xfinity hotspot network?",
+          "Does Xfinity Mobile work in Fiji?",
+          "What phone do I need to access Xfinity Mobile's 5G network for the fastest speeds?",
+          "How does Xfinity Mobile handle roaming when I travel outside my home coverage area?"
+        ]
+      },
+      {
+        "id": "devices-protection",
+        "label": "Xfinity Mobile devices & protection",
+        "query": "How do Xfinity Mobile's device options work, including bringing my own phone, adding tablets, smartwatches, or an Apple Watch cellular line to one bill, upgrading devices over time, and the difference between Xfinity Mobile Care and Care Plus protection?",
+        "questions": [
+          "Does Xfinity Mobile Care Plus include screen repairs?",
+          "Does Xfinity Mobile offer plans that cover phones, tablets and smartwatches on one bill?",
+          "Can I bring my own device to Xfinity Mobile?",
+          "How does Xfinity Mobile's phone upgrade process work for existing versus new customers?",
+          "How are Xfinity Mobile Care and Xfinity Mobile Care Plus different?",
+          "Can I add an Apple Watch cellular plan to my Xfinity Mobile phone line?"
+        ]
+      },
+      {
+        "id": "perks-addons",
+        "label": "Xfinity Mobile perks & add-ons",
+        "query": "What extra perks come with Xfinity Mobile plans, such as cloud storage or backup service, ID protection or cybersecurity add-ons, unlimited streaming for live sports without a data cap, and travel benefits on the premium unlimited tier?",
+        "questions": [
+          "Does Xfinity Mobile include any cloud storage or backup service as a perk?",
+          "Does Xfinity Mobile offer any ID protection or cybersecurity extras with its plans?",
+          "Can I stream live sports on Xfinity Mobile without hitting a data cap?",
+          "Does Xfinity Mobile's premium unlimited tier include any travel-related benefits?"
+        ]
+      }
     ],
     "competitorQuestions": [
       "How does Xfinity Mobile pricing compare to T-Mobile unlimited plans?",
