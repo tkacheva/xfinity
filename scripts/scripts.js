@@ -94,19 +94,21 @@ function isAiReferral() {
 }
 
 // Set by seedQueryFromAiReferral, consumed by buildOf1QueryAutoBlock: `query` is the
-// real, full text sent to generate() (good retrieval needs the whole preset question
-// set); `label` is what's actually shown in the of1 input box — a short, readable
-// stand-in, since echoing 25 concatenated questions back at the visitor as if it were
-// one typed question produced an unreadable wall of text in the UI.
+// text sent to generate(); `label` is what's shown in the of1 input box. Concatenating
+// all of a page's preset questions into one query used to produce an unreadable wall of
+// text and a mushy, generic generation (25 unrelated intents in one string). Instead the
+// question set is pre-grouped into topics (`of1/config/page-questions.json`), each with
+// one coherently-phrased `query`; a topic is picked at random per page load so repeat
+// visits get varied but internally-consistent generations instead of one generic blend.
 let seededQuery = null;
 let seededLabel = null;
 
 /**
  * If the page was reached from an AI assistant and has no explicit `q`/`llm_app_ctx`,
- * resolves a per-path preset question set (`of1/config/page-questions.json`) so
- * `buildOf1QueryAutoBlock` can seed the of1 block with it. Only the non-competitor
- * question set is used — competitor pricing questions are a known content gap and are
- * left out to avoid hallucinated answers.
+ * resolves a per-path preset topic set (`of1/config/page-questions.json`), picks one
+ * topic at random, and lets `buildOf1QueryAutoBlock` seed the of1 block with its
+ * pre-phrased `query`. Only the non-competitor topics are used — competitor pricing
+ * questions are a known content gap and are left out to avoid hallucinated answers.
  */
 async function seedQueryFromAiReferral() {
   if (!isAiReferral()) return;
@@ -117,9 +119,10 @@ async function seedQueryFromAiReferral() {
     if (!res.ok) return;
     const pageQuestions = await res.json();
     const entry = pageQuestions[window.location.pathname];
-    if (!entry || !entry.questions?.length) return;
-    seededQuery = entry.questions.join(' ');
-    seededLabel = entry.label || document.title;
+    if (!entry || !entry.topics?.length) return;
+    const topic = entry.topics[Math.floor(Math.random() * entry.topics.length)];
+    seededQuery = topic.query;
+    seededLabel = topic.label || entry.label || document.title;
   } catch (error) {
     // eslint-disable-next-line no-console
     console.error('AI-referral query seeding failed', error);

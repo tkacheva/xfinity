@@ -7,6 +7,11 @@ Split into two groups: standalone Xfinity Mobile questions (answerable from our 
 product/service facts) vs. questions that require competitor data (pricing/positioning
 against T-Mobile, Mint, Cricket, Metro, Verizon, AT&T).
 
+The standalone questions are grouped into four topics (plans-pricing, network-coverage,
+devices-protection, perks-addons) in `of1/config/page-questions.json`, each with one
+consistently-phrased representative query. `scripts.js` picks one topic at random per
+AI-referral page load instead of concatenating all 25 questions into a single query.
+
 ## Xfinity Mobile questions (25)
 
 1. What is WiFi PowerBoost on Xfinity Mobile?
