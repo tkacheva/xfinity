@@ -1,0 +1,14 @@
+.compare-table .ct-wrap { max-width: var(--maxw); margin: 0 auto; padding: 8px 24px 60px; overflow-x: auto; }
+.compare-table .ct-wrap > h2 { font-size: 1.9rem; font-weight: 700; letter-spacing: -0.02em; margin: 0 0 20px; }
+.compare-table table { width: 100%; border-collapse: collapse; font-size: 0.92rem; min-width: 560px; }
+.compare-table th,
+.compare-table td { text-align: left; padding: 13px 16px; border-bottom: 1px solid var(--border); }
+.compare-table thead th { font-weight: 700; font-size: 0.95rem; }
+.compare-table thead th:not(:first-child) { color: var(--purple); }
+.compare-table th:not(:first-child),
+.compare-table td:not(:first-child) { text-align: center; }
+.compare-table tbody th { font-weight: 500; color: var(--black); }
+
+@media (width <= 900px) {
+  .compare-table .ct-wrap { padding: 8px 24px 40px; }
+}
