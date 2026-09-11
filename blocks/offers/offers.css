@@ -1,12 +1,17 @@
 .offers .offers-grid {
   max-width: var(--maxw);
-  margin: -64px auto 0;
+  margin: 40px auto 0;
   padding: 0 24px;
   position: relative;
   z-index: 2;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 24px;
+}
+
+/* pull up to overlap the purple promo band only when it sits directly above */
+.promo-container + .offers-container .offers-grid {
+  margin-top: -64px;
 }
 
 .offers .offer {
@@ -28,5 +33,6 @@
 .offers .offer-actions a:not(.button) { color: var(--purple); font-weight: 600; }
 
 @media (width <= 900px) {
-  .offers .offers-grid { grid-template-columns: 1fr; margin-top: -48px; }
+  .offers .offers-grid { grid-template-columns: 1fr; }
+  .promo-container + .offers-container .offers-grid { margin-top: -48px; }
 }
