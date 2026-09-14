@@ -129,6 +129,51 @@ async function seedQueryFromAiReferral() {
   }
 }
 
+// Path → path AI-referral content overrides. When set, an AI-referral visit to the key
+// path serves the value path's authored content in place of that key path's own content,
+// skipping of1 generative seeding entirely — e.g. /learn/mobile/plans shows the
+// /learn/mobile/perks content for AI-referral traffic instead of generating a page.
+const AI_CONTENT_OVERRIDES = {
+  '/learn/mobile/plans': '/learn/mobile/perks',
+};
+
+/**
+ * If the page was reached from an AI assistant and has no explicit `q`/`llm_app_ctx`, and
+ * the current path has an `AI_CONTENT_OVERRIDES` entry, fetches the override path's
+ * `.plain.html` and swaps it into the real `<main>` before `loadEager`'s `decorateMain`
+ * runs, so the override's authored blocks/sections decorate normally as if authored on
+ * this path. Relative media paths in the fetched markup point at the override path's own
+ * media, so they're rebased the same way `loadFragment` (blocks/fragment/fragment.js)
+ * rebases fragment media. The URL/history is untouched — only the content swaps.
+ * @returns {Promise<boolean>} true if an override was applied
+ */
+async function applyAiReferralContentOverride() {
+  if (!isAiReferral()) return false;
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('q') || params.get('llm_app_ctx')) return false;
+  const overridePath = AI_CONTENT_OVERRIDES[window.location.pathname];
+  if (!overridePath) return false;
+  const main = document.querySelector('main');
+  if (!main) return false;
+  try {
+    const resp = await fetch(`${overridePath}.plain.html`);
+    if (!resp.ok) return false;
+    main.innerHTML = await resp.text();
+    const resetAttributeBase = (tag, attr) => {
+      main.querySelectorAll(`${tag}[${attr}^="./media_"]`).forEach((elem) => {
+        elem[attr] = new URL(elem.getAttribute(attr), new URL(overridePath, window.location)).href;
+      });
+    };
+    resetAttributeBase('img', 'src');
+    resetAttributeBase('source', 'srcset');
+    return true;
+  } catch (error) {
+    // eslint-disable-next-line no-console
+    console.error('AI-referral content override failed', error);
+    return false;
+  }
+}
+
 // Same tenant id the real DA-authored /of1 page hardcodes as its own `domain` config
 // row. Without it, of1.js falls back to the page's own hostname (blocks/of1/of1.js's
 // `!config.domain` branch) — fine on the real `.aem.page`/`.aem.live` host, but on a
@@ -369,7 +414,8 @@ function loadDelayed() {
 }
 
 async function loadPage() {
-  await seedQueryFromAiReferral();
+  const contentOverridden = await applyAiReferralContentOverride();
+  if (!contentOverridden) await seedQueryFromAiReferral();
   await loadEager(document);
   await loadLazy(document);
   loadDelayed();
