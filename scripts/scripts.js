@@ -85,12 +85,23 @@ const AI_REFERRAL_UTM_SOURCES = [
 ];
 
 /**
- * Whether the page was reached from an AI assistant (`utm_source=chatgpt.com` etc.).
+ * Whether the page was reached from an AI assistant (`utm_source=chatgpt.com` etc.), or,
+ * when that param is missing, whether the browser's `document.referrer` points at one of
+ * these assistants' domains. Some AI assistants (e.g. ChatGPT) don't always append the
+ * `utm_source` param to outbound links, so the referrer check is a backup signal.
  * @returns {boolean}
  */
 function isAiReferral() {
   const utmSource = (new URLSearchParams(window.location.search).get('utm_source') || '').toLowerCase();
-  return !!utmSource && AI_REFERRAL_UTM_SOURCES.some((src) => utmSource.includes(src));
+  if (utmSource && AI_REFERRAL_UTM_SOURCES.some((src) => utmSource.includes(src))) return true;
+  const { referrer } = document;
+  if (!referrer) return false;
+  try {
+    const referrerHost = new URL(referrer).hostname.toLowerCase();
+    return AI_REFERRAL_UTM_SOURCES.some((src) => referrerHost.includes(src));
+  } catch {
+    return false;
+  }
 }
 
 // Set by seedQueryFromAiReferral, consumed by buildOf1QueryAutoBlock: `query` is the
